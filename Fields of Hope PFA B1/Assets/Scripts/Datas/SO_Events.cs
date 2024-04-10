@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 [Serializable]
@@ -22,13 +23,18 @@ public class SO_Events : ScriptableObject
     [Tooltip("The event the second option leads to (None if end).")] public SO_Events ChildEvent2;
 
     [Header("Style")]
-    [Tooltip("The SO this event will use as graphic asset.")] public SO_EventAppearance Style;
+    [Tooltip("The SO this event will use as graphic asset.")] public SO_EventAppearance Appearance;
 
     [Header("System Stats")]
     [Range(-10, 10), Tooltip("cf explications on OUFITUDE DEGRE tm")] public int DegreDeOufitude;
     [Tooltip("List that contains pairs [value to change, amount of the changement].")] public List<CustomStruct> ValuesToChange;
 
-    public string GetFamily(string family) // retourne récursivement tous les cheminements possibles
+    /// <summary>
+    /// This method find recursively every path possible and return them as a string
+    /// </summary>
+    /// <param name="family"></param>
+    /// <returns></returns>
+    public string GetFamily(string family)
     {
         //Debug.Log(family);
         switch (family)
@@ -42,20 +48,28 @@ public class SO_Events : ScriptableObject
                 break;
         }
 
+        // if there's only a "left" child
         if (ChildEvent1 != null && ChildEvent2 == null)
         {
+            // return the result of this child's method
             return ChildEvent1.GetFamily(family) + " ";
         }
+        // if there's only a "right" child
         else if (ChildEvent1 == null && ChildEvent2 != null)
         {
+            // return the result of this child's method
             return ChildEvent2.GetFamily(family) + " ";
         }
+        // if there are two children
         else if (ChildEvent1 != null && ChildEvent2 != null)
         {
+            // return the result of these children's methods
             return ChildEvent1.GetFamily(family) + " " + ChildEvent2.GetFamily(family) + " ";
         }
+        // if there's no child
         else
         {
+            // return the actual result + indicates the end
             return family + "(End) |";
         }
     } 

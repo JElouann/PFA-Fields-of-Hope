@@ -15,6 +15,6 @@ MonoBehaviour:
   Name: Feuille1
   ChildEvent1: {fileID: 0}
   ChildEvent2: {fileID: 0}
-  Style: {fileID: 0}
+  Appearance: {fileID: 11400000, guid: f275f3eae6f34db4b9f17b45dc1a35bc, type: 2}
   DegreDeOufitude: 0
   ValuesToChange: []
