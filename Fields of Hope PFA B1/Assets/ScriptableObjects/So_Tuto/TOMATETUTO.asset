@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0cf883afddcbc4e92c4c47ccd81998, type: 3}
+  m_Name: TOMATETUTO
+  m_EditorClassIdentifier: 
+  plantName: Tomate
+  plantStages:
+  - {fileID: -829444282, guid: eaf3d521f543de845bcf879c633fd4e8, type: 3}
+  - {fileID: 1614043094, guid: eaf3d521f543de845bcf879c633fd4e8, type: 3}
+  - {fileID: 320479577, guid: eaf3d521f543de845bcf879c633fd4e8, type: 3}
+  - {fileID: -1079104842, guid: eaf3d521f543de845bcf879c633fd4e8, type: 3}
+  - {fileID: 751724034, guid: eaf3d521f543de845bcf879c633fd4e8, type: 3}
+  timeBtwStages: 5
+  buyPrice: 5
+  sellPrice: 10
+  icon: {fileID: -364422164, guid: eaf3d521f543de845bcf879c633fd4e8, type: 3}
+  dryPlanted: {fileID: -829444282, guid: eaf3d521f543de845bcf879c633fd4e8, type: 3}
