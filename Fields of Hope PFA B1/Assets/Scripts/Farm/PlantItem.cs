@@ -26,13 +26,17 @@ public class PlantItem : MonoBehaviour
 
     public void SelectSeedsWanted()
     {
-        fm.SelectPlant(plant);
+        fm.SelectPlant(plant, NB_graines, this);
     }
 
     void InitializeUI()
     {
         nameTxt.text = plant.plantName;
         icon.sprite = plant.icon;
+    }
+
+    private void Update()
+    {
         Nb_Graines.text = NB_graines.ToString();
     }
 }

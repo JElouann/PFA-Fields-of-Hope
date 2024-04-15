@@ -21,12 +21,15 @@ public class PlotManager : MonoBehaviour
 
     private void Update()
     {
+
+    }
+
+    public void GrowthPlant()
+    {
         if (isPlanted && test != null)
         {
-            timer -= Time.deltaTime;
-            if (timer < 0 && plantStage < test.plantStages.Length - 1)
+            if (plantStage < test.plantStages.Length - 1)
             {
-                timer = test.timeBtwStages;
                 plantStage++;
                 UpdatePlant();
             }
@@ -42,7 +45,7 @@ public class PlotManager : MonoBehaviour
                 Harvest();
             }
         }
-        else
+        else if (FarmManager.plantItem.NB_graines != 0)
         {
             Plant(FarmManager.selectPlant);
         }
@@ -65,6 +68,7 @@ public class PlotManager : MonoBehaviour
             UpdatePlant();
             timer = test.timeBtwStages;
             plant.gameObject.SetActive(true);
+            FarmManager.plantItem.NB_graines--;
         }
     }
 
