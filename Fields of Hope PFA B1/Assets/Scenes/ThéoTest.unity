@@ -467,6 +467,10 @@ PrefabInstance:
       propertyPath: plant
       value: 
       objectReference: {fileID: 11400000, guid: c66090f795b767e4c8ffb02650daf319, type: 2}
+    - target: {fileID: 8812852956728749852, guid: 604b835c75117284a89fca172d86f6e7, type: 3}
+      propertyPath: NB_graines
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2815,6 +2819,10 @@ PrefabInstance:
       propertyPath: plant
       value: 
       objectReference: {fileID: 11400000, guid: f9f32a8875e43bd40b4c14d0b61a32f8, type: 2}
+    - target: {fileID: 8812852956728749852, guid: 604b835c75117284a89fca172d86f6e7, type: 3}
+      propertyPath: NB_graines
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
