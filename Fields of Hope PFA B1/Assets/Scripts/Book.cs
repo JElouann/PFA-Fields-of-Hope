@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class TurnPage : MonoBehaviour
+public class Book : MonoBehaviour
 {
     [SerializeField] private float pageSpeed = 0.5f;
     [SerializeField] List<Transform> pages;
@@ -11,21 +12,13 @@ public class TurnPage : MonoBehaviour
     [SerializeField] GameObject backButton;
     [SerializeField] GameObject forwardButton;
 
-    private void Start()
-    {
-        backButton.SetActive(false);
-    }
+    [SerializeField] private Sprite _leftPageSprite;
+    [SerializeField] private Sprite _rightPageSprite;
 
-    public void InitialState()
-    {
-        for (int i=0; i<pages.Count; i++)
-        {
-            pages[i].transform.rotation = Quaternion.identity;
-        }
-        pages[0].SetAsLastSibling();
-        backButton.SetActive(true);
-    }
+    [SerializeField] private GameObject _pageLeftPrevab;
 
+
+    #region UI
     public void RotateNext()
     {
         if (rotate) { return; }
@@ -80,6 +73,14 @@ public class TurnPage : MonoBehaviour
             value += Time.deltaTime * pageSpeed;
             pages[index].rotation = Quaternion.Slerp(pages[index].rotation, targetRotation, value);
             float angle1 = Quaternion.Angle(pages[index].rotation, targetRotation);
+            if (pages[index].rotation.y >= -0.8f && !forward)
+            {
+                pages[index].Find("verso").SetAsFirstSibling();
+            }
+            else if (pages[index].rotation.y <= -0.6f && forward)
+            {
+                pages[index].Find("verso").SetAsLastSibling();
+            }
             if (angle1 < 0.1f)
             {
                 if (forward == false)
@@ -91,5 +92,18 @@ public class TurnPage : MonoBehaviour
             }
             yield return null;
         }
+    }
+    #endregion UI
+
+    #region System
+    public void CreatePage()
+    {
+        //GameObject newPage = Instantiate()
+    }
+    #endregion
+
+    private void Start()
+    {
+        backButton.SetActive(false);
     }
 }

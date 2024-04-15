@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: A
   m_EditorClassIdentifier: 
   Name: Racine
+  Text: Vous savez, moi je pense pas qu'il y ait de bonnes ou de mauvaises situations.
+    La vie c'est avant tout des rencontres.
+  IDEvent: 0
   ChildEvent1: {fileID: 11400000, guid: 5bd09e6e43b8d7b47bb0980f42d06b74, type: 2}
   ChildEvent2: {fileID: 11400000, guid: 1d7c9bcfc1d15f84fa5661c65c843567, type: 2}
   Appearance: {fileID: 11400000, guid: f275f3eae6f34db4b9f17b45dc1a35bc, type: 2}
-  DegreDeOufitude: 2
-  ValuesToChange: []
+  DegreDeOufitude: -2
+  ValuesToChange:
+  - ValueToChange: Potatoe
+    Amount: -3
+  - ValueToChange: Hunger
+    Amount: 2
