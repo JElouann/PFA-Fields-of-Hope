@@ -9,6 +9,9 @@ public class FarmManager : MonoBehaviour
     public PlantObjectTUTO selectPlant;
     public bool isPlanting = false;
 
+    public bool isSelecting = false;
+    public int selectedTool = 0;
+
     [HideInInspector]
     public PlantItem plantItem;
 

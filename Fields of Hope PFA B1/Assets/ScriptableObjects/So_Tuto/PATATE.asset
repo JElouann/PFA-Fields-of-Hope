@@ -14,12 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantName: Patate
   plantStages:
-  - {fileID: 1360519171, guid: eaf3d521f543de845bcf879c633fd4e8, type: 3}
-  - {fileID: -1896743561, guid: eaf3d521f543de845bcf879c633fd4e8, type: 3}
-  - {fileID: 1566744614, guid: eaf3d521f543de845bcf879c633fd4e8, type: 3}
-  - {fileID: -256124193, guid: eaf3d521f543de845bcf879c633fd4e8, type: 3}
+  - {fileID: 2019736897, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
+  - {fileID: 1849198961, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
+  - {fileID: 50214948, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
   timeBtwStages: 3
-  buyPrice: 5
-  sellPrice: 7
-  icon: {fileID: -2115334097, guid: eaf3d521f543de845bcf879c633fd4e8, type: 3}
-  dryPlanted: {fileID: 1360519171, guid: eaf3d521f543de845bcf879c633fd4e8, type: 3}
+  icon: {fileID: 1632337318, guid: 0d20e3a8a4c2d4346be9060eea5fe757, type: 3}
