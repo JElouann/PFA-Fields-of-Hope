@@ -12,6 +12,9 @@ public class PlantItem : MonoBehaviour
     public Image icon;
     public Image btnImage;
     public TextMeshProUGUI btnTxt;
+    public TextMeshProUGUI Nb_Graines;
+
+    public int NB_graines;
 
     private FarmManager fm;
 
@@ -21,14 +24,19 @@ public class PlantItem : MonoBehaviour
         InitializeUI();
     }
 
-    public void BuyPlant()
+    public void SelectSeedsWanted()
     {
-        fm.SelectPlant(plant);
+        fm.SelectPlant(plant, NB_graines, this);
     }
 
     void InitializeUI()
     {
         nameTxt.text = plant.plantName;
         icon.sprite = plant.icon;
+    }
+
+    private void Update()
+    {
+        Nb_Graines.text = NB_graines.ToString();
     }
 }

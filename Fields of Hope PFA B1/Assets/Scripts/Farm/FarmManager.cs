@@ -9,17 +9,25 @@ public class FarmManager : MonoBehaviour
     public PlantObjectTUTO selectPlant;
     public bool isPlanting = false;
 
-    public void SelectPlant(PlantObjectTUTO newplant)
+    public bool isSelecting = false;
+    public int selectedTool = 0;
+
+    [HideInInspector]
+    public PlantItem plantItem;
+
+    public void SelectPlant(PlantObjectTUTO newplant, int nb, PlantItem plant)
     {
         if(selectPlant == newplant)
         {
             selectPlant = null;
             isPlanting = false;
+            plantItem = null;
         }
         else
         {
             selectPlant = newplant;
             isPlanting = true;
+            plantItem = plant;
         }
     }
 }

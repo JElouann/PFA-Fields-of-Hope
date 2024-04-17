@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlotManager : MonoBehaviour
 {
     private bool isPlanted = false;
     public SpriteRenderer plant;
-
     private int plantStage = 0;
-    private float timer;
 
     private PlantObjectTUTO PlantObjectTUTO;
     private PlantObjectTUTO test;
@@ -21,12 +20,15 @@ public class PlotManager : MonoBehaviour
 
     private void Update()
     {
+
+    }
+
+    public void GrowthPlant()
+    {
         if (isPlanted && test != null)
         {
-            timer -= Time.deltaTime;
-            if (timer < 0 && plantStage < test.plantStages.Length - 1)
+            if (plantStage < test.plantStages.Length - 1)
             {
-                timer = test.timeBtwStages;
                 plantStage++;
                 UpdatePlant();
             }
@@ -37,14 +39,19 @@ public class PlotManager : MonoBehaviour
     {
         if (isPlanted)
         {
-            if(plantStage == test.plantStages.Length - 1 )
+            if (plantStage == test.plantStages.Length - 1)
             {
                 Harvest();
             }
         }
         else
         {
-            Plant(FarmManager.selectPlant);
+            if (FarmManager.plantItem == null) return;
+
+            else if (FarmManager.plantItem.NB_graines != 0)
+            {
+                Plant(FarmManager.selectPlant);
+            }
         }
     }
 
@@ -62,9 +69,9 @@ public class PlotManager : MonoBehaviour
             FarmManager.selectPlant = null;
             isPlanted = true;
             plantStage = 0;
-            UpdatePlant();
-            timer = test.timeBtwStages;
             plant.gameObject.SetActive(true);
+            FarmManager.plantItem.NB_graines--;
+            UpdatePlant();
         }
     }
 

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0cf883afddcbc4e92c4c47ccd81998, type: 3}
+  m_Name: Salade
+  m_EditorClassIdentifier: 
+  plantName: Salade
+  plantStages:
+  - {fileID: 2056258516, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
+  - {fileID: 2056258516, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
+  - {fileID: 2056258516, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
+  - {fileID: 284979733, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
+  - {fileID: 284979733, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
+  - {fileID: 284979733, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
+  - {fileID: -165383006, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
+  timeBtwStages: 1
+  icon: {fileID: 1281417111, guid: 0d20e3a8a4c2d4346be9060eea5fe757, type: 3}
