@@ -1,22 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Book : MonoBehaviour
 {
     [SerializeField] private float pageSpeed = 0.5f;
-    [SerializeField] List<Transform> pages;
-    int index = -1;
-    bool rotate = false;
-    [SerializeField] GameObject backButton;
-    [SerializeField] GameObject forwardButton;
+    [SerializeField] public List<Transform> pages;
+
+    public int index { get; private set; } = -1;
+    private bool rotate = false;
+    [SerializeField] private GameObject _backButton;
+    [SerializeField] private GameObject _forwardButton;
 
     [SerializeField] private Sprite _leftPageSprite;
     [SerializeField] private Sprite _rightPageSprite;
-
-    [SerializeField] private GameObject _pageLeftPrevab;
-
 
     #region UI
     public void RotateNext()
@@ -32,13 +31,13 @@ public class Book : MonoBehaviour
 
     public void ForwardButtonActions()
     {
-        if (backButton.activeInHierarchy == false)
+        if (_backButton.activeInHierarchy == false)
         {
-            backButton.SetActive(true);
+            _backButton.SetActive(true);
         }
         if (index == pages.Count - 1)
         {
-            forwardButton.SetActive(false);
+            _forwardButton.SetActive(false);
         }
     }
 
@@ -53,16 +52,22 @@ public class Book : MonoBehaviour
 
     public void BackButtonActions()
     {
-        if (forwardButton.activeInHierarchy == false)
+        if (_forwardButton.activeInHierarchy == false)
         {
-            forwardButton.SetActive(true);
+            _forwardButton.SetActive(true);
         }
         if (index - 1 == -1)
         {
-            backButton.SetActive(false);
+            _backButton.SetActive(false);
         }
     }
 
+    /// <summary>
+    /// Coroutine that rotate the page forward or backward over the time.
+    /// </summary>
+    /// <param name="angle"></param>
+    /// <param name="forward"></param>
+    /// <returns></returns>
     IEnumerator Rotate(float angle, bool forward)
     {
         float value = 0f;
@@ -73,6 +78,8 @@ public class Book : MonoBehaviour
             value += Time.deltaTime * pageSpeed;
             pages[index].rotation = Quaternion.Slerp(pages[index].rotation, targetRotation, value);
             float angle1 = Quaternion.Angle(pages[index].rotation, targetRotation);
+
+            // distinction between recto and verso
             if (pages[index].rotation.y >= -0.8f && !forward)
             {
                 pages[index].Find("verso").SetAsFirstSibling();
@@ -96,14 +103,11 @@ public class Book : MonoBehaviour
     #endregion UI
 
     #region System
-    public void CreatePage()
-    {
-        //GameObject newPage = Instantiate()
-    }
+    
     #endregion
 
     private void Start()
     {
-        backButton.SetActive(false);
+        _backButton.SetActive(false);
     }
 }

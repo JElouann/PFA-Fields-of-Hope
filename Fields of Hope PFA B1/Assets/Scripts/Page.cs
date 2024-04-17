@@ -9,4 +9,5 @@ public class Page : MonoBehaviour
     [SerializeField] private List<string> _paragraphes;
 
     private TextMeshProUGUI _currentContent;
+
 }

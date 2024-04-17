@@ -17,6 +17,7 @@ public class SO_Events : ScriptableObject
     public string Name;
     [Multiline, Tooltip("The text or dialogue the event contains.")] public string Text;
     [Min(0), Tooltip("The ID the event will have in game datas.")] public int IDEvent;
+    [Tooltip("The resume of this event the book will display.")] public string Description;
 
     [Header("Next events")]
     [Tooltip("The event the first option leads to (None if end).")] public SO_Events ChildEvent1;
