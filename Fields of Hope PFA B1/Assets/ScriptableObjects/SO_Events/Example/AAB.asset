@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: AAB
   m_EditorClassIdentifier: 
   Name: Feuille2
+  Text: L'homme suspect vous a suivi et vous pourri la vie.
+  IDEvent: 0
+  Description: 
   ChildEvent1: {fileID: 0}
+  Child1Text: 
   ChildEvent2: {fileID: 0}
+  Child2Text: 
   Appearance: {fileID: 11400000, guid: f275f3eae6f34db4b9f17b45dc1a35bc, type: 2}
   DegreDeOufitude: 0
-  ValuesToChange: []
+  ValuesToChange:
+  - ValueToChange: Life
+    Amount: -10

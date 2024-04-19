@@ -2,36 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PageInstancier : MonoBehaviour
 {
-    [SerializeField] private Book _book;
-    [SerializeField] private GameObject _pageLeftPrefab;
-    [SerializeField] private GameObject _pageRightPrefab;
-    [SerializeField] private List<string> _paragraphes;
-    [SerializeField] private List<string> _paragraphes2;
-    [SerializeField] private List<string> _paragraphes3;
+    public SO_Events CurrentEvent;
+    public GameObject EventPrefab;
+    public Button left;
+    public Button right;
 
-    [SerializeField] private Transform _parent;
-
-    public void CreateRightPage(List<string> paragraphes)
+    public void InstantiateEvent()
     {
-        GameObject newPage = Instantiate(_pageRightPrefab, _parent);
-        //TextMeshProUGUI newPageContent = newPage.transform.Find("Droite").transform.Find("content").GetComponent<TextMeshProUGUI>();
-        
-        foreach (string s in paragraphes)
-        {
-            //newPageContent.text += "<br>" + s;
-        }
-        _book.pages.Add(newPage.transform);
+        Instantiate(EventPrefab, transform);   
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        CreateRightPage(_paragraphes);
-        //CreateRightPage(_paragraphes2);
-        //CreateRightPage(_paragraphes3);
-        
+        //InstantiateEvent();
+    }
+
+    private void Awake()
+    {
+        //left.onClick.AddListener(InstantiateEvent);
     }
 }

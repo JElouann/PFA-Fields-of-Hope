@@ -13,8 +13,16 @@ MonoBehaviour:
   m_Name: AAA
   m_EditorClassIdentifier: 
   Name: Feuille1
+  Text: "Vous avez \xE9vit\xE9 l'homme suspect et \xEAtes maintenant en s\xE9curit\xE9
+    chez vous."
+  IDEvent: 0
+  Description: 
   ChildEvent1: {fileID: 0}
+  Child1Text: 
   ChildEvent2: {fileID: 0}
+  Child2Text: 
   Appearance: {fileID: 11400000, guid: f275f3eae6f34db4b9f17b45dc1a35bc, type: 2}
   DegreDeOufitude: 0
-  ValuesToChange: []
+  ValuesToChange:
+  - ValueToChange: Life
+    Amount: 10

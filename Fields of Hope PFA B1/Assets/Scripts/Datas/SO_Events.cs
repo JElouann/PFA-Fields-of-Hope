@@ -21,7 +21,9 @@ public class SO_Events : ScriptableObject
 
     [Header("Next events")]
     [Tooltip("The event the first option leads to (None if end).")] public SO_Events ChildEvent1;
+    [Tooltip("The text the first button will display.")] public string Child1Text;
     [Tooltip("The event the second option leads to (None if end).")] public SO_Events ChildEvent2;
+    [Tooltip("The text the second button will display.")] public string Child2Text;
 
     [Header("Style")]
     [Tooltip("The SO this event will use as graphic asset.")] public SO_EventAppearance Appearance;
