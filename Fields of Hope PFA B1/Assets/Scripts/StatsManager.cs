@@ -2,34 +2,110 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StatsManager : MonoBehaviour
 {
-    // In game stats
+    [field: Header("System stats")] // System stats
     [field: Range(0, 100)]
-    public int Life { get; set; }
-    
-    // System stats
+    [field: SerializeField]
+    public int Life { get; private set; }
+
+    [field: Range(0, 100)]
+    [field: SerializeField]
+    public int Hunger { get; private set; }
+
+    [field: SerializeField]
+    public int Seeds { get; private set; }
+
+    [field: SerializeField]
+    public int Food { get; private set; }
+
     public int DegréDeOufitude { get; set; }
 
-    // UI
+    [field: Header("UI")] // UI
     public TextMeshProUGUI LifeAmount;
+    public TextMeshProUGUI HungerAmount;
+    public TextMeshProUGUI SeedsAmount;
+    public TextMeshProUGUI FoodAmount;
 
+    public Image LifeBar;
+    public Image HungerBar;
 
-    public void ChangeLife(int value)
+    public void ChangeValues(string value, int amount)
     {
-        Debug.Log(int.Parse(LifeAmount.text));
+        switch (value)
+        {
+            case "Life":
+                if (Life + amount > 0) // Min attribute doesnt always work so we do it manually.
+                {
+                    Life += amount;
+                }
+                else
+                {
+                    Life = 0;
+                }
+                break;
 
-        int currentLife = int.Parse(LifeAmount.text);
-        LifeAmount.text = (currentLife + value).ToString();
+            case "Hunger":
+                if (Hunger + amount > 0) // Min attribute
+                {
+                    Hunger += amount;
+                }
+                else
+                {
+                    Hunger = 0;
+                }
+                break;
 
-        //LifeAmount.text = "GNGN";
-        //Debug.Log(LifeAmount.text);
+            case "Seeds":
+                if (Seeds + amount > 0) // Min attribute
+                {
+                    Seeds += amount;
+                }
+                else
+                {
+                    Seeds = 0;
+                }
+                break;
+
+            case "Food":
+                if (Food + amount > 0) // Min attribute
+                {
+                    Food += amount;
+                }
+                else
+                {
+                    Food = 0;
+                }
+                break;
+        }
+        UpdateTexts();
+    }
+
+    public void UpdateTexts()
+    {
+        LifeAmount.text = (Life).ToString();
+        HungerAmount.text = (Hunger).ToString();
+        SeedsAmount.text = (Seeds).ToString();
+        FoodAmount.text = (Food).ToString();
+    }
+
+    public void UpdateBars()
+    {
+        LifeBar.fillAmount = Life / 100f;
+        HungerBar.fillAmount = Hunger / 100f;
+    }
+
+    private void Update()
+    {
+        UpdateTexts();
+        UpdateBars();
     }
 
     private void Start()
     {
-        int gngn = int.Parse("45");
-        //Debug.Log(gngn);
+        UpdateTexts();
+        UpdateBars();
     }
 }

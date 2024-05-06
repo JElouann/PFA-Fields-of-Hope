@@ -23,5 +23,11 @@ MonoBehaviour:
   Appearance: {fileID: 0}
   DegreDeOufitude: 0
   ValuesToChange:
-  - ValueToChange: Life
-    Amount: 1000
+  - Value: Life
+    Amount: -10
+  - Value: Hunger
+    Amount: -20
+  - Value: Seeds
+    Amount: -30
+  - Value: Food
+    Amount: -40
