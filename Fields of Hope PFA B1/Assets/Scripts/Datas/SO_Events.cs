@@ -4,9 +4,9 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 [Serializable]
-public class CustomStruct
+public class ValueToChange
 {
-    public string ValueToChange;
+    public string Value;
     public int Amount;
 }
 
@@ -30,7 +30,7 @@ public class SO_Events : ScriptableObject
 
     [Header("System Stats")]
     [Range(-10, 10), Tooltip("cf explications on OUFITUDE DEGRE tm")] public int DegreDeOufitude;
-    [Tooltip("List that contains pairs [value to change, amount of the changement].")] public List<CustomStruct> ValuesToChange;
+    [Tooltip("List that contains pairs [value to change, amount of the changement].")] public List<ValueToChange> ValuesToChange;
 
     /// <summary>
     /// This method find recursively every path possible and return them as a string

@@ -24,5 +24,11 @@ MonoBehaviour:
   Appearance: {fileID: 11400000, guid: f275f3eae6f34db4b9f17b45dc1a35bc, type: 2}
   DegreDeOufitude: 0
   ValuesToChange:
-  - ValueToChange: Life
+  - Value: Life
     Amount: 10
+  - Value: Hunger
+    Amount: 20
+  - Value: Seeds
+    Amount: 30
+  - Value: Food
+    Amount: 40

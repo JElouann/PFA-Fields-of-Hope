@@ -16,12 +16,15 @@ public class EventScript : MonoBehaviour
 
     [SerializeField] private PageInstancier instancier;
 
-    private List<CustomStruct> valuesToChange;
+    private List<ValueToChange> _valuesToChange;
 
     [SerializeField] private StatsManager StatsManager;
 
     private void Awake()
     {
+        // Find manager
+        StatsManager = GameObject.FindObjectOfType<StatsManager>();
+
         // Find components
         _text = transform.Find("Text").GetComponent<TextMeshProUGUI>();
         LeftButton = transform.Find("LeftButton").GetComponent<Button>();
@@ -31,8 +34,6 @@ public class EventScript : MonoBehaviour
         UpdateEvent();
         LeftButton.onClick.AddListener(Left);
         RightButton.onClick.AddListener(Right);
-
-
     }
 
     public void Left()
@@ -56,14 +57,9 @@ public class EventScript : MonoBehaviour
         _text.text = currentEvent.Text;
         LeftButton.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = currentEvent.Child1Text;
         RightButton.transform.Find("Text").GetComponent<TextMeshProUGUI>().text= currentEvent.Child2Text;
-        foreach (CustomStruct ValueToChange in currentEvent.ValuesToChange)
+        foreach (ValueToChange ValueToChange in currentEvent.ValuesToChange)
         {
-            if(ValueToChange.ValueToChange == "Life")
-            {
-                Debug.Log($"stat manager : {StatsManager}");
-                StatsManager.ChangeLife(ValueToChange.Amount);
-                Debug.Log(ValueToChange.Amount);
-            }
+            StatsManager.ChangeValues(ValueToChange.Value, ValueToChange.Amount);
         }
         if(currentEvent.ChildEvent1 == null)
         {
