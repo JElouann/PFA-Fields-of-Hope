@@ -7,20 +7,50 @@ using UnityEngine.Video;
 
 public class PlayVideo : MonoBehaviour
 {
-    public void OnPlayVideo()
-    {
-        VideoPlayer player = GetComponent<VideoPlayer>();
+    [SerializeField]
+    GameObject Menu;
 
-        if (player)
-        {
-            player.Play();
-            StartCoroutine(Attendre());
-        }
+    [SerializeField]
+    GameObject ImageAnimation;
+
+    [SerializeField]
+    GameObject Crossfade;
+
+    [SerializeField]
+    private VideoPlayer player;
+
+    [SerializeField]
+    private Animator animator;
+
+    private void Start()
+    {
+        player = GetComponent<VideoPlayer>();
     }
 
-    private IEnumerator Attendre()
+    public void OnPlayVideo()
     {
-        yield return new WaitForSecondsRealtime(11f);
+        if (player)
+        {
+            StartCoroutine(Attendre1());
+            StartCoroutine(Attendre2());
+        }
+    }
+    private IEnumerator Attendre1()
+    {
+        animator.SetFloat("LOL", 1);
+        yield return new WaitForSecondsRealtime(1f);
+        Menu.SetActive(false);
+        yield return new WaitForSecondsRealtime(0.25f);
+        player.Play();
+        yield return new WaitForSecondsRealtime(0.25f);
+        ImageAnimation.SetActive(true);
+    }
+
+    private IEnumerator Attendre2()
+    {
+        yield return new WaitForSecondsRealtime(12f);
+        Crossfade.SetActive(true);
+        yield return new WaitForSecondsRealtime(3f);
         SceneManager.LoadScene("ElouannTest");
     }
 }
