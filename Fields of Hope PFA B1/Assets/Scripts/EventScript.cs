@@ -12,7 +12,9 @@ public class EventScript : MonoBehaviour
     private Button RightButton;
 
     private SO_Events previousEvent;
-    [SerializeField] private SO_Events currentEvent;
+    
+    [field: SerializeField]
+    public SO_Events currentEvent { get; set; }
 
     [SerializeField] private PageInstancier instancier;
 
@@ -20,7 +22,7 @@ public class EventScript : MonoBehaviour
 
     [SerializeField] private StatsManager StatsManager;
 
-    private void Awake()
+    /*private void Awake() // Only in prefab version
     {
         // Find manager
         StatsManager = GameObject.FindObjectOfType<StatsManager>();
@@ -34,7 +36,7 @@ public class EventScript : MonoBehaviour
         UpdateEvent();
         LeftButton.onClick.AddListener(Left);
         RightButton.onClick.AddListener(Right);
-    }
+    }*/
 
     public void Left()
     {
@@ -69,5 +71,21 @@ public class EventScript : MonoBehaviour
         {
             RightButton.gameObject.SetActive(false);
         }
+    }
+
+    public void LoadThis()
+    {
+        // Find manager
+        StatsManager = GameObject.FindObjectOfType<StatsManager>();
+
+        // Find components
+        _text = transform.Find("Text").GetComponent<TextMeshProUGUI>();
+        LeftButton = transform.Find("LeftButton").GetComponent<Button>();
+        RightButton = transform.Find("RightButton").GetComponent<Button>();
+
+        // Initialize components
+        UpdateEvent();
+        LeftButton.onClick.AddListener(Left);
+        RightButton.onClick.AddListener(Right);
     }
 }

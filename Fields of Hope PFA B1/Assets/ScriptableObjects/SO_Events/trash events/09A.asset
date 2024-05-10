@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
-  m_Name: A
+  m_Name: 09A
   m_EditorClassIdentifier: 
-  Name: Racine
-  Text: Un homme au bonnet rouge vous aborde.
+  Name: 
+  Text: LE CACS
   IDEvent: 0
   Description: 
-  ChildEvent1: {fileID: 11400000, guid: 5bd09e6e43b8d7b47bb0980f42d06b74, type: 2}
-  Child1Text: Ne pas lui faire confiance.
-  ChildEvent2: {fileID: 11400000, guid: 1d7c9bcfc1d15f84fa5661c65c843567, type: 2}
-  Child2Text: Le frapper.
-  Appearance: {fileID: 11400000, guid: f275f3eae6f34db4b9f17b45dc1a35bc, type: 2}
+  ChildEvent1: {fileID: 11400000, guid: ca41f468f605dfb40972a1e19bfd6b2b, type: 2}
+  Child1Text: A
+  ChildEvent2: {fileID: 11400000, guid: d005814b4b751e945a18316eb893dd61, type: 2}
+  Child2Text: B
+  Appearance: {fileID: 0}
   OufitudePool:
-    Minimum: 1
-    Maximum: 3
+    Minimum: 0
+    Maximum: 9
   ValuesToChange: []

@@ -22,7 +22,9 @@ MonoBehaviour:
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Appearance: {fileID: 11400000, guid: f275f3eae6f34db4b9f17b45dc1a35bc, type: 2}
-  DegreDeOufitude: 0
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
   ValuesToChange:
   - Value: Life
     Amount: 10

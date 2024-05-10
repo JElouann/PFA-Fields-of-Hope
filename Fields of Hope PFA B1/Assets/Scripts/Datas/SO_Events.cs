@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 [Serializable]
@@ -8,6 +7,13 @@ public class ValueToChange
 {
     public string Value;
     public int Amount;
+}
+
+[Serializable]
+public class Interval
+{
+    public int Minimum;
+    public int Maximum;
 }
 
 [CreateAssetMenu(fileName = "Event", menuName = "ScriptableObjects/Event", order = 1)]
@@ -29,7 +35,7 @@ public class SO_Events : ScriptableObject
     [Tooltip("The SO this event will use as graphic asset.")] public SO_EventAppearance Appearance;
 
     [Header("System Stats")]
-    [Range(-10, 10), Tooltip("cf explications on OUFITUDE DEGRE tm")] public int DegreDeOufitude;
+    [Tooltip("The interval of oufitude degre in which the event can occure.")] public Interval OufitudePool;
     [Tooltip("List that contains pairs [value to change, amount of the changement].")] public List<ValueToChange> ValuesToChange;
 
     /// <summary>
