@@ -57,6 +57,19 @@ public class EventScript : MonoBehaviour
     public void UpdateEvent()
     {
         _text.text = currentEvent.Text;
+        /*if (Random.Range(0, 2) == 0)
+        {
+            print(0);
+            LeftButton.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = currentEvent.Child1Text;
+            RightButton.transform.Find("Text").GetComponent<TextMeshProUGUI>().text= currentEvent.Child2Text;
+        }
+        else
+        {
+            print(1);
+            LeftButton.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = currentEvent.Child2Text;
+            RightButton.transform.Find("Text").GetComponent<TextMeshProUGUI>().text= currentEvent.Child1Text;
+        }*/
+
         LeftButton.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = currentEvent.Child1Text;
         RightButton.transform.Find("Text").GetComponent<TextMeshProUGUI>().text= currentEvent.Child2Text;
         foreach (ValueToChange ValueToChange in currentEvent.ValuesToChange)

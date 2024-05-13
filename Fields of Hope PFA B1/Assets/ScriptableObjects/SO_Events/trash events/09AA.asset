@@ -13,11 +13,7 @@ MonoBehaviour:
   m_Name: 09AA
   m_EditorClassIdentifier: 
   Name: 
-  Text: 'LE CACS
-
-    LA SUITE
-
-    A'
+  Text: -50 HP
   IDEvent: 0
   Description: 
   ChildEvent1: {fileID: 0}
@@ -28,4 +24,6 @@ MonoBehaviour:
   OufitudePool:
     Minimum: 0
     Maximum: 9
-  ValuesToChange: []
+  ValuesToChange:
+  - Value: Life
+    Amount: -50

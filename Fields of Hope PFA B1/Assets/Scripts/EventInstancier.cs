@@ -4,37 +4,30 @@ using UnityEngine;
 
 public class EventInstancier : MonoBehaviour
 {
-    // pour proto ou test
-    [SerializeField]
-    private GameObject _nextEvent;
-    private GameObject _currentEvent;
-
     // Composant requis
     private StatsManager _statsManager;
 
     [SerializeField]
     private Transform _where;
 
+    // New version
+    private List<SO_Events> _eventDatasSuitable = new();
+    
     [SerializeField]
-    private List<GameObject> _eventPrefabs;
-
-    [SerializeField]
-    private List<SO_Events> _eventDATAS; //
-
-    private List<GameObject> _eventsSuitable = new();
-
-    private List<SO_Events> _eventsSuitableDATAS = new();
+    private GameObject _eventPrefabBasis;
 
     [SerializeField]
-    private GameObject _eventPrefabEmptyTEST;
+    private List<SO_Events> _eventDatas;
+
+    // Previous version
+    //private List<GameObject> _eventsSuitable = new();
+    //[SerializeField]
+    //private List<GameObject> _eventPrefabs;
 
     private void Start()
     {
-        //CreateSuitableEventList();
-        //InstantiateEvent(_where);
-
-        CreateSuitableEventListDATAVERSION();
-        InstantiateEventDATA(_where);
+        CreateSuitableEventDataList();
+        InstantiateEventFromData(_where);
     }
 
     private void Awake()
@@ -42,8 +35,53 @@ public class EventInstancier : MonoBehaviour
         _statsManager = GameObject.FindAnyObjectByType<StatsManager>();
     }
 
+    // New version, where we create GameObjects from event datas to avoid creating prefabs for each events
+
     // Creates a list with every suitable events for this oufitude degre
-    private void CreateSuitableEventList()
+    private void CreateSuitableEventDataList() 
+    {
+        int degreDeOufitude = _statsManager.OufitudeDegre;
+
+        foreach (SO_Events eventData in _eventDatas)
+        {
+            if (IsDataInOufitudeRange(eventData, degreDeOufitude))
+            {
+                _eventDatasSuitable.Add(eventData);
+            }
+        }
+    }
+
+    // Checks if the event range fits with the Oufitude degre
+    private bool IsDataInOufitudeRange(SO_Events checkedEvent, int degreToCompare)
+    {
+        if (!(checkedEvent.OufitudePool.Minimum > degreToCompare | checkedEvent.OufitudePool.Maximum < degreToCompare))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    // Creates a GameObject event from a prefab basis, assignes to it the chosen event and reload it
+    private void InstantiateEventFromData(Transform where)
+    {
+        int selectedEventIndexDATA = Random.Range(0, _eventDatasSuitable.Count);
+
+        GameObject createdEvent = Instantiate(_eventPrefabBasis, where);
+        EventScript createdEventScript = createdEvent.GetComponent<EventScript>(); // get the EventScript of the new event GameObject
+
+        // update the event contained in the new event GameObject, then load it to display it and update its script
+        createdEventScript.currentEvent = _eventDatasSuitable[selectedEventIndexDATA];
+        createdEventScript.LoadThis();
+    }
+
+
+    // Previous version, based on prefabs of events
+
+    // Creates a list with every suitable events for this oufitude degre
+    /*private void CreateSuitableEventList()
     {
         int degreDeOufitude = _statsManager.OufitudeDegre;
 
@@ -56,19 +94,6 @@ public class EventInstancier : MonoBehaviour
             {
                 //print($"{eventPrefab.name} ({eventData.OufitudePool.Minimum}, {eventData.OufitudePool.Maximum}) is suitable for {degreDeOufitude}");
                 _eventsSuitable.Add(eventPrefab);
-            }
-        }
-    }
-
-    private void CreateSuitableEventListDATAVERSION() //
-    {
-        int degreDeOufitude = _statsManager.OufitudeDegre;
-
-        foreach (SO_Events eventData in _eventDATAS)
-        {
-            if (IsInOufitudeRangeDATAVERSION(eventData, degreDeOufitude))
-            {
-                _eventsSuitableDATAS.Add(eventData);
             }
         }
     }
@@ -87,38 +112,10 @@ public class EventInstancier : MonoBehaviour
         }
     }
 
-    private bool IsInOufitudeRangeDATAVERSION(SO_Events checkedEvent, int degreToCompare) //
-    {
-        if (!(checkedEvent.OufitudePool.Minimum > degreToCompare | checkedEvent.OufitudePool.Maximum < degreToCompare))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
     private void InstantiateEvent(Transform where)
     {
         int selectedEventIndex = Random.Range(0, _eventsSuitable.Count);
         //print(_eventsSuitable[selectedEventIndex]);
         Instantiate(_eventsSuitable[selectedEventIndex], where);
-    }
-
-    private void InstantiateEventDATA(Transform where) //
-    {
-        int selectedEventIndexDATA = Random.Range(0, _eventsSuitableDATAS.Count);
-        /*foreach(SO_Events gngn in _eventsSuitableDATAS)
-        {
-            print(gngn);
-        }*/
-
-        GameObject createdEvent = Instantiate(_eventPrefabEmptyTEST, where);
-        EventScript createdEventScript = createdEvent.GetComponent<EventScript>(); // get the EventScript of the new event GameObject
-
-        // update the event contained in the new event GameObject, then load it to display it and update its script
-        createdEventScript.currentEvent = _eventsSuitableDATAS[selectedEventIndexDATA];
-        createdEventScript.LoadThis();
-    }
+    }*/
 }

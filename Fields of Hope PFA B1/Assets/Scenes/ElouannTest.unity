@@ -1213,7 +1213,7 @@ GameObject:
   - component: {fileID: 263719526}
   - component: {fileID: 263719525}
   m_Layer: 5
-  m_Name: BookMark3
+  m_Name: BookMark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2309,15 +2309,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cdfcbcdeff725945ad06787eb9b7869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextEvent: {fileID: 1429412434451524463, guid: c9712840e97d1d94a9ba1a3ad97c6d1a, type: 3}
   _where: {fileID: 1880438612}
-  _eventPrefabs:
-  - {fileID: 1429412434451524463, guid: c9712840e97d1d94a9ba1a3ad97c6d1a, type: 3}
-  - {fileID: 4607400035265042227, guid: 23f50a1ee6da4864cb9f9f840e1d32da, type: 3}
-  _eventDATAS:
+  _eventPrefabBasis: {fileID: 4607400035265042227, guid: 23f50a1ee6da4864cb9f9f840e1d32da, type: 3}
+  _eventDatas:
   - {fileID: 11400000, guid: 8c2ddfac7a815b14d8b949524a59cdc2, type: 2}
   - {fileID: 11400000, guid: 9663941c8ab8d98478c4f70a54d44bfb, type: 2}
-  _eventPrefabEmptyTEST: {fileID: 4607400035265042227, guid: 23f50a1ee6da4864cb9f9f840e1d32da, type: 3}
 --- !u!1 &517234294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2947,54 +2943,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704598542}
   m_CullTransparentMesh: 1
---- !u!1 &717059337
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 717059339}
-  - component: {fileID: 717059338}
-  m_Layer: 0
-  m_Name: PageInstancier
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &717059338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717059337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbd8050f709e338409e5d76467eb8914, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentEvent: {fileID: 11400000, guid: 8c2ddfac7a815b14d8b949524a59cdc2, type: 2}
-  EventPrefab: {fileID: 0}
-  left: {fileID: 0}
-  right: {fileID: 0}
---- !u!4 &717059339
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717059337}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 810.6792, y: 544.99347, z: 4.79693}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &735582686
 GameObject:
   m_ObjectHideFlags: 0
@@ -3458,6 +3406,7 @@ GameObject:
   - component: {fileID: 810632101}
   - component: {fileID: 810632103}
   - component: {fileID: 810632102}
+  - component: {fileID: 810632104}
   m_Layer: 5
   m_Name: portrait
   m_TagString: Untagged
@@ -3522,6 +3471,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810632100}
   m_CullTransparentMesh: 1
+--- !u!114 &810632104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810632100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de8a33638130574681a763fceeb2d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _portrait: {fileID: 810632102}
+  _stateList:
+  - {fileID: 21300000, guid: 6ac06116125c22747aee446ae9541529, type: 3}
+  - {fileID: 21300000, guid: ae7220b9d1252934782f868eb53f6520, type: 3}
+  - {fileID: 21300000, guid: 899ed60354df31b4a8f1136db2d9522d, type: 3}
+  - {fileID: 21300000, guid: 1cd956b3e04796644a52c04aead28350, type: 3}
 --- !u!1 &828779735
 GameObject:
   m_ObjectHideFlags: 0
@@ -9324,6 +9291,5 @@ SceneRoots:
   - {fileID: 1551927055}
   - {fileID: 1780251088}
   - {fileID: 1747634093}
-  - {fileID: 717059339}
   - {fileID: 735582688}
   - {fileID: 505025376}

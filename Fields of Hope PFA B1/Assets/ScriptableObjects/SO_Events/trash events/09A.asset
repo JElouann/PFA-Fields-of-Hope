@@ -17,9 +17,9 @@ MonoBehaviour:
   IDEvent: 0
   Description: 
   ChildEvent1: {fileID: 11400000, guid: ca41f468f605dfb40972a1e19bfd6b2b, type: 2}
-  Child1Text: A
+  Child1Text: -50 HP
   ChildEvent2: {fileID: 11400000, guid: d005814b4b751e945a18316eb893dd61, type: 2}
-  Child2Text: B
+  Child2Text: +50 HP
   Appearance: {fileID: 0}
   OufitudePool:
     Minimum: 0
