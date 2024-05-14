@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
-  m_Name: Labyrinthe
+  m_Name: Labyrinthe1 1 2
   m_EditorClassIdentifier: 
   Name: Labyrinthe
-  Text: "Je rentre dans un Labyrinthe, je suis perdu.\nDeux chemin s'offre \xE0 moi
-    :"
+  Text: "RANG N\xB03 DROITE"
   IDEvent: 0
-  Description: Racine
-  ChildEvent1: {fileID: 11400000, guid: 7a93467bac2b8b44a8e6cecea79f3734, type: 2}
-  Child1Text: 'Gauche '
-  ChildEvent2: {fileID: 11400000, guid: d85177352eee7f04da46e49c7555e377, type: 2}
+  Description: "Choix Gauche n\xB01"
+  ChildEvent1: {fileID: 11400000, guid: 996a57f93df93804caf1d6028747e0b6, type: 2}
+  Child1Text: Gauche
+  ChildEvent2: {fileID: 11400000, guid: 15dee49aecd941b48b82a19c342bd7b0, type: 2}
   Child2Text: Droite
   Appearance: {fileID: 0}
   OufitudePool:
     Minimum: 0
-    Maximum: 9
+    Maximum: 0
   ValuesToChange: []

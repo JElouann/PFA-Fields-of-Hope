@@ -10,19 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
-  m_Name: Labyrinthe
+  m_Name: Labyrinthe2 1 1 1
   m_EditorClassIdentifier: 
   Name: Labyrinthe
-  Text: "Je rentre dans un Labyrinthe, je suis perdu.\nDeux chemin s'offre \xE0 moi
-    :"
+  Text: "Est ce que je continue ?\n(Si je d\xE9cide de choisir non je rentre chez
+    moi)"
   IDEvent: 0
-  Description: Racine
-  ChildEvent1: {fileID: 11400000, guid: 7a93467bac2b8b44a8e6cecea79f3734, type: 2}
-  Child1Text: 'Gauche '
-  ChildEvent2: {fileID: 11400000, guid: d85177352eee7f04da46e49c7555e377, type: 2}
-  Child2Text: Droite
+  Description: "Choix Droite n\xB01"
+  ChildEvent1: {fileID: 0}
+  Child1Text: Oui
+  ChildEvent2: {fileID: 11400000, guid: a37ee226a87fa1c47aafe61ab8bb29a7, type: 2}
+  Child2Text: Non
   Appearance: {fileID: 0}
   OufitudePool:
     Minimum: 0
-    Maximum: 9
-  ValuesToChange: []
+    Maximum: 0
+  ValuesToChange:
+  - Value: Hunger
+    Amount: -5
