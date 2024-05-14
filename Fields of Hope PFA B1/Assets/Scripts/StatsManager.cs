@@ -21,8 +21,11 @@ public class StatsManager : MonoBehaviour
     [field: SerializeField]
     public int Food { get; private set; }
 
-    // Vegetables inventory
+    [field: SerializeField] // TEMPORARY
+    public int OufitudeDegre { get; set; } // number used to check
 
+    // Vegetables inventory
+    [Header("Vegetables")]
     public int Carotte; // inchallah faudra faire l'inventaire un jour hein
     public int Beterave;
     public int Poireau;
@@ -31,9 +34,6 @@ public class StatsManager : MonoBehaviour
     public int Rutabaga;
     public int Topinambour;
     public int Radis;
-
-    [field: SerializeField] // TEMPORARY
-    public int OufitudeDegre { get; set; } // number used to check
 
     [field: Header("UI")] // UI
     public TextMeshProUGUI LifeAmount;
@@ -90,6 +90,10 @@ public class StatsManager : MonoBehaviour
                 {
                     Food = 0;
                 }
+                break;
+
+            case "Day":
+                // à faire
                 break;
         }
         UpdateTexts();
