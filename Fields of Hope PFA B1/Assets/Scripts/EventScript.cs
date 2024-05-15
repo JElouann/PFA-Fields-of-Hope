@@ -8,6 +8,10 @@ using UnityEngine.UI;
 public class EventScript : MonoBehaviour
 {
     private TextMeshProUGUI _text;
+
+    [SerializeField]
+    private int _fontSize = 40;
+
     private Button LeftButton;
     private Button RightButton;
 
@@ -57,6 +61,7 @@ public class EventScript : MonoBehaviour
     public void UpdateEvent()
     {
         _text.text = currentEvent.Text;
+        
         /*if (Random.Range(0, 2) == 0)
         {
             print(0);
@@ -70,8 +75,11 @@ public class EventScript : MonoBehaviour
             RightButton.transform.Find("Text").GetComponent<TextMeshProUGUI>().text= currentEvent.Child1Text;
         }*/
 
-        LeftButton.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = currentEvent.Child1Text;
-        RightButton.transform.Find("Text").GetComponent<TextMeshProUGUI>().text= currentEvent.Child2Text;
+        TextMeshProUGUI leftText = LeftButton.transform.Find("Text").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI rightText = RightButton.transform.Find("Text").GetComponent<TextMeshProUGUI>();
+
+        leftText.text = currentEvent.Child1Text;
+        rightText.text = currentEvent.Child2Text;
         foreach (ValueToChange ValueToChange in currentEvent.ValuesToChange)
         {
             StatsManager.ChangeValues(ValueToChange.Value, ValueToChange.Amount);

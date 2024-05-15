@@ -18,7 +18,8 @@ public class EventInstancier : MonoBehaviour
     private GameObject _eventPrefabBasis;
 
     [SerializeField]
-    private List<SO_Events> _eventDatas;
+    private List<SO_Events> _eventDatas; // /!\ SEPARER EN DEUX : events explo et events ferme
+
 
     public void InstantiateEvent()
     {
