@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: Labyrinthe1 2 2 4
+  m_EditorClassIdentifier: 
+  Name: Labyrinthe
+  Text: Bon et maintenant ?
+  IDEvent: 0
+  Description: "Choix Gauche n\xB01"
+  ChildEvent1: {fileID: 11400000, guid: f03620a9c8f861348b9f61593e1cfa44, type: 2}
+  Child1Text: Gauche
+  ChildEvent2: {fileID: 11400000, guid: d003f35f49d215e448cb4f0d971a15e5, type: 2}
+  Child2Text: Droite
+  Appearance: {fileID: 0}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
+  ValuesToChange:
+  - Value: Hunger
+    Amount: -5

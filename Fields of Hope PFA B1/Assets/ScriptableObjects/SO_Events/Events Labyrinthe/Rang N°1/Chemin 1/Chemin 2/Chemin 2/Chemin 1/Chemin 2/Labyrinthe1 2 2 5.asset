@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: Labyrinthe1 2 2 5
+  m_EditorClassIdentifier: 
+  Name: Labyrinthe
+  Text: "Oh mince des barbell\xE9s !!"
+  IDEvent: 0
+  Description: "Choix Gauche n\xB01"
+  ChildEvent1: {fileID: 11400000, guid: 18d7b17c305d4f74097894cad66bac53, type: 2}
+  Child1Text: Essayer d'y aller
+  ChildEvent2: {fileID: 11400000, guid: 7038063a6e5906142bf48ad148e50c60, type: 2}
+  Child2Text: Rebrousser le chemins
+  Appearance: {fileID: 0}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
+  ValuesToChange:
+  - Value: Hunger
+    Amount: -5

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: Labyrinthe1 1 1 4
+  m_EditorClassIdentifier: 
+  Name: Labyrinthe
+  Text: "Je me trouve devant une \xE9chelle qui \xE0 l'air d'aller vers un \xE9tage
+    sup\xE9rieur mais je n'arrive pas \xE0 voir le sommet de l'echelle ol fait trop
+    sombre pour voir.\nQue faire prendre l'echelle ou continuer ma route ?"
+  IDEvent: 0
+  Description: "Choix Gauche n\xB01"
+  ChildEvent1: {fileID: 11400000, guid: fe3f4ea5bb700784894fa3bb278952b6, type: 2}
+  Child1Text: "Prendre l'\xE9chelle "
+  ChildEvent2: {fileID: 11400000, guid: f666735ed04871f49bc471da4101f776, type: 2}
+  Child2Text: Continuer ma route
+  Appearance: {fileID: 0}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
+  ValuesToChange:
+  - Value: Hunger
+    Amount: 0

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: Labyrinthe1 1 1 7
+  m_EditorClassIdentifier: 
+  Name: Labyrinthe
+  Text: "Mince une trousse de soins d\xE9j\xE0 utiliser...\nDommage...\nIl se fait
+    tard je vais rentrer c'est mieux"
+  IDEvent: 0
+  Description: "Choix Gauche n\xB01"
+  ChildEvent1: {fileID: 11400000, guid: 4ae90d7e910377a46812f0a78c49ea81, type: 2}
+  Child1Text: Oui
+  ChildEvent2: {fileID: 0}
+  Child2Text: Non
+  Appearance: {fileID: 0}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
+  ValuesToChange:
+  - Value: Hunger
+    Amount: 0
