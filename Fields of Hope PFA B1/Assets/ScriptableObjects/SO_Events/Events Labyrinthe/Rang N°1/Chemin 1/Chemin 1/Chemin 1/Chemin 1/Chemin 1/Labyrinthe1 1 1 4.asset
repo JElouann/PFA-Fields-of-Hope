@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Labyrinthe1 1 1 4
   m_EditorClassIdentifier: 
   Name: Labyrinthe
-  Text: Oh de la nourriture, toujours sa de pris
+  Text: "Oh de la nourriture, toujours \xE7a de pris.\nBon mieux vaut rentrer pour
+    tous d\xE9poser."
   IDEvent: 0
   Description: "Choix Gauche n\xB01"
   ChildEvent1: {fileID: 11400000, guid: 4ae90d7e910377a46812f0a78c49ea81, type: 2}

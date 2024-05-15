@@ -17,7 +17,7 @@ MonoBehaviour:
     moi)"
   IDEvent: 0
   Description: "Choix Gauche n\xB01"
-  ChildEvent1: {fileID: 11400000, guid: 8f5d808ca1551a542b2e4af6534dd764, type: 2}
+  ChildEvent1: {fileID: 11400000, guid: ad6dd24f902cc854b999a7d80eba0dda, type: 2}
   Child1Text: Oui
   ChildEvent2: {fileID: 11400000, guid: a37ee226a87fa1c47aafe61ab8bb29a7, type: 2}
   Child2Text: Non

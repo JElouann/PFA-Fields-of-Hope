@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
-  m_Name: Labyrinthe1 2 2 1
+  m_Name: Labyrinthe1 1 2 4
   m_EditorClassIdentifier: 
   Name: Labyrinthe
-  Text: "Est ce que je continue ?\n(Si je d\xE9cide de choisir non je rentre chez
-    moi)"
+  Text: "Bon on sais jamais mais peut \xEAtre qu'il y a quelque chose d'int\xE9rresant.\nOh
+    !! Un kit ! \nEuh j'entends un bruit bizarre ...\nAAAH une boule qui vient vers
+    moi !!!"
   IDEvent: 0
   Description: "Choix Gauche n\xB01"
-  ChildEvent1: {fileID: 11400000, guid: 79c8dbae1fcf7ca47b4bba2bc7f34b14, type: 2}
+  ChildEvent1: {fileID: 0}
   Child1Text: Oui
-  ChildEvent2: {fileID: 11400000, guid: a37ee226a87fa1c47aafe61ab8bb29a7, type: 2}
+  ChildEvent2: {fileID: 0}
   Child2Text: Non
   Appearance: {fileID: 0}
   OufitudePool:
@@ -27,4 +28,4 @@ MonoBehaviour:
     Maximum: 0
   ValuesToChange:
   - Value: Hunger
-    Amount: -5
+    Amount: -15
