@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Labyrinthe1 2 2 4
   m_EditorClassIdentifier: 
   Name: Labyrinthe
-  Text: Bon et maintenant ?
+  Text: "Encore un choix \xE0 faire."
   IDEvent: 0
   Description: "Choix Gauche n\xB01"
   ChildEvent1: {fileID: 11400000, guid: f03620a9c8f861348b9f61593e1cfa44, type: 2}
@@ -24,6 +24,4 @@ MonoBehaviour:
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange:
-  - Value: Hunger
-    Amount: -5
+  ValuesToChange: []

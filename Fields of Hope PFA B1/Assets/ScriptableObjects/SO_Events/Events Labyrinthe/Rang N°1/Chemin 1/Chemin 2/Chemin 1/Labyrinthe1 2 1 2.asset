@@ -17,7 +17,7 @@ MonoBehaviour:
     moi)"
   IDEvent: 0
   Description: "Choix Gauche n\xB01"
-  ChildEvent1: {fileID: 11400000, guid: 70aef19e3486e924faf9fc9eb9503d45, type: 2}
+  ChildEvent1: {fileID: 11400000, guid: 537ff2096c383944ca30825bc5c251a9, type: 2}
   Child1Text: Oui
   ChildEvent2: {fileID: 11400000, guid: a37ee226a87fa1c47aafe61ab8bb29a7, type: 2}
   Child2Text: Non
@@ -25,6 +25,4 @@ MonoBehaviour:
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange:
-  - Value: Hunger
-    Amount: -5
+  ValuesToChange: []

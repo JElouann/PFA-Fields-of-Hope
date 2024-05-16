@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
-  m_Name: Labyrinthe1 2 1 1
+  m_Name: Labyrinthe 1
   m_EditorClassIdentifier: 
   Name: Labyrinthe
-  Text: "Est ce que je continue ?\n(Si je d\xE9cide de choisir non je rentre chez
-    moi)"
+  Text: Quel chemin choisir ?
   IDEvent: 0
-  Description: "Choix Gauche n\xB01"
-  ChildEvent1: {fileID: 11400000, guid: 9ee670c8b04daae4fa8e2158725cd576, type: 2}
-  Child1Text: Oui
-  ChildEvent2: {fileID: 11400000, guid: a37ee226a87fa1c47aafe61ab8bb29a7, type: 2}
-  Child2Text: Non
+  Description: 
+  ChildEvent1: {fileID: 11400000, guid: 031de3d0cb2b7364488b23f2ef14b0dc, type: 2}
+  Child1Text: Gauche
+  ChildEvent2: {fileID: 11400000, guid: 8d33b1a7c9d63ed4a84f9fc8df63c1f6, type: 2}
+  Child2Text: Droite
   Appearance: {fileID: 0}
   OufitudePool:
     Minimum: 0

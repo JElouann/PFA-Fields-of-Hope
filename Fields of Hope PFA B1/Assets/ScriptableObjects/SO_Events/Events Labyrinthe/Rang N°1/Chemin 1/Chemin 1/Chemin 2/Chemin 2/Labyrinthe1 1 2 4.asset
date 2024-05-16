@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Labyrinthe
   Text: "Bon on sais jamais mais peut \xEAtre qu'il y a quelque chose d'int\xE9rresant.\nOh
-    !! Un kit ! \nEuh j'entends un bruit bizarre ...\nAAAH une boule qui vient vers
-    moi !!!"
+    !! Un kit ! \nEuh j'entends un bruit bizarre ...\nUne trappe c'est ouverte avec
+    du fil barbel\xE9. J'ai r\xE9ussi \xE0 m'en extraire assez facilement."
   IDEvent: 0
   Description: "Choix Gauche n\xB01"
   ChildEvent1: {fileID: 0}
@@ -29,3 +29,5 @@ MonoBehaviour:
   ValuesToChange:
   - Value: Hunger
     Amount: -15
+  - Value: Life
+    Amount: -5

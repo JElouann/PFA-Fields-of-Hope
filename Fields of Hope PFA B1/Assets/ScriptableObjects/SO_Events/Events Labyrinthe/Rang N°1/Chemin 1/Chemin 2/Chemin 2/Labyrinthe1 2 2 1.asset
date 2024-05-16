@@ -25,6 +25,4 @@ MonoBehaviour:
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange:
-  - Value: Hunger
-    Amount: -5
+  ValuesToChange: []
