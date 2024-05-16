@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: 09A
   m_EditorClassIdentifier: 
   Name: 
-  Text: LE CACS
+  Text: "Ma\xEEtre Corbeau tenait en son bec un fromage. Ma\xEEtre Renard, par l'odeur
+    all\xE9ch\xE9e, lui tint a peu pr\xE8s ce langage : \"Zebi corbac raboule le
+    claquos\"\""
   IDEvent: 0
   Description: 
   ChildEvent1: {fileID: 11400000, guid: ca41f468f605dfb40972a1e19bfd6b2b, type: 2}
@@ -24,4 +26,14 @@ MonoBehaviour:
   OufitudePool:
     Minimum: 0
     Maximum: 9
-  ValuesToChange: []
+  Type: 0
+  ValuesToChange:
+  - Value: 
+    Amount: 0
+  Trade:
+    Price:
+      Value: 
+      Amount: 0
+    Gain:
+      Value: 
+      Amount: 0

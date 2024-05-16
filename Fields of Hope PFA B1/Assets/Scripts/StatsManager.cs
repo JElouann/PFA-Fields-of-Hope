@@ -125,22 +125,36 @@ public class StatsManager : MonoBehaviour
     /// Returns the amount of damage that will be taken from the hunger, scaling with starving stages.
     /// </summary>
     /// <returns></returns>
-    public int GetHungerDamage()
+    public int GetHungerConsequence()
     {
-        int starvingDamage = 0;
+        int healthChange = 0;
         switch (Hunger)
         {
+            case 100:
+                healthChange = 20;
+                break;
+
+            case < 100 and >= 90:
+                healthChange = 10;
+                break;
+
+            case < 90 and >= 80:
+                healthChange = 5;
+                break;
+
             case <= 20 and > 10:
-                starvingDamage = 5;
+                healthChange = -5;
                 break;
+
             case <= 10 and > 0:
-                starvingDamage = 10;
+                healthChange = -10;
                 break;
+
             case 0:
-                starvingDamage = 20;
+                healthChange = -20;
                 break;
         }
-        return starvingDamage;
+        return healthChange;
     }
 
     private void Update()
