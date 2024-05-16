@@ -21,8 +21,11 @@ public class StatsManager : MonoBehaviour
     [field: SerializeField]
     public int Food { get; private set; }
 
-    // Vegetables inventory
+    [field: SerializeField] // TEMPORARY
+    public int OufitudeDegre { get; set; } // number used to check
 
+    // Vegetables inventory
+    [Header("Vegetables")]
     public int Carotte; // inchallah faudra faire l'inventaire un jour hein
     public int Beterave;
     public int Poireau;
@@ -31,9 +34,6 @@ public class StatsManager : MonoBehaviour
     public int Rutabaga;
     public int Topinambour;
     public int Radis;
-
-    [field: SerializeField] // TEMPORARY
-    public int OufitudeDegre { get; set; } // number used to check
 
     [field: Header("UI")] // UI
     public TextMeshProUGUI LifeAmount;
@@ -49,9 +49,13 @@ public class StatsManager : MonoBehaviour
         switch (value)
         {
             case "Life":
-                if (Life + amount > 0) // Min attribute doesnt always work so we do it manually.
+                if (Life + amount > 0 && Life + amount <= 100) // Range attribute doesnt always work so we do it manually.
                 {
                     Life += amount;
+                }
+                else if (amount > 0)
+                {
+                    Life = 100;
                 }
                 else
                 {
@@ -60,9 +64,13 @@ public class StatsManager : MonoBehaviour
                 break;
 
             case "Hunger":
-                if (Hunger + amount > 0) // Min attribute
+                if (Hunger + amount > 0 && Hunger + amount <= 100) // Range attribute
                 {
                     Hunger += amount;
+                }
+                else if (amount > 0)
+                {
+                    Hunger = 100;
                 }
                 else
                 {
@@ -71,7 +79,7 @@ public class StatsManager : MonoBehaviour
                 break;
 
             case "Seeds":
-                if (Seeds + amount > 0) // Min attribute
+                if (Seeds + amount > 0) // Range attribute
                 {
                     Seeds += amount;
                 }
@@ -82,7 +90,7 @@ public class StatsManager : MonoBehaviour
                 break;
 
             case "Food":
-                if (Food + amount > 0) // Min attribute
+                if (Food + amount > 0) // Range attribute
                 {
                     Food += amount;
                 }
@@ -90,6 +98,10 @@ public class StatsManager : MonoBehaviour
                 {
                     Food = 0;
                 }
+                break;
+
+            case "Day":
+                // à faire
                 break;
         }
         UpdateTexts();
@@ -107,6 +119,28 @@ public class StatsManager : MonoBehaviour
     {
         LifeBar.fillAmount = Life / 100f;
         HungerBar.fillAmount = Hunger / 100f;
+    }
+
+    /// <summary>
+    /// Returns the amount of damage that will be taken from the hunger, scaling with starving stages.
+    /// </summary>
+    /// <returns></returns>
+    public int GetHungerDamage()
+    {
+        int starvingDamage = 0;
+        switch (Hunger)
+        {
+            case <= 20 and > 10:
+                starvingDamage = 5;
+                break;
+            case <= 10 and > 0:
+                starvingDamage = 10;
+                break;
+            case 0:
+                starvingDamage = 20;
+                break;
+        }
+        return starvingDamage;
     }
 
     private void Update()
