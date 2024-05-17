@@ -105,6 +105,14 @@ public class EventScript : MonoBehaviour
                 return value == condition.Amount;
             case Operator.Less:
                 return value < condition.Amount;
+            case Operator.LessOrEqual: 
+                return value <= condition.Amount;
+            case Operator.More: 
+                return value > condition.Amount;
+            case Operator.MoreOrEqual: 
+                return value >= condition.Amount;
+            case Operator.Different: 
+                return value != condition.Amount;
             default: 
                 return false;
         }

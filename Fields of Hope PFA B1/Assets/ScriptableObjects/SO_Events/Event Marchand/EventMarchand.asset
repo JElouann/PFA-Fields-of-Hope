@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
-  m_Name: Event
+  m_Name: EventMarchand
   m_EditorClassIdentifier: 
-  Name: TEST
+  Name: Event Marchand
   Text: "Au loin, \xE0 travers la neige, une silhouette s'approche de la ferme, son
     visage dissimul\xE9 derri\xE8re un masque \xE0 gaz et un long manteau. \xC0 premi\xE8re
     vue, son apparence sinistre suscite la m\xE9fiance, mais apr\xE8s avoir engag\xE9
@@ -20,12 +20,15 @@ MonoBehaviour:
     d'\xE9changer [VALEUR(30)] graines contre de la nourriture afin de s'installer
     dans la r\xE9gion. Peut-\xEAtre devrions-nous envisager de faire affaire avec
     lui ?"
-  IDEvent: 0
-  Description: 
-  ChildEvent1: {fileID: 11400000}
-  Child1Text: lol
-  ChildEvent2: {fileID: 11400000}
-  Child2Text: pml
+  ChildEvent1: {fileID: 11400000, guid: 89b56262e772d5b498ebc870dcfed1f3, type: 2}
+  Child1Text: Oui
+  Child1Conditions:
+  - Variable: 3
+    Operator: 3
+    Amount: 20
+  ChildEvent2: {fileID: 11400000, guid: 0cfb0b12bf30c394b866e95646b1d2c8, type: 2}
+  Child2Text: 'Non '
+  Child2Conditions: []
   Appearance: {fileID: 0}
   OufitudePool:
     Minimum: 0

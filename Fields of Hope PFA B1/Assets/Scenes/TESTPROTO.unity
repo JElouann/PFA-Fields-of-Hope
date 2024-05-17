@@ -2312,7 +2312,7 @@ MonoBehaviour:
   _where: {fileID: 1880438612}
   _eventPrefabBasis: {fileID: 4607400035265042227, guid: 23f50a1ee6da4864cb9f9f840e1d32da, type: 3}
   _eventDatas:
-  - {fileID: 11400000, guid: cf779bab122d05d4c9c076666ae8ac02, type: 2}
+  - {fileID: 11400000, guid: b41515d2995e3d943815b923e9f379a2, type: 2}
 --- !u!1 &517234294
 GameObject:
   m_ObjectHideFlags: 0
