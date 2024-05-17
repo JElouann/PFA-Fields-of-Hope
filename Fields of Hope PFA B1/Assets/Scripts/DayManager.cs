@@ -32,9 +32,8 @@ public class DayManager : MonoBehaviour
 
     private void OnEndDay()
     {
+        _statsManager.ChangeValues("Life", _statsManager.GetHungerConsequence());
         _statsManager.ChangeValues("Hunger", -FoodLoss * FoodLossMultiplier);
-        print($"Lost 5 *hunger* for the {_dayCounter} time");
-        _statsManager.ChangeValues("Life", -_statsManager.GetHungerDamage());
     }
 
     private void UpdateCounter()

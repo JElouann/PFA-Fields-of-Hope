@@ -317,7 +317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ce4c52ee99ac343ac3c1e8ada4dde6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fontSize: 75
   <currentEvent>k__BackingField: {fileID: 0}
   instancier: {fileID: 0}
   StatsManager: {fileID: 0}
