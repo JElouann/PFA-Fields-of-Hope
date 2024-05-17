@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Labyrinthe1 2 2 6
   m_EditorClassIdentifier: 
   Name: Labyrinthe
-  Text: Bon et maintenant ?
+  Text: 'Incroyable , des garines et de la nourriture!
+
+    Il faut que je rentre
+    au plus vite pour tout ranger.'
   IDEvent: 0
   Description: "Choix Gauche n\xB01"
   ChildEvent1: {fileID: 11400000, guid: 42115a0ec7adf3841bc078d4ff2415e0, type: 2}
@@ -25,5 +28,7 @@ MonoBehaviour:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: Hunger
-    Amount: -5
+  - Value: Food
+    Amount: 5
+  - Value: Seeds
+    Amount: 15

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
-  m_Name: Labyrinthe1 2 1 1
+  m_Name: Labyrinthe 1
   m_EditorClassIdentifier: 
   Name: Labyrinthe
-  Text: "Est ce que je continue ?\n(Si je d\xE9cide de choisir non je rentre chez
-    moi)"
+  Text: "Une Horde de rat me bloque le passage.\nEst ce que j'essaie de passer quand
+    m\xEAme ou je fais demi-tour ?"
   IDEvent: 0
-  Description: "Choix Gauche n\xB01"
-  ChildEvent1: {fileID: 11400000, guid: 9ee670c8b04daae4fa8e2158725cd576, type: 2}
-  Child1Text: Oui
-  ChildEvent2: {fileID: 11400000, guid: a37ee226a87fa1c47aafe61ab8bb29a7, type: 2}
-  Child2Text: Non
+  Description: 
+  ChildEvent1: {fileID: 11400000, guid: 0127a0d1ab8b5af49af1cdec1b747daa, type: 2}
+  Child1Text: Essayer de passer
+  ChildEvent2: {fileID: 11400000, guid: 8cd24081fb8f69a4e86153f62594efa3, type: 2}
+  Child2Text: Faire demi-tour
   Appearance: {fileID: 0}
   OufitudePool:
     Minimum: 0

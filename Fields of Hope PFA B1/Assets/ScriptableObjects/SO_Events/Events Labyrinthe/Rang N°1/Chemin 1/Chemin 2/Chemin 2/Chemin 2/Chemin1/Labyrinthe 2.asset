@@ -10,20 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
-  m_Name: Labyrinthe1 1 1 4
+  m_Name: Labyrinthe 2
   m_EditorClassIdentifier: 
   Name: Labyrinthe
-  Text: LOLOLOO
+  Text: "Allez je prends mon courage et je fonce.\nBeurk d\xE9goutant ! Je me retrouve
+    bloque au milieu! Il essaie de me manger maintenant ?!\nfaut que je m'extirpe
+    de l\xE0 ! Voila que maintenant il me poursuive ! Bon autant rentrer, peut-\xEAtre
+    que je reviendrais par ici plus tard."
   IDEvent: 0
-  Description: "Choix Gauche n\xB01"
+  Description: 
   ChildEvent1: {fileID: 0}
-  Child1Text: Gauche
+  Child1Text: Essayer de passer
   ChildEvent2: {fileID: 0}
-  Child2Text: Droite
+  Child2Text: Faire demi-tour
   Appearance: {fileID: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: Hunger
-    Amount: 0
+    Amount: -15

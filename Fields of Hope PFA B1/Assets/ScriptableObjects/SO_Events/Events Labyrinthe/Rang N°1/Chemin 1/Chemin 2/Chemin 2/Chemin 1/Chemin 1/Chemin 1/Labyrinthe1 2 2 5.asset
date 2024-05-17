@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Labyrinthe1 2 2 5
   m_EditorClassIdentifier: 
   Name: Labyrinthe
-  Text: Bon et maintenant ?
+  Text: "Un chemin bloquer par des mine de Claymore!\nSi je passe dans un certain
+    rayon de cette mine elle lachera eds projectiles qui peut me faire tr\xE8s mal.
+    \nEst-ce que j'essaie de passer ou je fait demi-tour ?"
   IDEvent: 0
   Description: "Choix Gauche n\xB01"
-  ChildEvent1: {fileID: 11400000, guid: 42115a0ec7adf3841bc078d4ff2415e0, type: 2}
-  Child1Text: Gauche
-  ChildEvent2: {fileID: 0}
-  Child2Text: Droite
+  ChildEvent1: {fileID: 11400000, guid: 1ac7fd8fbf792e041920439300f5b052, type: 2}
+  Child1Text: Essayer de passer
+  ChildEvent2: {fileID: 11400000, guid: 29d100894d918434086969a4d45a3312, type: 2}
+  Child2Text: Faire demi-tour
   Appearance: {fileID: 0}
   OufitudePool:
     Minimum: 0
