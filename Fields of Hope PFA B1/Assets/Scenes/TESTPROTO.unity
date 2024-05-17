@@ -2485,7 +2485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.8985891, b: 0.80532223, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2730,7 +2730,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &644351160 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7109388573495308765, guid: 79a81f94df7afc74bb510256654fb282, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6308499831614283224, guid: 79a81f94df7afc74bb510256654fb282, type: 3}
   m_PrefabInstance: {fileID: 3149236367173473662}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &688056846
@@ -3019,10 +3019,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100dd9bc0661639428f7854212ef9183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Life>k__BackingField: 50
+  <Life>k__BackingField: 100
   <Hunger>k__BackingField: 50
   <Seeds>k__BackingField: 25
   <Food>k__BackingField: 5
+  <OufitudeDegre>k__BackingField: 3
   Carotte: 0
   Beterave: 0
   Poireau: 0
@@ -3031,7 +3032,6 @@ MonoBehaviour:
   Rutabaga: 0
   Topinambour: 0
   Radis: 0
-  <OufitudeDegre>k__BackingField: 3
   LifeAmount: {fileID: 763282492}
   HungerAmount: {fileID: 1144182950}
   SeedsAmount: {fileID: 2002597779}
@@ -4026,6 +4026,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911236633}
+  m_CullTransparentMesh: 1
+--- !u!1 &931519812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 931519813}
+  - component: {fileID: 931519815}
+  - component: {fileID: 931519814}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &931519813
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931519812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1551927055}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &931519814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931519812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.2509804}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &931519815
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931519812}
   m_CullTransparentMesh: 1
 --- !u!224 &937606996 stripped
 RectTransform:
@@ -5613,7 +5688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.91764706}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6231,10 +6306,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pageSpeed: 0.85
   pages: []
-  _backButton: {fileID: 442083154}
-  _forwardButton: {fileID: 1977791286}
-  _leftPageSprite: {fileID: 21300000, guid: 88a83e3cab09830409067c6f3aaa4f4b, type: 3}
-  _rightPageSprite: {fileID: 21300000, guid: e430fb58e0e6fba45a906fa4547fc385, type: 3}
+  backButton: {fileID: 0}
+  forwardButton: {fileID: 0}
 --- !u!1 &1545203954
 GameObject:
   m_ObjectHideFlags: 0
@@ -6408,6 +6481,7 @@ RectTransform:
   - {fileID: 580397045}
   - {fileID: 1880438612}
   - {fileID: 219657093}
+  - {fileID: 931519813}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8974,7 +9048,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 79a81f94df7afc74bb510256654fb282, type: 3}
 --- !u!224 &1437779668071295927 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7109388573495308765, guid: 79a81f94df7afc74bb510256654fb282, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6022206249831105356, guid: 79a81f94df7afc74bb510256654fb282, type: 3}
   m_PrefabInstance: {fileID: 197146697850099709}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3149236367173473662

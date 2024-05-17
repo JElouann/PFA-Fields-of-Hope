@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
-  m_Name: Labyrinthe1 1 1 4
+  m_Name: Labyrinthe1 1 1 6
   m_EditorClassIdentifier: 
   Name: Labyrinthe
-  Text: "Un corps avec un sac. Cette personne est morte il y a d\xE9ja un petit moment.\nEst
-    ce que je fouille le sac ou je continue mon chemin ??"
+  Text: "Mieux vaut \xE9viter, il y a peut-\xEAtre rien.\nBon encore un chemin \xE0
+    choisir."
   IDEvent: 0
   Description: "Choix Gauche n\xB01"
-  ChildEvent1: {fileID: 11400000, guid: b60c9b36998d3d34b8b5149276c66200, type: 2}
-  Child1Text: Fouiiler le sac
-  ChildEvent2: {fileID: 11400000, guid: 8e33ef36f58e80042ab49a0892b12c2a, type: 2}
-  Child2Text: 'Continuer son chemin '
+  ChildEvent1: {fileID: 11400000, guid: 09356ad9315ac3340bb064a6704480f0, type: 2}
+  Child1Text: Gauche
+  ChildEvent2: {fileID: 11400000, guid: 1ad45a632c432a64fb56d5c21393c9be, type: 2}
+  Child2Text: Droite
   Appearance: {fileID: 0}
   OufitudePool:
     Minimum: 0

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: 
+  Name: TEST
+  Text: "Au loin, \xE0 travers la neige, une silhouette s'approche de la ferme, son
+    visage dissimul\xE9 derri\xE8re un masque \xE0 gaz et un long manteau. \xC0 premi\xE8re
+    vue, son apparence sinistre suscite la m\xE9fiance, mais apr\xE8s avoir engag\xE9
+    la conversation, il se r\xE9v\xE8le \xEAtre une personne sympathique, d\xE9sireuse
+    d'\xE9changer [VALEUR(30)] graines contre de la nourriture afin de s'installer
+    dans la r\xE9gion. Peut-\xEAtre devrions-nous envisager de faire affaire avec
+    lui ?"
+  IDEvent: 0
+  Description: 
+  ChildEvent1: {fileID: 11400000}
+  Child1Text: lol
+  ChildEvent2: {fileID: 11400000}
+  Child2Text: pml
+  Appearance: {fileID: 0}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 9
+  ValuesToChange: []

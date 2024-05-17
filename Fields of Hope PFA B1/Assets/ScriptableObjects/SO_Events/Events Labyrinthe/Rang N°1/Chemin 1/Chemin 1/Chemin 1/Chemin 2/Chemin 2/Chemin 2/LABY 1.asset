@@ -10,21 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
-  m_Name: Labyrinthe1 1 1 8
+  m_Name: LABY 1
   m_EditorClassIdentifier: 
-  Name: Labyrinthe
-  Text: "Arhh un tas de cadavre... Ca me donne envie de vomir... Vite partir avant
-    que \xE7a me d\xE9goute plus..."
+  Name: 
+  Text: 
   IDEvent: 0
-  Description: "Choix Gauche n\xB01"
-  ChildEvent1: {fileID: 11400000, guid: 84d406929c98aed4faec3787880a4593, type: 2}
-  Child1Text: Gauche
+  Description: 
+  ChildEvent1: {fileID: 0}
+  Child1Text: 
   ChildEvent2: {fileID: 0}
-  Child2Text: Droite
+  Child2Text: 
   Appearance: {fileID: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange:
-  - Value: Hunger
-    Amount: -10
+  ValuesToChange: []
