@@ -18,31 +18,15 @@ public class EventScript : MonoBehaviour
     [field: SerializeField]
     public SO_Events currentEvent { get; set; }
 
-    [SerializeField] private PageInstancier instancier;
-
     private List<ValueToChange> _valuesToChange;
 
     [SerializeField] private StatsManager StatsManager;
 
-    /*private void Awake() // Only in prefab version
+    private DialogueBox dialogueBox;
+
+    public void Left() // left button
     {
-        // Find manager
-        StatsManager = GameObject.FindObjectOfType<StatsManager>();
-
-        // Find components
-        _text = transform.Find("Text").GetComponent<TextMeshProUGUI>();
-        LeftButton = transform.Find("LeftButton").GetComponent<Button>();
-        RightButton = transform.Find("RightButton").GetComponent <Button>();
-
-        // Initialize components
-        UpdateEvent();
-        LeftButton.onClick.AddListener(Left);
-        RightButton.onClick.AddListener(Right);
-    }*/
-
-    public void Left()
-    {
-        if (!CheckConditions(currentEvent.Child1Conditions)) return;
+        if (!CheckConditions(currentEvent.Child1Conditions)) return; // unable the use of this choice button if conditions unfullfilled (add game feel)
 
         print("left");
         previousEvent = currentEvent;
@@ -50,9 +34,9 @@ public class EventScript : MonoBehaviour
         UpdateEvent();
     }
 
-    public void Right() 
+    public void Right() // right button
     {
-        if (!CheckConditions(currentEvent.Child2Conditions)) return;
+        if (!CheckConditions(currentEvent.Child2Conditions)) return; // unable the use of this choice button if conditions unfullfilled (add game feel)
 
         print("right");
         previousEvent = currentEvent;
@@ -60,6 +44,7 @@ public class EventScript : MonoBehaviour
         UpdateEvent();
     }
 
+    #region Conditions methods
     private bool CheckConditions(List<Condition> conditions) //
     {
         foreach (Condition condition in conditions)
@@ -77,26 +62,17 @@ public class EventScript : MonoBehaviour
         {
             case GameVariables.Health:
                 value = StatsManager.Life;
-                return TEEEEST(condition, value);
+                return CompareWithOperator(condition, value);
                 //break;
             case GameVariables.Seeds:
                 value = StatsManager.Seeds;
-                return TEEEEST(condition, value);
+                return CompareWithOperator(condition, value);
                 //break;
             default: return false;
         }
-
-        /*// Comparer avec l'opérateur
-        switch (condition.Operator)
-        {
-            case Operator.Equal:
-                return value == condition.Amount;
-            case Operator.Less:
-                return value < condition.Amount;
-        }*/
     }
 
-    public bool TEEEEST(Condition condition, int value) //
+    public bool CompareWithOperator(Condition condition, int value) //
     {
         // Comparer avec l'opérateur
         switch (condition.Operator)
@@ -109,11 +85,11 @@ public class EventScript : MonoBehaviour
                 return false;
         }
     }
-
+    #endregion
 
     public void UpdateEvent()
     {
-        _text.text = currentEvent.Text;
+        //_text.text = currentEvent.Text;
         
         /*if (Random.Range(0, 2) == 0)
         {
@@ -130,7 +106,9 @@ public class EventScript : MonoBehaviour
 
         TextMeshProUGUI leftText = LeftButton.transform.Find("Text").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI rightText = RightButton.transform.Find("Text").GetComponent<TextMeshProUGUI>();
-        
+        DialogueBox dialogueBox = transform.Find("TextBox").GetComponent<DialogueBox>(); //
+        dialogueBox._text = transform.Find("TextBox").transform.Find("Text").GetComponent<TextMeshProUGUI>(); //
+        dialogueBox.StartDialogue(currentEvent.Text); //
         leftText.text = currentEvent.Child1Text;
         rightText.text = currentEvent.Child2Text;
         
@@ -139,14 +117,14 @@ public class EventScript : MonoBehaviour
             StatsManager.ChangeValues(ValueToChange.Value, ValueToChange.Amount);
         }
 
-        if(currentEvent.ChildEvent1 == null)
-        {
+        /*if(currentEvent.ChildEvent1 == null)
+        {*/
             LeftButton.gameObject.SetActive(false);
-        }
+        /*}
         if(currentEvent.ChildEvent2 == null)
-        {
+        {*/
             RightButton.gameObject.SetActive(false);
-        }
+        //}
     }
 
     public void LoadThis()
@@ -154,8 +132,10 @@ public class EventScript : MonoBehaviour
         // Find manager
         StatsManager = GameObject.FindObjectOfType<StatsManager>();
 
+
         // Find components
-        _text = transform.Find("Text").GetComponent<TextMeshProUGUI>();
+        dialogueBox._text = transform.Find("TextBox").transform.Find("Text").GetComponent<TextMeshProUGUI>(); //
+        //dialogueBox.StartDialogue(currentEvent.Text); //
         LeftButton = transform.Find("LeftButton").GetComponent<Button>();
         RightButton = transform.Find("RightButton").GetComponent<Button>();
 
@@ -163,5 +143,26 @@ public class EventScript : MonoBehaviour
         UpdateEvent();
         LeftButton.onClick.AddListener(Left);
         RightButton.onClick.AddListener(Right);
+    }
+
+    public void OnEndDisplayDialogue()
+    {
+        if (currentEvent.ChildEvent1 != null)
+        {
+            LeftButton.gameObject.SetActive(true);
+        }
+        if (currentEvent.ChildEvent2 != null)
+        {
+            RightButton.gameObject.SetActive(true);
+        }
+        // if tatata
+        // show buttons
+        print("event ok");
+    }
+
+    private void Awake()
+    {
+        dialogueBox = transform.Find("TextBox").GetComponent<DialogueBox>(); //
+        this.dialogueBox.OnEndTextDisplay += this.OnEndDisplayDialogue;
     }
 }

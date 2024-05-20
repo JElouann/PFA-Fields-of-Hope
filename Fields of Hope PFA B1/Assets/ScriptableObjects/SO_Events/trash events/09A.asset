@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Text: "Ma\xEEtre Corbeau tenait en son bec un fromage. Ma\xEEtre Renard, par l'odeur
-    all\xE9ch\xE9e, lui tint a peu pr\xE8s ce langage : \"Zebi corbac raboule le
-    claquos\"\n(max 30 hung pour gauche)"
+    all\xE9ch\xE9e, lui tint \xE0 peu pr\xE8s ce langage : \"Zebi corbac raboule
+    le claquos\""
   ChildEvent1: {fileID: 11400000, guid: ca41f468f605dfb40972a1e19bfd6b2b, type: 2}
   Child1Text: -50 HP
   Child1Conditions:
