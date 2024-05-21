@@ -64,7 +64,10 @@ public class SO_Events : ScriptableObject
 
     [Header("Style")]
     ///[Tooltip("The SO this event will use as graphic asset.")] public SO_EventAppearance Appearance;
-    public List<Sprite> ImageEvent;
+    public Sprite ImageEvent;
+    public Vector3 SpritePosition;
+    public Quaternion SpriteRotation;
+    public Vector3 SpriteScale;
 
     [Header("System Stats")]
     [Tooltip("The interval of oufitude degre in which the event can occure.")] public Interval OufitudePool;

@@ -24,6 +24,9 @@ public class EventScript : MonoBehaviour
 
     private DialogueBox dialogueBox;
 
+    public GameObject GizmosSprite;
+    public GameObject Image;
+
     public void Left() // left button
     {
         if (!CheckConditions(currentEvent.Child1Conditions)) return; // unable the use of this choice button if conditions unfullfilled (add game feel)
@@ -128,6 +131,12 @@ public class EventScript : MonoBehaviour
         LeftButton.gameObject.SetActive(false);
 
         RightButton.gameObject.SetActive(false);
+
+        GameObject pipolopo = Instantiate(Image, currentEvent.SpritePosition, currentEvent.SpriteRotation, GizmosSprite.transform);
+        pipolopo.transform.localScale = currentEvent.SpriteScale;
+        Image PipolopoSprite = pipolopo.GetComponent<Image>();
+        PipolopoSprite.sprite = currentEvent.ImageEvent;
+        Debug.Log(pipolopo);
     }
 
     public void LoadThis()

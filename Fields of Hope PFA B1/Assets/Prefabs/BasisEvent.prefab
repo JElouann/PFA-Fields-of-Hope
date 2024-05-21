@@ -370,6 +370,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &4244815142957389874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5164965883949223705}
+  m_Layer: 0
+  m_Name: GizmosSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5164965883949223705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244815142957389874}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 200, z: 21.117014}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4775172008489403247}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4607400035265042227
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +434,7 @@ Transform:
   - {fileID: 6610784883099842898}
   - {fileID: 2180223051173207427}
   - {fileID: 8568158505228986646}
+  - {fileID: 5164965883949223705}
   - {fileID: 8888929344688918001}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -420,6 +452,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <currentEvent>k__BackingField: {fileID: 0}
   StatsManager: {fileID: 0}
+  GizmosSprite: {fileID: 4244815142957389874}
+  Image: {fileID: 6755845457329097134, guid: abb0dd20080add844b2d3a66de9fb15f, type: 3}
 --- !u!1 &5761561587342979949
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _text: {fileID: 8546141399504937059}
   <Lines>k__BackingField: []
-  _textSpeed: 0.04
+  _textSpeed: 0.025
   _textSlicer: {fileID: 0}
 --- !u!114 &199540878537960389
 MonoBehaviour:
