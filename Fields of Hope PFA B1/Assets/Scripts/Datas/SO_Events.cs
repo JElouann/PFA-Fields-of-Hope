@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [Serializable]
 public class ValueToChange  
@@ -62,7 +63,8 @@ public class SO_Events : ScriptableObject
     public List<Condition> Child2Conditions;
 
     [Header("Style")]
-    [Tooltip("The SO this event will use as graphic asset.")] public SO_EventAppearance Appearance;
+    ///[Tooltip("The SO this event will use as graphic asset.")] public SO_EventAppearance Appearance;
+    public List<Sprite> ImageEvent;
 
     [Header("System Stats")]
     [Tooltip("The interval of oufitude degre in which the event can occure.")] public Interval OufitudePool;
