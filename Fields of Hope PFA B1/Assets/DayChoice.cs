@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public enum DailyChoice
@@ -10,13 +11,18 @@ public enum DailyChoice
 public class DayChoice : MonoBehaviour
 {
     private DailyChoice _dailyChoice;
+    private event Action OnChoose;
+
+    [SerializeField] private GameObject FarmPanel;
+    [SerializeField] private GameObject ExplorationPanel;
 
     public void SelectFarm()
     {
         if(_dailyChoice == DailyChoice.None)
         {
             _dailyChoice = DailyChoice.Farm;
-            // invoke C# event responsible of instancing event
+            OnChoose?.Invoke(); // invoke C# event responsible of instancing event
+
             print(_dailyChoice.ToString());
         }
     }
@@ -26,8 +32,26 @@ public class DayChoice : MonoBehaviour
         if (_dailyChoice == DailyChoice.None)
         {
             _dailyChoice = DailyChoice.Exploration;
-            // invoke C# event responsible of instancing event
+            OnChoose?.Invoke(); // invoke C# event responsible of instancing event
             print(_dailyChoice.ToString());
         }
+    }
+
+    private void OnChooseDailyTask()
+    {
+        if (_dailyChoice == DailyChoice.Farm)
+        {
+
+        }
+
+        if (_dailyChoice == DailyChoice.Exploration)
+        {
+
+        }
+    }
+
+    private void Start()
+    {
+        OnChoose += OnChooseDailyTask;
     }
 }
