@@ -105,6 +105,7 @@ public class StatsManager : MonoBehaviour
                 break;
         }
         UpdateTexts();
+        UpdateBars();
     }
 
     public void UpdateTexts()
@@ -159,8 +160,8 @@ public class StatsManager : MonoBehaviour
 
     private void Update()
     {
-        UpdateTexts();
-        UpdateBars();
+        //UpdateTexts();
+        //UpdateBars();
     }
 
     private void Start()
