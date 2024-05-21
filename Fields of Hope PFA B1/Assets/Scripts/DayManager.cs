@@ -32,6 +32,8 @@ public class DayManager : MonoBehaviour
 
     private void OnEndDay()
     {
+        // Jouer animation de changement de jour
+
         _statsManager.ChangeValues("Life", _statsManager.GetHungerConsequence());
         _statsManager.ChangeValues("Hunger", -FoodLoss * FoodLossMultiplier);
     }
