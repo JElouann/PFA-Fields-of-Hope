@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: Labyrinthe1 1 1 5
+  m_EditorClassIdentifier: 
+  Name: Labyrinthe
+  Text: "Autant fouiller le sac, il ne lui servira plus.\nJe vais l'ouvrir avec prudence
+    au cas ou.\nUn rat se trouve dans le sac et ma mordu le bras. J'ai pas grand
+    chose mais \xE7a fait un peu mal. \nBon maintenant regardons le sac. Un peu de
+    nourriture qui n'as pas \xE9t\xE9 manger pas le sac.\nRentrons il se fait tard."
+  IDEvent: 0
+  Description: "Choix Gauche n\xB01"
+  ChildEvent1: {fileID: 11400000, guid: 17f241c23256a354d992d5392f4ff780, type: 2}
+  Child1Text: Gauche
+  ChildEvent2: {fileID: 11400000, guid: dd76d86b651a62d4e85b80c34abc5cfa, type: 2}
+  Child2Text: Droite
+  Appearance: {fileID: 0}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
+  ValuesToChange:
+  - Value: Food
+    Amount: 3
+  - Value: Life
+    Amount: -5
