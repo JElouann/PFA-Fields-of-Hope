@@ -32,9 +32,9 @@ public class EventInstancier : MonoBehaviour
         _statsManager = GameObject.FindAnyObjectByType<StatsManager>();
     }
 
-    private void Start()
+    private void Start() // TEMPORARY
     {
-        InstantiateEvent();
+        //InstantiateEvent();
     }
 
     // New version, where we create GameObjects from event datas to avoid creating prefabs for each events
