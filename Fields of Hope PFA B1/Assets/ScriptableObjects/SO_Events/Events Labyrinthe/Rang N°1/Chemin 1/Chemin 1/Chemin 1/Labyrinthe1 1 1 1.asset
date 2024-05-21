@@ -15,13 +15,17 @@ MonoBehaviour:
   Name: Labyrinthe
   Text: "Est ce que je continue ?\n(Si je d\xE9cide de choisir non je rentre chez
     moi)"
-  IDEvent: 0
-  Description: "Choix Gauche n\xB01"
   ChildEvent1: {fileID: 11400000, guid: 922b90771a93cc146a7ee557abe49651, type: 2}
   Child1Text: Oui
+  Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: a37ee226a87fa1c47aafe61ab8bb29a7, type: 2}
   Child2Text: Non
-  Appearance: {fileID: 0}
+  Child2Conditions: []
+  ImageEvent:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0

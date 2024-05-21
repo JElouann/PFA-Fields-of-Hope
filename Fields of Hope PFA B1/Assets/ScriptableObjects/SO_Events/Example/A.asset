@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Racine
   Text: Un homme au bonnet rouge vous aborde.
-  IDEvent: 0
-  Description: 
   ChildEvent1: {fileID: 11400000, guid: 5bd09e6e43b8d7b47bb0980f42d06b74, type: 2}
   Child1Text: Ne pas lui faire confiance.
+  Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: 1d7c9bcfc1d15f84fa5661c65c843567, type: 2}
   Child2Text: Le frapper.
-  Appearance: {fileID: 11400000, guid: f275f3eae6f34db4b9f17b45dc1a35bc, type: 2}
+  Child2Conditions: []
+  ImageEvent:
+  - {fileID: 77343172, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
+  - {fileID: -1704645326, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
+  - {fileID: 1828835226, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
   OufitudePool:
     Minimum: 1
     Maximum: 3
