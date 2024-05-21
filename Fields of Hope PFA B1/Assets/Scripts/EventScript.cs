@@ -125,14 +125,9 @@ public class EventScript : MonoBehaviour
             StatsManager.ChangeValues(ValueToChange.Value, ValueToChange.Amount);
         }
 
-        /*if(currentEvent.ChildEvent1 == null)
-        {*/
-            LeftButton.gameObject.SetActive(false);
-        /*}
-        if(currentEvent.ChildEvent2 == null)
-        {*/
-            RightButton.gameObject.SetActive(false);
-        //}
+        LeftButton.gameObject.SetActive(false);
+
+        RightButton.gameObject.SetActive(false);
     }
 
     public void LoadThis()
