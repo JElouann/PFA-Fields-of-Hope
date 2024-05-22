@@ -21,7 +21,6 @@ public class TextSlicer : MonoBehaviour
             if (index >= numberOfCharPerLine && c == ' ')
             {
                 currentSelection += c;
-                print(c + " reset" + " | " + currentSelection);
                 slicedText.Add(currentSelection);
                 textToSlice.Replace(currentSelection, "");
                 index = 0;

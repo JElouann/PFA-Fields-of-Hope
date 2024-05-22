@@ -50,26 +50,31 @@ public class Interval // Used for the oufitude degre
 public class SO_Events : ScriptableObject
 {
     [Header("Infos")]
+    [Space(2)]
     public string Name;
     [Multiline, Tooltip("The text or dialogue the event contains.")] public string Text;
 
-    [Header("Next events")]
+    [Header("Child 1")]
+    [Space(2)]
     [Tooltip("The event the first option leads to (None if end).")] public SO_Events ChildEvent1;
     [Tooltip("The text the first button will display.")] public string Child1Text;
     public List<Condition> Child1Conditions;
 
+    [Header("Child 2")]
+    [Space(2)]
     [Tooltip("The event the second option leads to (None if end).")] public SO_Events ChildEvent2;
     [Tooltip("The text the second button will display.")] public string Child2Text;
     public List<Condition> Child2Conditions;
 
     [Header("Style")]
-    ///[Tooltip("The SO this event will use as graphic asset.")] public SO_EventAppearance Appearance;
+    [Space(2)]
     public Sprite ImageEvent;
     public Vector3 SpritePosition;
     public Quaternion SpriteRotation;
     public Vector3 SpriteScale;
 
     [Header("System Stats")]
+    [Space(2)]
     [Tooltip("The interval of oufitude degre in which the event can occure.")] public Interval OufitudePool;
     [Space(10)]
     [Tooltip("List that contains pairs [value to change, amount of the changement].")] public List<ValueToChange> ValuesToChange;

@@ -4,7 +4,7 @@ using UnityEngine;
 public class DayManager : MonoBehaviour
 {
 
-    private int _dayCounter;
+    public int _dayCounter { get; private set; }
     private StatsManager _statsManager;
     private EventInstancier _eventInstancier;
     public DailyChoice DayChoice { get; set; }
@@ -19,7 +19,7 @@ public class DayManager : MonoBehaviour
     [field: SerializeField] public int LifeLossMultiplier { get; set; } = 1;
     [field: SerializeField] public int FoodLossMultiplier { get; set; } = 1;
 
-    public void MoreFood() // TEST
+    public void MoreFood() // DEV
     {
         _statsManager.ChangeValues("Hunger", 5);
     }
@@ -38,9 +38,7 @@ public class DayManager : MonoBehaviour
         // On met à jour les différentes valeurs
         _statsManager.ChangeValues("Life", _statsManager.GetHungerConsequence());
         _statsManager.ChangeValues("Hunger", -FoodLoss * FoodLossMultiplier);
-
         DayChoice = DailyChoice.None;
-        print(DayChoice);
     }
 
     private void Awake()

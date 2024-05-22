@@ -19,7 +19,7 @@ public class DayChoice : MonoBehaviour
         {
             _dayManager.DayChoice = DailyChoice.Farm;
             OnChoose?.Invoke(); // invoke C# event responsible of instancing event
-            Debug.Log($"<color=#C4D165>{_dayManager.DayChoice} </color>");
+            Debug.Log($"<color=green>{_dayManager.DayChoice} </color>");
         }
     }
 
@@ -29,7 +29,7 @@ public class DayChoice : MonoBehaviour
         {
             _dayManager.DayChoice = DailyChoice.Exploration;
             OnChoose?.Invoke(); // invoke C# event responsible of instancing event
-            Debug.Log($"<color=#D1AC65>{_dayManager.DayChoice} </color>");
+            Debug.Log($"<color=orange>{_dayManager.DayChoice} </color>");
         }
     }
 
@@ -38,12 +38,12 @@ public class DayChoice : MonoBehaviour
         switch(_dayManager.DayChoice)
         {
             case DailyChoice.Farm:
-                FarmPanel.SetActive(true);
+                //FarmPanel.SetActive(true);
                 _eventInstancier.InstantiateEvent();
                 break;
             
             case DailyChoice.Exploration:
-                ExplorationPanel.SetActive(true);
+                //ExplorationPanel.SetActive(true);
                 _eventInstancier.InstantiateEvent();
                 break;
         }
@@ -55,7 +55,7 @@ public class DayChoice : MonoBehaviour
         _dayManager = GameObject.Find("DayManager").GetComponent<DayManager>();
 
         OnChoose += OnChooseDailyTask;
-        FarmPanel.SetActive(false);
-        ExplorationPanel.SetActive(false);
+        //FarmPanel.SetActive(false);
+        //ExplorationPanel.SetActive(false);
     }
 }

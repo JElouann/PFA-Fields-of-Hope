@@ -1,8 +1,6 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,11 +25,11 @@ public class EventScript : MonoBehaviour
     public GameObject GizmosSprite;
     public GameObject Image;
 
+    public event Action OnEndEvent;
+
     public void Left() // left button
     {
         if (!CheckConditions(currentEvent.Child1Conditions)) return; // unable the use of this choice button if conditions unfullfilled (add game feel)
-
-        print("left");
         previousEvent = currentEvent;
         currentEvent = currentEvent.ChildEvent1;
         UpdateEvent();
@@ -40,8 +38,6 @@ public class EventScript : MonoBehaviour
     public void Right() // right button
     {
         if (!CheckConditions(currentEvent.Child2Conditions)) return; // unable the use of this choice button if conditions unfullfilled (add game feel)
-
-        print("right");
         previousEvent = currentEvent;
         currentEvent = currentEvent.ChildEvent2;
         UpdateEvent();
@@ -132,11 +128,10 @@ public class EventScript : MonoBehaviour
 
         RightButton.gameObject.SetActive(false);
 
-        GameObject pipolopo = Instantiate(Image, currentEvent.SpritePosition, currentEvent.SpriteRotation, GizmosSprite.transform);
-        pipolopo.transform.localScale = currentEvent.SpriteScale;
-        Image PipolopoSprite = pipolopo.GetComponent<Image>();
+        GameObject spriteCreated = Instantiate(Image, currentEvent.SpritePosition, currentEvent.SpriteRotation, GizmosSprite.transform);
+        spriteCreated.transform.localScale = currentEvent.SpriteScale;
+        Image PipolopoSprite = spriteCreated.GetComponent<Image>();
         PipolopoSprite.sprite = currentEvent.ImageEvent;
-        Debug.Log(pipolopo);
     }
 
     public void LoadThis()
@@ -159,17 +154,22 @@ public class EventScript : MonoBehaviour
 
     public void OnEndDisplayDialogue()
     {
-        if (currentEvent.ChildEvent1 != null)
+        if (currentEvent.ChildEvent1 == null && currentEvent.ChildEvent2 == null)
         {
-            LeftButton.gameObject.SetActive(true);
+            print("event fini");
+            OnEndEvent.Invoke();
         }
-        if (currentEvent.ChildEvent2 != null)
+        else
         {
-            RightButton.gameObject.SetActive(true);
+            if (currentEvent.ChildEvent1 != null)
+            {
+                LeftButton.gameObject.SetActive(true);
+            }
+            if (currentEvent.ChildEvent2 != null)
+            {
+                RightButton.gameObject.SetActive(true);
+            }
         }
-        // if tatata
-        // show buttons
-        print("event ok");
     }
 
     private void Awake()

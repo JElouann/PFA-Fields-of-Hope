@@ -18,14 +18,14 @@ MonoBehaviour:
     le claquos\""
   ChildEvent1: {fileID: 11400000, guid: ca41f468f605dfb40972a1e19bfd6b2b, type: 2}
   Child1Text: -50 HP
-  Child1Conditions:
-  - Variable: 1
-    Operator: 1
-    Amount: 25
+  Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: d005814b4b751e945a18316eb893dd61, type: 2}
   Child2Text: +50 HP
   Child2Conditions: []
-  Appearance: {fileID: 0}
+  ImageEvent: {fileID: 21300000, guid: 9b9d581e98c63964f85ef098f1205b8f, type: 3}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 3, y: 3, z: 3}
   OufitudePool:
     Minimum: 0
     Maximum: 9
