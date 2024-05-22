@@ -11,21 +11,21 @@ public class StatsManager : MonoBehaviour
     [field: Header("System stats")]
     [field: Range(0, 100)]
     [field: SerializeField]
-    public int Life { get; private set; }
+    public int Life { get; set; }
 
     private int _previousLife; // used to tween Hunger Bar at change
 
     [field: Range(0, 100)]
     [field: SerializeField]
-    public int Hunger { get; private set; }
+    public int Hunger { get; set; }
 
     private int _previousHunger; // used to tween Hunger Bar at change
 
     [field: SerializeField]
-    public int Seeds { get; private set; }
+    public int Seeds { get; set; }
 
     [field: SerializeField]
-    public int Food { get; private set; }
+    public int Food { get; set; }
 
     [field: SerializeField] // TEMPORARY
     public int OufitudeDegre { get; set; } // number used to check
@@ -33,7 +33,7 @@ public class StatsManager : MonoBehaviour
     // Vegetables inventory
     [Header("Vegetables")]
     public int Carotte; // inchallah faudra faire l'inventaire un jour hein
-    public int Beterave;
+    public int Betterave;
     public int Poireau;
     public int Potiron;
     public int Patate;

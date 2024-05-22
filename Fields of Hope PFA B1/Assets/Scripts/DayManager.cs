@@ -4,10 +4,12 @@ using UnityEngine;
 public class DayManager : MonoBehaviour
 {
 
-    public int _dayCounter { get; private set; }
-    private StatsManager _statsManager;
-    private EventInstancier _eventInstancier;
+    public int _dayCounter { get; set; }
+    public StatsManager _statsManager { get; private set; }
+    public EventInstancier _eventInstancier { get; private set; }
     public DailyChoice DayChoice { get; set; }
+
+    [field: SerializeField] public EndDay EndDay { get; private set; }
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI _counterText;

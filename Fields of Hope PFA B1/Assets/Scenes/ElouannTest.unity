@@ -3776,6 +3776,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cdfcbcdeff725945ad06787eb9b7869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _statsManager: {fileID: 735582687}
+  _dayManager: {fileID: 1958838310}
   _where: {fileID: 1880438612}
   _eventPrefabBasis: {fileID: 4607400035265042227, guid: 23f50a1ee6da4864cb9f9f840e1d32da, type: 3}
   _eventDatas:
@@ -5244,7 +5246,7 @@ MonoBehaviour:
   <Food>k__BackingField: 5
   <OufitudeDegre>k__BackingField: 3
   Carotte: 0
-  Beterave: 0
+  Betterave: 0
   Poireau: 0
   Potiron: 0
   Patate: 0
@@ -12370,6 +12372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1958838309}
   - component: {fileID: 1958838310}
+  - component: {fileID: 1958838311}
   m_Layer: 0
   m_Name: DayManager
   m_TagString: Untagged
@@ -12404,11 +12407,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9158d247a3c05b40812661c3ebcdd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <EndDay>k__BackingField: {fileID: 1958838311}
   _counterText: {fileID: 1400109430}
   FoodLoss: 5
   LifeLoss: 5
   <LifeLossMultiplier>k__BackingField: 1
   <FoodLossMultiplier>k__BackingField: 1
+--- !u!114 &1958838311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958838308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843e956d510fa7647882f5df1e034efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dayManager: {fileID: 1958838310}
 --- !u!1 &1977791286
 GameObject:
   m_ObjectHideFlags: 0

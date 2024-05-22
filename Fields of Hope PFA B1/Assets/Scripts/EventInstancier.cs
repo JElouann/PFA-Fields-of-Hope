@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EventInstancier : MonoBehaviour
 {
-    // Composant requis
-    private StatsManager _statsManager;
+    // Managers requis
+    [SerializeField] private StatsManager _statsManager;
+    [SerializeField] private DayManager _dayManager;
 
     [SerializeField]
     private Transform _where;
@@ -29,12 +30,7 @@ public class EventInstancier : MonoBehaviour
 
     private void Awake()
     {
-        _statsManager = GameObject.FindAnyObjectByType<StatsManager>();
-    }
-
-    private void Start() // TEMPORARY
-    {
-        //InstantiateEvent();
+        //_statsManager = GameObject.FindAnyObjectByType<StatsManager>();
     }
 
     // New version, where we create GameObjects from event datas to avoid creating prefabs for each events
@@ -76,6 +72,7 @@ public class EventInstancier : MonoBehaviour
 
         // update the event contained in the new event GameObject, then load it to display it and update its script
         createdEventScript.currentEvent = _eventDatasSuitable[selectedEventIndexDATA];
+        createdEventScript.OnEndEvent += _dayManager.EndDay.OnEndDay;
         createdEventScript.LoadThis();
         _eventsPassed.Add(createdEventScript.currentEvent);
         _eventDatasSuitable.Clear();
