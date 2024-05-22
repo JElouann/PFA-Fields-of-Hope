@@ -11,7 +11,11 @@ public class StatsManager : MonoBehaviour
     [field: Header("System stats")]
     [field: Range(0, 100)]
     [field: SerializeField]
-    public int Life { get; set; }
+    public int Life {
+
+        get => myStat["Life"];
+        set => myStat["Life"] = value;
+    }
 
     private int _previousLife; // used to tween Hunger Bar at change
 
@@ -50,26 +54,38 @@ public class StatsManager : MonoBehaviour
     public Image LifeBar;
     public Image HungerBar;
 
+    private Dictionary<string, int> myStat = new Dictionary<string, int>() {
+        {"Life",0 },
+        {"Hunger",0 },
+        {"Food",0 },
+        {"Seeds",0 },
+        {"Day",0 }
+    };
+
     public void ChangeValues(string value, int amount)
     {
+        myStat[value] = Mathf.Clamp(myStat[value] + amount, 0, 100);
+
         switch (value)
         {
             case "Life":
-                if (Life + amount > 0 && Life + amount <= 100) // Range attribute doesnt always work so we do it manually.
-                {
-                    _previousLife = amount;
-                    Life += amount;
-                }
-                else if (amount > 0)
-                {
-                    _previousLife = amount;
-                    Life = 100;
-                }
-                else
-                {
-                    _previousLife = amount;
-                    Life = 0;
-                }
+                Life = Mathf.Clamp(Life + amount, 0, 100);
+
+                //if (Life + amount > 0 && Life + amount <= 100) // Range attribute doesnt always work so we do it manually.
+                //{
+                //    _previousLife = amount;
+                //    Life += amount;
+                //}
+                //else if (amount > 0)
+                //{
+                //    _previousLife = amount;
+                //    Life = 100;
+                //}
+                //else
+                //{
+                //    _previousLife = amount;
+                //    Life = 0;
+                //}
                 break;
 
             case "Hunger":
