@@ -1,57 +1,61 @@
 using System;
+using System.Drawing;
+using Unity.VisualScripting;
 using UnityEngine;
-
-public enum DailyChoice
-{
-    None,
-    Farm,
-    Exploration
-}
 
 public class DayChoice : MonoBehaviour
 {
-    private DailyChoice _dailyChoice;
+    private DayManager _dayManager;
     private event Action OnChoose;
 
     [SerializeField] private GameObject FarmPanel;
     [SerializeField] private GameObject ExplorationPanel;
 
+    private EventInstancier _eventInstancier;
+
     public void SelectFarm()
     {
-        if(_dailyChoice == DailyChoice.None)
+        if(_dayManager.DayChoice == DailyChoice.None)
         {
-            _dailyChoice = DailyChoice.Farm;
+            _dayManager.DayChoice = DailyChoice.Farm;
             OnChoose?.Invoke(); // invoke C# event responsible of instancing event
-
-            print(_dailyChoice.ToString());
+            Debug.Log($"<color=#C4D165>{_dayManager.DayChoice} </color>");
         }
     }
 
     public void SelectExploration()
     {
-        if (_dailyChoice == DailyChoice.None)
+        if (_dayManager.DayChoice == DailyChoice.None)
         {
-            _dailyChoice = DailyChoice.Exploration;
+            _dayManager.DayChoice = DailyChoice.Exploration;
             OnChoose?.Invoke(); // invoke C# event responsible of instancing event
-            print(_dailyChoice.ToString());
+            Debug.Log($"<color=#D1AC65>{_dayManager.DayChoice} </color>");
         }
     }
 
     private void OnChooseDailyTask()
     {
-        if (_dailyChoice == DailyChoice.Farm)
+        switch(_dayManager.DayChoice)
         {
-
-        }
-
-        if (_dailyChoice == DailyChoice.Exploration)
-        {
-
+            case DailyChoice.Farm:
+                FarmPanel.SetActive(true);
+                _eventInstancier.InstantiateEvent();
+                break;
+            
+            case DailyChoice.Exploration:
+                ExplorationPanel.SetActive(true);
+                _eventInstancier.InstantiateEvent();
+                break;
         }
     }
 
     private void Start()
     {
+        _eventInstancier = GameObject.Find("EventInstancier").GetComponent<EventInstancier>();
+        _dayManager = GameObject.Find("DayManager").GetComponent<DayManager>();
+
         OnChoose += OnChooseDailyTask;
+        FarmPanel.SetActive(false);
+        ExplorationPanel.SetActive(false);
     }
 }
