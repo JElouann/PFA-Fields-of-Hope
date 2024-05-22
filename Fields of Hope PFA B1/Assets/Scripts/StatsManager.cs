@@ -8,13 +8,14 @@ using UnityEngine.UI;
 public class StatsManager : MonoBehaviour
 {
     // System stats
-    [field: Header("System stats")]
-    [field: Range(0, 100)]
-    [field: SerializeField]
+    //[Header("System stats")]
+    //[Range(0, 100)]
+    //[SerializeField]
+    
     public int Life {
 
-        get => myStat["Life"];
-        set => myStat["Life"] = value;
+        get => _myStat["Life"];
+        set => _myStat["Life"] = value;
     }
 
     private int _previousLife; // used to tween Hunger Bar at change
@@ -54,7 +55,7 @@ public class StatsManager : MonoBehaviour
     public Image LifeBar;
     public Image HungerBar;
 
-    private Dictionary<string, int> myStat = new Dictionary<string, int>() {
+    private Dictionary<string, int> _myStat = new Dictionary<string, int>() {
         {"Life",0 },
         {"Hunger",0 },
         {"Food",0 },
@@ -64,68 +65,24 @@ public class StatsManager : MonoBehaviour
 
     public void ChangeValues(string value, int amount)
     {
-        myStat[value] = Mathf.Clamp(myStat[value] + amount, 0, 100);
+        _myStat[value] = Mathf.Clamp(_myStat[value] + amount, 0, 100);
 
         switch (value)
         {
             case "Life":
                 Life = Mathf.Clamp(Life + amount, 0, 100);
-
-                //if (Life + amount > 0 && Life + amount <= 100) // Range attribute doesnt always work so we do it manually.
-                //{
-                //    _previousLife = amount;
-                //    Life += amount;
-                //}
-                //else if (amount > 0)
-                //{
-                //    _previousLife = amount;
-                //    Life = 100;
-                //}
-                //else
-                //{
-                //    _previousLife = amount;
-                //    Life = 0;
-                //}
                 break;
 
             case "Hunger":
-                if (Hunger + amount > 0 && Hunger + amount <= 100) // Range attribute
-                {
-                    _previousHunger = amount;
-                    Hunger += amount;
-                }
-                else if (amount > 0)
-                {
-                    _previousHunger = amount;
-                    Hunger = 100;
-                }
-                else
-                {
-                    _previousHunger = amount;
-                    Hunger = 0;
-                }
+                Hunger = Mathf.Clamp(Hunger + amount, 0, 100);
                 break;
 
             case "Seeds":
-                if (Seeds + amount > 0) // Range attribute
-                {
-                    Seeds += amount;
-                }
-                else
-                {
-                    Seeds = 0;
-                }
+                Seeds = Mathf.Clamp(Seeds + amount, 0, 100);
                 break;
 
             case "Food":
-                if (Food + amount > 0) // Range attribute
-                {
-                    Food += amount;
-                }
-                else
-                {
-                    Food = 0;
-                }
+                Food = Mathf.Clamp(Food + amount, 0, 100);
                 break;
 
             case "Day":
@@ -146,9 +103,7 @@ public class StatsManager : MonoBehaviour
 
     public void UpdateBars()
     {
-        //LifeBar.fillAmount = Life / 100f;
         LifeBar.DOFillAmount(Life / 100f, 0.1f + _previousLife / 100);
-        //HungerBar.fillAmount = Hunger / 100f;
         HungerBar.DOFillAmount(Hunger / 100f, 0.1f + _previousHunger / 100);
     }
 
@@ -188,14 +143,10 @@ public class StatsManager : MonoBehaviour
         return healthChange;
     }
 
-    private void Update()
-    {
-        //UpdateTexts();
-        //UpdateBars();
-    }
-
     private void Start()
     {
+        // On initialise les variables avec des valeurs prédéfinies
+        Life = 100;
         UpdateTexts();
         UpdateBars();
     }

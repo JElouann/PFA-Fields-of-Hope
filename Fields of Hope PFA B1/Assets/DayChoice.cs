@@ -1,9 +1,9 @@
 using System;
-using System.Drawing;
-using Unity.VisualScripting;
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class DayChoice : MonoBehaviour
+public class DayChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private DayManager _dayManager;
     private event Action OnChoose;
@@ -12,6 +12,11 @@ public class DayChoice : MonoBehaviour
     [SerializeField] private GameObject ExplorationPanel;
 
     private EventInstancier _eventInstancier;
+
+    [Header("Gamefeel")]
+    [SerializeField] private Vector3 _scaleOnHover;
+    [SerializeField] private float _scaleOnHoverSpeed;
+    [SerializeField] private float _unscaleSpeed;
 
     public void SelectFarm()
     {
@@ -38,6 +43,7 @@ public class DayChoice : MonoBehaviour
         switch(_dayManager.DayChoice)
         {
             case DailyChoice.Farm:
+                //Destroy(gameObject);
                 //FarmPanel.SetActive(true);
                 _eventInstancier.InstantiateEvent();
                 break;
@@ -57,5 +63,16 @@ public class DayChoice : MonoBehaviour
         OnChoose += OnChooseDailyTask;
         //FarmPanel.SetActive(false);
         //ExplorationPanel.SetActive(false);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        this.transform.SetAsLastSibling();
+        this.transform.DOScale(_scaleOnHover, _scaleOnHoverSpeed);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        this.transform.DOScale(Vector3.one, _unscaleSpeed);
     }
 }
