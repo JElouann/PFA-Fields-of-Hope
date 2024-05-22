@@ -20,10 +20,10 @@ MonoBehaviour:
   ChildEvent2: {fileID: 11400000, guid: 1d7c9bcfc1d15f84fa5661c65c843567, type: 2}
   Child2Text: Le frapper.
   Child2Conditions: []
-  ImageEvent:
-  - {fileID: 77343172, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
-  - {fileID: -1704645326, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
-  - {fileID: 1828835226, guid: 65fccd9ff0bad3644a86ef6f627ef063, type: 3}
+  ImageEvent: {fileID: -538862991, guid: 0d20e3a8a4c2d4346be9060eea5fe757, type: 3}
+  SpritePosition: {x: 1250, y: 425, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 2, y: 2, z: 2}
   OufitudePool:
     Minimum: 1
     Maximum: 3
