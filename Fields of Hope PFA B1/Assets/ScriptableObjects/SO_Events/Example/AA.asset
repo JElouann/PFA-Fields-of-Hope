@@ -14,12 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Noeud1
   Text: "Vous d\xE9cidez de ne pas lui faire confiance et de fuir."
-  IDEvent: 0
-  Description: 
   ChildEvent1: {fileID: 11400000, guid: 582dfd029789ddf4ea9c085e7f34d1be, type: 2}
   Child1Text: Rentrer en courant.
+  Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: e40dcd171c9e9eb44974f7acf984ef09, type: 2}
   Child2Text: Rentrer tranquillement.
-  Appearance: {fileID: 11400000, guid: f275f3eae6f34db4b9f17b45dc1a35bc, type: 2}
-  DegreDeOufitude: 2
+  Child2Conditions: []
+  ImageEvent: {fileID: -1716446164, guid: 0d20e3a8a4c2d4346be9060eea5fe757, type: 3}
+  SpritePosition: {x: 1350, y: 425, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 2, y: 2, z: 2}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
   ValuesToChange: []
