@@ -26,6 +26,11 @@ public class DayManager : MonoBehaviour
         _statsManager.ChangeValues("Hunger", 5);
     }
 
+    public void MoreSeeds() // DEV
+    {
+        _statsManager.ChangeValues("Seeds", 5);
+    }
+
     public void NextDay()
     {
         OnEndDay();
