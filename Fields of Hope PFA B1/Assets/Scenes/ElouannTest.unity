@@ -3779,7 +3779,7 @@ MonoBehaviour:
   _where: {fileID: 1880438612}
   _eventPrefabBasis: {fileID: 4607400035265042227, guid: 23f50a1ee6da4864cb9f9f840e1d32da, type: 3}
   _eventDatas:
-  - {fileID: 11400000, guid: cf779bab122d05d4c9c076666ae8ac02, type: 2}
+  - {fileID: 11400000, guid: 9663941c8ab8d98478c4f70a54d44bfb, type: 2}
 --- !u!1 &517234294
 GameObject:
   m_ObjectHideFlags: 0
@@ -9726,8 +9726,8 @@ Canvas:
   m_GameObject: {fileID: 1551927051}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 287829830}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -12404,11 +12404,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9158d247a3c05b40812661c3ebcdd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _counterText: {fileID: 1400109430}
   FoodLoss: 5
-  <FoodLossMultiplier>k__BackingField: 1
   LifeLoss: 5
   <LifeLossMultiplier>k__BackingField: 1
-  _counterText: {fileID: 1400109430}
+  <FoodLossMultiplier>k__BackingField: 1
 --- !u!1 &1977791286
 GameObject:
   m_ObjectHideFlags: 0
