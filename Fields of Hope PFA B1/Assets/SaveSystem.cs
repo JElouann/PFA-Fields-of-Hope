@@ -4,9 +4,12 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 
+
 public class SaveSystem : MonoBehaviour
 {
-    //public TMP_InputField inputField;
+    public static int saveSlot;
+
+    private bool IsEmpty;
 
     [SerializeField]
     private StatsManager statsManager;
@@ -31,32 +34,20 @@ public class SaveSystem : MonoBehaviour
     private int radis;
     */
 
-    public TextMeshProUGUI dayTMP;
-    public TextMeshProUGUI LifeTMP;
-    public TextMeshProUGUI HungerTMP;
-    public TextMeshProUGUI SeedsTMP;
-    public TextMeshProUGUI foodTMP;
+    private void Start()
+    {
+        LoadData();
+    }
 
-    /*
-    private int carotteTMP;
-    private int betteraveTMP;
-    private int poireauTMP;
-    private int potironTMP;
-    private int pommedeterreTMP;
-    private int rutabagaTMP;
-    private int topinambourTMP;
-    private int radisTMP;
-    */
+
 
     public void SaveData()
     {
-        //PlayerPrefs.SetString("Input", inputField.text);
-        day = dayManager._dayCounter;
-        Life = statsManager.Life;
-        Hunger = statsManager.Hunger;
-        Seeds = statsManager.Seeds;
-        food = statsManager.Food;
-
+        PlayerPrefs.SetInt("Day", dayManager._dayCounter);
+        PlayerPrefs.SetInt("Life", statsManager.Life);
+        PlayerPrefs.SetInt("Hunger", statsManager.Hunger);
+        PlayerPrefs.SetInt("Seeds", statsManager.Seeds);
+        PlayerPrefs.SetInt("Food", statsManager.Food);
 
         /*
         carotte = statsManager.Carotte;
@@ -68,32 +59,31 @@ public class SaveSystem : MonoBehaviour
         topinambour = statsManager.Topinambour;
         radis = statsManager.Radis;
         */
-        Debug.Log("SAVE");
     }
 
     public void LoadData()
     {
-        //inputField.text = PlayerPrefs.GetString("Input");
-        dayTMP.text = day.ToString();
-        LifeTMP.text = Life.ToString();
-        HungerTMP.text = Hunger.ToString();
-        SeedsTMP.text = Seeds.ToString();
-        foodTMP.text = food.ToString();
-        /*dayManager._dayCounter = day;
-        statsManager.Life = Life;
-        statsManager.Hunger = Hunger;
-        statsManager.Seeds = Seeds;
-        statsManager.Food = food;*/
-        Debug.Log("LOAD");
+        dayManager._dayCounter = PlayerPrefs.GetInt("Day");
+        statsManager.Life = PlayerPrefs.GetInt("Life");
+        statsManager.Hunger = PlayerPrefs.GetInt("Hunger");
+        statsManager.Seeds = PlayerPrefs.GetInt("Seeds");
+        statsManager.Food = PlayerPrefs.GetInt("Food");
+        statsManager.UpdateTexts();
+        statsManager.UpdateBars();
     }
 
     public void DeleteData()
     {
-        //inputField.text = string.Empty;
-        dayTMP = null;
-        LifeTMP = null;
-        HungerTMP = null;
-        SeedsTMP = null;
-        foodTMP = null;
+        IsEmpty = false;
+        dayManager._dayCounter = -1;
+        dayManager.NextDay();
+        statsManager.Life = 50;
+        statsManager.Hunger = 45;
+        statsManager.Seeds = 15;
+        statsManager.Food = 5;
+        statsManager.UpdateTexts();
+        statsManager.UpdateBars();
+
+        PlayerPrefs.DeleteAll();
     }
 }
