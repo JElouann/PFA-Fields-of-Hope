@@ -14,14 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Labyrinthe
   Text: 'Mieux vaut partir '
-  IDEvent: 0
-  Description: "Choix Gauche n\xB01"
   ChildEvent1: {fileID: 0}
   Child1Text: Oui
+  Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: Non
-  Appearance: {fileID: 0}
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
-    Maximum: 0
+    Maximum: 9
   ValuesToChange: []
