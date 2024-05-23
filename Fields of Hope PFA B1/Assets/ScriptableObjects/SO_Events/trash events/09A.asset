@@ -29,6 +29,4 @@ MonoBehaviour:
   OufitudePool:
     Minimum: 0
     Maximum: 9
-  ValuesToChange:
-  - Value: 
-    Amount: 0
+  ValuesToChange: []

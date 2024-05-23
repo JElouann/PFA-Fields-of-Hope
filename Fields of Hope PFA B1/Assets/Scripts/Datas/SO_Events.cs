@@ -1,50 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-[Serializable]
-public class ValueToChange  
-{
-    public string Value;
-    public int Amount;
-}
-
-[Serializable]
-public enum GameVariables
-{
-    Health,
-    Hunger,
-    Food,
-    Seeds,
-    Carrot,
-    Potato
-}
-
-public enum Operator
-{
-    Less,
-    LessOrEqual,
-    More,
-    MoreOrEqual,
-    Equal,
-    Different
-}
-
-[Serializable]
-public class Condition
-{
-    public GameVariables Variable;
-    public Operator Operator;
-    public int Amount;
-}
-
-[Serializable]
-public class Interval // Used for the oufitude degre
-{
-    public int Minimum;
-    public int Maximum;
-}
 
 [CreateAssetMenu(fileName = "Event", menuName = "ScriptableObjects/Event", order = 1)]
 public class SO_Events : ScriptableObject

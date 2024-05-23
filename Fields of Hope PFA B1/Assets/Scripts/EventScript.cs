@@ -113,9 +113,11 @@ public class EventScript : MonoBehaviour
 
         TextMeshProUGUI leftText = LeftButton.transform.Find("Text").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI rightText = RightButton.transform.Find("Text").GetComponent<TextMeshProUGUI>();
-        DialogueBox dialogueBox = transform.Find("TextBox").GetComponent<DialogueBox>(); //
+
+        DialogueBox dialogueBox = transform.Find("TextBox").GetComponent<DialogueBox>(); // ICI LA 
         dialogueBox._text = transform.Find("TextBox").transform.Find("Text").GetComponent<TextMeshProUGUI>(); //
         dialogueBox.StartDialogue(currentEvent.Text); //
+
         leftText.text = currentEvent.Child1Text;
         rightText.text = currentEvent.Child2Text;
         
@@ -156,7 +158,7 @@ public class EventScript : MonoBehaviour
     {
         if (currentEvent.ChildEvent1 == null && currentEvent.ChildEvent2 == null)
         {
-            print("event fini");
+            //print("event fini");
             OnEndEvent.Invoke();
         }
         else

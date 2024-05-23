@@ -21,10 +21,17 @@ public class DayManager : MonoBehaviour
     [field: SerializeField] public int LifeLossMultiplier { get; set; } = 1;
     [field: SerializeField] public int FoodLossMultiplier { get; set; } = 1;
 
+    #region DEV CHEAT
     public void MoreFood() // DEV
     {
         _statsManager.ChangeValues("Hunger", 5);
     }
+
+    public void MoreSeeds() // DEV
+    {
+        _statsManager.ChangeValues("Seeds", 5);
+    }
+    #endregion
 
     public void NextDay()
     {

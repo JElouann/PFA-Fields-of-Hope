@@ -31,7 +31,9 @@ public class DialogueBox : MonoBehaviour
 
     private IEnumerator TypeLine()
     {
-        this.GetComponent<Button>().interactable = false;
+        //this.GetComponent<Button>().interactable = false; VERSION SANS GAME FEEL
+        Button button = GameObject.Find("Button").GetComponent<Button>();
+        button.interactable = false;
         foreach (char c in Lines[_index].ToCharArray())
         {
             _text.text += c;
@@ -39,13 +41,15 @@ public class DialogueBox : MonoBehaviour
         }
         if (_index == Lines.Length - 1)
         {
-            this.GetComponent<Button>().interactable = false;
+            //this.GetComponent<Button>().interactable = false;
+            button.interactable = false;
             // afficher potentiels bouttons choix
             this.OnEndTextDisplay?.Invoke();
         }
         else
         {
-            this.GetComponent<Button>().interactable = true;
+            //this.GetComponent<Button>().interactable = true;
+            button.interactable = true;
         }
     }
 
