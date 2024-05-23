@@ -24,12 +24,12 @@ public class DayManager : MonoBehaviour
     #region DEV CHEAT
     public void MoreFood() // DEV
     {
-        _statsManager.ChangeValues("Hunger", 5);
+        _statsManager.ChangeValues(InventoryEnum.Life, 5);
     }
 
     public void MoreSeeds() // DEV
     {
-        _statsManager.ChangeValues("Seeds", 5);
+        _statsManager.ChangeValues(InventoryEnum.Seeds, 5);
     }
     #endregion
 
@@ -45,8 +45,8 @@ public class DayManager : MonoBehaviour
         // Jouer animation de changement de jour
 
         // On met à jour les différentes valeurs
-        _statsManager.ChangeValues("Life", _statsManager.GetHungerConsequence());
-        _statsManager.ChangeValues("Hunger", -FoodLoss * FoodLossMultiplier);
+        _statsManager.ChangeValues(InventoryEnum.Life, _statsManager.GetHungerConsequence());
+        //_statsManager.ChangeValues("Hunger", -FoodLoss * FoodLossMultiplier);
         DayChoice = DailyChoice.None;
     }
 
