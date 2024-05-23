@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -56,12 +57,14 @@ public class StatsManager : MonoBehaviour
     public Image HungerBar;
 
     private Dictionary<string, int> _myStat = new Dictionary<string, int>() {
-        {"Life",0 },
-        {"Hunger",0 },
-        {"Food",0 },
-        {"Seeds",0 },
-        {"Day",0 }
+        {"Life", 0},
+        {"Hunger", 0},
+        {"Food", 0},
+        {"Seeds", 0},
+        {"Day", 0}
     };
+
+    public event Action OnDeath;
 
     public void ChangeValues(string value, int amount)
     {
@@ -71,6 +74,7 @@ public class StatsManager : MonoBehaviour
         {
             case "Life":
                 Life = Mathf.Clamp(Life + amount, 0, 100);
+                if(IsDead()) { OnDeath?.Invoke(); }
                 break;
 
             case "Hunger":
@@ -141,6 +145,11 @@ public class StatsManager : MonoBehaviour
                 break;
         }
         return healthChange;
+    }
+
+    private bool IsDead()
+    {
+        return Life == 0 ? true : false;
     }
 
     private void Start()
