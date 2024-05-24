@@ -29,6 +29,14 @@ public class SeedsPlants : MonoBehaviour
         InventorySlots.Add(yes);
     }
 
+    public void RemoveDay()
+    {
+        foreach (InventorySlot slot in InventorySlots)
+        {
+            slot.TempsRestantDePousse--;
+        }
+    }
+
     public void RemoveSeed()
     {
         seedData = null;
