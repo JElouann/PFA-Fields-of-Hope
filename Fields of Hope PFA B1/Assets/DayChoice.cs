@@ -2,21 +2,34 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public enum Type
+{
+    Farm,
+    Exploration
+}
 
 public class DayChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private DayManager _dayManager;
     private event Action OnChoose;
 
-    [SerializeField] private GameObject FarmPanel;
-    [SerializeField] private GameObject ExplorationPanel;
-
     private EventInstancier _eventInstancier;
+
+    [Header("Boutons")]
+    [SerializeField] private GameObject _farmButton;
+    [SerializeField] private GameObject _explorationButton;
 
     [Header("Gamefeel")]
     [SerializeField] private Vector3 _scaleOnHover;
     [SerializeField] private float _scaleOnHoverSpeed;
     [SerializeField] private float _unscaleSpeed;
+    private Vector3 _position;
+
+    [Space(5)]
+    [SerializeField] private float _slideValue;
+    [SerializeField] private Type _type;
 
     public void SelectFarm()
     {
@@ -43,13 +56,11 @@ public class DayChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         switch(_dayManager.DayChoice)
         {
             case DailyChoice.Farm:
-                //Destroy(gameObject);
-                //FarmPanel.SetActive(true);
+                Destroy(gameObject);
                 _eventInstancier.InstantiateEvent();
                 break;
             
             case DailyChoice.Exploration:
-                //ExplorationPanel.SetActive(true);
                 _eventInstancier.InstantiateEvent();
                 break;
         }
@@ -61,18 +72,23 @@ public class DayChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         _dayManager = GameObject.Find("DayManager").GetComponent<DayManager>();
 
         OnChoose += OnChooseDailyTask;
-        //FarmPanel.SetActive(false);
-        //ExplorationPanel.SetActive(false);
+        _position = this.transform.localPosition;
     }
 
+    #region GameFeel
     public void OnPointerEnter(PointerEventData eventData)
     {
+        float _slideDirection = _type == Type.Farm ? -1 : 1;
         this.transform.SetAsLastSibling();
         this.transform.DOScale(_scaleOnHover, _scaleOnHoverSpeed);
+        this.transform.DOLocalMoveX(_position.x + _slideDirection * _slideValue, 0.2f);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        float _returnDirection = _type == Type.Exploration ? 1 : -1;
         this.transform.DOScale(Vector3.one, _unscaleSpeed);
+        this.transform.DOLocalMoveX(_position.x, 0.3f);
     }
+    #endregion
 }

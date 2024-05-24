@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -14,8 +15,8 @@ public class StatsManager : MonoBehaviour
     
     public int Life {
 
-        get => _myStat["Life"];
-        set => _myStat["Life"] = value;
+        get => _myStat[InventoryEnum.Life];
+        set => _myStat[InventoryEnum.Life] = value;
     }
 
     private int _previousLife; // used to tween Hunger Bar at change
@@ -55,37 +56,35 @@ public class StatsManager : MonoBehaviour
     public Image LifeBar;
     public Image HungerBar;
 
-    private Dictionary<string, int> _myStat = new Dictionary<string, int>() {
-        {"Life",0 },
-        {"Hunger",0 },
-        {"Food",0 },
-        {"Seeds",0 },
-        {"Day",0 }
+    private Dictionary<InventoryEnum, int> _myStat = new Dictionary<InventoryEnum, int>() {
+        {InventoryEnum.Life, 0},
+        {InventoryEnum.Hunger, 0},
+        {InventoryEnum.Seeds, 0},
+        {InventoryEnum.Day, 0}
     };
 
-    public void ChangeValues(string value, int amount)
+    public event Action OnDeath;
+
+    public void ChangeValues(InventoryEnum value, int amount)
     {
         _myStat[value] = Mathf.Clamp(_myStat[value] + amount, 0, 100);
 
         switch (value)
         {
-            case "Life":
+            case InventoryEnum.Life:
                 Life = Mathf.Clamp(Life + amount, 0, 100);
+                if(IsDead()) { OnDeath?.Invoke(); }
                 break;
 
-            case "Hunger":
+            case InventoryEnum.Hunger:
                 Hunger = Mathf.Clamp(Hunger + amount, 0, 100);
                 break;
 
-            case "Seeds":
+            case InventoryEnum.Seeds:
                 Seeds = Mathf.Clamp(Seeds + amount, 0, 100);
                 break;
 
-            case "Food":
-                Food = Mathf.Clamp(Food + amount, 0, 100);
-                break;
-
-            case "Day":
+            case InventoryEnum.Day:
                 // à faire
                 break;
         }
@@ -141,6 +140,11 @@ public class StatsManager : MonoBehaviour
                 break;
         }
         return healthChange;
+    }
+
+    private bool IsDead()
+    {
+        return Life == 0 ? true : false;
     }
 
     private void Start()

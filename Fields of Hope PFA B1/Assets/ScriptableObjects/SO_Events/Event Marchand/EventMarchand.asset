@@ -29,7 +29,10 @@ MonoBehaviour:
   ChildEvent2: {fileID: 11400000, guid: 0cfb0b12bf30c394b866e95646b1d2c8, type: 2}
   Child2Text: 'Non '
   Child2Conditions: []
-  Appearance: {fileID: 0}
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 9

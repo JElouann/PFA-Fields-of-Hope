@@ -8,18 +8,29 @@ public class EventInstancier : MonoBehaviour
     [SerializeField] private StatsManager _statsManager;
     [SerializeField] private DayManager _dayManager;
 
+    // Socket représentant la position où instancier les events
     [SerializeField]
     private Transform _where;
-
-    // New version
-    private List<SO_Events> _eventDatasSuitable = new();
-    private List<SO_Events> _eventsPassed = new();
     
+    // Prefab utilisé pour instancier les events (gameobjects) à partir de leurs Datas
     [SerializeField]
     private GameObject _eventPrefabBasis;
 
+    // Listes utilisées pour stocker et choisir les events
+    private List<SO_Events> _eventDatasSuitable = new();
+    private List<SO_Events> _eventsPassed = new();
+
     [SerializeField]
     private List<SO_Events> _eventDatas; // /!\ SEPARER EN DEUX : events explo et events ferme
+
+    [SerializeField]
+    private List<SO_Events> _farmEventDatas;
+
+    [SerializeField]
+    private List<SO_Events> _expeditionEventDatas;
+
+    [SerializeField]
+    private List<SO_Events> _histoireEventDatas;
 
 
     public void InstantiateEvent()

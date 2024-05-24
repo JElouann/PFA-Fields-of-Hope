@@ -3,6 +3,6 @@ using System;
 [Serializable]
 public class ValueToChange
 {
-    public string Value;
+    public InventoryEnum Value;
     public int Amount;
 }
