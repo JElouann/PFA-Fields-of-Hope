@@ -32,6 +32,8 @@ public class EventInstancier : MonoBehaviour
     [SerializeField]
     private List<SO_Events> _histoireEventDatas;
 
+    [field: SerializeField]
+    public GameObject CreatedEvent { get; set; }
 
     public void InstantiateEvent()
     {
@@ -63,14 +65,8 @@ public class EventInstancier : MonoBehaviour
     // Checks if the event range fits with the Oufitude degre
     private bool IsInOufitudeRange(SO_Events checkedEvent, int degreToCompare)
     {
-        if (!(checkedEvent.OufitudePool.Minimum > degreToCompare | checkedEvent.OufitudePool.Maximum < degreToCompare))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        bool toReturn = !(checkedEvent.OufitudePool.Minimum > degreToCompare | checkedEvent.OufitudePool.Maximum < degreToCompare) ? true : false;
+        return toReturn;
     }
 
     // Creates a GameObject event from a prefab basis, assignes to it the chosen event and reload it
@@ -78,8 +74,8 @@ public class EventInstancier : MonoBehaviour
     {
         int selectedEventIndexDATA = Random.Range(0, _eventDatasSuitable.Count);
 
-        GameObject createdEvent = Instantiate(_eventPrefabBasis, where);
-        EventScript createdEventScript = createdEvent.GetComponent<EventScript>(); // get the EventScript of the new event GameObject
+        CreatedEvent = Instantiate(_eventPrefabBasis, where);
+        EventScript createdEventScript = CreatedEvent.GetComponent<EventScript>(); // get the EventScript of the new event GameObject
 
         // update the event contained in the new event GameObject, then load it to display it and update its script
         createdEventScript.currentEvent = _eventDatasSuitable[selectedEventIndexDATA];

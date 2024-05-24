@@ -12,7 +12,7 @@ public class StatsManager : MonoBehaviour
     //[Header("System stats")]
     //[Range(0, 100)]
     //[SerializeField]
-    
+
     public int Life {
 
         get => _myStat[InventoryEnum.Life];
@@ -21,14 +21,19 @@ public class StatsManager : MonoBehaviour
 
     private int _previousLife; // used to tween Hunger Bar at change
 
-    [field: Range(0, 100)]
-    [field: SerializeField]
-    public int Hunger { get; set; }
+    public int Hunger {
+
+        get => _myStat[InventoryEnum.Hunger];
+        set => _myStat[InventoryEnum.Hunger] = value;
+    }
 
     private int _previousHunger; // used to tween Hunger Bar at change
 
-    [field: SerializeField]
-    public int Seeds { get; set; }
+    public int Seeds {
+
+        get => _myStat[InventoryEnum.Seeds];
+        set => _myStat[InventoryEnum.Seeds] = value;
+    }
 
     [field: SerializeField]
     public int Food { get; set; }
@@ -37,15 +42,55 @@ public class StatsManager : MonoBehaviour
     public int OufitudeDegre { get; set; } // number used to check
 
     // Vegetables inventory
-    [Header("Vegetables")]
-    public int Carotte; // inchallah faudra faire l'inventaire un jour hein
-    public int Betterave;
-    public int Poireau;
-    public int Potiron;
-    public int Patate;
-    public int Rutabaga;
-    public int Topinambour;
-    public int Radis;
+    public int Carotte {
+
+        get => _myStat[InventoryEnum.Carotte];
+        set => _myStat[InventoryEnum.Carotte] = value;
+    }
+
+    public int Betterave
+    {
+
+        get => _myStat[InventoryEnum.Betterave];
+        set => _myStat[InventoryEnum.Betterave] = value;
+    }
+    public int Poireau
+    {
+
+        get => _myStat[InventoryEnum.Poireau];
+        set => _myStat[InventoryEnum.Poireau] = value;
+    }
+    public int Potiron
+    {
+
+        get => _myStat[InventoryEnum.Potiron];
+        set => _myStat[InventoryEnum.Potiron] = value;
+    }
+
+    public int Patate
+    {
+
+        get => _myStat[InventoryEnum.Patate];
+        set => _myStat[InventoryEnum.Patate] = value;
+    }
+    public int Rutabaga
+    {
+
+        get => _myStat[InventoryEnum.Rutabaga];
+        set => _myStat[InventoryEnum.Rutabaga] = value;
+    }
+    public int Topinambour
+    {
+
+        get => _myStat[InventoryEnum.Topinambour];
+        set => _myStat[InventoryEnum.Topinambour] = value;
+    }
+    public int Radis
+    {
+
+        get => _myStat[InventoryEnum.Radis];
+        set => _myStat[InventoryEnum.Radis] = value;
+    }
 
     [field: Header("UI")] // UI
     public TextMeshProUGUI LifeAmount;
@@ -60,7 +105,16 @@ public class StatsManager : MonoBehaviour
         {InventoryEnum.Life, 0},
         {InventoryEnum.Hunger, 0},
         {InventoryEnum.Seeds, 0},
-        {InventoryEnum.Day, 0}
+        {InventoryEnum.Carotte, 0},
+        {InventoryEnum.Betterave, 0},
+        {InventoryEnum.Poireau, 0},
+        {InventoryEnum.Potiron, 0},
+        {InventoryEnum.Patate, 0},
+        {InventoryEnum.Rutabaga, 0},
+        {InventoryEnum.Topinambour, 0},
+        {InventoryEnum.Radis, 0},
+        {InventoryEnum.Day, 0},
+        {InventoryEnum.Medkit, 0},
     };
 
     public event Action OnDeath;
@@ -68,26 +122,8 @@ public class StatsManager : MonoBehaviour
     public void ChangeValues(InventoryEnum value, int amount)
     {
         _myStat[value] = Mathf.Clamp(_myStat[value] + amount, 0, 100);
-
-        switch (value)
-        {
-            case InventoryEnum.Life:
-                Life = Mathf.Clamp(Life + amount, 0, 100);
-                if(IsDead()) { OnDeath?.Invoke(); }
-                break;
-
-            case InventoryEnum.Hunger:
-                Hunger = Mathf.Clamp(Hunger + amount, 0, 100);
-                break;
-
-            case InventoryEnum.Seeds:
-                Seeds = Mathf.Clamp(Seeds + amount, 0, 100);
-                break;
-
-            case InventoryEnum.Day:
-                // à faire
-                break;
-        }
+        if (IsDead()) { OnDeath?.Invoke(); }
+        
         UpdateTexts();
         UpdateBars();
     }
@@ -151,6 +187,7 @@ public class StatsManager : MonoBehaviour
     {
         // On initialise les variables avec des valeurs prédéfinies
         Life = 100;
+        Hunger = 50;
         UpdateTexts();
         UpdateBars();
     }

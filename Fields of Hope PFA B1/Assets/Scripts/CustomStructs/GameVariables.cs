@@ -3,10 +3,17 @@ using System;
 [Serializable]
 public enum GameVariables
 {
-    Health,
+    Life,
     Hunger,
-    Food,
     Seeds,
-    Carrot,
-    Potato
+    Carotte,
+    Betterave,
+    Poireau,
+    Potiron,
+    Patate,
+    Rutabaga,
+    Topinambour,
+    Radis,
+    Day,
+    Medkit
 }

@@ -51,6 +51,6 @@ public class PlayVideo : MonoBehaviour
         yield return new WaitForSecondsRealtime(12f);
         Crossfade.SetActive(true);
         yield return new WaitForSecondsRealtime(3f);
-        SceneManager.LoadScene("ElouannTest");
+        SceneManager.LoadScene("Théo");
     }
 }

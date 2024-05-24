@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
-  m_Name: AAA
+  m_Name: Farm1
   m_EditorClassIdentifier: 
-  Name: Feuille1
-  Text: "Vous avez \xE9vit\xE9 l'homme suspect et \xEAtes maintenant en s\xE9curit\xE9
-    chez vous."
+  Name: 
+  Text: Farm1 test
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
@@ -27,13 +26,7 @@ MonoBehaviour:
   SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
-    Maximum: 0
+    Maximum: 9
   ValuesToChange:
-  - Value: 0
-    Amount: 10
-  - Value: 0
-    Amount: 20
-  - Value: 0
-    Amount: 30
-  - Value: 0
-    Amount: 40
+  - Value: 3
+    Amount: 66

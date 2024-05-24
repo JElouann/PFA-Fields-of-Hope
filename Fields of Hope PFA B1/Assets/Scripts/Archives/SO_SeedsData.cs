@@ -7,9 +7,11 @@ public class SO_SeedsData : ScriptableObject
 {
     public string Nom;
     
-    public float TempsDePousseEnJours;
-    
-    public int ID;
+    public int TempsDePousseEnJours;
 
-    public int QuantitéDeLégumesRécupéré;
+    public string Description;
+
+    public int CoutEnGraines;
+
+    public int Satiété;
 }

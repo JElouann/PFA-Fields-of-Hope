@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81205984173739e41a2adcee3a4bcb9b, type: 3}
+  m_Name: Poireau
+  m_EditorClassIdentifier: 
+  Nom: Poireau
+  TempsDePousseEnJours: 0
+  Description: 
+  CoutEnGraines: 0
+  "Sati\xE9t\xE9": 5
