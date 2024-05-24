@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: ChildEvent_Organisation2
+  m_EditorClassIdentifier: 
+  Name: NON
+  Text: "\"Je ne vois aucune raison de tout organiser. Apr\xE8s tout, ce ne sont
+    que des l\xE9gumes. Je laisse tout dans une seule cagette. Mais apr\xE8s quelques
+    jours, je remarque qu'un de mes l\xE9gumes est pourri ! En regardant le bon c\xF4t\xE9
+    des choses, j'ai r\xE9cup\xE9r\xE9 quelques graines en prenant ce qui restait
+    du l\xE9gume.\""
+  ChildEvent1: {fileID: 0}
+  Child1Text: 
+  Child1Conditions: []
+  ChildEvent2: {fileID: 0}
+  Child2Text: 
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
+  ValuesToChange:
+  - Value: 2
+    Amount: 5
