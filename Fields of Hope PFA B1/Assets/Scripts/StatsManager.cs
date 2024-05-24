@@ -12,7 +12,7 @@ public class StatsManager : MonoBehaviour
     //[Header("System stats")]
     //[Range(0, 100)]
     //[SerializeField]
-    
+
     public int Life {
 
         get => _myStat[InventoryEnum.Life];
@@ -68,12 +68,12 @@ public class StatsManager : MonoBehaviour
     public void ChangeValues(InventoryEnum value, int amount)
     {
         _myStat[value] = Mathf.Clamp(_myStat[value] + amount, 0, 100);
-
-        switch (value)
+        if (IsDead()) { OnDeath?.Invoke(); }
+        /*switch (value)
         {
             case InventoryEnum.Life:
                 Life = Mathf.Clamp(Life + amount, 0, 100);
-                if(IsDead()) { OnDeath?.Invoke(); }
+                
                 break;
 
             case InventoryEnum.Hunger:
@@ -87,7 +87,7 @@ public class StatsManager : MonoBehaviour
             case InventoryEnum.Day:
                 // à faire
                 break;
-        }
+        }*/
         UpdateTexts();
         UpdateBars();
     }
@@ -153,5 +153,10 @@ public class StatsManager : MonoBehaviour
         Life = 100;
         UpdateTexts();
         UpdateBars();
+    }
+
+    private void Update()
+    {
+        print(Life);
     }
 }

@@ -4219,6 +4219,7 @@ MonoBehaviour:
   _farmEventDatas: []
   _expeditionEventDatas: []
   _histoireEventDatas: []
+  <CreatedEvent>k__BackingField: {fileID: 0}
 --- !u!1 &517234294
 GameObject:
   m_ObjectHideFlags: 0
@@ -11470,8 +11471,8 @@ RectTransform:
   - {fileID: 571575321}
   - {fileID: 2109762241}
   - {fileID: 757257673}
-  - {fileID: 1564568909}
   - {fileID: 1880438612}
+  - {fileID: 1564568909}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -14898,6 +14899,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dayManager: {fileID: 1958838310}
+  _statsManager: {fileID: 735582687}
+  _eventInstancier: {fileID: 505025377}
 --- !u!1 &1977791286
 GameObject:
   m_ObjectHideFlags: 0

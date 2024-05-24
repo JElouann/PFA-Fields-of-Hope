@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -21,6 +22,8 @@ public class DayManager : MonoBehaviour
     [field: SerializeField] public int LifeLossMultiplier { get; set; } = 1;
     [field: SerializeField] public int FoodLossMultiplier { get; set; } = 1;
 
+    public event Action OnEndDay;
+
     #region DEV CHEAT
     public void MoreFood() // DEV
     {
@@ -35,24 +38,16 @@ public class DayManager : MonoBehaviour
 
     public void NextDay()
     {
-        OnEndDay();
+        OnEndDay?.Invoke();
         _dayCounter++;
         _counterText.text = (_dayCounter).ToString();
     }
 
-    private void OnEndDay()
-    {
-        // Jouer animation de changement de jour
-
-        // On met à jour les différentes valeurs
-        _statsManager.ChangeValues(InventoryEnum.Life, _statsManager.GetHungerConsequence());
-        //_statsManager.ChangeValues("Hunger", -FoodLoss * FoodLossMultiplier);
-        DayChoice = DailyChoice.None;
-    }
 
     private void Awake()
     {
         _statsManager = GameObject.FindAnyObjectByType<StatsManager>();
         _eventInstancier = GameObject.FindAnyObjectByType<EventInstancier>();
+        OnEndDay += EndDay.OnEndDay;
     }
 }

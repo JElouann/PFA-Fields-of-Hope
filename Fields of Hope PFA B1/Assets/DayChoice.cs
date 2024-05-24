@@ -3,6 +3,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public enum Type
 {
@@ -26,6 +27,7 @@ public class DayChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     [SerializeField] private float _scaleOnHoverSpeed;
     [SerializeField] private float _unscaleSpeed;
     private Vector3 _position;
+    private static bool _selected;
 
     [Space(5)]
     [SerializeField] private float _slideValue;
@@ -53,14 +55,17 @@ public class DayChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     private void OnChooseDailyTask()
     {
-        switch(_dayManager.DayChoice)
+        float _slideDirection = _type == Type.Farm ? -1 : 1;
+        switch (_dayManager.DayChoice)
         {
             case DailyChoice.Farm:
-                Destroy(gameObject);
+                Destroy(_explorationButton);
                 _eventInstancier.InstantiateEvent();
                 break;
             
             case DailyChoice.Exploration:
+                this.transform.DOLocalMoveX(_position.x + _slideDirection, 0.8f);
+                Destroy(_farmButton);
                 _eventInstancier.InstantiateEvent();
                 break;
         }

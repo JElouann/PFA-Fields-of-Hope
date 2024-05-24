@@ -16,7 +16,10 @@ MonoBehaviour:
   Text: "Vous d\xE9cidez de ne pas lui faire confiance et de fuir."
   ChildEvent1: {fileID: 11400000, guid: 582dfd029789ddf4ea9c085e7f34d1be, type: 2}
   Child1Text: Rentrer en courant.
-  Child1Conditions: []
+  Child1Conditions:
+  - Variable: 0
+    Operator: 0
+    Amount: 0
   ChildEvent2: {fileID: 11400000, guid: e40dcd171c9e9eb44974f7acf984ef09, type: 2}
   Child2Text: Rentrer tranquillement.
   Child2Conditions: []
