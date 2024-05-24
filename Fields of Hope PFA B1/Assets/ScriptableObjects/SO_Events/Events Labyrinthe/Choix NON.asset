@@ -26,5 +26,7 @@ MonoBehaviour:
   SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
-    Maximum: 9
-  ValuesToChange: []
+    Maximum: 0
+  ValuesToChange:
+  - Value: 
+    Amount: 0

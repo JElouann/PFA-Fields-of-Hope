@@ -59,7 +59,7 @@ public class EventScript : MonoBehaviour
         int value;
         switch (condition.Variable)
         {
-            case GameVariables.Health:
+            case GameVariables.Life:
                 value = StatsManager.Life;
                 return CompareWithOperator(condition, value);
                 //break;
@@ -158,8 +158,7 @@ public class EventScript : MonoBehaviour
     {
         if (currentEvent.ChildEvent1 == null && currentEvent.ChildEvent2 == null)
         {
-            //print("event fini");
-            OnEndEvent.Invoke();
+            //OnEndEvent.Invoke();
         }
         else
         {

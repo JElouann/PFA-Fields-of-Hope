@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
-  m_Name: Labyrinthe
+  m_Name: Farm1
   m_EditorClassIdentifier: 
-  Name: Labyrinthe
-  Text: "Je rentre dans un Labyrinthe, je suis perdu. Deux chemin s'offre \xE0 moi
-    :"
-  ChildEvent1: {fileID: 11400000, guid: 7a93467bac2b8b44a8e6cecea79f3734, type: 2}
-  Child1Text: 'Gauche '
+  Name: 
+  Text: Farm1 test
+  ChildEvent1: {fileID: 0}
+  Child1Text: 
   Child1Conditions: []
-  ChildEvent2: {fileID: 11400000, guid: d85177352eee7f04da46e49c7555e377, type: 2}
-  Child2Text: Droite
+  ChildEvent2: {fileID: 0}
+  Child2Text: 
   Child2Conditions: []
   ImageEvent: {fileID: 0}
   SpritePosition: {x: 0, y: 0, z: 0}
@@ -28,4 +27,6 @@ MonoBehaviour:
   OufitudePool:
     Minimum: 0
     Maximum: 9
-  ValuesToChange: []
+  ValuesToChange:
+  - Value: 3
+    Amount: 66

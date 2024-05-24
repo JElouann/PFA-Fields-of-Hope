@@ -1,7 +1,7 @@
 using System;
 
 [Serializable]
-public enum GameVariables
+public enum InventoryEnum
 {
     Life,
     Hunger,
