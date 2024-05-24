@@ -15,22 +15,25 @@ MonoBehaviour:
   Name: Feuille1
   Text: "Vous avez \xE9vit\xE9 l'homme suspect et \xEAtes maintenant en s\xE9curit\xE9
     chez vous."
-  IDEvent: 0
-  Description: 
   ChildEvent1: {fileID: 0}
   Child1Text: 
+  Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
-  Appearance: {fileID: 11400000, guid: f275f3eae6f34db4b9f17b45dc1a35bc, type: 2}
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: Life
+  - Value: 0
     Amount: 10
-  - Value: Hunger
+  - Value: 0
     Amount: 20
-  - Value: Seeds
+  - Value: 0
     Amount: 30
-  - Value: Food
+  - Value: 0
     Amount: 40

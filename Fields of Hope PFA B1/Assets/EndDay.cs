@@ -10,6 +10,10 @@ public class EndDay : MonoBehaviour
     private StatsManager _statsManager;
     [SerializeField]
     private EventInstancier _eventInstancier;
+    [SerializeField]
+    private int _foodLoss;
+    [SerializeField]
+    private int _foodLossMultiplier;
 
     public void OnEndDay()
     {
@@ -19,8 +23,10 @@ public class EndDay : MonoBehaviour
         // Jouer animation de changement de jour
 
         // On met à jour les différentes valeurs
+
         _statsManager.ChangeValues(InventoryEnum.Life, _statsManager.GetHungerConsequence());
-        //_statsManager.ChangeValues("Hunger", -FoodLoss * FoodLossMultiplier);
+        _statsManager.ChangeValues(InventoryEnum.Hunger, -_foodLoss * _foodLossMultiplier);
+        
         _dayManager.DayChoice = DailyChoice.None;
     }
 }
