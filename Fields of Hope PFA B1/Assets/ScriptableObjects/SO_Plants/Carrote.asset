@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81205984173739e41a2adcee3a4bcb9b, type: 3}
-  m_Name: Tomate
+  m_Name: Carrote
   m_EditorClassIdentifier: 
-  Nom: Tomate
+  Nom: Carrote
   TempsDePousseEnJours: 5
-  ID: 2
-  "Quantit\xE9DeL\xE9gumesR\xE9cup\xE9r\xE9": 8
+  Description: " Douce et croquante, la carotte est une source l\xE9g\xE8re de vitamines
+    qui offre un coup de pouce \xE9nerg\xE9tique mod\xE9r\xE9."
+  CoutEnGraines: 0
+  "Sati\xE9t\xE9": 15

@@ -9,7 +9,6 @@ public class SaveSystem : MonoBehaviour
 {
     public static int saveSlot;
 
-    private bool IsEmpty;
 
     [SerializeField]
     private StatsManager statsManager;
@@ -74,7 +73,6 @@ public class SaveSystem : MonoBehaviour
 
     public void DeleteData()
     {
-        IsEmpty = false;
         dayManager._dayCounter = -1;
         dayManager.NextDay();
         statsManager.Life = 50;
@@ -83,7 +81,6 @@ public class SaveSystem : MonoBehaviour
         statsManager.Food = 5;
         statsManager.UpdateTexts();
         statsManager.UpdateBars();
-
-        PlayerPrefs.DeleteAll();
+        SaveData();
     }
 }
