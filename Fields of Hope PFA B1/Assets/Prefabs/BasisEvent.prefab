@@ -969,7 +969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 447b1038951383340975c6293d968657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfCharPerLine: 40
+  numberOfCharPerLine: 80
 --- !u!222 &5089786311662197713
 CanvasRenderer:
   m_ObjectHideFlags: 0

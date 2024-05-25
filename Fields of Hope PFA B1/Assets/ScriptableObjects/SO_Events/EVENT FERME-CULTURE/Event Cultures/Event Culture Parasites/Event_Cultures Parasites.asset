@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: Event_Cultures Parasites
+  m_EditorClassIdentifier: 
+  Name: Cultures Parasites
+  Text: "`\"Apr\xE8s avoir attentivement observ\xE9 mes plantes, j'ai remarqu\xE9
+    qu'elles avaient du mal \xE0 pousser. De plus pr\xE8s, j'ai vu que certaines
+    de mes plantes commen\xE7aient \xE0 pourrir! Quelque chose de noir et gluant
+    commence \xE0 envahir les plantes, comme des tentacules\u2026 Devrais-je essayer
+    de les enlever moi-m\xEAme ?\"`"
+  ChildEvent1: {fileID: 11400000, guid: 411b538efd3ab4f419dc9c409278819a, type: 2}
+  Child1Text: OUI
+  Child1Conditions: []
+  ChildEvent2: {fileID: 11400000, guid: e835a353d412066439b6b05136ba6a0c, type: 2}
+  Child2Text: NON
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
+  OufitudePool:
+    Minimum: 7
+    Maximum: 8
+  ValuesToChange: []

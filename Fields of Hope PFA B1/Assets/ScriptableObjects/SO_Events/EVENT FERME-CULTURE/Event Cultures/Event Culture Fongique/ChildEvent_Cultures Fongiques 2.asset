@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: ChildEvent_Cultures Fongiques 2
+  m_EditorClassIdentifier: 
+  Name: NE RIEN FAIRE
+  Text: "J'ai laiss\xE9 la plante telle qu'elle \xE9tait, pensant que c'\xE9tait
+    peut-\xEAtre normal. Je ne suis pas experte en biologie v\xE9g\xE9tale, mais
+    m\xEAme un expert comprendrait-il ce ph\xE9nom\xE8ne ? Peut-\xEAtre est-ce d\xFB
+    \xE0 la radiation. Quoi qu'il en soit, la plante a commenc\xE9 \xE0 r\xE9tr\xE9cir
+    et est morte en tombant par terre. J'esp\xE8re juste que cela n'affectera pas
+    mes autres l\xE9gumes."
+  ChildEvent1: {fileID: 0}
+  Child1Text: 
+  Child1Conditions: []
+  ChildEvent2: {fileID: 0}
+  Child2Text: 
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
+  ValuesToChange:
+  - Value: 11
+    Amount: 1

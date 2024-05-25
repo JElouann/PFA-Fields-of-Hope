@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: ChildEvent_Coffre-Fort 1
+  m_EditorClassIdentifier: 
+  Name: FORCER LE COFFRE
+  Text: "\"Apr\xE8s des jours de tentatives, il est finalement temps d'essayer d'ouvrir
+    le coffre par la force... Je sors tous les outils et babioles de la ferme, mais
+    apr\xE8s des heures d'efforts, le coffre reste ferm\xE9. Par frustration, je
+    frappe une biblioth\xE8que vide et une petite feuille avec le code tombe. Dans
+    le coffre, des graines. Tous ces efforts pour presque rien.\""
+  ChildEvent1: {fileID: 0}
+  Child1Text: 
+  Child1Conditions: []
+  ChildEvent2: {fileID: 0}
+  Child2Text: 
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
+  ValuesToChange:
+  - Value: 2
+    Amount: 15

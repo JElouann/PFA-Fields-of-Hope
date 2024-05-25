@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: Event_PluieToxique
+  m_EditorClassIdentifier: 
+  Name: Pluie Toxique
+  Text: "`\u201CAlors que j\u2019\xE9tais en train de me reposer, \xE0 la vue des
+    nuages gris, quelque chose d\u2019inattendue est arriv\xE9, de la pluie commence
+    \xE0 tomber des cieux ! \u201C Au d\xE9but cela me sembl\xE9 comme une b\xE9n\xE9diction,
+    mais rapidement une odeur qui pique me viens au nez , les nuances de l\u2019eau
+    son inhabituelles\u2026\xE0 mon horreur je r\xE9alise que cette pluie est toxique
+    ! Que faire ?\"``"
+  ChildEvent1: {fileID: 11400000, guid: 38629871e1a129a4bb2e2e6861a1004d, type: 2}
+  Child1Text: PROTEGER LES CULTURES
+  Child1Conditions: []
+  ChildEvent2: {fileID: 11400000, guid: ad4a0a0b9df77a6438ee2fac4eb46995, type: 2}
+  Child2Text: ME METTRE A L'ABRIS
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
+  OufitudePool:
+    Minimum: 3
+    Maximum: 8
+  ValuesToChange: []
