@@ -2595,7 +2595,7 @@ MonoBehaviour:
   _scaleOnHover: {x: 1.2, y: 1.2, z: 1.2}
   _scaleOnHoverSpeed: 0.2
   _unscaleSpeed: 0.3
-  _slideDirection: {x: 75, y: 0, z: 0}
+  _slideDirection: {x: 65, y: 0, z: 0}
   _slideValue: 1
   _type: 1
 --- !u!1 &307665627
@@ -14883,6 +14883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9158d247a3c05b40812661c3ebcdd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <DayChoiceScript>k__BackingField: {fileID: 1514833335}
   <EndDay>k__BackingField: {fileID: 1958838311}
   _counterText: {fileID: 1400109430}
   FoodLoss: 5

@@ -28,5 +28,7 @@ public class EndDay : MonoBehaviour
         _statsManager.ChangeValues(InventoryEnum.Hunger, -_foodLoss * _foodLossMultiplier);
         
         _dayManager.DayChoice = DailyChoice.None;
+
+        _dayManager.DayChoiceScript.Restart();
     }
 }

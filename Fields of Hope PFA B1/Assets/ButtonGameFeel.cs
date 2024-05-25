@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class ButtonGameFeel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -20,10 +21,12 @@ public class ButtonGameFeel : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     [SerializeField] private float _slideValue;
     [SerializeField] private Type _type;
 
+    public static bool _canBeSelected { get; set; }
+
     #region GameFeel
     public void OnPointerEnter(PointerEventData eventData)
     {
-        //if (_selected) { return; }
+        if (DayChoice._selected) { return; }
         this.transform.SetAsLastSibling();
         this.transform.DOScale(_scaleOnHover, _scaleOnHoverSpeed);
         this.transform.DOLocalMove(_position + _slideDirection , 0.2f);
@@ -31,9 +34,27 @@ public class ButtonGameFeel : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //if (_selected) { return; }
+        if (DayChoice._selected) { return; }
         this.transform.DOScale(Vector3.one, _unscaleSpeed);
         this.transform.DOLocalMove(_position, 0.3f);
+    }
+
+    public void SelectedGameFeel(int direction)
+    {
+        this.transform.DOLocalMoveX(transform.localPosition.x + (80 * direction), 0.8f);
+        this.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.8f);
+    }
+
+    public void NotSelectedGameFeel()
+    {
+        this.GetComponent<Image>().DOFade(0, 0.4f);
+        this.transform.GetChild(0).GetComponent<Image>().DOFade(0, 0.4f);
+        //this.gameObject.SetActive(false);
+    }
+
+    public void ResetAppearance()
+    {
+
     }
     #endregion
 
