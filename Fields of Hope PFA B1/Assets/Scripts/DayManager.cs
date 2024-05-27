@@ -9,6 +9,9 @@ public class DayManager : MonoBehaviour
     public StatsManager _statsManager { get; private set; }
     public EventInstancier _eventInstancier { get; private set; }
 
+    [field: SerializeField]
+    public DayChoice DayChoiceScript { get; set; }
+
     public DailyChoice DayChoice { get; set; }
 
     [field: SerializeField] public EndDay EndDay { get; private set; }

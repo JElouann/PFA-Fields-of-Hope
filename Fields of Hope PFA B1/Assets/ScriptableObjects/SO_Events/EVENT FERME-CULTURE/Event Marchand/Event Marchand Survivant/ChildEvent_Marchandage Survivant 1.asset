@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: ChildEvent_Marchandage Survivant 1
+  m_EditorClassIdentifier: 
+  Name: OUI
+  Text: "Apr\xE8s une discussion assez longue, nous parvenons \xE0 un accord : je
+    lui donne des graines en \xE9change de deux patates et une carotte. Malgr\xE9
+    sa prestance mena\xE7ante, il me salue chaleureusement. C'\xE9tait un homme sympathique
+    dans un monde assez cruel. J'aurais aim\xE9 lui proposer de rester, mais il \xE9tait
+    d\xE9j\xE0 parti"
+  ChildEvent1: {fileID: 0}
+  Child1Text: 
+  Child1Conditions: []
+  ChildEvent2: {fileID: 0}
+  Child2Text: 
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
+  ValuesToChange:
+  - Value: 0
+    Amount: -20
+  - Value: 0
+    Amount: 5

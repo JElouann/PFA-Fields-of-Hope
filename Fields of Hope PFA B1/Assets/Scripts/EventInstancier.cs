@@ -20,8 +20,10 @@ public class EventInstancier : MonoBehaviour
     private List<SO_Events> _eventDatasSuitable = new();
     private List<SO_Events> _eventsPassed = new();
 
+
     [SerializeField]
     private List<SO_Events> _eventDatas; // /!\ SEPARER EN DEUX : events explo et events ferme
+
 
     [SerializeField]
     private List<SO_Events> _farmEventDatas;
@@ -35,24 +37,43 @@ public class EventInstancier : MonoBehaviour
     [field: SerializeField]
     public GameObject CreatedEvent { get; set; }
 
-    public void InstantiateEvent()
+    public void InstantiateEvent(EventType eventType)
     {
-        CreateSuitableEventDataList();
+        CreateSuitableEventDataList(eventType);
         InitializeEvent(_where);
     }
 
-    private void Awake()
-    {
-        //_statsManager = GameObject.FindAnyObjectByType<StatsManager>();
-    }
-
-    // New version, where we create GameObjects from event datas to avoid creating prefabs for each events
-
     // Creates a list with every suitable events for this oufitude degre
-    private void CreateSuitableEventDataList() 
+    private void CreateSuitableEventDataList(EventType eventType) 
     {
         int degreDeOufitude = _statsManager.OufitudeDegre;
 
+        // si on doit mettre un event d'histoire --> fonction et return
+
+        switch (eventType)
+        {
+            case EventType.Farm:
+                foreach (SO_Events eventData in _farmEventDatas)
+                {
+                    if (IsInOufitudeRange(eventData, degreDeOufitude))
+                    {
+                        _eventDatasSuitable.Add(eventData);
+                    }
+                }
+                break;
+
+            case EventType.Expedition:
+                foreach (SO_Events eventData in _expeditionEventDatas)
+                {
+                    if (IsInOufitudeRange(eventData, degreDeOufitude))
+                    {
+                        _eventDatasSuitable.Add(eventData);
+                    }
+                }
+                break;
+        }
+
+        // DEV TEST
         foreach (SO_Events eventData in _eventDatas)
         {
             if (IsInOufitudeRange(eventData, degreDeOufitude))
@@ -73,11 +94,11 @@ public class EventInstancier : MonoBehaviour
     private void InitializeEvent(Transform where)
     {
         int selectedEventIndexDATA = Random.Range(0, _eventDatasSuitable.Count);
-
+        
         CreatedEvent = Instantiate(_eventPrefabBasis, where);
-        EventScript createdEventScript = CreatedEvent.GetComponent<EventScript>(); // get the EventScript of the new event GameObject
+        EventScript createdEventScript = CreatedEvent.GetComponent<EventScript>(); // Get the EventScript of the new event GameObject
 
-        // update the event contained in the new event GameObject, then load it to display it and update its script
+        // Update the event contained in the new event GameObject, then load it to display it and update its script
         createdEventScript.currentEvent = _eventDatasSuitable[selectedEventIndexDATA];
         createdEventScript.OnEndEvent += _dayManager.EndDay.OnEndDay;
         createdEventScript.LoadThis();
