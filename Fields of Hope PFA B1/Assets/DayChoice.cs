@@ -1,7 +1,6 @@
 using System;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public enum Type
@@ -54,17 +53,17 @@ public class DayChoice : MonoBehaviour
             case DailyChoice.Farm:
                 _farmButton.SendMessage("SelectedGameFeel", -1);
                 _farmButton.GetComponent<Button>().interactable = false;
-                //_explorationButton.SetActive(false);
                 _explorationButton.SendMessage("NotSelectedGameFeel");
+
                 //_eventInstancier.InstantiateEvent();
                 break;
             
             case DailyChoice.Exploration:
                 _explorationButton.SendMessage("SelectedGameFeel", 1);
                 _explorationButton.GetComponent<Button>().interactable = false;
-                //_farmButton.SetActive(false);
                 _farmButton.SendMessage("NotSelectedGameFeel");
-                _eventInstancier.InstantiateEvent();
+
+                _eventInstancier.InstantiateEvent(EventType.Expedition);
                 break;
         }
     }

@@ -21,11 +21,11 @@ public class EndDay : MonoBehaviour
     public void OnEndDay()
     {
         Destroy(_eventInstancier.CreatedEvent);
-        print("�a marche");
+        print("ça marche");
 
         // Jouer animation de changement de jour
 
-        // On met � jour les diff�rentes valeurs
+        // On met a jour les diff�rentes valeurs
 
         _statsManager.ChangeValues(InventoryEnum.Life, _statsManager.GetHungerConsequence());
         _statsManager.ChangeValues(InventoryEnum.Hunger, -_foodLoss * _foodLossMultiplier);

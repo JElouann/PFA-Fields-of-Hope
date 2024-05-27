@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -45,11 +46,12 @@ public class ButtonGameFeel : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         this.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.8f);
     }
 
-    public void NotSelectedGameFeel()
+    public async void NotSelectedGameFeel()
     {
         this.GetComponent<Image>().DOFade(0, 0.4f);
         this.transform.GetChild(0).GetComponent<Image>().DOFade(0, 0.4f);
-        //this.gameObject.SetActive(false);
+        await Task.Delay(400);
+        this.gameObject.SetActive(false);
     }
 
     public void ResetAppearance()
