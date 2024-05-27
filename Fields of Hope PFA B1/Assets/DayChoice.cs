@@ -57,6 +57,7 @@ public class DayChoice : MonoBehaviour
                 _farmButton.GetComponent<Button>().interactable = false;
                 _explorationButton.SendMessage("NotSelectedGameFeel");
                 _cultureMenu.SetActive(true);
+                _cultureMenu.GetComponentInChildren<DialogueBox>().StartDialogue("Je suis à la ferme. Bon, quel légume planter ?");
                 break;
             
             case DailyChoice.Exploration:

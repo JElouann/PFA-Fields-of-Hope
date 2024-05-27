@@ -15,15 +15,18 @@ public class SelectSeed : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public TextMeshProUGUI textDescription;
 
+    public GameObject textBox;
+
     public void SelectedSeed()
     {
         seedsPlants.seedData = SO_SeedsData;
-        textDescription.text = SO_SeedsData.Description;
+        textBox.GetComponent<DialogueBox>().StartDialogue(SO_SeedsData.Description);
     }
 
     public void Start()
     {
         Image.sprite = SO_SeedsData.Image ;
+
     }
 
 

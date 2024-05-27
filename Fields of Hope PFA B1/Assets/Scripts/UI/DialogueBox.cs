@@ -20,7 +20,7 @@ public class DialogueBox : MonoBehaviour
 
     public void StartDialogue(string text)
     {
-        
+        StopAllCoroutines();
         _textSlicer = gameObject.GetComponent<TextSlicer>();
         Lines = _textSlicer.Slice(text).ToArray();
 
