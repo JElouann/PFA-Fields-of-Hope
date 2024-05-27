@@ -7,6 +7,8 @@ using UnityEngine.UIElements;
 
 public class FarmManager : MonoBehaviour
 {
+    public GameObject PanelFarm;
+
     public SO_SeedsData seedData;
 
     [Serializable]
@@ -37,6 +39,8 @@ public class FarmManager : MonoBehaviour
         {
             StatsManager.ChangeValues(InventoryEnum.Seeds, -Slot.Plant.CoutEnGraines);
             InventorySlots.Add(Slot);
+            //Lancer Event Farm 
+            PanelFarm.SetActive(false);
         }
     }
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Poireau
   m_EditorClassIdentifier: 
   Type: 5
-  Nom: Poireau
+  Image: {fileID: 21300000, guid: da903b3ccb42bc04084983c6b704f089, type: 3}
   TempsDePousseEnJours: 2
   Description: 
   CoutEnGraines: 5

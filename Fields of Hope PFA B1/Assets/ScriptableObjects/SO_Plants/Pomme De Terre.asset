@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pomme De Terre
   m_EditorClassIdentifier: 
   Type: 7
-  Nom: Pomme de Terre
+  Image: {fileID: 21300000, guid: c72c1e053e662ad4682bdbce724aacb9, type: 3}
   TempsDePousseEnJours: 8
   Description: "Un aliment de base polyvalent, g\xE9n\xE9ralement bouilli ou frit,
     fournit des glucides qui soutiennent l'\xE9nergie."

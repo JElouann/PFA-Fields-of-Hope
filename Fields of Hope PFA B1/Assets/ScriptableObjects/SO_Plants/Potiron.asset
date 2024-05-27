@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Potiron
   m_EditorClassIdentifier: 
   Type: 6
-  Nom: Potiron
+  Image: {fileID: 21300000, guid: f45ac3106a7a8e943a66c38e81cc88ca, type: 3}
   TempsDePousseEnJours: 10
   Description: "Un l\xE9gume polyvalent et riche en fibres, il est souvent utilis\xE9
     dans la pr\xE9paration de plats principaux ou de desserts sains."

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Carrote
   m_EditorClassIdentifier: 
   Type: 3
-  Nom: Carrote
+  Image: {fileID: 21300000, guid: 2c51d748fb62512419bd343a7deb89fd, type: 3}
   TempsDePousseEnJours: 5
   Description: " Douce et croquante, la carotte est une source l\xE9g\xE8re de vitamines
     qui offre un coup de pouce \xE9nerg\xE9tique mod\xE9r\xE9."

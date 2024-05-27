@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rutabaga
   m_EditorClassIdentifier: 
   Type: 8
-  Nom: Rutabaga
+  Image: {fileID: 21300000, guid: 222f15defe0e50447aaf0cbdd879e4ca, type: 3}
   TempsDePousseEnJours: 5
   Description: "Un l\xE9gume-racine robuste, dot\xE9 d'une texture consistante, qui
     fournit une source mod\xE9r\xE9e de glucides et de fibres."
