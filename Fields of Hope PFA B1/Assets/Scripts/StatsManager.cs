@@ -187,6 +187,7 @@ public class StatsManager : MonoBehaviour
         // On initialise les variables avec des valeurs prédéfinies
         Life = 100;
         Hunger = 50;
+        Seeds = 50;
         UpdateTexts();
         UpdateBars();
     }
