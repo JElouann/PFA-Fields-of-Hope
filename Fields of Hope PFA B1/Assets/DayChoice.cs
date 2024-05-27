@@ -1,7 +1,6 @@
 using System;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public enum Type
@@ -21,17 +20,16 @@ public class DayChoice : MonoBehaviour
     [SerializeField] private GameObject _farmButton;
     [SerializeField] private GameObject _explorationButton;
 
-    private Vector3 _position;
-    private static bool _selected;
+    private Vector3 _farmButtonPosition;
+    private Vector3 _explorationButtonPosition;
 
-
+    public static bool _selected { get; private set; }
 
     public void SelectFarm()
     {
         if(_dayManager.DayChoice == DailyChoice.None)
         {
             _dayManager.DayChoice = DailyChoice.Farm;
-            //OnChoose?.Invoke(); // invoke C# event responsible of instancing event
             OnChooseDailyTask();
             Debug.Log($"<color=green>{_dayManager.DayChoice} </color>");
         }
@@ -42,7 +40,6 @@ public class DayChoice : MonoBehaviour
         if (_dayManager.DayChoice == DailyChoice.None)
         {
             _dayManager.DayChoice = DailyChoice.Exploration;
-            //OnChoose?.Invoke(); // invoke C# event responsible of instancing event
             OnChooseDailyTask();
             Debug.Log($"<color=orange>{_dayManager.DayChoice} </color>");
         }
@@ -50,24 +47,23 @@ public class DayChoice : MonoBehaviour
 
     private void OnChooseDailyTask()
     {
+        _selected = true;
         switch (_dayManager.DayChoice)
         {
             case DailyChoice.Farm:
-                _selected = true;
-                _farmButton.transform.DOLocalMoveX(_position.x - 150, 0.8f);
-                _farmButton.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.8f);
+                _farmButton.SendMessage("SelectedGameFeel", -1);
                 _farmButton.GetComponent<Button>().interactable = false;
-                Destroy(_explorationButton);
+                _explorationButton.SendMessage("NotSelectedGameFeel");
+
                 //_eventInstancier.InstantiateEvent();
                 break;
             
             case DailyChoice.Exploration:
-                _selected = true;
-                _explorationButton.transform.DOLocalMoveX(_position.x + 150, 0.8f);
-                _explorationButton.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.8f);
+                _explorationButton.SendMessage("SelectedGameFeel", 1);
                 _explorationButton.GetComponent<Button>().interactable = false;
-                Destroy(_farmButton);
-                _eventInstancier.InstantiateEvent();
+                _farmButton.SendMessage("NotSelectedGameFeel");
+
+                _eventInstancier.InstantiateEvent(EventType.Expedition);
                 break;
         }
     }
@@ -76,13 +72,24 @@ public class DayChoice : MonoBehaviour
     {
         _eventInstancier = GameObject.Find("EventInstancier").GetComponent<EventInstancier>();
         _dayManager = GameObject.Find("DayManager").GetComponent<DayManager>();
-        _position = this.transform.localPosition;
+        _farmButtonPosition = this._farmButton.transform.position;
+        _explorationButtonPosition = this._explorationButton.transform.position;
     }
 
     public void Restart()
     {
         _selected = false;
-        this.transform.position = _position;
-        this.transform.localScale = Vector3.one;
+
+        _farmButton.SetActive(true);
+        _farmButton.transform.position = _farmButtonPosition;
+        _farmButton.transform.localScale = Vector3.one;
+        _farmButton.GetComponent<Image>().DOFade(1, 0);
+        _farmButton.transform.GetChild(0).GetComponent<Image>().DOFade(1, 0f);
+
+        _explorationButton.SetActive(true);
+        _explorationButton.transform.position = _explorationButtonPosition;
+        _explorationButton.transform.localScale = Vector3.one;
+        _explorationButton.GetComponent<Image>().DOFade(1, 0);
+        _explorationButton.transform.GetChild(0).GetComponent<Image>().DOFade(1, 0f);
     }
 }

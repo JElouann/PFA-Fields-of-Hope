@@ -16,21 +16,23 @@ public class EndDay : MonoBehaviour
     private int _foodLossMultiplier;
 
     [SerializeField]
-    private SeedsPlants SeedsPlants;
+    private FarmManager SeedsPlants;
 
     public void OnEndDay()
     {
         Destroy(_eventInstancier.CreatedEvent);
-        print("ça marche");
+        print("Ã§a marche");
 
         // Jouer animation de changement de jour
 
-        // On met à jour les différentes valeurs
+        // On met a jour les diffï¿½rentes valeurs
 
         _statsManager.ChangeValues(InventoryEnum.Life, _statsManager.GetHungerConsequence());
         _statsManager.ChangeValues(InventoryEnum.Hunger, -_foodLoss * _foodLossMultiplier);
         
         _dayManager.DayChoice = DailyChoice.None;
+
+        _dayManager.DayChoiceScript.Restart();
         SeedsPlants.RemoveDay();
     }
 }

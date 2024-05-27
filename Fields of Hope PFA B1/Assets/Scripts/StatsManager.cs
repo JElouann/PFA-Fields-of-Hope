@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
@@ -188,7 +187,13 @@ public class StatsManager : MonoBehaviour
         // On initialise les variables avec des valeurs prédéfinies
         Life = 100;
         Hunger = 50;
+        Seeds = 50;
         UpdateTexts();
         UpdateBars();
+    }
+
+    private void Update()
+    {
+        print(Patate);
     }
 }

@@ -29,7 +29,7 @@ public class EventScript : MonoBehaviour
 
     public void Left() // left button
     {
-        if (!CheckConditions(currentEvent.Child1Conditions)) return; // unable the use of this choice button if conditions unfullfilled (add game feel)
+        if (!CheckConditions(currentEvent.Child1Conditions)) return;
         previousEvent = currentEvent;
         currentEvent = currentEvent.ChildEvent1;
         UpdateEvent();
@@ -37,7 +37,7 @@ public class EventScript : MonoBehaviour
 
     public void Right() // right button
     {
-        if (!CheckConditions(currentEvent.Child2Conditions)) return; // unable the use of this choice button if conditions unfullfilled (add game feel)
+        if (!CheckConditions(currentEvent.Child2Conditions)) return;
         previousEvent = currentEvent;
         currentEvent = currentEvent.ChildEvent2;
         UpdateEvent();
@@ -96,8 +96,6 @@ public class EventScript : MonoBehaviour
 
     public void UpdateEvent()
     {
-        //_text.text = currentEvent.Text;
-        
         /*if (Random.Range(0, 2) == 0)
         {
             print(0);

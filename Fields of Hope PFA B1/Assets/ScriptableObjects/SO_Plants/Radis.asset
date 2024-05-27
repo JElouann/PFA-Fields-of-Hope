@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81205984173739e41a2adcee3a4bcb9b, type: 3}
   m_Name: Radis
   m_EditorClassIdentifier: 
-  Nom: Radis
-  TempsDePousseEnJours: 0
+  Type: 10
+  Image: {fileID: 1093868420, guid: 5f4f7a79f3a6b474fb9e5cbffd64d98f, type: 3}
+  TempsDePousseEnJours: 1
   Description: "Croquant mais l\xE9ger, le radis apporte peu de calories. Il est
     id\xE9al pour des salades ou des en-cas rapides."
-  CoutEnGraines: 0
+  CoutEnGraines: 2
   "Sati\xE9t\xE9": 3
