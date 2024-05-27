@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: "Event_Survivant_For\xEAt"
+  m_EditorClassIdentifier: 
+  Name: "Survivants dans la for\xEAt"
+  Text: "\"En traversant la for\xEAt, j'aper\xE7ois de la fum\xE9e devant moi. En
+    m'approchant, je d\xE9couvre un petit camp de survivants qui semblent vouloir
+    s'installer ici pour un moment. Devrais-je tenter de m'approcher ?\""
+  ChildEvent1: {fileID: 11400000, guid: 025317f33911dae41a8a7b8fe8642718, type: 2}
+  Child1Text: Oui
+  Child1Conditions: []
+  ChildEvent2: {fileID: 11400000, guid: c7be4dd4a6cdfb24f82abd184f29767c, type: 2}
+  Child2Text: Non
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
+  ValuesToChange: []

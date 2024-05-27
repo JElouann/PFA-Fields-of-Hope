@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: Event_Marchandage Pilleur
+  m_EditorClassIdentifier: 
+  Name: Marchandage Pilleur
+  Text: "`De loin, \xE0 travers la neige, une silhouette se dessine, s'approchant
+    de la ferme. Alors que je la scrute, je r\xE9alise avec appr\xE9hension qu'il
+    s'agit d'un potentiel pilleur ! Pr\xEAt \xE0 me d\xE9fendre, je suis sur le qui-vive.
+    Pourtant, la personne agite un drapeau blanc en s'approchant et s'arr\xEAte devant
+    moi. Elle explique qu'elle ne fait pas partie des pilleurs et souhaite simplement
+    \xE9changer des ressources pour son fr\xE8re. Devrais-je accepter sa proposition
+    d'\xE9change pour une Betterave`"
+  ChildEvent1: {fileID: 11400000, guid: f92097a3cfb809148a5f2da8c61ce17d, type: 2}
+  Child1Text: OUI
+  Child1Conditions: []
+  ChildEvent2: {fileID: 11400000, guid: bb4d485dff09dc24b8fe43d9ceeb9414, type: 2}
+  Child2Text: NON
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
+  OufitudePool:
+    Minimum: 6
+    Maximum: 7
+  ValuesToChange: []
