@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Text: 
-  IDEvent: 0
-  Description: 
   ChildEvent1: {fileID: 0}
   Child1Text: 
+  Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
-  Appearance: {fileID: 0}
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0

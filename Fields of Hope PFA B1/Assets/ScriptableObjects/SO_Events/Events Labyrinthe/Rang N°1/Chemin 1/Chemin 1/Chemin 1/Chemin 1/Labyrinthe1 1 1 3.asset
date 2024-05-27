@@ -15,16 +15,17 @@ MonoBehaviour:
   Name: Labyrinthe
   Text: "Peut \xEAtre que je vais r\xE9cup\xE9rer quelle que chose.\nBon ou je vais
     maintenant?"
-  IDEvent: 0
-  Description: "Choix Gauche n\xB01"
   ChildEvent1: {fileID: 11400000, guid: ca6482f621197454c8e367313c3d7df5, type: 2}
   Child1Text: Gauche
+  Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: 3a7992779e1677447bdfa16a96e0c9a0, type: 2}
   Child2Text: Droite
-  Appearance: {fileID: 0}
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange:
-  - Value: Hunger
-    Amount: 0
+  ValuesToChange: []

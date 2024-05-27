@@ -16,16 +16,19 @@ MonoBehaviour:
   Text: "Mieux vaut \xE9viter pour l'instant, on ne sais jamais.\nJe continue mon
     chemin. Encore un choix qui s'offre \xE0 moi.\nQuelle direction je vais choisir
     ?"
-  IDEvent: 0
-  Description: "Choix Gauche n\xB01"
   ChildEvent1: {fileID: 11400000, guid: 88cd37aa973f7c4448cd9595a6f05d1e, type: 2}
   Child1Text: Gauche
+  Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: b33f3f0f7e859b94097b9f34544ab3ab, type: 2}
   Child2Text: Droite
-  Appearance: {fileID: 0}
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: Hunger
-    Amount: 0
+  - Value: 1
+    Amount: -5

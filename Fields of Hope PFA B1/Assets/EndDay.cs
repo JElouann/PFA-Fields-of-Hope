@@ -18,6 +18,9 @@ public class EndDay : MonoBehaviour
     [SerializeField]
     private FarmManager SeedsPlants;
 
+    [SerializeField]
+    private GameObject PanelEndDay;
+
     public void OnEndDay()
     {
         Destroy(_eventInstancier.CreatedEvent);
@@ -34,5 +37,7 @@ public class EndDay : MonoBehaviour
 
         _dayManager.DayChoiceScript.Restart();
         SeedsPlants.RemoveDay();
+
+        PanelEndDay.SetActive(true);
     }
 }

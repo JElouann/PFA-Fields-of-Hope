@@ -13,20 +13,21 @@ MonoBehaviour:
   m_Name: Labyrinthe1 1 1 4
   m_EditorClassIdentifier: 
   Name: Labyrinthe
-  Text: "Oh de la nourriture, toujours \xE7a de pris.\nBon mieux vaut rentrer pour
-    tous d\xE9poser."
-  IDEvent: 0
-  Description: "Choix Gauche n\xB01"
+  Text: "Oh des graines, toujours \xE7a de pris.\nBon mieux vaut rentrer pour tous
+    d\xE9poser."
   ChildEvent1: {fileID: 11400000, guid: 4ae90d7e910377a46812f0a78c49ea81, type: 2}
   Child1Text: Oui
+  Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: Non
-  Appearance: {fileID: 0}
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: Hunger
-    Amount: -5
-  - Value: Food
-    Amount: 5
+  - Value: 2
+    Amount: 15

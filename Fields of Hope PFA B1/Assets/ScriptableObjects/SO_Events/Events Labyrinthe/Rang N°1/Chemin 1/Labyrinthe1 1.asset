@@ -14,16 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Labyrinthe
   Text: "RANG N\xB02 GAUCHE"
-  IDEvent: 0
-  Description: "Choix Gauche n\xB01"
   ChildEvent1: {fileID: 11400000, guid: ee3b056867850d74a8c6122a5cf0fd61, type: 2}
   Child1Text: Gauche
+  Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: de064784d687ecc49bab61312193bc54, type: 2}
   Child2Text: Droite
-  Appearance: {fileID: 0}
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: Hunger
+  - Value: 1
     Amount: -5
