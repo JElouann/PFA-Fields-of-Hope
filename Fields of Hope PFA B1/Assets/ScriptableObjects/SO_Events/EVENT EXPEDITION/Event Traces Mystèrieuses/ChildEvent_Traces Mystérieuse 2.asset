@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: "ChildEvent_Traces Myst\xE9rieuse 2"
+  m_EditorClassIdentifier: 
+  Name: Retourner chez soi
+  Text: "\"Apr\xE8s avoir suivi les traces dans la neige, vous constatez qu'elles
+    s'arr\xEAtent sous un arbre, mais continuent sur le tronc. Une myriade de questions
+    envahit votre esprit. Paniqu\xE9, vous prenez peur et retournez chez vous. Comment
+    une cr\xE9ature a-t-elle pu grimper ainsi ?\""
+  ChildEvent1: {fileID: 0}
+  Child1Text: 
+  Child1Conditions: []
+  ChildEvent2: {fileID: 0}
+  Child2Text: 
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
+  ValuesToChange: []

@@ -17,20 +17,20 @@ MonoBehaviour:
     V\xEAtue d'une blouse blanche et arborant un brassard rouge, la personne se pr\xE9sente
     comme un m\xE9decin, offrant ses services en \xE9change de 2 Patates. Dois-je
     accepter son offre ?`"
-  ChildEvent1: {fileID: 0}
+  ChildEvent1: {fileID: 11400000, guid: 334195b907f23ad409e6df000c67807a, type: 2}
   Child1Text: OUI
   Child1Conditions:
-  - Variable: 0
-    Operator: 0
-    Amount: 0
-  ChildEvent2: {fileID: 0}
-  Child2Text: 
+  - Variable: 7
+    Operator: 3
+    Amount: 2
+  ChildEvent2: {fileID: 11400000, guid: 4973906620d08bb409f2916bacd0beb6, type: 2}
+  Child2Text: NON
   Child2Conditions: []
   ImageEvent: {fileID: 0}
   SpritePosition: {x: 0, y: 0, z: 0}
   SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
   SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
-    Minimum: 0
-    Maximum: 0
+    Minimum: 9
+    Maximum: 10
   ValuesToChange: []

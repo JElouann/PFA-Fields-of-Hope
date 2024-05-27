@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
+  m_Name: Event_Air_Samaritains
+  m_EditorClassIdentifier: 
+  Name: "H\xE9licopt\xE8re Samaritains"
+  Text: "`Dans les prairies de Sk\xF6rn, je me balade \xE0 la recherche de bois et
+    d'autres combustibles pour la ferme quand j'entends un bourdonnement. \xC0 ma
+    grande surprise, c'est un h\xE9licopt\xE8re ! Il survole ma zone. Devrais-je
+    lui faire signe ?`"
+  ChildEvent1: {fileID: 11400000, guid: 89860a58882cd4e4b8917d82f77a6a3e, type: 2}
+  Child1Text: OUI
+  Child1Conditions: []
+  ChildEvent2: {fileID: 11400000, guid: 52a1d7d42691bb6488f6bf79e984832b, type: 2}
+  Child2Text: NON
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
+  OufitudePool:
+    Minimum: 0
+    Maximum: 0
+  ValuesToChange: []
