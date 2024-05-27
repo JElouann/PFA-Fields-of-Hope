@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FarmManager : MonoBehaviour
+public class ArchiveFarmManager : MonoBehaviour
 {
     public PlantObjectTUTO selectPlant;
     public bool isPlanting = false;

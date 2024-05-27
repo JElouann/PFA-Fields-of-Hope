@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81205984173739e41a2adcee3a4bcb9b, type: 3}
   m_Name: Betterave
   m_EditorClassIdentifier: 
+  Type: 4
   Nom: Betterave
-  TempsDePousseEnJours: 0
+  TempsDePousseEnJours: 6
   Description: "Cette racine l\xE9gumineuse offre une source notable de sucre naturel,
     ayant une valeur nutritionnelle \xE9lev\xE9e."
-  CoutEnGraines: 0
+  CoutEnGraines: 23
   "Sati\xE9t\xE9": 18

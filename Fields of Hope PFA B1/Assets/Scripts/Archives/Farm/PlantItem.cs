@@ -16,11 +16,11 @@ public class PlantItem : MonoBehaviour
 
     public int NB_graines;
 
-    private FarmManager fm;
+    private ArchiveFarmManager fm;
 
     void Start()
     {
-        fm = FindObjectOfType<FarmManager>();
+        fm = FindObjectOfType<ArchiveFarmManager>();
         InitializeUI();
     }
 
