@@ -15,5 +15,6 @@ public enum InventoryEnum
     Topinambour,
     Radis,
     Day,
-    Medkit
+    Medkit,
+    DegreDeOufitude
 }

@@ -57,7 +57,8 @@ public class EventInstancier : MonoBehaviour
         }
         else
         {
-            // FARM...
+            CreateSuitableFarmEventList();
+            InitializeEvent(null, _where);
         }
     }
 

@@ -39,7 +39,7 @@ public class ButtonGameFeel : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void SelectedGameFeel(int direction)
     {
-        this.transform.DOLocalMoveX(transform.localPosition.x + (80 * direction), 0.8f);
+        this.transform.DOLocalMove(new Vector3(0, 6, 0), 0.8f);
         this.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.8f);
     }
 

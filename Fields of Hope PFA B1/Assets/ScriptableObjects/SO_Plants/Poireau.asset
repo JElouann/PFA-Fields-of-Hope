@@ -15,6 +15,7 @@ MonoBehaviour:
   Type: 5
   Image: {fileID: 21300000, guid: da903b3ccb42bc04084983c6b704f089, type: 3}
   TempsDePousseEnJours: 2
-  Description: 
+  Description: "L\xE9gume vert utilis\xE9 comme ingr\xE9dient aromatique, mais relativement
+    l\xE9ger en termes de calories."
   CoutEnGraines: 5
   "Sati\xE9t\xE9": 5

@@ -39,7 +39,7 @@ public class FarmManager : MonoBehaviour
         {
             StatsManager.ChangeValues(InventoryEnum.Seeds, -Slot.Plant.CoutEnGraines);
             InventorySlots.Add(Slot);
-            //Lancer Event Farm 
+            GameObject.Find("EventInstancier").GetComponent<EventInstancier>().InstantiateEvent(EventType.Farm);
             PanelFarm.SetActive(false);
         }
     }

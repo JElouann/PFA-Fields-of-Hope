@@ -37,56 +37,52 @@ public class StatsManager : MonoBehaviour
     [field: SerializeField]
     public int Food { get; set; }
 
-    [field: SerializeField] // TEMPORARY
-    public int OufitudeDegre { get; set; } // number used to check
+    public int OufitudeDegre
+    {
+        get => _myStat[InventoryEnum.DegreDeOufitude]; 
+        set => _myStat[InventoryEnum.DegreDeOufitude] = value;
+    }
 
     // Vegetables inventory
-    public int Carotte {
-
+    public int Carotte
+    {
         get => _myStat[InventoryEnum.Carotte];
         set => _myStat[InventoryEnum.Carotte] = value;
     }
 
     public int Betterave
     {
-
         get => _myStat[InventoryEnum.Betterave];
         set => _myStat[InventoryEnum.Betterave] = value;
     }
     public int Poireau
     {
-
         get => _myStat[InventoryEnum.Poireau];
         set => _myStat[InventoryEnum.Poireau] = value;
     }
     public int Potiron
     {
-
         get => _myStat[InventoryEnum.Potiron];
         set => _myStat[InventoryEnum.Potiron] = value;
     }
 
     public int Patate
     {
-
         get => _myStat[InventoryEnum.Patate];
         set => _myStat[InventoryEnum.Patate] = value;
     }
     public int Rutabaga
     {
-
         get => _myStat[InventoryEnum.Rutabaga];
         set => _myStat[InventoryEnum.Rutabaga] = value;
     }
     public int Topinambour
     {
-
         get => _myStat[InventoryEnum.Topinambour];
         set => _myStat[InventoryEnum.Topinambour] = value;
     }
     public int Radis
     {
-
         get => _myStat[InventoryEnum.Radis];
         set => _myStat[InventoryEnum.Radis] = value;
     }
@@ -114,6 +110,7 @@ public class StatsManager : MonoBehaviour
         {InventoryEnum.Radis, 0},
         {InventoryEnum.Day, 0},
         {InventoryEnum.Medkit, 0},
+        {InventoryEnum.DegreDeOufitude, 0}
     };
 
     public event Action OnDeath;
@@ -122,7 +119,9 @@ public class StatsManager : MonoBehaviour
     {
         _myStat[value] = Mathf.Clamp(_myStat[value] + amount, 0, 100);
         if (IsDead()) { OnDeath?.Invoke(); }
-        
+
+        print(OufitudeDegre); //
+
         UpdateTexts();
         UpdateBars();
     }
@@ -190,10 +189,5 @@ public class StatsManager : MonoBehaviour
         Seeds = 50;
         UpdateTexts();
         UpdateBars();
-    }
-
-    private void Update()
-    {
-        print(Patate);
     }
 }

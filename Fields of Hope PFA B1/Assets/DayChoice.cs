@@ -14,6 +14,8 @@ public class DayChoice : MonoBehaviour
     private DayManager _dayManager;
     private event Action OnChoose;
 
+    [SerializeField] private GameObject _cultureMenu;
+
     private EventInstancier _eventInstancier;
 
     [Header("Boutons")]
@@ -54,8 +56,7 @@ public class DayChoice : MonoBehaviour
                 _farmButton.SendMessage("SelectedGameFeel", -1);
                 _farmButton.GetComponent<Button>().interactable = false;
                 _explorationButton.SendMessage("NotSelectedGameFeel");
-
-                //_eventInstancier.InstantiateEvent();
+                _cultureMenu.SetActive(true);
                 break;
             
             case DailyChoice.Exploration:
