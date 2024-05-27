@@ -16,16 +16,19 @@ MonoBehaviour:
   Text: "J'arrive juste sur un entrepot.\nIl y a plusieurs objet de valleur mais
     il ne me seront pas utile.\nJ'ai trouv\xE9 des graines toujours \xE7a se pris.\nRentrons
     pour mettre \xE7a en s\xE9curit\xE9."
-  IDEvent: 0
-  Description: "Choix Gauche n\xB01"
   ChildEvent1: {fileID: 11400000, guid: 84d406929c98aed4faec3787880a4593, type: 2}
   Child1Text: Gauche
+  Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: Droite
-  Appearance: {fileID: 0}
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: Hunger
-    Amount: 0
+  - Value: 2
+    Amount: 5

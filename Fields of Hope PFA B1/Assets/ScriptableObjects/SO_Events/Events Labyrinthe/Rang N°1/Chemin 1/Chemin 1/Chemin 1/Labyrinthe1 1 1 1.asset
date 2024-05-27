@@ -21,14 +21,13 @@ MonoBehaviour:
   ChildEvent2: {fileID: 11400000, guid: a37ee226a87fa1c47aafe61ab8bb29a7, type: 2}
   Child2Text: Non
   Child2Conditions: []
-  ImageEvent:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: Hunger
+  - Value: 1
     Amount: -5

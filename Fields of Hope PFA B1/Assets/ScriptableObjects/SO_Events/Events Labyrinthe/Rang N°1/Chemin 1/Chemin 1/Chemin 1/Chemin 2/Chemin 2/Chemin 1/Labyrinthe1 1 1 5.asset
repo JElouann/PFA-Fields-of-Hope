@@ -17,18 +17,21 @@ MonoBehaviour:
     au cas ou.\nUn rat se trouve dans le sac et ma mordu le bras. J'ai pas grand
     chose mais \xE7a fait un peu mal. \nBon maintenant regardons le sac. Un peu de
     nourriture qui n'as pas \xE9t\xE9 manger pas le sac.\nRentrons il se fait tard."
-  IDEvent: 0
-  Description: "Choix Gauche n\xB01"
   ChildEvent1: {fileID: 11400000, guid: 17f241c23256a354d992d5392f4ff780, type: 2}
   Child1Text: Gauche
+  Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: dd76d86b651a62d4e85b80c34abc5cfa, type: 2}
   Child2Text: Droite
-  Appearance: {fileID: 0}
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: Food
-    Amount: 3
-  - Value: Life
+  - Value: 3
+    Amount: 2
+  - Value: 0
     Amount: -5

@@ -15,18 +15,21 @@ MonoBehaviour:
   Name: Labyrinthe
   Text: "Des graines !\nC'est cool pour mes plantations.\nJe vais rentrer pour tous
     d\xE9poser.\n"
-  IDEvent: 0
-  Description: "Choix Gauche n\xB01"
   ChildEvent1: {fileID: 11400000, guid: 4ae90d7e910377a46812f0a78c49ea81, type: 2}
   Child1Text: Oui
+  Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: Non
-  Appearance: {fileID: 0}
+  Child2Conditions: []
+  ImageEvent: {fileID: 0}
+  SpritePosition: {x: 0, y: 0, z: 0}
+  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
+  SpriteScale: {x: 0, y: 0, z: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: Hunger
+  - Value: 1
     Amount: -5
-  - Value: Seeds
+  - Value: 2
     Amount: 10
