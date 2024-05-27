@@ -4296,6 +4296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 505025376}
   - component: {fileID: 505025377}
+  - component: {fileID: 505025378}
   m_Layer: 0
   m_Name: EventInstancier
   m_TagString: Untagged
@@ -4348,8 +4349,32 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 24a2f8543c9421841beb07fe6c156b73, type: 2}
   - {fileID: 11400000, guid: c47fdefaef41f59428622498d0fb200c, type: 2}
   _expeditionEventDatas: []
-  _histoireEventDatas: []
   <CreatedEvent>k__BackingField: {fileID: 0}
+--- !u!114 &505025378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505025375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cf0bd923c0b324bb29f43433dd6cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <First>k__BackingField: 0
+  <Second>k__BackingField: 0
+  <Third>k__BackingField: 0
+  <Fourth>k__BackingField: 0
+  _histoireEventDatas:
+  - List:
+    - {fileID: 11400000, guid: 033be880c49bcad49b73f1b755a93e40, type: 2}
+  - List:
+    - {fileID: 11400000, guid: 851fdfb88826312469d10abe9b68f050, type: 2}
+  - List:
+    - {fileID: 11400000, guid: 53eff615a5be8694390a83f2fc149955, type: 2}
+  - List:
+    - {fileID: 11400000, guid: 4918467cf8175dd45b0b508dfdd76d80, type: 2}
 --- !u!1 &517234294
 GameObject:
   m_ObjectHideFlags: 0
