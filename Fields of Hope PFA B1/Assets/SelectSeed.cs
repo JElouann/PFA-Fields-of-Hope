@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectSeed : MonoBehaviour
 {
-    [SerializeField]
-    private SO_SeedsData SO_SeedsData;
+    public SO_SeedsData SO_SeedsData;
 
     [SerializeField]
-    SeedsPlants seedsPlants;
+    FarmManager seedsPlants;
 
-    public TextMeshProUGUI textMeshProUGUI;
+    public Image Image;
 
     public TextMeshProUGUI textDescription;
 
@@ -23,6 +23,6 @@ public class SelectSeed : MonoBehaviour
 
     public void Start()
     {
-        textMeshProUGUI.text = SO_SeedsData.Nom ;
+        Image.sprite = SO_SeedsData.Image ;
     }
 }

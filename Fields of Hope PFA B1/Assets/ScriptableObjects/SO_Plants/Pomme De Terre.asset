@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81205984173739e41a2adcee3a4bcb9b, type: 3}
   m_Name: Pomme De Terre
   m_EditorClassIdentifier: 
+  Type: 7
   Nom: Pomme de Terre
-  TempsDePousseEnJours: 3
+  TempsDePousseEnJours: 8
   Description: "Un aliment de base polyvalent, g\xE9n\xE9ralement bouilli ou frit,
     fournit des glucides qui soutiennent l'\xE9nergie."
-  CoutEnGraines: 0
+  CoutEnGraines: 28
   "Sati\xE9t\xE9": 20

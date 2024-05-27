@@ -16,7 +16,7 @@ public class EndDay : MonoBehaviour
     private int _foodLossMultiplier;
 
     [SerializeField]
-    private SeedsPlants SeedsPlants;
+    private FarmManager SeedsPlants;
 
     public void OnEndDay()
     {

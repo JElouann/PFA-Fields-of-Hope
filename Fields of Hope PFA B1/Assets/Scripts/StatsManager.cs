@@ -190,4 +190,9 @@ public class StatsManager : MonoBehaviour
         UpdateTexts();
         UpdateBars();
     }
+
+    private void Update()
+    {
+        print(Patate);
+    }
 }

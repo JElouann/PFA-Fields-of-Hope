@@ -11,11 +11,11 @@ public class PlotManager : MonoBehaviour
 
     private PlantObjectTUTO PlantObjectTUTO;
     private PlantObjectTUTO test;
-    private FarmManager FarmManager;
+    private ArchiveFarmManager FarmManager;
 
     private void Start()
     {
-        FarmManager = transform.parent.GetComponent<FarmManager>();
+        FarmManager = transform.parent.GetComponent<ArchiveFarmManager>();
     }
 
     private void Update()
