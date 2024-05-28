@@ -16,7 +16,7 @@ public class EndDayStats : MonoBehaviour
         public InventoryEnum inventory{ get; set; }
 
         [field: SerializeField]
-        public int Amout { get; set; }
+        public int Amount { get; set; }
     }
 
     public List<StatChange> StatsHasChange;
@@ -27,10 +27,20 @@ public class EndDayStats : MonoBehaviour
         {
             if (StatsHasChange[i].inventory == inventoryEnum)
             {
-                StatsHasChange[i].Amout += amout;
-                m_TextMeshProUGUI.text += inventoryEnum + " "  + StatsHasChange[i].Amout.ToString();
+                StatsHasChange[i].Amount += amout;
                 return;
             }
+        }
+    }
+
+    public void OnEndDayToString()
+    {
+        for(int i = 0;i < StatsHasChange.Count; i++)
+        {
+            if (StatsHasChange[i].Amount == 0) return;
+            string stats = (StatsHasChange[i].Amount < 0) ? "<color=#D14E4E>" + StatsHasChange[i].Amount.ToString() + "</color>" :
+                                                            "<color=#6FA048>" + "+"+StatsHasChange[i].Amount.ToString() + "</color>";
+            m_TextMeshProUGUI.text += StatsHasChange[i].inventory + " " + stats + "\n";
         }
     }
 
@@ -39,7 +49,7 @@ public class EndDayStats : MonoBehaviour
         m_TextMeshProUGUI.text = null;
         for (int i = 0; i < StatsHasChange.Count; i++)
         {
-            StatsHasChange[i].Amout = 0;
+            StatsHasChange[i].Amount = 0;
             gameObject.SetActive(false);
         }
     }

@@ -45,7 +45,7 @@ public class DayManager : MonoBehaviour
         OnEndDay?.Invoke();
         _dayCounter++;
         _counterText.text = (_dayCounter).ToString();
-        EndDayStats.OnDayFinished();
+        EndDayStats.OnEndDayToString();
     }
 
 
