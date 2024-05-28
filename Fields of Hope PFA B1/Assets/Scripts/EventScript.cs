@@ -128,10 +128,15 @@ public class EventScript : MonoBehaviour
 
         RightButton.gameObject.SetActive(false);
 
-        GameObject spriteCreated = Instantiate(Image, currentEvent.SpritePosition, currentEvent.SpriteRotation, GizmosSprite.transform);
-        spriteCreated.transform.localScale = currentEvent.SpriteScale;
-        Image PipolopoSprite = spriteCreated.GetComponent<Image>();
-        PipolopoSprite.sprite = currentEvent.ImageEvent;
+        for (int i = 0; i < currentEvent.StyleEvent.Count; i++)
+        {
+            GameObject spriteCreated = Instantiate(Image, currentEvent.StyleEvent[i].SpritePosition, currentEvent.StyleEvent[i].SpriteRotation, GizmosSprite.transform);
+            RectTransform rectTransform = spriteCreated.GetComponent<RectTransform>();
+            rectTransform.sizeDelta = currentEvent.StyleEvent[i].SpriteLongueurAndLargeur;
+            spriteCreated.transform.localScale = currentEvent.StyleEvent[i].SpriteScale;
+            Image PipolopoSprite = spriteCreated.GetComponent<Image>();
+            PipolopoSprite.sprite = currentEvent.StyleEvent[i].ImageEvent;
+        }
     }
 
     public void LoadThis()

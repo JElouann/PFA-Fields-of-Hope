@@ -20,13 +20,15 @@ MonoBehaviour:
   ChildEvent2: {fileID: 0}
   Child2Text: Non
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent:
+  - <ImageEvent>k__BackingField: {fileID: 0}
+    <SpritePosition>k__BackingField: {x: 0, y: 0, z: 0}
+    <SpriteRotation>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    <SpriteScale>k__BackingField: {x: 0, y: 0, z: 0}
+    <SpriteLongueurAndLargeur>k__BackingField: {x: 0, y: 0}
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: 
+  - Value: 0
     Amount: 0

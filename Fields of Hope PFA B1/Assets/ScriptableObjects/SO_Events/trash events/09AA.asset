@@ -14,16 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Text: -50 HP
-  IDEvent: 0
-  Description: 
   ChildEvent1: {fileID: 0}
   Child1Text: 
+  Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
-  Appearance: {fileID: 0}
+  Child2Conditions: []
+  StyleEvent:
+  - <ImageEvent>k__BackingField: {fileID: 21300000, guid: 2c568bb0334596b429d1d18df414d5e4, type: 3}
+    <SpritePosition>k__BackingField: {x: 3, y: -1.5, z: 0}
+    <SpriteRotation>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    <SpriteScale>k__BackingField: {x: 0.5, y: 0.5, z: 0.5}
+    <SpriteLongueurAndLargeur>k__BackingField: {x: 148, y: 386}
   OufitudePool:
     Minimum: 0
     Maximum: 9
   ValuesToChange:
-  - Value: Life
+  - Value: 0
     Amount: -50
