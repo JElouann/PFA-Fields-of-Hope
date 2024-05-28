@@ -89,6 +89,12 @@ public class StatsManager : MonoBehaviour
         set => _myStat[InventoryEnum.Radis] = value;
     }
 
+    public int Medkit
+    {
+        get => _myStat[InventoryEnum.Medkit];
+        set => _myStat[InventoryEnum.Medkit] = value;
+    }
+
     [field: Header("UI")] // UI
     public TextMeshProUGUI LifeAmount;
     public TextMeshProUGUI HungerAmount;
@@ -122,7 +128,7 @@ public class StatsManager : MonoBehaviour
         _myStat[value] = (value == InventoryEnum.DegreDeOufitude) ? Mathf.Clamp(_myStat[value] + amount, 0, 10) : Mathf.Clamp(_myStat[value] + amount, 0, 100);
         if (IsDead()) { OnDeath?.Invoke(); }
 
-        print(OufitudeDegre); //
+        //print(OufitudeDegre); //
 
         UpdateTexts();
         UpdateBars();

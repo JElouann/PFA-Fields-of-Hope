@@ -161,7 +161,7 @@ public class EventScript : MonoBehaviour
     {
         if (currentEvent.ChildEvent1 == null && currentEvent.ChildEvent2 == null)
         {
-            //OnEndEvent.Invoke();
+            OnEndEvent.Invoke();
         }
         else
         {

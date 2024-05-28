@@ -42,10 +42,11 @@ public class DayManager : MonoBehaviour
 
     public void NextDay()
     {
-        OnEndDay?.Invoke();
+        //OnEndDay?.Invoke();
         _dayCounter++;
         _counterText.text = (_dayCounter).ToString();
-        EndDayStats.OnEndDayToString();
+        DayChoice = DailyChoice.None;
+        //EndDayStats.OnEndDayToString();
     }
 
 

@@ -37,10 +37,12 @@ public class EndDayStats : MonoBehaviour
     {
         for(int i = 0;i < StatsHasChange.Count; i++)
         {
-            if (StatsHasChange[i].Amount == 0) return;
-            string stats = (StatsHasChange[i].Amount < 0) ? "<color=#D14E4E>" + StatsHasChange[i].Amount.ToString() + "</color>" :
-                                                            "<color=#6FA048>" + "+"+StatsHasChange[i].Amount.ToString() + "</color>";
-            m_TextMeshProUGUI.text += StatsHasChange[i].inventory + " " + stats + "\n";
+            if (StatsHasChange[i].Amount != 0)
+            {
+                string stats = (StatsHasChange[i].Amount < 0) ? "<color=#D14E4E>" + StatsHasChange[i].Amount.ToString() + "</color>" :
+                                                                "<color=#6FA048>" + "+" + StatsHasChange[i].Amount.ToString() + "</color>";
+                m_TextMeshProUGUI.text += StatsHasChange[i].inventory + " " + stats + "\n";
+            }
         }
     }
 
