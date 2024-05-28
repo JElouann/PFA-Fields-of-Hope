@@ -11,6 +11,8 @@ public class StatsManager : MonoBehaviour
     //[Header("System stats")]
     //[Range(0, 100)]
     //[SerializeField]
+    [SerializeField]
+    private EndDayStats enddaystats;
 
     public int Life {
 
@@ -124,6 +126,7 @@ public class StatsManager : MonoBehaviour
 
         UpdateTexts();
         UpdateBars();
+        enddaystats.OnStatsChange(value, amount);
     }
 
     public void UpdateTexts()
