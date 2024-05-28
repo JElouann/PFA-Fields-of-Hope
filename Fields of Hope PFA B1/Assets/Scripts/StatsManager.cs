@@ -119,7 +119,7 @@ public class StatsManager : MonoBehaviour
 
     public void ChangeValues(InventoryEnum value, int amount)
     {
-        _myStat[value] = Mathf.Clamp(_myStat[value] + amount, 0, 100);
+        _myStat[value] = (value == InventoryEnum.DegreDeOufitude) ? Mathf.Clamp(_myStat[value] + amount, 0, 10) : Mathf.Clamp(_myStat[value] + amount, 0, 100);
         if (IsDead()) { OnDeath?.Invoke(); }
 
         print(OufitudeDegre); //
