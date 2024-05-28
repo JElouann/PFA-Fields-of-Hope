@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DayManager : MonoBehaviour
 {
+    [SerializeField]
+    private EndDayStats EndDayStats;
 
     public int _dayCounter { get; set; }
     public StatsManager _statsManager { get; private set; }
@@ -43,6 +45,7 @@ public class DayManager : MonoBehaviour
         OnEndDay?.Invoke();
         _dayCounter++;
         _counterText.text = (_dayCounter).ToString();
+        EndDayStats.OnEndDayToString();
     }
 
 
