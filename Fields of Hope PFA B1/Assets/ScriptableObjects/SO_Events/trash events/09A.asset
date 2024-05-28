@@ -22,10 +22,12 @@ MonoBehaviour:
   ChildEvent2: {fileID: 11400000, guid: d005814b4b751e945a18316eb893dd61, type: 2}
   Child2Text: +50 HP
   Child2Conditions: []
-  ImageEvent: {fileID: 21300000, guid: 9b9d581e98c63964f85ef098f1205b8f, type: 3}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 3, y: 3, z: 3}
+  StyleEvent:
+  - <ImageEvent>k__BackingField: {fileID: 21300000, guid: a86f7a31cde903646ba6566a9e9fb605, type: 3}
+    <SpritePosition>k__BackingField: {x: 5, y: -1.5, z: 0}
+    <SpriteRotation>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    <SpriteScale>k__BackingField: {x: 0.5, y: 0.5, z: 0.5}
+    <SpriteLongueurAndLargeur>k__BackingField: {x: 409, y: 423}
   OufitudePool:
     Minimum: 0
     Maximum: 9

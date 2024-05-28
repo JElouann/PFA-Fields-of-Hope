@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,12 +23,28 @@ public class SO_Events : ScriptableObject
     [Tooltip("The text the second button will display.")] public string Child2Text;
     public List<Condition> Child2Conditions;
 
+    [Serializable]
+    public class Style
+    {
+        [field: SerializeField]
+        public Sprite ImageEvent { get; set; }
+
+        [field: SerializeField]
+        public Vector3 SpritePosition { get; set; }
+
+        [field: SerializeField]
+        public Quaternion SpriteRotation { get; set; }
+
+        [field: SerializeField]
+        public Vector3 SpriteScale { get; set; }
+
+        [field: SerializeField]
+        public Vector2 SpriteLongueurAndLargeur { get; set; }
+    }
+
     [Header("Style")]
     [Space(2)]
-    public Sprite ImageEvent;
-    public Vector3 SpritePosition;
-    public Quaternion SpriteRotation;
-    public Vector3 SpriteScale;
+    public List<Style> StyleEvent;
 
     [Header("System Stats")]
     [Space(2)]
