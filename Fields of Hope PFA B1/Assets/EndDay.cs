@@ -33,8 +33,8 @@ public class EndDay : MonoBehaviour
 
         // On met a jour les diff�rentes valeurs
 
-        _statsManager.ChangeValues(InventoryEnum.Life, _statsManager.GetHungerConsequence());
-        _statsManager.ChangeValues(InventoryEnum.Hunger, -_foodLoss * _foodLossMultiplier);
+        _statsManager.ChangeValues(InventoryEnum.Life, _statsManager.GetHungerConsequence(), false);
+        _statsManager.ChangeValues(InventoryEnum.Hunger, -_foodLoss * _foodLossMultiplier, false);
         
         _dayManager.DayChoice = DailyChoice.None;
 

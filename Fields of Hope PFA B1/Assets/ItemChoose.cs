@@ -21,8 +21,8 @@ public class ItemChoose : MonoBehaviour
         InventoryEnum typeToChange = (chosenItem.Type != InventoryEnum.Medkit) ? InventoryEnum.Hunger : InventoryEnum.Life;
         Debug.Log(statsManager._myStat[chosenItem.Type]);
         if (!statsManager.CheckRessource(chosenItem.Type)) return;
-        statsManager.ChangeValues(typeToChange, chosenItem.Satiété);
-        statsManager.ChangeValues(chosenItem.Type, -1);
+        statsManager.ChangeValues(typeToChange, chosenItem.Satiété, false);
+        statsManager.ChangeValues(chosenItem.Type, -1, true);
         Debug.Log(statsManager._myStat[chosenItem.Type]);
         game.SetActive(true);
     }

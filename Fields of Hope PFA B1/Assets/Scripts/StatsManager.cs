@@ -125,7 +125,7 @@ public class StatsManager : MonoBehaviour
 
     public event Action OnDeath;
 
-    public void ChangeValues(InventoryEnum value, int amount)
+    public void ChangeValues(InventoryEnum value, int amount, bool hasToRemember)
     {
         _myStat[value] = (value == InventoryEnum.DegreDeOufitude) ? Mathf.Clamp(_myStat[value] + amount, 0, 10) : Mathf.Clamp(_myStat[value] + amount, 0, 100);
         if (IsDead()) { OnDeath?.Invoke(); }
@@ -133,7 +133,8 @@ public class StatsManager : MonoBehaviour
         //print(OufitudeDegre); //
         UpdateTexts();
         UpdateBars();
-        enddaystats.OnStatsChange(value, amount);
+
+        if (hasToRemember) enddaystats.OnStatsChange(value, amount);
     }
 
     public bool CheckRessource(InventoryEnum value)

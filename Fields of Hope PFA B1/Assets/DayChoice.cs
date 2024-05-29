@@ -83,12 +83,14 @@ public class DayChoice : MonoBehaviour
         _selected = false;
 
         _farmButton.SetActive(true);
+        _farmButton.GetComponent<Button>().interactable = true;
         _farmButton.transform.position = _farmButtonPosition;
         _farmButton.transform.localScale = Vector3.one;
         _farmButton.GetComponent<Image>().DOFade(1, 0);
         _farmButton.transform.GetChild(0).GetComponent<Image>().DOFade(1, 0f);
 
         _explorationButton.SetActive(true);
+        _explorationButton.GetComponent<Button>().interactable = true;
         _explorationButton.transform.position = _explorationButtonPosition;
         _explorationButton.transform.localScale = Vector3.one;
         _explorationButton.GetComponent<Image>().DOFade(1, 0);

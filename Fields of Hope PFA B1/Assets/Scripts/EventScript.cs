@@ -121,7 +121,7 @@ public class EventScript : MonoBehaviour
         
         foreach (ValueToChange ValueToChange in currentEvent.ValuesToChange)
         {
-            StatsManager.ChangeValues(ValueToChange.Value, ValueToChange.Amount);
+            StatsManager.ChangeValues(ValueToChange.Value, ValueToChange.Amount, true);
         }
 
         LeftButton.gameObject.SetActive(false);
