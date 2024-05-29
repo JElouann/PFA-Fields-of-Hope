@@ -18,24 +18,24 @@ public class StatsManager : MonoBehaviour
 
     public int Life {
 
-        get => _myStat[InventoryEnum.Life];
-        set => _myStat[InventoryEnum.Life] = value;
+        get => _myStat[InventoryEnum.Santé];
+        set => _myStat[InventoryEnum.Santé] = value;
     }
 
     private int _previousLife; // used to tween Hunger Bar at change
 
     public int Hunger {
 
-        get => _myStat[InventoryEnum.Hunger];
-        set => _myStat[InventoryEnum.Hunger] = value;
+        get => _myStat[InventoryEnum.Faim];
+        set => _myStat[InventoryEnum.Faim] = value;
     }
 
     private int _previousHunger; // used to tween Hunger Bar at change
 
     public int Seeds {
 
-        get => _myStat[InventoryEnum.Seeds];
-        set => _myStat[InventoryEnum.Seeds] = value;
+        get => _myStat[InventoryEnum.Graines];
+        set => _myStat[InventoryEnum.Graines] = value;
     }
 
     [field: SerializeField]
@@ -72,8 +72,8 @@ public class StatsManager : MonoBehaviour
 
     public int Patate
     {
-        get => _myStat[InventoryEnum.Patate];
-        set => _myStat[InventoryEnum.Patate] = value;
+        get => _myStat[InventoryEnum.PommeDeTerre];
+        set => _myStat[InventoryEnum.PommeDeTerre] = value;
     }
     public int Rutabaga
     {
@@ -93,8 +93,8 @@ public class StatsManager : MonoBehaviour
 
     public int Medkit
     {
-        get => _myStat[InventoryEnum.Medkit];
-        set => _myStat[InventoryEnum.Medkit] = value;
+        get => _myStat[InventoryEnum.KitDeSoins];
+        set => _myStat[InventoryEnum.KitDeSoins] = value;
     }
 
     [field: Header("UI")] // UI
@@ -107,19 +107,19 @@ public class StatsManager : MonoBehaviour
     public Image HungerBar;
 
     public Dictionary<InventoryEnum, int> _myStat = new Dictionary<InventoryEnum, int>() {
-        {InventoryEnum.Life, 0},
-        {InventoryEnum.Hunger, 0},
-        {InventoryEnum.Seeds, 0},
+        {InventoryEnum.Santé, 0},
+        {InventoryEnum.Faim, 0},
+        {InventoryEnum.Graines, 0},
         {InventoryEnum.Carotte, 0},
         {InventoryEnum.Betterave, 0},
         {InventoryEnum.Poireau, 0},
         {InventoryEnum.Potiron, 0},
-        {InventoryEnum.Patate, 0},
+        {InventoryEnum.PommeDeTerre, 0},
         {InventoryEnum.Rutabaga, 0},
         {InventoryEnum.Topinambour, 0},
         {InventoryEnum.Radis, 0},
-        {InventoryEnum.Day, 0},
-        {InventoryEnum.Medkit, 0},
+        {InventoryEnum.Jour, 0},
+        {InventoryEnum.KitDeSoins, 0},
         {InventoryEnum.DegreDeOufitude, 0}
     };
 

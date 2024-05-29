@@ -3,18 +3,18 @@ using System;
 [Serializable]
 public enum InventoryEnum
 {
-    Life,
-    Hunger,
-    Seeds,
+    Santé,
+    Faim,
+    Graines,
     Carotte,
     Betterave,
     Poireau,
     Potiron,
-    Patate,
+    PommeDeTerre,
     Rutabaga,
     Topinambour,
     Radis,
-    Day,
-    Medkit,
+    Jour,
+    KitDeSoins,
     DegreDeOufitude
 }

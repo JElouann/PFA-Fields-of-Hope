@@ -31,12 +31,12 @@ public class DayManager : MonoBehaviour
     #region DEV CHEAT
     public void MoreFood() // DEV
     {
-        _statsManager.ChangeValues(InventoryEnum.Life, 5, false);
+        _statsManager.ChangeValues(InventoryEnum.Santé, 5, false);
     }
 
     public void MoreSeeds() // DEV
     {
-        _statsManager.ChangeValues(InventoryEnum.Seeds, 5, false);
+        _statsManager.ChangeValues(InventoryEnum.Graines, 5, false);
     }
     #endregion
 

@@ -14,8 +14,13 @@ public class OnPanelActive : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI TextRendement;
 
+    [SerializeField] TextMeshProUGUI TextQuantités;
+
     [SerializeField]
     ItemChoose ItemChoose;
+
+    [SerializeField]
+    StatsManager StatsManager;
 
     public void OnSetActive()
     {
@@ -24,6 +29,7 @@ public class OnPanelActive : MonoBehaviour
         Image.overrideSprite = b.Image;
         TextNom.text = b.name;
         TextDescription.text = b.Description;
-        TextRendement.text = b.Satiété.ToString();
+        TextQuantités.text = StatsManager._myStat[b.Type].ToString();
+        TextRendement.text = "<color=#6FA048>" + "+" + b.Satiété.ToString() + "</color>"; ;
     }
 }
