@@ -12,24 +12,19 @@ public class ItemChoose : MonoBehaviour
     public InventoryEnum buttonItem;
     public static SO_SeedsData chosenItem;
 
-    public void Manger(InventoryEnum inventoryEnum)
-    {
-        if (PlantItem.Type == inventoryEnum && statsManager.Medkit != 0 )
-        {
-            statsManager.ChangeValues(InventoryEnum.Life, PlantItem.Satiété);
-            
-        }
-    } 
-
     public void ChooseVegetable()
     {
         chosenItem = PlantItem;
     }
-    public void Validate()
+    public void Validate(GameObject game)
     {
         InventoryEnum typeToChange = (chosenItem.Type != InventoryEnum.Medkit) ? InventoryEnum.Hunger : InventoryEnum.Life;
+        statsManager.Regarde(typeToChange);
         if (!statsManager.CheckRessource(typeToChange)) return;
+        print(statsManager.CheckRessource(typeToChange) + " | " + " LOLo");
         statsManager.ChangeValues(typeToChange, chosenItem.Satiété);
+        statsManager.ChangeValues(chosenItem.Type, -1);
+        game.SetActive(true);
     }
 
     public void Unchoose()

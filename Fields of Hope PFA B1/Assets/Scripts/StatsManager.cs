@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class StatsManager : MonoBehaviour
@@ -104,7 +105,7 @@ public class StatsManager : MonoBehaviour
     public Image LifeBar;
     public Image HungerBar;
 
-    private Dictionary<InventoryEnum, int> _myStat = new Dictionary<InventoryEnum, int>() {
+    public Dictionary<InventoryEnum, int> _myStat = new Dictionary<InventoryEnum, int>() {
         {InventoryEnum.Life, 0},
         {InventoryEnum.Hunger, 0},
         {InventoryEnum.Seeds, 0},
@@ -129,8 +130,6 @@ public class StatsManager : MonoBehaviour
         if (IsDead()) { OnDeath?.Invoke(); }
 
         //print(OufitudeDegre); //
-        print(value + " | " + amount);
-
         UpdateTexts();
         UpdateBars();
         enddaystats.OnStatsChange(value, amount);
@@ -138,7 +137,7 @@ public class StatsManager : MonoBehaviour
 
     public bool CheckRessource(InventoryEnum value)
     {
-        print((_myStat[value] > 0));
+        print(_myStat[value]);
         return (_myStat[value] > 0);
     }
 
@@ -197,14 +196,27 @@ public class StatsManager : MonoBehaviour
         return Life == 0 ? true : false;
     }
 
-    private void Start()
+    private void Awake()
     {
         // On initialise les variables avec des valeurs prédéfinies
         Life = 100;
         Hunger = 50;
         Seeds = 50;
         Patate = 2;
+        Radis = 0;
+        Carotte = 0;
+        Betterave = 0;
+        Poireau = 0;
+        Potiron = 0;
+        Rutabaga = 0;
+        Topinambour = 0;
+        Medkit = 0;
         UpdateTexts();
         UpdateBars();
+    }
+
+    public void Regarde(InventoryEnum i)
+    {
+        Debug.Log("Reagrde bien " + _myStat[i]);
     }
 }
