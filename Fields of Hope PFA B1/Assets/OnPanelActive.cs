@@ -20,7 +20,7 @@ public class OnPanelActive : MonoBehaviour
     public void OnSetActive()
     {
         gameObject.SetActive(true);
-        var b = ItemChoose.PlantItem;
+        var b = ItemChoose.chosenItem;
         Image.overrideSprite = b.Image;
         TextNom.text = b.name;
         TextDescription.text = b.Description;

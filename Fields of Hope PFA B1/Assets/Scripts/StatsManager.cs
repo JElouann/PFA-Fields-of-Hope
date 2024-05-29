@@ -129,10 +129,17 @@ public class StatsManager : MonoBehaviour
         if (IsDead()) { OnDeath?.Invoke(); }
 
         //print(OufitudeDegre); //
+        print(value + " | " + amount);
 
         UpdateTexts();
         UpdateBars();
         enddaystats.OnStatsChange(value, amount);
+    }
+
+    public bool CheckRessource(InventoryEnum value)
+    {
+        print((_myStat[value] > 0));
+        return (_myStat[value] > 0);
     }
 
     public void UpdateTexts()
@@ -196,6 +203,7 @@ public class StatsManager : MonoBehaviour
         Life = 100;
         Hunger = 50;
         Seeds = 50;
+        Patate = 2;
         UpdateTexts();
         UpdateBars();
     }

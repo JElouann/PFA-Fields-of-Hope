@@ -9,30 +9,31 @@ public class ItemChoose : MonoBehaviour
 
     public SO_SeedsData PlantItem;
 
-    public void Selected(SO_SeedsData item)
-    {
-        PlantItem = item;
-    }
+    public InventoryEnum buttonItem;
+    public static SO_SeedsData chosenItem;
 
-    public void Deselected()
+    public void Manger(InventoryEnum inventoryEnum)
     {
-        Selected(null);
-    }
-
-    public void Manger(GameObject game1)
-    {
-        if (PlantItem.Type == InventoryEnum.Medkit && statsManager.Medkit != 0 )
+        if (PlantItem.Type == inventoryEnum && statsManager.Medkit != 0 )
         {
             statsManager.ChangeValues(InventoryEnum.Life, PlantItem.Satiété);
-            game1.SetActive(true);
-        }
-        else if (PlantItem.Type == InventoryEnum.Carotte)
-        {
-            statsManager.ChangeValues(InventoryEnum.Hunger, PlantItem.Satiété);
-        }
-        else
-        {
-
+            
         }
     } 
+
+    public void ChooseVegetable()
+    {
+        chosenItem = PlantItem;
+    }
+    public void Validate()
+    {
+        InventoryEnum typeToChange = (chosenItem.Type != InventoryEnum.Medkit) ? InventoryEnum.Hunger : InventoryEnum.Life;
+        if (!statsManager.CheckRessource(typeToChange)) return;
+        statsManager.ChangeValues(typeToChange, chosenItem.Satiété);
+    }
+
+    public void Unchoose()
+    {
+        chosenItem = null;
+    }
 }
