@@ -19,11 +19,11 @@ public class ItemChoose : MonoBehaviour
     public void Validate(GameObject game)
     {
         InventoryEnum typeToChange = (chosenItem.Type != InventoryEnum.Medkit) ? InventoryEnum.Hunger : InventoryEnum.Life;
-        statsManager.Regarde(typeToChange);
-        if (!statsManager.CheckRessource(typeToChange)) return;
-        print(statsManager.CheckRessource(typeToChange) + " | " + " LOLo");
+        Debug.Log(statsManager._myStat[chosenItem.Type]);
+        if (!statsManager.CheckRessource(chosenItem.Type)) return;
         statsManager.ChangeValues(typeToChange, chosenItem.Satiété);
         statsManager.ChangeValues(chosenItem.Type, -1);
+        Debug.Log(statsManager._myStat[chosenItem.Type]);
         game.SetActive(true);
     }
 

@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class StatsManager : MonoBehaviour
 {
@@ -137,7 +138,7 @@ public class StatsManager : MonoBehaviour
 
     public bool CheckRessource(InventoryEnum value)
     {
-        print(_myStat[value]);
+        print(value);
         return (_myStat[value] > 0);
     }
 
@@ -199,24 +200,12 @@ public class StatsManager : MonoBehaviour
     private void Awake()
     {
         // On initialise les variables avec des valeurs prédéfinies
-        Life = 100;
+        Life = 60;
         Hunger = 50;
-        Seeds = 50;
+        Seeds = 30;
         Patate = 2;
-        Radis = 0;
-        Carotte = 0;
-        Betterave = 0;
-        Poireau = 0;
-        Potiron = 0;
-        Rutabaga = 0;
-        Topinambour = 0;
-        Medkit = 0;
+
         UpdateTexts();
         UpdateBars();
-    }
-
-    public void Regarde(InventoryEnum i)
-    {
-        Debug.Log("Reagrde bien " + _myStat[i]);
     }
 }
