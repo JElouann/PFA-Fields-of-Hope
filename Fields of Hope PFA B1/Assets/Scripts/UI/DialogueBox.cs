@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -12,21 +11,22 @@ public class DialogueBox : MonoBehaviour
     public string[] Lines {  get; private set; } = new string[0];
 
     [SerializeField] private float _textSpeed = 0.3f;
-    private int _index;
+    [SerializeField] private int _index;
 
     [SerializeField] private TextSlicer _textSlicer;
 
     public event Action OnEndTextDisplay;
 
+    private Coroutine _dialogueCoroutine;
+
     public void StartDialogue(string text)
     {
-        StopAllCoroutines();
         _textSlicer = gameObject.GetComponent<TextSlicer>();
         Lines = _textSlicer.Slice(text).ToArray();
 
-        _text.text = string.Empty;
-        _index = 0;
-        StartCoroutine(TypeLine());
+        _index = -1;
+
+        NextLine();
     }
 
     private IEnumerator TypeLine()
@@ -34,11 +34,14 @@ public class DialogueBox : MonoBehaviour
         //this.GetComponent<Button>().interactable = false; VERSION SANS GAME FEEL
         Button button = GameObject.Find("Button").GetComponent<Button>();
         button.interactable = false;
-        foreach (char c in Lines[_index].ToCharArray())
+        _text.text = Lines[_index];
+        _text.maxVisibleCharacters = 0;
+        for (int i = 0; i < Lines[_index].Length; i++)
         {
-            _text.text += c;
+            _text.maxVisibleCharacters++;
             yield return new WaitForSeconds(_textSpeed);
         }
+
         if (_index == Lines.Length - 1)
         {
             //this.GetComponent<Button>().interactable = false;
@@ -55,11 +58,19 @@ public class DialogueBox : MonoBehaviour
 
     public void NextLine()
     {
-        if (_index < Lines.Length - 1)
+        if (_index >= Lines.Length - 1) return;
+
+        if (_dialogueCoroutine != null && _index != -1)
+        {
+            //if (_index == -1) print("ouais le couscous");
+            StopCoroutine(_dialogueCoroutine);
+            _dialogueCoroutine = null;
+            _text.maxVisibleCharacters = Lines[_index].Length;
+        }
+        else
         {
             _index++;
-            _text.text = string.Empty;
-            StartCoroutine(TypeLine());
+            _dialogueCoroutine = StartCoroutine(TypeLine());
         }
     }
 }

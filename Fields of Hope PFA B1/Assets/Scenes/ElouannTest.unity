@@ -8600,6 +8600,7 @@ MonoBehaviour:
   <Lines>k__BackingField:
   - "Je suis \xE0 la ferme. Bon, quel l\xE9gume planter ?"
   _textSpeed: 0.025
+  _index: 0
   _textSlicer: {fileID: 848592283}
 --- !u!1 &872199743
 GameObject:
@@ -17805,6 +17806,10 @@ PrefabInstance:
     - target: {fileID: 9119413012934274762, guid: 19db5c5417bb0c1488a78d0f9a0df2a7, type: 3}
       propertyPath: m_Name
       value: PanelEndDay
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119413012934274762, guid: 19db5c5417bb0c1488a78d0f9a0df2a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
