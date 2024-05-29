@@ -6118,7 +6118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &571575321
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7736,7 +7736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &757257673
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9547,7 +9547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &952167584
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18432,6 +18432,7 @@ MonoBehaviour:
   _foodLossMultiplier: 1
   SeedsPlants: {fileID: 265318492}
   PanelEndDay: {fileID: 1388112281}
+  EndDayStats: {fileID: 0}
 --- !u!1 &1965422815
 GameObject:
   m_ObjectHideFlags: 0
@@ -19688,7 +19689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2109762241
 RectTransform:
   m_ObjectHideFlags: 0
