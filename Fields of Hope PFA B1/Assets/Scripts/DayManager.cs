@@ -46,7 +46,7 @@ public class DayManager : MonoBehaviour
         _dayCounter++;
         _counterText.text = (_dayCounter).ToString();
         DayChoice = DailyChoice.None;
-        //EndDayStats.OnEndDayToString();
+        EndDayStats.OnDayFinished();
     }
 
 
