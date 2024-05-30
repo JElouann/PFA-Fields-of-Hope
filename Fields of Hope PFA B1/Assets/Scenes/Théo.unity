@@ -2884,11 +2884,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8c952a95f390d43963a0d2535423a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FarmPanel: {fileID: 1678690483}
-  ExplorationPanel: {fileID: 52952864}
-  _scaleOnHover: {x: 1.2, y: 1.2, z: 1.2}
-  _scaleOnHoverSpeed: 0.2
-  _unscaleSpeed: 0.3
+  _cultureMenu: {fileID: 0}
+  _farmButton: {fileID: 0}
+  _explorationButton: {fileID: 0}
 --- !u!1 &307665627
 GameObject:
   m_ObjectHideFlags: 0
@@ -4651,6 +4649,9 @@ MonoBehaviour:
   _eventPrefabBasis: {fileID: 4607400035265042227, guid: 23f50a1ee6da4864cb9f9f840e1d32da, type: 3}
   _eventDatas:
   - {fileID: 11400000, guid: cf779bab122d05d4c9c076666ae8ac02, type: 2}
+  _farmEventDatas: []
+  _expeditionEventDatas: []
+  <CreatedEvent>k__BackingField: {fileID: 0}
 --- !u!1 &517234294
 GameObject:
   m_ObjectHideFlags: 0
@@ -6487,18 +6488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100dd9bc0661639428f7854212ef9183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Hunger>k__BackingField: 50
-  <Seeds>k__BackingField: 25
+  enddaystats: {fileID: 0}
   <Food>k__BackingField: 5
-  <OufitudeDegre>k__BackingField: 3
-  Carotte: 0
-  Betterave: 0
-  Poireau: 0
-  Potiron: 0
-  Patate: 0
-  Rutabaga: 0
-  Topinambour: 0
-  Radis: 0
   LifeAmount: {fileID: 1306112490}
   HungerAmount: {fileID: 1230823112}
   SeedsAmount: {fileID: 1440619175}
@@ -15613,11 +15604,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8c952a95f390d43963a0d2535423a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FarmPanel: {fileID: 1678690483}
-  ExplorationPanel: {fileID: 52952864}
-  _scaleOnHover: {x: 1.2, y: 1.2, z: 1.2}
-  _scaleOnHoverSpeed: 0.2
-  _unscaleSpeed: 0.3
+  _cultureMenu: {fileID: 0}
+  _farmButton: {fileID: 0}
+  _explorationButton: {fileID: 0}
 --- !u!1 &1956573703
 GameObject:
   m_ObjectHideFlags: 0
@@ -15928,12 +15917,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9158d247a3c05b40812661c3ebcdd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EndDayStats: {fileID: 0}
+  <DayChoiceScript>k__BackingField: {fileID: 0}
   <EndDay>k__BackingField: {fileID: 1958838311}
   _counterText: {fileID: 1400109430}
   FoodLoss: 5
   LifeLoss: 5
-  <LifeLossMultiplier>k__BackingField: 1
-  <FoodLossMultiplier>k__BackingField: 1
 --- !u!114 &1958838311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15947,6 +15936,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dayManager: {fileID: 1958838310}
+  _statsManager: {fileID: 0}
+  _eventInstancier: {fileID: 0}
+  _foodLoss: 0
+  _foodLossMultiplier: 0
+  SeedsPlants: {fileID: 0}
+  PanelEndDay: {fileID: 0}
+  EndDayStats: {fileID: 0}
 --- !u!1 &1977791286
 GameObject:
   m_ObjectHideFlags: 0

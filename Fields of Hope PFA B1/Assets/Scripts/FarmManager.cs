@@ -33,7 +33,6 @@ public class FarmManager : MonoBehaviour
         Slot.TempsRestantDePousse = seedData.TempsDePousseEnJours;
         if (StatsManager.Seeds < Slot.Plant.CoutEnGraines)
         {
-            Debug.Log("C'est Normal TQT"); // PAS ASSEZ DE GRAINES
             return;
         }
         else
@@ -63,5 +62,7 @@ public class FarmManager : MonoBehaviour
     public void RemoveSeed()
     {
         seedData = null;
+        GameObject.Find("EventInstancier").GetComponent<EventInstancier>().InstantiateEvent(EventType.Farm);
+        PanelFarm.SetActive(false);
     }
 }
