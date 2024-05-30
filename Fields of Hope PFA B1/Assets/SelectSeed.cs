@@ -17,16 +17,19 @@ public class SelectSeed : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public GameObject textBox;
 
+    [SerializeField] 
+    private TextMeshProUGUI _textAffichage;
+
     public void SelectedSeed()
     {
         seedsPlants.seedData = SO_SeedsData;
-        textBox.GetComponent<DialogueBox>().StartDialogue(SO_SeedsData.Description);
+        _textAffichage.text = SO_SeedsData.name+"\n"+ "Nombre de graine nécessaire : " + SO_SeedsData.CoutEnGraines + "\n" + "Temps de pousse : " + SO_SeedsData.TempsDePousseEnJours + " jour";
+        textBox.GetComponent<DialogueBox>().StartDialogue(_textAffichage.text);
     }
 
     public void Start()
     {
         Image.sprite = SO_SeedsData.Image ;
-
     }
 
 
