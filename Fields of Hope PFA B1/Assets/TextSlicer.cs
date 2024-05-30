@@ -18,7 +18,7 @@ public class TextSlicer : MonoBehaviour
 
         foreach(char c in textToSlice) // travel through each character in string
         {
-            if (index >= numberOfCharPerLine && c == ' ')
+            if (index >= numberOfCharPerLine && (c == '.' || c == '?' || c == '!'))
             {
                 currentSelection += c;
                 slicedText.Add(currentSelection);

@@ -148,7 +148,7 @@ public class StatsManager : MonoBehaviour
         LifeAmount.text = (Life).ToString();
         HungerAmount.text = (Hunger).ToString();
         SeedsAmount.text = (Seeds).ToString();
-        FoodAmount.text = (Food).ToString();
+        FoodAmount.text = (Carotte * 15 + Betterave * 18 + Poireau * 5 + Potiron * 25 + Patate * 20 + Rutabaga * 10 + Radis * 3 + Topinambour * 8).ToString();
     }
 
     public void UpdateBars()

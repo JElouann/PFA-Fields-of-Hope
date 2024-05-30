@@ -956,6 +956,7 @@ MonoBehaviour:
   _text: {fileID: 8546141399504937059}
   <Lines>k__BackingField: []
   _textSpeed: 0.025
+  _index: 0
   _textSlicer: {fileID: 0}
 --- !u!114 &199540878537960389
 MonoBehaviour:
@@ -969,7 +970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 447b1038951383340975c6293d968657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfCharPerLine: 80
+  numberOfCharPerLine: 60
 --- !u!222 &5089786311662197713
 CanvasRenderer:
   m_ObjectHideFlags: 0
