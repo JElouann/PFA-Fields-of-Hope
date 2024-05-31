@@ -110,6 +110,9 @@ public class StatsManager : MonoBehaviour
     [SerializeField]
     private RessourcesGameFeel _gameFeelHandler;
 
+    [SerializeField]
+    private SaveSystem _saveSystem;
+
     public Dictionary<InventoryEnum, int> _myStat = new Dictionary<InventoryEnum, int>() {
         {InventoryEnum.Santé, 0},
         {InventoryEnum.Faim, 0},
@@ -143,7 +146,11 @@ public class StatsManager : MonoBehaviour
             StartCoroutine(_gameFeelHandler.HungerGainLogo());
         }
 
-        if (IsDead()) { OnDeath?.Invoke(); }
+        if (IsDead()) 
+        { 
+            OnDeath?.Invoke(); 
+            _saveSystem.DeleteData();
+        }
 
         //print(OufitudeDegre); //
         UpdateTexts();
