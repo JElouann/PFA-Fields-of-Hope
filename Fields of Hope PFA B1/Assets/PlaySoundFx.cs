@@ -5,9 +5,17 @@ using UnityEngine;
 public class PlaySoundFx : MonoBehaviour
 {
     [SerializeField]
-    private SoudFxManager soudFxManager;
+    private SoundSFXManager soundFxManager;
+
+    private AudioClip _audio;
+
     public void OnClick(AudioClip clip)
     {
-        soudFxManager.PlaySoundFXClip(clip, transform, 1f);
+       _audio = clip;
+    }
+
+    public void PopilopoFaitDuGrosSon(string popilopo)
+    {
+        soundFxManager.PlaySoundFXClip(_audio, transform, 1f, popilopo);
     }
 }
