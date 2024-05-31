@@ -103,8 +103,12 @@ public class StatsManager : MonoBehaviour
     public TextMeshProUGUI SeedsAmount;
     public TextMeshProUGUI FoodAmount;
 
+    [Header("GameFeel")]
     public Image LifeBar;
     public Image HungerBar;
+
+    [SerializeField]
+    private RessourcesGameFeel _gameFeelHandler;
 
     public Dictionary<InventoryEnum, int> _myStat = new Dictionary<InventoryEnum, int>() {
         {InventoryEnum.Santé, 0},
@@ -128,6 +132,17 @@ public class StatsManager : MonoBehaviour
     public void ChangeValues(InventoryEnum value, int amount, bool hasToRemember)
     {
         _myStat[value] = (value == InventoryEnum.DegreDeOufitude) ? Mathf.Clamp(_myStat[value] + amount, 0, 10) : Mathf.Clamp(_myStat[value] + amount, 0, 100);
+        if(value == InventoryEnum.Santé/* && amount > 0*/) // à voir si on boing le logo quand on perd
+        {
+            StartCoroutine(_gameFeelHandler.LifeChangeText(amount));
+            StartCoroutine(_gameFeelHandler.LifeGainLogo());
+        }
+        else if (value == InventoryEnum.Faim && amount > 0)
+        {
+            StartCoroutine(_gameFeelHandler.HungerChangeText(amount));
+            StartCoroutine(_gameFeelHandler.HungerGainLogo());
+        }
+
         if (IsDead()) { OnDeath?.Invoke(); }
 
         //print(OufitudeDegre); //

@@ -8,7 +8,7 @@ public class DialogueBox : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI _text;
     [field: SerializeField]
-    public string[] Lines {  get; private set; } = new string[0];
+    public string[] Lines { get; private set; } = new string[0];
 
     [SerializeField] private float _textSpeed = 0.3f;
     [SerializeField] private int _index;
@@ -54,6 +54,7 @@ public class DialogueBox : MonoBehaviour
             //this.GetComponent<Button>().interactable = true;
             button.interactable = true;
         }
+        _dialogueCoroutine = null;
     }
 
     public void NextLine()

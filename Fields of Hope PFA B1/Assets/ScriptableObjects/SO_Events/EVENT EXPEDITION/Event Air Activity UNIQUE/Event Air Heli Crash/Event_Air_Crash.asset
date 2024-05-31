@@ -13,19 +13,16 @@ MonoBehaviour:
   m_Name: Event_Air_Crash
   m_EditorClassIdentifier: 
   Name: "H\xE9licopt\xE8re Crash (No_Survivor)"
-  Text: "`\"Sur le chemin de mon abri, j'entends un bruit perturbant. Un h\xE9licopt\xE8re
+  Text: "Sur le chemin de mon abri, j'entends un bruit perturbant. Un h\xE9licopt\xE8re
     appara\xEEt dans les airs et s'\xE9crase dans la for\xEAt. Je prends un moment
-    pour me ressaisir. Devrais-je aller voir o\xF9 il s'est \xE9cras\xE9 ?\""
+    pour me ressaisir. Devrais-je aller voir o\xF9 il s'est \xE9cras\xE9 ?"
   ChildEvent1: {fileID: 11400000, guid: 6b1aa6470e8f8a740a007b484bdd92e9, type: 2}
   Child1Text: OUI
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: 328817a795f2d3b4c95ad9ec90ccb0aa, type: 2}
   Child2Text: NON
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0

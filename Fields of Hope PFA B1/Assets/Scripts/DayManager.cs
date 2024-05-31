@@ -29,9 +29,14 @@ public class DayManager : MonoBehaviour
     public event Action OnEndDay;
 
     #region DEV CHEAT
-    public void MoreFood() // DEV
+    public void MoreLife() // DEV
     {
         _statsManager.ChangeValues(InventoryEnum.Santé, 5, false);
+    }
+
+    public void MoreFood() // DEV
+    {
+        _statsManager.ChangeValues(InventoryEnum.Faim, 5, false);
     }
 
     public void MoreSeeds() // DEV

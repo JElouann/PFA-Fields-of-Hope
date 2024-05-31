@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dfbd2157acafd3488c26ef9cbdc945d, type: 3}
-  m_Name: ChildEvent_Air_Crash 2
+  m_Script: {fileID: 11500000, guid: 8d0c352350038fb4ba4dbe2a9514fa0b, type: 3}
+  m_Name: PIPOLOPO
   m_EditorClassIdentifier: 
-  Name: NON
-  Text: "Je d\xE9cide de ne pas m'attarder ici, cela a d\xFB attirer d'autres personnes,
-    et je pr\xE9f\xE8re \xE9viter une confrontation. Je pars dans la direction oppos\xE9e
-    \xE0 la fum\xE9e, en esp\xE9rant que les survivants s'en sortiront."
+  Name: 
+  Text: 
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
@@ -27,3 +25,4 @@ MonoBehaviour:
     Minimum: 0
     Maximum: 0
   ValuesToChange: []
+  AGROU: 0

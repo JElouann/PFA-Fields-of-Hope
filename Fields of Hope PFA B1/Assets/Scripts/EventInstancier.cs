@@ -10,13 +10,14 @@ public struct Histoire
 
 public class EventInstancier : MonoBehaviour
 {
-    // Managers requis
+    // Scripts requis
     [SerializeField] private StatsManager _statsManager;
     [SerializeField] private DayManager _dayManager;
+    private StoryHandler _storyHandler;
 
     // Socket représentant la position où instancier les events
     [SerializeField]
-    private Transform _where;
+    private Transform _position;
     
     // Prefab utilisé pour instancier les events (gameobjects) à partir de leurs Datas
     [SerializeField]
@@ -26,57 +27,36 @@ public class EventInstancier : MonoBehaviour
     private List<SO_Events> _eventDatasSuitable = new();
     private List<SO_Events> _eventsPassed = new();
 
-
-    [SerializeField]
-    private List<SO_Events> _eventDatas; // /!\ TEMPORARY
-
-    private StoryHandler _storyHandler;
-
+    // Listes contenant tous les events, par type
     [SerializeField]
     private List<SO_Events> _farmEventDatas;
-
     [SerializeField]
     private List<SO_Events> _expeditionEventDatas;
 
+    // Event créé
     [field: SerializeField]
     public GameObject CreatedEvent { get; set; }
 
     public void InstantiateEvent(EventType eventType)
     {
-        //
         if (_storyHandler.IsStoryEventToday())
         {
             print("STORY TODAY");
-            InitializeEvent(_storyHandler.GetRandomStoryEvent(), _where);
+            InitializeEvent(_storyHandler.GetRandomStoryEvent(), _position);
         }
         else if (eventType == EventType.Expedition)
         {
             CreateSuitableExpeditionEventList();
-            // SO_event == chooseevent()
-            InitializeEvent(null, _where);
+            InitializeEvent(null, _position);
         }
         else
         {
             CreateSuitableFarmEventList();
-            InitializeEvent(null, _where);
+            InitializeEvent(null, _position);
         }
     }
 
-    // Creates a list with every suitable events for this oufitude degre
-    private void CreateSuitableEventDataList() 
-    {
-        int degreDeOufitude = _statsManager.OufitudeDegre;
-
-        // DEV TEST
-        foreach (SO_Events eventData in _eventDatas)
-        {
-            if (IsInOufitudeRange(eventData, degreDeOufitude))
-            {
-                _eventDatasSuitable.Add(eventData);
-            }
-        }
-    }
-
+    // Creates a list with every suitable farm events for this oufitude degre
     private void CreateSuitableFarmEventList()
     {
         int degreDeOufitude = _statsManager.OufitudeDegre;
@@ -89,6 +69,7 @@ public class EventInstancier : MonoBehaviour
         }
     }
 
+    // Creates a list with every expedition suitable events for this oufitude degre
     private void CreateSuitableExpeditionEventList()
     {
         int degreDeOufitude = _statsManager.OufitudeDegre;
@@ -112,7 +93,7 @@ public class EventInstancier : MonoBehaviour
     private void InitializeEvent(SO_Events toInitialize, Transform where)
     {
         int selectedEventIndex = UnityEngine.Random.Range(0, _eventDatasSuitable.Count);
-
+            
         CreatedEvent = Instantiate(_eventPrefabBasis, where);
         EventScript createdEventScript = CreatedEvent.GetComponent<EventScript>(); // Get the EventScript of the new event GameObject
 
@@ -125,7 +106,6 @@ public class EventInstancier : MonoBehaviour
         _eventsPassed.Add(createdEventScript.currentEvent);
         _eventDatasSuitable.Clear();
     }
-
 
     private void Awake()
     {

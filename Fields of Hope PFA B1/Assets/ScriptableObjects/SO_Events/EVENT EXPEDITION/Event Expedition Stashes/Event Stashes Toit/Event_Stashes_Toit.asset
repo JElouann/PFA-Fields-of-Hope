@@ -23,10 +23,7 @@ MonoBehaviour:
   ChildEvent2: {fileID: 11400000, guid: 1b9252efc21b3884d82dac31b9f7d970, type: 2}
   Child2Text: NON
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
