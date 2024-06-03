@@ -16,29 +16,11 @@ public class SaveSystem : MonoBehaviour
     [SerializeField]
     private DayManager dayManager;
 
-    private int day;
-    private int Life;
-    private int Hunger;
-    private int Seeds;
-    private int food;
-
-    /*
-    private int carotte;
-    private int betterave;
-    private int poireau;
-    private int potiron;
-    private int pommedeterre;
-    private int rutabaga;
-    private int topinambour;
-    private int radis;
-    */
 
     private void Start()
     {
         LoadData();
     }
-
-
 
     public void SaveData()
     {
@@ -47,17 +29,14 @@ public class SaveSystem : MonoBehaviour
         PlayerPrefs.SetInt("Hunger", statsManager.Hunger);
         PlayerPrefs.SetInt("Seeds", statsManager.Seeds);
         PlayerPrefs.SetInt("Food", statsManager.Food);
-
-        /*
-        carotte = statsManager.Carotte;
-        betterave = statsManager.Beterave;
-        poireau = statsManager.Poireau;
-        potiron = statsManager.Potiron;
-        pommedeterre = statsManager.Patate;
-        rutabaga = statsManager.Rutabaga;
-        topinambour = statsManager.Topinambour;
-        radis = statsManager.Radis;
-        */
+        PlayerPrefs.SetInt("Carotte", statsManager.Carotte);
+        PlayerPrefs.SetInt("Betterave", statsManager.Betterave);
+        PlayerPrefs.SetInt("Patate", statsManager.Patate);
+        PlayerPrefs.SetInt("Potiron", statsManager.Potiron);
+        PlayerPrefs.SetInt("Rutabaga", statsManager.Rutabaga);
+        PlayerPrefs.SetInt("Topinambour", statsManager.Topinambour);
+        PlayerPrefs.SetInt("Radis", statsManager.Radis);
+        PlayerPrefs.SetInt("Poireau", statsManager.Poireau);
     }
 
     public void LoadData()
@@ -66,19 +45,28 @@ public class SaveSystem : MonoBehaviour
         statsManager.Life = PlayerPrefs.GetInt("Life");
         statsManager.Hunger = PlayerPrefs.GetInt("Hunger");
         statsManager.Seeds = PlayerPrefs.GetInt("Seeds");
-        statsManager.Food = PlayerPrefs.GetInt("Food");
+        statsManager.Carotte = PlayerPrefs.GetInt("Carotte");
+        statsManager.Betterave = PlayerPrefs.GetInt("Betterave");
+        statsManager.Patate = PlayerPrefs.GetInt("Patate");
+        statsManager.Potiron = PlayerPrefs.GetInt("Potiron");
+        statsManager.Rutabaga = PlayerPrefs.GetInt("Rutabaga");
+        statsManager.Topinambour = PlayerPrefs.GetInt("Topinambour");
+        statsManager.Radis = PlayerPrefs.GetInt("Radis");
+        statsManager.Poireau = PlayerPrefs.GetInt("Poireau");
+        dayManager.UpdateTextDay();
         statsManager.UpdateTexts();
         statsManager.UpdateBars();
     }
 
-    public void DeleteData()
+    public void NewGame()
     {
         dayManager._dayCounter = -1;
         dayManager.NextDay();
         statsManager.Life = 50;
         statsManager.Hunger = 45;
         statsManager.Seeds = 15;
-        statsManager.Food = 5;
+        statsManager.Carotte = 2;
+        dayManager.UpdateTextDay();
         statsManager.UpdateTexts();
         statsManager.UpdateBars();
         SaveData();

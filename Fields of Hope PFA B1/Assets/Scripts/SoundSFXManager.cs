@@ -3,13 +3,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 
-[Serializable]
-public enum SFXType
-{
-    Ambiance,
-    SFX,
-    Musique
-}
 public class SoundSFXManager : MonoBehaviour
 {
 

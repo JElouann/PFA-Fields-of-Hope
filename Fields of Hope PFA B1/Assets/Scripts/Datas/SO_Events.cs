@@ -53,6 +53,10 @@ public class SO_Events : ScriptableObject
     [Space(10)]
     [Tooltip("List that contains pairs [value to change, amount of the changement].")] public List<ValueToChange> ValuesToChange;
 
+    [Header("Audio")]
+    [Space(2)]
+    public AudioClip SFX;
+
     /// <summary>
     /// This method find recursively every path possible and return them as a string
     /// </summary>

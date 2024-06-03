@@ -6,6 +6,9 @@ using UnityEngine.Video;
 public class PlayVideo : MonoBehaviour
 {
     [SerializeField]
+    private GameObject Panel;
+
+    [SerializeField]
     GameObject Menu;
 
     [SerializeField]
@@ -15,37 +18,63 @@ public class PlayVideo : MonoBehaviour
     GameObject Crossfade;
 
     [SerializeField]
-    private VideoPlayer player;
+    private VideoPlayer videoplayer;
 
     [SerializeField]
     private Animator animator;
 
+
+    private bool isplaying = false;
+
     private void Start()
     {
-        player = GetComponent<VideoPlayer>();
+        videoplayer = GetComponent<VideoPlayer>();
     }
 
     public void OnPlayVideo()
     {
-        if (player)
+        if (videoplayer)
         {
-            StartCoroutine(Attendre1());
-            StartCoroutine(Attendre2());
+            isplaying = true;
+            Panel.SetActive(true);
+            StartCoroutine(StartVideo());           
         }
     }
-    private IEnumerator Attendre1()
+
+    public void PauseVideo()
     {
-        animator.SetFloat("LOL", 1);
-        yield return new WaitForSecondsRealtime(1f);
-        Menu.SetActive(false);
-        yield return new WaitForSecondsRealtime(0.25f);
-        player.Play();
+        if (isplaying == true)
+        {
+            isplaying= false;
+            videoplayer.Pause();
+        }
+        else if (isplaying == false)
+        {
+            isplaying = true;
+            videoplayer.Play();
+        }
+    }
+
+    public void Skip()
+    {
+        if (videoplayer)
+        {
+            videoplayer.Stop();
+        }
+    }
+
+    private IEnumerator StartVideo()
+    {
+        videoplayer.Play();
         yield return new WaitForSecondsRealtime(0.25f);
         ImageAnimation.SetActive(true);
     }
 
     private IEnumerator Attendre2()
     {
+        animator.SetFloat("LOL", 1);
+        yield return new WaitForSecondsRealtime(1f);
+        Menu.SetActive(false);
         yield return new WaitForSecondsRealtime(12f);
         Crossfade.SetActive(true);
         yield return new WaitForSecondsRealtime(3f);
