@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2c7404d9061484f429774f4abd7fc811
+guid: 52142cc3f9ff6f2468da79b2345baca5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,91 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Page02_Livre_FIELD_OF_HOPE_0
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 540
-        width: 552
-        height: 161
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab7a312bbdd740f4fab653f2babdc898
-      internalID: -284972839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Page02_Livre_FIELD_OF_HOPE_1
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 305
-        width: 562
-        height: 170
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 807c738c471f3754cb908dfdb7f21b6d
-      internalID: 1029565931
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Page02_Livre_FIELD_OF_HOPE_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 280
-        height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 198c763beecad074f8b7e249a5ef2d9a
-      internalID: -1250943518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Page02_Livre_FIELD_OF_HOPE_3
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 0
-        width: 285
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d52dd24a58a771d4083d98acbb837ea9
-      internalID: 1279605287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -203,11 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Page02_Livre_FIELD_OF_HOPE_0: -284972839
-      Page02_Livre_FIELD_OF_HOPE_1: 1029565931
-      Page02_Livre_FIELD_OF_HOPE_2: -1250943518
-      Page02_Livre_FIELD_OF_HOPE_3: 1279605287
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
