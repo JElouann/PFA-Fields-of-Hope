@@ -61,4 +61,9 @@ public class DayManager : MonoBehaviour
         _eventInstancier = GameObject.FindAnyObjectByType<EventInstancier>();
         OnEndDay += EndDay.OnEndDay;
     }
+
+    public void UpdateTextDay()
+    {
+        _counterText.text = _dayCounter.ToString();
+    }
 }

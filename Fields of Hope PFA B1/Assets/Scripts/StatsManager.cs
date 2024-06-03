@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
-using static UnityEngine.Rendering.DebugUI;
 
 public class StatsManager : MonoBehaviour
 {
@@ -149,7 +147,7 @@ public class StatsManager : MonoBehaviour
         if (IsDead()) 
         { 
             OnDeath?.Invoke(); 
-            _saveSystem.DeleteData();
+            _saveSystem.NewGame();
         }
 
         //print(OufitudeDegre); //
@@ -222,12 +220,6 @@ public class StatsManager : MonoBehaviour
 
     private void Awake()
     {
-        // On initialise les variables avec des valeurs prédéfinies
-        Life = 60;
-        Hunger = 50;
-        Seeds = 30;
-        Patate = 2;
-
         UpdateTexts();
         UpdateBars();
     }
