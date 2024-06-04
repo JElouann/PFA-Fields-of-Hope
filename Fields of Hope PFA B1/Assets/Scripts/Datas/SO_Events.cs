@@ -10,6 +10,7 @@ public class SO_Events : ScriptableObject
     [Space(2)]
     public string Name;
     [Multiline, Tooltip("The text or dialogue the event contains.")] public string Text;
+    public bool IsStoryEvent;
 
     [Header("Child 1")]
     [Space(2)]
@@ -51,6 +52,10 @@ public class SO_Events : ScriptableObject
     [Tooltip("The interval of oufitude degre in which the event can occure.")] public Interval OufitudePool;
     [Space(10)]
     [Tooltip("List that contains pairs [value to change, amount of the changement].")] public List<ValueToChange> ValuesToChange;
+
+    [Header("Audio")]
+    [Space(2)]
+    public AudioClip SFX;
 
     /// <summary>
     /// This method find recursively every path possible and return them as a string

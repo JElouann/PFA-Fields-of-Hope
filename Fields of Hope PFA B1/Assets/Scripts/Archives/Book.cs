@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class book : MonoBehaviour
+public class Book : MonoBehaviour
 {
     [SerializeField] float pageSpeed = 0.5f;
     [SerializeField] List<Transform> pages;

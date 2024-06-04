@@ -1122,7 +1122,7 @@ MonoBehaviour:
   Menu: {fileID: 1726850982}
   ImageAnimation: {fileID: 2140559308}
   Crossfade: {fileID: 12656892}
-  player: {fileID: 0}
+  videoplayer: {fileID: 0}
   animator: {fileID: 1726850984}
 --- !u!1 &748951333
 GameObject:

@@ -31,7 +31,7 @@ public class DayManager : MonoBehaviour
     #region DEV CHEAT
     public void MoreLife() // DEV
     {
-        _statsManager.ChangeValues(InventoryEnum.Santé, 5, false);
+        _statsManager.ChangeValues(InventoryEnum.Santé, -5, false);
     }
 
     public void MoreFood() // DEV
@@ -60,5 +60,10 @@ public class DayManager : MonoBehaviour
         _statsManager = GameObject.FindAnyObjectByType<StatsManager>();
         _eventInstancier = GameObject.FindAnyObjectByType<EventInstancier>();
         OnEndDay += EndDay.OnEndDay;
+    }
+
+    public void UpdateTextDay()
+    {
+        _counterText.text = _dayCounter.ToString();
     }
 }

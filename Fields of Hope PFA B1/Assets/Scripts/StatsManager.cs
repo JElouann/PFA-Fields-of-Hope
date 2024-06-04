@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
-using static UnityEngine.Rendering.DebugUI;
 
 public class StatsManager : MonoBehaviour
 {
@@ -108,7 +106,13 @@ public class StatsManager : MonoBehaviour
     public Image HungerBar;
 
     [SerializeField]
+    private InventoryDisplay _inventoryDisplay;
+
+    [SerializeField]
     private RessourcesGameFeel _gameFeelHandler;
+
+    [SerializeField]
+    private SaveSystem _saveSystem;
 
     public Dictionary<InventoryEnum, int> _myStat = new Dictionary<InventoryEnum, int>() {
         {InventoryEnum.Santé, 0},
@@ -143,11 +147,15 @@ public class StatsManager : MonoBehaviour
             StartCoroutine(_gameFeelHandler.HungerGainLogo());
         }
 
-        if (IsDead()) { OnDeath?.Invoke(); }
+        if (IsDead()) 
+        { 
+            OnDeath?.Invoke(); 
+            _saveSystem.NewGame();
+        }
 
-        //print(OufitudeDegre); //
         UpdateTexts();
         UpdateBars();
+        _inventoryDisplay.UpdateAmounts(value);
 
         if (hasToRemember) enddaystats.OnStatsChange(value, amount);
     }
@@ -215,12 +223,6 @@ public class StatsManager : MonoBehaviour
 
     private void Awake()
     {
-        // On initialise les variables avec des valeurs prédéfinies
-        Life = 60;
-        Hunger = 50;
-        Seeds = 30;
-        Patate = 2;
-
         UpdateTexts();
         UpdateBars();
     }
