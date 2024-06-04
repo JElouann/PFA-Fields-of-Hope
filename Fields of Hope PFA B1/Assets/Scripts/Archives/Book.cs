@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class book : MonoBehaviour
+public class Book : MonoBehaviour
 {
+    [SerializeField] private Sprite _rectoSprite;
+    [SerializeField] private Sprite _versoSprite;
+
     [SerializeField] float pageSpeed = 0.5f;
     [SerializeField] List<Transform> pages;
     int index = -1;

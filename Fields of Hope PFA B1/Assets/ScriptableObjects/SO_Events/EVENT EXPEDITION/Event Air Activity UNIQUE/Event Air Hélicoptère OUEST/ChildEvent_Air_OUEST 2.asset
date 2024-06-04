@@ -17,21 +17,17 @@ MonoBehaviour:
     moi, le bruit des rotors de l'h\xE9licopt\xE8re s'approche. Trop tard, une balle
     me transperce l'abdomen et je m'\xE9croule au sol. En faisant semblant d'\xEAtre
     morte, je reste immobile pendant quelques minutes avant qu'ils partent\u2026\""
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: 0
-    Amount: 0
   - Value: 0
     Amount: -35
