@@ -14,7 +14,7 @@ public class PlaySoundFx : MonoBehaviour
        _audio = clip;
     }
 
-    public void PopilopoFaitDuGrosSon(string popilopo)
+    public void OnPlaySFXSound(string popilopo)
     {
         soundFxManager.PlaySoundFXClip(_audio, transform, 1f, popilopo);
     }
