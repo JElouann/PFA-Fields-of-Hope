@@ -18965,6 +18965,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1691197033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9119413012934274762, guid: 19db5c5417bb0c1488a78d0f9a0df2a7, type: 3}
+  m_PrefabInstance: {fileID: 3521717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1701667598
 GameObject:
   m_ObjectHideFlags: 0
@@ -20113,7 +20118,7 @@ MonoBehaviour:
   _foodLoss: 5
   _foodLossMultiplier: 1
   SeedsPlants: {fileID: 132010449}
-  PanelEndDay: {fileID: 0}
+  PanelEndDay: {fileID: 1691197033}
   EndDayStats: {fileID: 850617567}
 --- !u!4 &1822782478
 Transform:
