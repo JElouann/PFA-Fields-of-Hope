@@ -7093,7 +7093,6 @@ GameObject:
   - component: {fileID: 540680799}
   - component: {fileID: 540680798}
   - component: {fileID: 540680797}
-  - component: {fileID: 540680796}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -7121,19 +7120,6 @@ RectTransform:
   m_AnchoredPosition: {x: 870, y: 54}
   m_SizeDelta: {x: 160, y: 74.16}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &540680796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 540680794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81328b114b7af0d45a4665b1a97423de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundFxManager: {fileID: 0}
 --- !u!114 &540680797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7182,6 +7168,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PlayVideo, Assembly-CSharp
         m_MethodName: OnPlayVideo
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 540680794}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10465,9 +10463,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _text: {fileID: 1802372974}
   <Lines>k__BackingField: []
-  _textSpeed: 0.01
+  _textSpeed: 0.025
   _index: 0
   _textSlicer: {fileID: 793175219}
+  _playSound: {fileID: 0}
 --- !u!114 &793175217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11217,6 +11216,7 @@ MonoBehaviour:
   _textSpeed: 0.025
   _index: 0
   _textSlicer: {fileID: 848592283}
+  _playSound: {fileID: 0}
 --- !u!224 &854326030 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3140223108083238354, guid: 19db5c5417bb0c1488a78d0f9a0df2a7, type: 3}
@@ -17537,7 +17537,7 @@ MonoBehaviour:
   _rectoSprite: {fileID: 0}
   _versoSprite: {fileID: 0}
   pageSpeed: 0.85
-  pages: []
+  page: {fileID: 0}
   backButton: {fileID: 0}
   forwardButton: {fileID: 0}
 --- !u!1 &1545203954
@@ -20635,8 +20635,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26.62, y: 5.79}
-  m_SizeDelta: {x: 1241.06, y: 942.1}
+  m_AnchoredPosition: {x: -0.0000038147, y: 0.000030518}
+  m_SizeDelta: {x: 1184.11, y: 366.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1802372974
 MonoBehaviour:
@@ -20661,7 +20661,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 27c967173f98ae445a74abf840203bca, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 1690558655618131465, guid: 27c967173f98ae445a74abf840203bca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20724,7 +20724,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1802372975
