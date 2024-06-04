@@ -19,6 +19,9 @@ public class DialogueBox : MonoBehaviour
 
     private Coroutine _dialogueCoroutine;
 
+    [SerializeField]
+    private PlaySoundFx _playSound;
+    
     public void StartDialogue(string text)
     {
         _textSlicer = gameObject.GetComponent<TextSlicer>();

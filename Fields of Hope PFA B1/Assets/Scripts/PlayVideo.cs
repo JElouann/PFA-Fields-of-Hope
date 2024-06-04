@@ -32,6 +32,7 @@ public class PlayVideo : MonoBehaviour
     {
         if (videoplayer)
         {
+            MenuCinématic.SetActive(true);
             StartCoroutine(StartVideo());           
         }
     }
@@ -41,6 +42,8 @@ public class PlayVideo : MonoBehaviour
         if (videoplayer)
         {
             videoplayer.Stop();
+            PanelText.SetActive(false);
+            MenuCinématic.SetActive(false);
         }
     }
 
@@ -51,8 +54,13 @@ public class PlayVideo : MonoBehaviour
         ImageAnimation.SetActive(true);
         yield return new WaitForSecondsRealtime(10.5f);
         PanelText.SetActive(true);
-        dialogue.StartDialogue("Au début du 21ème siècle, WEST et EST sortent d'une longue guerre froide."+ "\n"+ "Ce conflit a causé des tensions mondiales et une panique générale." + "\n" + "MID, fragilisée par deux guerres mondiales, se trouve entre WEST et EST." + "\n" + "Pour éviter un nouveau conflit, MID crée le Comité des Axes Défensives (CAD)." + "\n" + "SUD, riche en ressources, attire l’attention mondiale." + "\n" + "En 2001, une attaque tue 3029 personnes dans WEST." + "\n" + "WEST accuse EST d’en être responsable via des mercenaires." + "\n" + "WEST envoie des troupes au SUD pour combattre le terrorisme, augmentant son influence." + "\n" + "EST, allié de SUD, menace de riposter. Ce conflit idéologique devient rapidement une guerre." + "\n" + "EST menace MID de frappes nucléaires en raison de leur soutien à WEST." + "\n" + "Une réunion d’urgence du CAD diminue temporairement les tensions, mais MID et WEST renforcent les frontières autour d’EST." + "\n" + "EST lance un ultimatum et se prépare à se défendre." + "\n" + "Les combats éclatent. EST, voyant ses forces anéanties, lance une attaque nucléaire sur MID." + "\n" + "Une contre-attaque massive suit." + "\n" + "Les capitales de WEST et d’EST sont détruites, laissant les deux nations en ruines." + "\n" + "Les forces restantes de MID, WEST et EST se dispersent." + "\n" + "Le monde est en ruines." + "\n" + "Les survivants doivent naviguer dans ce paysage de désolation." + "\n" + "Vous, joueur, devez survivre, reconstruire et apporter de l’espoir à un monde brisé.");
-        yield return new WaitForSecondsRealtime(30f);
+        dialogue.StartDialogue("Au début du 21ème siècle, une attaque terroriste déclenche une guerre entre les puissances mondiales WEST et EST, entraînant des frappes nucléaires dévastatrices. ");
+        yield return new WaitForSecondsRealtime(10f);
+        dialogue.StartDialogue("Les nations sont en ruines et les survivants doivent naviguer dans un monde post-apocalyptique.");
+        yield return new WaitForSecondsRealtime(10f);
+        dialogue.StartDialogue("Vous, joueur, devez survivre, reconstruire et apporter de l’espoir à ce monde brisé.");
+        yield return new WaitForSecondsRealtime(10f);
+        PanelText.SetActive(false);
         MenuCinématic.SetActive(false);
     }
 }
