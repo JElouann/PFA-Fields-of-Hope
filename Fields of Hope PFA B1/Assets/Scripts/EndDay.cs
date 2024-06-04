@@ -34,7 +34,6 @@ public class EndDay : MonoBehaviour
         // On met a jour les diff�rentes valeurs
 
         _statsManager.ChangeValues(InventoryEnum.Santé, _statsManager.GetHungerConsequence(), false);
-        print(_statsManager.GetHungerConsequence());
         _statsManager.ChangeValues(InventoryEnum.Faim, -_foodLoss * _foodLossMultiplier, false);
         
         _dayManager.DayChoice = DailyChoice.None;

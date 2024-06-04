@@ -106,6 +106,9 @@ public class StatsManager : MonoBehaviour
     public Image HungerBar;
 
     [SerializeField]
+    private InventoryDisplay _inventoryDisplay;
+
+    [SerializeField]
     private RessourcesGameFeel _gameFeelHandler;
 
     [SerializeField]
@@ -150,9 +153,9 @@ public class StatsManager : MonoBehaviour
             _saveSystem.NewGame();
         }
 
-        //print(OufitudeDegre); //
         UpdateTexts();
         UpdateBars();
+        _inventoryDisplay.UpdateAmounts(value);
 
         if (hasToRemember) enddaystats.OnStatsChange(value, amount);
     }
