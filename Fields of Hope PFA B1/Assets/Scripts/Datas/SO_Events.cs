@@ -9,7 +9,7 @@ public class SO_Events : ScriptableObject
     [Header("Infos")]
     [Space(2)]
     public string Name;
-    [Multiline, Tooltip("The text or dialogue the event contains.")] public string Text;
+    [TextArea, Tooltip("The text or dialogue the event contains.")] public string Text;
     public bool IsStoryEvent;
 
     [Header("Child 1")]

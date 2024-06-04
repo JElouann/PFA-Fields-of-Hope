@@ -24,16 +24,16 @@ public class Book : MonoBehaviour
 
     private void Start()
     {
-        _recto = page.transform.Find("Recto").gameObject;
-        _verso = page.transform.Find("Verso").gameObject;
+        _recto = page.transform.GetChild(0).Find("Recto").gameObject;
+        _verso = page.transform.GetChild(0).Find("Verso").gameObject;
         InitialState();
     }
 
     public void InitialState()
     {
-        page.transform.rotation = Quaternion.identity;
-        _verso.SetActive(false);
-        _verso.transform.SetAsLastSibling();
+        page.transform.rotation = new Quaternion(0, 0, 0, 0);
+        _recto.SetActive(false);
+        _recto.transform.SetAsLastSibling();
         forwardButton.SetActive(false);
 
     }
@@ -42,7 +42,7 @@ public class Book : MonoBehaviour
     {
         if (rotate == true) { return; }
         index++;
-        float angle = 180; //in order to rotate the page forward, you need to set the rotation by 180 degrees around the y axis
+        float angle = 0; //in order to rotate the page forward, you need to set the rotation by 180 degrees around the y axis
         ForwardButtonActions();
         page.transform.SetAsLastSibling();
         StartCoroutine(Rotate(angle, true));
@@ -64,7 +64,7 @@ public class Book : MonoBehaviour
     public void RotateBack()
     {
         if (rotate == true) { return; }
-        float angle = 0; //in order to rotate the page back, you need to set the rotation to 0 degrees around the y axis
+        float angle = 180; //in order to rotate the page back, you need to set the rotation to 0 degrees around the y axis
         //pages[index].transform.SetAsLastSibling();
         BackButtonActions();
         StartCoroutine(Rotate(angle, false));
@@ -87,11 +87,16 @@ public class Book : MonoBehaviour
         float value = 0f;
         while (true)
         {
+            if(page.transform.rotation.y == -86.957f) //-85 > page.transform.rotation.y && page.transform.rotation.y > -95
+            {
+                //_recto.SetActive(true);
+                print("étape");
+            }
             rotate = true;
             Quaternion targetRotation = Quaternion.Euler(0, angle, 0);
             value += Time.deltaTime * pageSpeed;
-            /*pages[index].transform.rotation = Quaternion.Slerp(pages[index].transform.rotation, targetRotation, value); //smoothly turn the page
-            float angle1 = Quaternion.Angle(pages[index].transform.rotation, targetRotation); //calculate the angle between the given angle of rotation and the current angle of rotation
+            page.transform.rotation = Quaternion.Slerp(page.transform.rotation, targetRotation, value); //smoothly turn the page
+            float angle1 = Quaternion.Angle(page.transform.rotation, targetRotation); //calculate the angle between the given angle of rotation and the current angle of rotation
             if (angle1 < 0.1f)
             {
                 if (forward == false)
@@ -103,7 +108,7 @@ public class Book : MonoBehaviour
 
             }
             yield return null;
-            */
+            
         }
     }
 
