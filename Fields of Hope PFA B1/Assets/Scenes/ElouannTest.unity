@@ -6158,6 +6158,7 @@ GameObject:
   - component: {fileID: 392975351}
   - component: {fileID: 392975350}
   - component: {fileID: 392975349}
+  - component: {fileID: 392975352}
   m_Layer: 5
   m_Name: pasButton
   m_TagString: Untagged
@@ -6228,9 +6229,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 765406292}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Book, Assembly-CSharp
-        m_MethodName: RotateForward
+        m_MethodName: TurnPage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6278,6 +6279,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392975347}
   m_CullTransparentMesh: 1
+--- !u!114 &392975352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392975347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62598ef8e41a6d0469dca918e1a7a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rectoSprite: {fileID: 0}
+  _versoSprite: {fileID: 0}
+  pageSpeed: 0.5
+  page: {fileID: 765406290}
+  backButton: {fileID: 0}
+  forwardButton: {fileID: 0}
 --- !u!1 &403829798
 GameObject:
   m_ObjectHideFlags: 0
@@ -8551,6 +8570,7 @@ MonoBehaviour:
   _textSpeed: 0.025
   _index: 0
   _textSlicer: {fileID: 655019361}
+  _Sound: {fileID: 8300000, guid: 2475c3674e5a48449bd1196ed8fc0ae8, type: 3}
 --- !u!224 &655019363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9120,6 +9140,7 @@ MonoBehaviour:
   _textSpeed: 0.01
   _index: 0
   _textSlicer: {fileID: 733011269}
+  _Sound: {fileID: 0}
 --- !u!114 &733011271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9375,7 +9396,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 765406292}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Book, Assembly-CSharp
         m_MethodName: RotateBack
         m_Mode: 1
@@ -9718,7 +9739,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 765406291}
-  - component: {fileID: 765406292}
   m_Layer: 5
   m_Name: PAGE
   m_TagString: Untagged
@@ -9746,24 +9766,6 @@ RectTransform:
   m_AnchoredPosition: {x: -11.71, y: -43.343}
   m_SizeDelta: {x: 1358.6, y: 852.69}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &765406292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765406290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62598ef8e41a6d0469dca918e1a7a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rectoSprite: {fileID: 0}
-  _versoSprite: {fileID: 0}
-  pageSpeed: 0.001
-  page: {fileID: 765406290}
-  backButton: {fileID: 745459249}
-  forwardButton: {fileID: 1920749237}
 --- !u!1 &779374620
 GameObject:
   m_ObjectHideFlags: 0
@@ -23507,6 +23509,9 @@ MonoBehaviour:
   "MenuCin\xE9matic": {fileID: 0}
   ImageAnimation: {fileID: 0}
   videoplayer: {fileID: 1892727281}
+  AudioClip: {fileID: 0}
+  AudioSource: {fileID: 0}
+  _soundSFXManager: {fileID: 0}
 --- !u!328 &1892727281
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -23854,6 +23859,7 @@ GameObject:
   - component: {fileID: 1920749240}
   - component: {fileID: 1920749239}
   - component: {fileID: 1920749238}
+  - component: {fileID: 1920749242}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -23905,9 +23911,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 765406292}
+      - m_Target: {fileID: 1920749242}
         m_TargetAssemblyTypeName: Book, Assembly-CSharp
-        m_MethodName: RotateForward
+        m_MethodName: TurnPage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23975,6 +23981,24 @@ RectTransform:
   m_AnchoredPosition: {x: 795, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1920749242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920749237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62598ef8e41a6d0469dca918e1a7a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rectoSprite: {fileID: 0}
+  _versoSprite: {fileID: 0}
+  pageSpeed: 0.5
+  page: {fileID: 765406290}
+  backButton: {fileID: 0}
+  forwardButton: {fileID: 0}
 --- !u!1 &1928584201
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Book : MonoBehaviour
@@ -24,9 +28,10 @@ public class Book : MonoBehaviour
 
     private void Start()
     {
+        print(_isFlipped);
         _recto = page.transform.GetChild(0).Find("Recto").gameObject;
         _verso = page.transform.GetChild(0).Find("Verso").gameObject;
-        InitialState();
+        //InitialState();
     }
 
     public void InitialState()
@@ -112,6 +117,52 @@ public class Book : MonoBehaviour
         }
     }
 
+    private bool _isFlipped;
 
+    public void TurnPage() // TRANSFORMER EN ASYNC OU COROUTINE POUR REGLER TIMING
+    {
+        /*if (_isFlipped)
+        {
+            page.transform.DORotate(new Vector3(page.transform.rotation.x, 90, page.transform.rotation.z), pageSpeed);
+            _verso.SetActive(true);
+            _recto.SetActive(false);
+            page.transform.DORotate(new Vector3(page.transform.rotation.x, 0, page.transform.rotation.z), pageSpeed);
+            _isFlipped = false;
+        }
+        else
+        {
+            page.transform.DORotate(new Vector3(page.transform.rotation.x, 90, page.transform.rotation.z), pageSpeed);
+            _verso.SetActive(false);
+            _recto.SetActive(true);
+            page.transform.DORotate(new Vector3(page.transform.rotation.x, 180, page.transform.rotation.z), pageSpeed);
+            _isFlipped = true;
+        }
+        print(_isFlipped);*/
+
+        StartCoroutine(Coroutine());
+    }
+
+    private IEnumerator Coroutine()
+    {
+        if (_isFlipped)
+        {
+            page.transform.DORotate(new Vector3(page.transform.rotation.x, 90, page.transform.rotation.z), pageSpeed);
+            yield return new WaitForSeconds(pageSpeed / 2);
+            _verso.SetActive(true);
+            _recto.SetActive(false);
+            page.transform.DORotate(new Vector3(page.transform.rotation.x, 0, page.transform.rotation.z), pageSpeed);
+            _isFlipped = false;
+        }
+        else
+        {
+            page.transform.DORotate(new Vector3(page.transform.rotation.x, 90, page.transform.rotation.z), pageSpeed);
+            yield return new WaitForSeconds(pageSpeed /2);
+            _verso.SetActive(false);
+            _recto.SetActive(true);
+            page.transform.DORotate(new Vector3(page.transform.rotation.x, 180, page.transform.rotation.z), pageSpeed);
+            _isFlipped = true;
+        }
+        print(_isFlipped);
+    }
 
 }
