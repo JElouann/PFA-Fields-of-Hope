@@ -28,5 +28,5 @@ MonoBehaviour:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: 7
-    Amount: 3
+  - Value: 5
+    Amount: 2

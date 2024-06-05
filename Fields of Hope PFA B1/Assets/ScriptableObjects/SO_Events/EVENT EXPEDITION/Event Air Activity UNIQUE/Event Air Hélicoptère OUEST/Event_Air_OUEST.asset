@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Event_Air_OUEST
   m_EditorClassIdentifier: 
   Name: "H\xE9licopt\xE8re OUEST"
-  Text: "`Dans les ruines de la p\xE9riph\xE9rie de Sk\xF6rn, le silence est troubl\xE9
+  Text: "Dans les ruines de la p\xE9riph\xE9rie de Sk\xF6rn, le silence est troubl\xE9
     par un bourdonnement strident qui se rapproche. Au loin, dans les airs, un h\xE9licopt\xE8re
     militaire survole la ville et semble passer \xE0 c\xF4t\xE9 de moi. C'est un
-    h\xE9licopt\xE8re de l'Est ! Dois-je me cacher dans les buissons ou courir vers
-    des ruines capables de me prot\xE9ger ?`"
+    h\xE9licopt\xE8re de l'Ouest ! Dois-je me cacher dans les buissons ou courir
+    vers des ruines capables de me prot\xE9ger ?"
   ChildEvent1: {fileID: 11400000, guid: 7f9e05bb92a21554d80853df6491ec94, type: 2}
-  Child1Text: SE CACHER DANS LES BUISSONS
+  Child1Text: Se cacher dans les buissons
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: afc9512ed641da14090876c6e3e3a606, type: 2}
-  Child2Text: COURRIR ET SE METTRE A COUVERT
+  Child2Text: Courrir et se mettre a couvert
   Child2Conditions: []
   ImageEvent: {fileID: 21300000, guid: c334688165364bf4bbd7aaf3e919aeeb, type: 3}
   SpritePosition: {x: 0, y: 0, z: 0}

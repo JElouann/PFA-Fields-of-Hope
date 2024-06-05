@@ -21,13 +21,13 @@ MonoBehaviour:
     la r\xE9gion. Peut-\xEAtre devrions-nous envisager de faire affaire avec lui
     ?"
   ChildEvent1: {fileID: 11400000, guid: 89b56262e772d5b498ebc870dcfed1f3, type: 2}
-  Child1Text: OUI
+  Child1Text: Oui
   Child1Conditions:
   - Variable: 3
     Operator: 3
     Amount: 20
   ChildEvent2: {fileID: 11400000, guid: c45e5da907ce244449d87ea0e68d1b5e, type: 2}
-  Child2Text: NON
+  Child2Text: Non
   Child2Conditions: []
   ImageEvent: {fileID: 0}
   SpritePosition: {x: 0, y: 0, z: 0}

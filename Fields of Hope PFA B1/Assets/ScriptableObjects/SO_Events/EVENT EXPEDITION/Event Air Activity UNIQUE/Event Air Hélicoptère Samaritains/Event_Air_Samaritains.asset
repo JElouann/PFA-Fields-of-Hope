@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Event_Air_Samaritains
   m_EditorClassIdentifier: 
   Name: "H\xE9licopt\xE8re Samaritains"
-  Text: "`Dans les prairies de Sk\xF6rn, je me balade \xE0 la recherche de bois et
+  Text: "Dans les prairies de Sk\xF6rn, je me balade \xE0 la recherche de bois et
     d'autres combustibles pour la ferme quand j'entends un bourdonnement. \xC0 ma
     grande surprise, c'est un h\xE9licopt\xE8re ! Il survole ma zone. Devrais-je
-    lui faire signe ?`"
+    lui faire signe ?"
   ChildEvent1: {fileID: 11400000, guid: 89860a58882cd4e4b8917d82f77a6a3e, type: 2}
-  Child1Text: OUI
+  Child1Text: Oui
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: 52a1d7d42691bb6488f6bf79e984832b, type: 2}
-  Child2Text: NON
+  Child2Text: Non
   Child2Conditions: []
   ImageEvent: {fileID: 0}
   SpritePosition: {x: 0, y: 0, z: 0}

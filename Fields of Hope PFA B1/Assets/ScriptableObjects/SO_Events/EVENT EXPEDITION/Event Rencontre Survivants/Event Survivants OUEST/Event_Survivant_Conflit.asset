@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Event_Survivant_Conflit
   m_EditorClassIdentifier: 
   Name: Survivants VS Soldats
-  Text: "\"Dans les rue de Sk\xF6rn, j'aper\xE7ois un groupe de soldats devant un
-    b\xE2timent, ils hurlent contre des survivants un l'int\xE9rieur, des menaces
-    de morts et insultes et autres injures. Les soldats semble vouloir tuer les survivants
-    \xE0 l'int\xE9rieur du b\xE2timent. Devrais-je essayer de les aider ?\""
+  Text: "Dans les rue de Sk\xF6rn, j'aper\xE7ois un groupe de soldats devant un b\xE2timent,
+    ils hurlent contre des survivants un l'int\xE9rieur, des menaces de morts et
+    insultes et autres injures. Les soldats semble vouloir tuer les survivants \xE0
+    l'int\xE9rieur du b\xE2timent. Devrais-je essayer de les aider ?"
   ChildEvent1: {fileID: 11400000, guid: 724a93afb985fdb49b5d1501166dba22, type: 2}
   Child1Text: Aider les survivants
   Child1Conditions: []

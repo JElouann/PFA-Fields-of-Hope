@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Event_Grenier
   m_EditorClassIdentifier: 
   Name: Grenier
-  Text: "`\"En vous baladant \xE0 travers les couloirs, vous remarquez une trappe
-    au plafond. Depuis que vous \xEAtes ici, vous n'aviez jamais remarqu\xE9 la possibilit\xE9
+  Text: "En vous baladant \xE0 travers les couloirs, vous remarquez une trappe au
+    plafond. Depuis que vous \xEAtes ici, vous n'aviez jamais remarqu\xE9 la possibilit\xE9
     que cette ferme ait un grenier. Il pourrait \xEAtre int\xE9ressant de voir ce
-    qu'il y a au-dessus. Montez-vous ?\"`"
+    qu'il y a au-dessus. Montez-vous ?"
   ChildEvent1: {fileID: 11400000, guid: 968eb3b1e967f7d4897dfb0f7ab70b31, type: 2}
-  Child1Text: OUI
+  Child1Text: Oui
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: edb359aa454f4934fa29e23e6bdf4ba7, type: 2}
-  Child2Text: NON
+  Child2Text: Non
   Child2Conditions: []
   ImageEvent: {fileID: 0}
   SpritePosition: {x: 0, y: 0, z: 0}

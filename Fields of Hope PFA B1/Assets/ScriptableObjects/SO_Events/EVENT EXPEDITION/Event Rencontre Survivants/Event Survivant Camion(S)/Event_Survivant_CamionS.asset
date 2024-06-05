@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Event_Survivant_CamionS
   m_EditorClassIdentifier: 
   Name: Camion Samaritains
-  Text: "\"En marchant sur les routes d\xE9sertes aux alentours de Sk\xF6rn, je rep\xE8re
+  Text: "En marchant sur les routes d\xE9sertes aux alentours de Sk\xF6rn, je rep\xE8re
     un camion qui se dirige vers moi au loin. Leur manque de discr\xE9tion est alarmant
     ; ils pourraient repr\xE9senter un danger. Devrais-je envisager de me cacher
-    ?\""
+    ?"
   ChildEvent1: {fileID: 11400000, guid: b152a083fb3633f4482fc9e91a7e3153, type: 2}
   Child1Text: Se cacher
   Child1Conditions: []
