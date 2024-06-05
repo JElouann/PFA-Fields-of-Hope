@@ -22,6 +22,15 @@ public class PlayVideo : MonoBehaviour
     [SerializeField]
     private VideoPlayer videoplayer;
 
+    [SerializeField]
+    private AudioClip AudioClip;
+
+    [SerializeField]
+    private AudioSource AudioSource;
+
+    [SerializeField]
+    private SoundSFXManager _soundSFXManager;
+
 
     private void Start()
     {
@@ -42,6 +51,7 @@ public class PlayVideo : MonoBehaviour
         if (videoplayer)
         {
             videoplayer.Stop();
+            AudioSource.Stop();
             PanelText.SetActive(false);
             MenuCinématic.SetActive(false);
         }
@@ -49,8 +59,10 @@ public class PlayVideo : MonoBehaviour
 
     private IEnumerator StartVideo()
     {
+        _soundSFXManager.PlaySoundFXClip(AudioClip, gameObject.transform, 1f, "Ambiance");
+        yield return new WaitForSecondsRealtime(0.40f);
         videoplayer.Play();
-        yield return new WaitForSecondsRealtime(0.25f);
+        yield return new WaitForSecondsRealtime(0.05f);
         ImageAnimation.SetActive(true);
         yield return new WaitForSecondsRealtime(10.5f);
         PanelText.SetActive(true);
