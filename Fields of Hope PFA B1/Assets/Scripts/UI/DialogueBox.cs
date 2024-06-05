@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using JetBrains.Annotations;
 
 public class DialogueBox : MonoBehaviour
 {
@@ -22,7 +23,6 @@ public class DialogueBox : MonoBehaviour
     [SerializeField]
     private AudioClip _Sound;
 
-    [SerializeField]
     private SoundSFXManager _soundSFXManager;
     
     public void StartDialogue(string text)
@@ -41,7 +41,7 @@ public class DialogueBox : MonoBehaviour
     {
         //this.GetComponent<Button>().interactable = false; VERSION SANS GAME FEEL
         Button button = GameObject.Find("Button").GetComponent<Button>();
-        button.interactable = false;
+        //button.interactable = false;
         _text.text = Lines[_index];
         _text.maxVisibleCharacters = 0;
         for (int i = 0; i < Lines[_index].Length; i++)
