@@ -959,7 +959,6 @@ MonoBehaviour:
   _index: 0
   _textSlicer: {fileID: 0}
   _Sound: {fileID: 8300000, guid: 89971d3defab26f4aa421f99778bd57f, type: 3}
-  _soundSFXManager: {fileID: 0}
 --- !u!114 &199540878537960389
 MonoBehaviour:
   m_ObjectHideFlags: 0
