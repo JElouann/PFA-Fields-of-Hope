@@ -24,11 +24,15 @@ public class DialogueBox : MonoBehaviour
     private AudioClip _Sound;
 
     private SoundSFXManager _soundSFXManager;
-    
+
+    private void Awake()
+    {
+        _soundSFXManager = FindAnyObjectByType<SoundSFXManager>();    
+    }
+
     public void StartDialogue(string text)
     {
-        Debug.Log("JE COMMENCE A ECRIRE");
-        _soundSFXManager.PlayMusicClip(_Sound, transform, 1f, "Music");
+        _soundSFXManager.PlaySoundFXClip(_Sound, transform, 1f, "Music");
         _textSlicer = gameObject.GetComponent<TextSlicer>();
         Lines = _textSlicer.Slice(text).ToArray();
 
