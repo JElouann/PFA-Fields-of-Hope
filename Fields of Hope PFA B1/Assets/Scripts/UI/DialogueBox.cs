@@ -20,10 +20,15 @@ public class DialogueBox : MonoBehaviour
     private Coroutine _dialogueCoroutine;
 
     [SerializeField]
-    private PlaySoundFx _playSound;
+    private AudioClip _Sound;
+
+    [SerializeField]
+    private SoundSFXManager _soundSFXManager;
     
     public void StartDialogue(string text)
     {
+        Debug.Log("JE COMMENCE A ECRIRE");
+        _soundSFXManager.PlayMusicClip(_Sound, transform, 1f, "Music");
         _textSlicer = gameObject.GetComponent<TextSlicer>();
         Lines = _textSlicer.Slice(text).ToArray();
 
@@ -48,7 +53,7 @@ public class DialogueBox : MonoBehaviour
         if (_index == Lines.Length - 1)
         {
             //this.GetComponent<Button>().interactable = false;
-            button.interactable = false;
+            //button.interactable = false;
             // afficher potentiels bouttons choix
             this.OnEndTextDisplay?.Invoke();
         }
