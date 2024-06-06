@@ -26,12 +26,25 @@ public class RessourcesGameFeel : MonoBehaviour
         _lifeLogo.transform.DOScale(Vector3.one, 0.3f);
     }
 
+    public IEnumerator LifeLossLogo()
+    {
+        _lifeLogo.transform.DOPunchScale(new Vector3(0.75f, 0.75f, 0.75f), 3, 7, 0).SetEase(Ease.InOutBounce);
+        yield return null;
+    }
+
     public IEnumerator HungerGainLogo()
     {
         _hungerLogo.transform.DOScale(new Vector3(1.45f, 1.35f, 1.45f), 0.425f).SetEase(Ease.OutExpo);
         yield return new WaitForSeconds(0.2f);
         _hungerLogo.transform.DOScale(Vector3.one, 0.3f);
     }
+
+    public IEnumerator HungerLossLogo()
+    {
+        _hungerLogo.transform.DOPunchScale(new Vector3(0.75f, 0.75f, 0.75f), 3, 7, 0).SetEase(Ease.InOutElastic);
+        yield return null;
+    }
+
 
     public IEnumerator LifeChangeText(int value)
     {
@@ -58,12 +71,6 @@ public class RessourcesGameFeel : MonoBehaviour
         _hungerText.DOFade(0, 0.5f);
         _hungerText.gameObject.transform.DOLocalMoveY(_hungerTextPosition.y + verticalSlide * 2, 0.5f);
     }
-
-    public IEnumerator HungerChangeText()
-    {
-        yield return null;
-    }
-
 
     private void Awake()
     {
