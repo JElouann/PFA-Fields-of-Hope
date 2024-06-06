@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 using JetBrains.Annotations;
+using System.Runtime.CompilerServices;
 
 public class DialogueBox : MonoBehaviour
 {
@@ -23,16 +24,15 @@ public class DialogueBox : MonoBehaviour
     [SerializeField]
     private AudioClip _Sound;
 
-    private SoundSFXManager _soundSFXManager;
+    [SerializeField]
+    private AudioSource AudioSource;
 
-    private void Awake()
-    {
-        _soundSFXManager = FindAnyObjectByType<SoundSFXManager>();    
-    }
+    private bool _isPlaying = false;
 
     public void StartDialogue(string text)
     {
-        _soundSFXManager.PlaySoundFXClip(_Sound, transform, 1f, "SFX");
+        //_soundSFXManager.PlaySoundFXClip(_Sound, transform, 1f, "SFX");
+        PlaySoundWritting("Non");
         _textSlicer = gameObject.GetComponent<TextSlicer>();
         Lines = _textSlicer.Slice(text).ToArray();
 
@@ -44,7 +44,7 @@ public class DialogueBox : MonoBehaviour
     private IEnumerator TypeLine()
     {
         //this.GetComponent<Button>().interactable = false; VERSION SANS GAME FEEL
-        Button button = GameObject.Find("Button").GetComponent<Button>();
+        //Button button = GameObject.Find("Button").GetComponent<Button>();
         //button.interactable = false;
         _text.text = Lines[_index];
         _text.maxVisibleCharacters = 0;
@@ -65,7 +65,8 @@ public class DialogueBox : MonoBehaviour
         else
         {
             //this.GetComponent<Button>().interactable = true;
-            button.interactable = true;
+            //button.interactable = true;
+            PlaySoundWritting("Stop");
         }
         _dialogueCoroutine = null;
     }
@@ -85,6 +86,23 @@ public class DialogueBox : MonoBehaviour
         {
             _index++;
             _dialogueCoroutine = StartCoroutine(TypeLine());
+        }
+    }
+
+    private void PlaySoundWritting(string stop)
+    {
+        AudioSource Source = AudioSource;
+        Source.clip = _Sound;
+        if (stop == "Stop")
+        {
+            Source.Stop();
+            Debug.Log("J'ai Fini");
+        }
+        else
+        {
+            Source.volume = 1f;
+            Source.Play();
+            Debug.Log("Je commence");
         }
     }
 }

@@ -21,9 +21,4 @@ public class PlaySoundFx : MonoBehaviour
     {
         soundFxManager.PlaySoundFXClip(_audio, transform, 1f, popilopo);
     }
-
-    public void OnPlayMusic()
-    {
-        
-    }
 }
