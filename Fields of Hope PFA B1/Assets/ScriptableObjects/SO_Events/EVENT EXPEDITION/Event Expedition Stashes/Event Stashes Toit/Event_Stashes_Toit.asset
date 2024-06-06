@@ -13,18 +13,20 @@ MonoBehaviour:
   m_Name: Event_Stashes_Toit
   m_EditorClassIdentifier: 
   Name: Toit Cachette
-  Text: "\u201CEn explorant les ruines de Sk\xF6rn, je remarque une sorte de b\xE2che
-    sur un toit, des marques sugg\xE8re que quelqu\u2019un est pass\xE9 par ici,
-    et a escalad\xE9 le mur. Cela pourrait \xEAtre quelque chose d\u2019utile, dois-je
-    essayer de voir ce que c\u2019est ?\u201D"
+  Text: "En explorant les ruines de Sk\xF6rn, je remarque une sorte de b\xE2che sur
+    un toit, des marques sugg\xE8re que quelqu\u2019un est pass\xE9 par ici, et a
+    escalad\xE9 le mur. Cela pourrait \xEAtre quelque chose d\u2019utile, dois-je
+    essayer de voir ce que c\u2019est ?"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 11400000, guid: a8d258159fc6cee42beb5ceba3a72924, type: 2}
-  Child1Text: OUI
+  Child1Text: Oui
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: 1b9252efc21b3884d82dac31b9f7d970, type: 2}
-  Child2Text: NON
+  Child2Text: Non
   Child2Conditions: []
   StyleEvent: []
   OufitudePool:
-    Minimum: 0
-    Maximum: 0
+    Minimum: 2
+    Maximum: 8
   ValuesToChange: []
+  SFX: {fileID: 0}

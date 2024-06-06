@@ -13,21 +13,22 @@ MonoBehaviour:
   m_Name: ChildEvent_Marchandage Pilleur 2
   m_EditorClassIdentifier: 
   Name: NON
-  Text: "\"Malheureusement, je lui explique que je ne peux pas lui c\xE9der mes ressources,
+  Text: "Malheureusement, je lui explique que je ne peux pas lui c\xE9der mes ressources,
     \xE9tant dans l'incapacit\xE9 de le faire. La pilleuse repart alors avec d\xE9termination
     \xE0 travers la neige, esp\xE9rant que son fr\xE8re parviendra \xE0 survivre
-    dans ces conditions difficiles.\""
+    dans ces conditions difficiles."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange: []
+  ValuesToChange:
+  - Value: 13
+    Amount: 0
+  SFX: {fileID: 0}

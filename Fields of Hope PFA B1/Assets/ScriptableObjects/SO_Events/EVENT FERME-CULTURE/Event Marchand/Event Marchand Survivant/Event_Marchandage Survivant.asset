@@ -20,20 +20,19 @@ MonoBehaviour:
     d'\xE9changer pour 20 graines contre de la nourriture afin de s'installer dans
     la r\xE9gion. Peut-\xEAtre devrions-nous envisager de faire affaire avec lui
     ?"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 11400000, guid: 89b56262e772d5b498ebc870dcfed1f3, type: 2}
-  Child1Text: OUI
+  Child1Text: Oui
   Child1Conditions:
-  - Variable: 3
+  - Variable: 2
     Operator: 3
-    Amount: 20
+    Amount: 30
   ChildEvent2: {fileID: 11400000, guid: c45e5da907ce244449d87ea0e68d1b5e, type: 2}
-  Child2Text: NON
+  Child2Text: Non
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
-    Minimum: 7
-    Maximum: 9
+    Minimum: 5
+    Maximum: 7
   ValuesToChange: []
+  SFX: {fileID: 0}

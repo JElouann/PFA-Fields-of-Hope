@@ -13,20 +13,19 @@ MonoBehaviour:
   m_Name: Event_Plantes_Matrix
   m_EditorClassIdentifier: 
   Name: Plantes Matrix
-  Text: "\"En traversant la for\xEAt pour revenir chez moi, je tombe sur un amas
-    de plantes autour d'un arbre, avec des baies violettes et bleues. Elles semblent
-    comestibles. Devrais-je essayer d'en manger quelques-unes ?\""
+  Text: "En traversant la for\xEAt pour revenir chez moi, je tombe sur un amas de
+    plantes autour d'un arbre, avec des baies violettes et bleues. Elles semblent
+    comestibles. Devrais-je essayer d'en manger quelques-unes ?"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 11400000, guid: fd57b3b6339747342ab05ec859f1ddf7, type: 2}
-  Child1Text: BLEU
+  Child1Text: Bleu
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: 5da070ff087aad746bcf7301d95c457c, type: 2}
-  Child2Text: VIOLET
+  Child2Text: Violet
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
-    Minimum: 0
-    Maximum: 0
+    Minimum: 1
+    Maximum: 6
   ValuesToChange: []
+  SFX: {fileID: 0}

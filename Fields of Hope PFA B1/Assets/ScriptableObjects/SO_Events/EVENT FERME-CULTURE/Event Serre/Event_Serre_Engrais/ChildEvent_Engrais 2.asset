@@ -13,20 +13,18 @@ MonoBehaviour:
   m_Name: ChildEvent_Engrais 2
   m_EditorClassIdentifier: 
   Name: EN DESSOUS
-  Text: "\"Vous mettez l'engrais sous la terre au pied de chaque plante, en faisant
+  Text: "Vous mettez l'engrais sous la terre au pied de chaque plante, en faisant
     attention de ne pas trop en mettre. C'est un travail studieux et long, mais \xE0
     travers votre serre, vous retrouvez quelques graines et l\xE9gumes \xE9gar\xE9s.
-    Malheureusement, il semble que l'engrais n'a pas beaucoup d'effet.\""
+    Malheureusement, il semble que l'engrais n'a pas beaucoup d'effet."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
@@ -35,3 +33,6 @@ MonoBehaviour:
     Amount: 8
   - Value: 10
     Amount: 1
+  - Value: 13
+    Amount: 2
+  SFX: {fileID: 0}

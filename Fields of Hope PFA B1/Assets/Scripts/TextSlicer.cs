@@ -37,7 +37,11 @@ public class TextSlicer : MonoBehaviour
                 index++;
             }
         }
-        slicedText.Add(currentSelection);
+        if(currentSelection != null)
+        {
+            slicedText.Add(currentSelection);
+        }
+        slicedText.Add(" ");
         return slicedText;
     }
 }

@@ -13,22 +13,20 @@ MonoBehaviour:
   m_Name: ChildEvent_Survivant_CamionS 2
   m_EditorClassIdentifier: 
   Name: Rester sur la route
-  Text: "\"Je reste sur la route par curiosit\xE9. Le camion approche \xE0 grande
-    vitesse et freine brusquement \xE0 ma hauteur. Un homme lourdement arm\xE9 appara\xEEt
+  Text: "Je reste sur la route par curiosit\xE9. Le camion approche \xE0 grande vitesse
+    et freine brusquement \xE0 ma hauteur. Un homme lourdement arm\xE9 appara\xEEt
     \xE0 l'arri\xE8re du camion, dans l'obscurit\xE9 sous la b\xE2che. Il me fixe
     d'un air sinistre, puis soudain, il jette une petite bo\xEEte sur la route. Il
     me fait signe et me souhaite bonne chance, puis le camion repart, laissant \xE0
-    l'int\xE9rieur de la bo\xEEte quelques vivres.\""
+    l'int\xE9rieur de la bo\xEEte quelques vivres."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
@@ -37,3 +35,6 @@ MonoBehaviour:
     Amount: 10
   - Value: 7
     Amount: 1
+  - Value: 13
+    Amount: 2
+  SFX: {fileID: 0}

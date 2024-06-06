@@ -13,20 +13,21 @@ MonoBehaviour:
   m_Name: "ChildEvent_Survivant_For\xEAt 2"
   m_EditorClassIdentifier: 
   Name: Non
-  Text: "\"J'\xE9vite les survivants et les contourne pour \xE9viter la confrontation.
+  Text: "J'\xE9vite les survivants et les contourne pour \xE9viter la confrontation.
     On ne sait jamais comment ils peuvent r\xE9agir ou quelles sont leurs intentions.
-    Mieux vaut \xEAtre prudent.\""
+    Mieux vaut \xEAtre prudent."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange: []
+  ValuesToChange:
+  - Value: 13
+    Amount: -1
+  SFX: {fileID: 0}

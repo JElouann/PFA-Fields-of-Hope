@@ -13,26 +13,23 @@ MonoBehaviour:
   m_Name: ChildEvent_Marchandage Survivant 2
   m_EditorClassIdentifier: 
   Name: NON
-  Text: "\"Apr\xE8s avoir discut\xE9 avec lui de sujets int\xE9ressants, j'ai d\xFB
+  Text: "Apr\xE8s avoir discut\xE9 avec lui de sujets int\xE9ressants, j'ai d\xFB
     lui expliquer que je ne pouvais pas me permettre d'\xE9changer des graines, car
     j'avais besoin de les utiliser pour continuer mes cultures. L'homme s'est excus\xE9
     d'avoir demand\xE9 et m'a souhait\xE9 bonne chance avant de partir. Malheureusement,
-    je n'ai pas pu l'aider.\""
+    je n'ai pas pu l'aider."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: 0
-    Amount: -20
-  - Value: 0
-    Amount: 5
+  - Value: 13
+    Amount: 0
+  SFX: {fileID: 0}

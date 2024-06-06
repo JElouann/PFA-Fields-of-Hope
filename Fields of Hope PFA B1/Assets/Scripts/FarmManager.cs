@@ -29,19 +29,14 @@ public class FarmManager : MonoBehaviour
     public void AddSeed()
     {
         GrowingPlant Slot = new GrowingPlant();
+        if (seedData == null) return;
         Slot.Plant = seedData;
         Slot.TempsRestantDePousse = seedData.TempsDePousseEnJours;
-        if (StatsManager.Seeds < Slot.Plant.CoutEnGraines)
-        {
-            return;
-        }
-        else
-        {
-            StatsManager.ChangeValues(InventoryEnum.Graines, -Slot.Plant.CoutEnGraines, true);
-            InventorySlots.Add(Slot);
-            GameObject.Find("EventInstancier").GetComponent<EventInstancier>().InstantiateEvent(EventType.Farm);
-            PanelFarm.SetActive(false);
-        }
+        if (StatsManager.Seeds < Slot.Plant.CoutEnGraines) return;
+        StatsManager.ChangeValues(InventoryEnum.Graines, -Slot.Plant.CoutEnGraines, true);
+        InventorySlots.Add(Slot);
+        GameObject.Find("EventInstancier").GetComponent<EventInstancier>().InstantiateEvent(EventType.Farm);
+        PanelFarm.SetActive(false);
     }
 
     public void RemoveDay()

@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Event_Intrusion Nocturne
   m_EditorClassIdentifier: 
   Name: Intrusion Nocturne
-  Text: "`\"Pendant la nuit, j'entends des chuchotements et des bruits de pas autour
+  Text: "Pendant la nuit, j'entends des chuchotements et des bruits de pas autour
     de la maison. Des gens r\xF4dent autour de la ferme, et ils semblent vouloir
     s'introduire chez moi. Dois-je essayer de n\xE9gocier avec eux ou les emp\xEAcher
-    discr\xE8tement d'entrer ?\"`"
+    discr\xE8tement d'entrer ?"
   ChildEvent1: {fileID: 11400000, guid: 10b7ad05e610c2a47a7d0e94e241df8a, type: 2}
-  Child1Text: NEGOCIER
+  Child1Text: Negocier
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: 7c2a3b554d76c104c91ee27fdc6a6326, type: 2}
-  Child2Text: EMPECHER LEUR ENTREE
+  Child2Text: Empecher leur entree
   Child2Conditions: []
   ImageEvent: {fileID: 0}
   SpritePosition: {x: 0, y: 0, z: 0}

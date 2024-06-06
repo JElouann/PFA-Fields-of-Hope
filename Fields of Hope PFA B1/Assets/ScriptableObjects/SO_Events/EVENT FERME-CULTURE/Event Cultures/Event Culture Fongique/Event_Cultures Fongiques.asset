@@ -13,21 +13,20 @@ MonoBehaviour:
   m_Name: Event_Cultures Fongiques
   m_EditorClassIdentifier: 
   Name: Cultures Fongiques
-  Text: "`\"Alors que je d\xE9sherbais autour des plantes, j'ai commenc\xE9 \xE0
-    sentir une odeur naus\xE9abonde et \xE2cre. En suivant l'odeur, j'ai d\xE9couvert
-    qu'elle provenait malheureusement d\u2019une de mes cultures. Une sorte de champignon
-    a commenc\xE9 \xE0 pousser sur la plante. Que dois-je faire ?\"`\n"
+  Text: "Alors que je d\xE9sherbais autour des plantes, j'ai commenc\xE9 \xE0 sentir
+    une odeur naus\xE9abonde et \xE2cre. En suivant l'odeur, j'ai d\xE9couvert qu'elle
+    provenait malheureusement d\u2019une de mes cultures. Une sorte de champignon
+    a commenc\xE9 \xE0 pousser sur la plante. Que dois-je faire ?"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 11400000, guid: f3b10b3e9c58aac4faf2868e1adb99e7, type: 2}
-  Child1Text: ESSAYER DE RETIRER
+  Child1Text: Essayer de retirer
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: 879b3bb28d3f7a64f9b71065381d1fa6, type: 2}
-  Child2Text: NE RIEN FAIRE
+  Child2Text: Ne rien faire
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
-    Minimum: 2
-    Maximum: 9
+    Minimum: 1
+    Maximum: 7
   ValuesToChange: []
+  SFX: {fileID: 0}

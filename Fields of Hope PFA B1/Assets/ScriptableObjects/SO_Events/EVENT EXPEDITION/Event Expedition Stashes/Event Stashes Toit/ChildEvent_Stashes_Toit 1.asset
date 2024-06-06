@@ -13,23 +13,24 @@ MonoBehaviour:
   m_Name: ChildEvent_Stashes_Toit 1
   m_EditorClassIdentifier: 
   Name: OUI
-  Text: "\u201CEn escaladant le mur pour atteindre le toit de la maison d\xE9labr\xE9e,
+  Text: "En escaladant le mur pour atteindre le toit de la maison d\xE9labr\xE9e,
     celui-ci c\xE8de sous votre poids. Vous tombez \xE0 travers la structure avec
     les d\xE9bris du toit. Malgr\xE9 vos blessures, vous \xEAtes soulag\xE9 que toute
-    la maison ne soit pas faite du m\xEAme mat\xE9riau.\u201D"
+    la maison ne soit pas faite du m\xEAme mat\xE9riau."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: 0
     Amount: -10
+  - Value: 13
+    Amount: -2
+  SFX: {fileID: 0}

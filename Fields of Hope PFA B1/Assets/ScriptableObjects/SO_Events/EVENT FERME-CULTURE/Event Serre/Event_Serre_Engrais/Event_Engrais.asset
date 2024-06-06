@@ -19,10 +19,10 @@ MonoBehaviour:
     d'enfance : devez-vous r\xE9pandre l'engrais sur la terre ou l'enfouir en dessous
     ?\"`"
   ChildEvent1: {fileID: 11400000, guid: 15952960bd5057842bffa4af18e7b5b6, type: 2}
-  Child1Text: AU DESSUS
+  Child1Text: Au dessus
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: 5b742f96f4a35df4bb88be4b5c66faa1, type: 2}
-  Child2Text: EN DESSOUS
+  Child2Text: En dessous
   Child2Conditions: []
   ImageEvent: {fileID: 0}
   SpritePosition: {x: 0, y: 0, z: 0}
