@@ -13,22 +13,23 @@ MonoBehaviour:
   m_Name: ChildEvent_Engrais 1
   m_EditorClassIdentifier: 
   Name: AU DESSUS
-  Text: "\"Vous r\xE9pandez l'engrais avec parcimonie dans votre serre, en faisant
+  Text: "Vous r\xE9pandez l'engrais avec parcimonie dans votre serre, en faisant
     attention et de fa\xE7on r\xE9guli\xE8re. Vous videz tout le sac, et apr\xE8s
-    quelques jours, les plantes semblent pousser plus vigoureusement.\""
+    quelques jours, les plantes semblent pousser plus vigoureusement."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: 11
     Amount: -1
+  - Value: 13
+    Amount: 2
+  SFX: {fileID: 0}

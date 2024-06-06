@@ -13,22 +13,23 @@ MonoBehaviour:
   m_Name: ChildEvent_PluieToxique1
   m_EditorClassIdentifier: 
   Name: '''PROTEGER LES CULTURES'''
-  Text: "\"Je me pr\xE9cipite vers mes cultures pour essayer de les couvrir. Des
-    trous percent le haut de la serre et tombent sur certaines des plantes. Je les
-    couvre de mon corps, ma peau br\xFBle sous la pluie. Apr\xE8s des minutes interminables..\""
+  Text: "Je me pr\xE9cipite vers mes cultures pour essayer de les couvrir. Des trous
+    percent le haut de la serre et tombent sur certaines des plantes. Je les couvre
+    de mon corps, ma peau br\xFBle sous la pluie. Apr\xE8s des minutes interminables.."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: 0
     Amount: -10
+  - Value: 13
+    Amount: -1
+  SFX: {fileID: 0}

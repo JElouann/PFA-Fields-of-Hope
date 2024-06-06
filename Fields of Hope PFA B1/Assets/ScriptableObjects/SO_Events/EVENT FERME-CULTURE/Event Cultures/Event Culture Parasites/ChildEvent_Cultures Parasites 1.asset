@@ -13,24 +13,25 @@ MonoBehaviour:
   m_Name: ChildEvent_Cultures Parasites 1
   m_EditorClassIdentifier: 
   Name: OUI
-  Text: "\"Apr\xE8s avoir essay\xE9 d'enlever cette chose, un parasite a commenc\xE9
+  Text: "Apr\xE8s avoir essay\xE9 d'enlever cette chose, un parasite a commenc\xE9
     \xE0 grouiller dans ma main. Avant que je ne puisse r\xE9agir, il m'a piqu\xE9
     le poignet et s'est enfoui sous terre. C'\xE9tait comme une sangsue. Je ne sais
     pas si je dois m'inqui\xE9ter de ma blessure ou de l'endroit o\xF9 est partie
-    cette cr\xE9ature\u2026 mais la plante est saine.\""
+    cette cr\xE9ature\u2026 mais la plante est saine."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: 0
     Amount: -8
+  - Value: 13
+    Amount: -2
+  SFX: {fileID: 0}

@@ -13,20 +13,21 @@ MonoBehaviour:
   m_Name: ChildEvent_Air_FakeCrash 2
   m_EditorClassIdentifier: 
   Name: NON
-  Text: "\"Je d\xE9cide de ne pas m'attarder ici, cela a d\xFB attirer d'autres personnes,
+  Text: "Je d\xE9cide de ne pas m'attarder ici, cela a d\xFB attirer d'autres personnes,
     et je pr\xE9f\xE8re \xE9viter une confrontation. Je pars dans la direction oppos\xE9e
-    \xE0 la fum\xE9e, en esp\xE9rant que les survivants s'en sortiront.\""
+    \xE0 la fum\xE9e, en esp\xE9rant que les survivants s'en sortiront."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange: []
+  ValuesToChange:
+  - Value: 13
+    Amount: -2
+  SFX: {fileID: 0}

@@ -13,24 +13,25 @@ MonoBehaviour:
   m_Name: "ChildEvent_Survivant_For\xEAt 1"
   m_EditorClassIdentifier: 
   Name: Oui
-  Text: "\"Je d\xE9cide de m'approcher d'eux, pas \xE0 pas, sans essayer de les surprendre.
+  Text: "Je d\xE9cide de m'approcher d'eux, pas \xE0 pas, sans essayer de les surprendre.
     Cependant, un des survivants, surpris par mon arriv\xE9e dans leur camp, sort
     une arme et me tire dans l'\xE9paule. Je tombe par terre. Quand je rouvre les
     yeux, ils ont d\xE9j\xE0 fui. Me levant en boitant de douleur, je trouve quelques
-    vivres, au moins.\""
+    vivres, au moins."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: 0
     Amount: -25
+  - Value: 13
+    Amount: -4
+  SFX: {fileID: 0}

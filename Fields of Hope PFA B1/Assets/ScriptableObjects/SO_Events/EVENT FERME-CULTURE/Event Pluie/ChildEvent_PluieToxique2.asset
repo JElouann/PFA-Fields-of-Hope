@@ -13,23 +13,24 @@ MonoBehaviour:
   m_Name: ChildEvent_PluieToxique2
   m_EditorClassIdentifier: 
   Name: '''ME METTRE A L''ABRIS'''
-  Text: "\"Je m'abrite rapidement et observe mes cultures sous la pluie acide. La
-    serre c\xE8de sous son acidit\xE9, certaines plantes commencent \xE0 perdre de
-    leur vigueur, d'autres fondent litt\xE9ralement sous l'effet de cette pluie corrosive.
-    Apr\xE8s son passage, quelques plantes sont devenues inutilisables...\""
+  Text: "Je m'abrite rapidement et observe mes cultures sous la pluie acide. La serre
+    c\xE8de sous son acidit\xE9, certaines plantes commencent \xE0 perdre de leur
+    vigueur, d'autres fondent litt\xE9ralement sous l'effet de cette pluie corrosive.
+    Apr\xE8s son passage, quelques plantes sont devenues inutilisables..."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: 11
     Amount: 1
+  - Value: 13
+    Amount: -1
+  SFX: {fileID: 0}

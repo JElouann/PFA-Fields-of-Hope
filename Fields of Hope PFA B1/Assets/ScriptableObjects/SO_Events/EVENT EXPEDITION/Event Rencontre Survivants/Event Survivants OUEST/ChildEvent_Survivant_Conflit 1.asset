@@ -13,25 +13,26 @@ MonoBehaviour:
   m_Name: ChildEvent_Survivant_Conflit 1
   m_EditorClassIdentifier: 
   Name: Aider les survivants
-  Text: "\"Je d\xE9cide de les aider. M'approchant lentement des soldats qui se pr\xE9cipitent
+  Text: "Je d\xE9cide de les aider. M'approchant lentement des soldats qui se pr\xE9cipitent
     vers la porte du b\xE2timent, j'empoigne un tuyau rouill\xE9 et en frappe un.
     En un instant, ils se retournent vers moi, mais les survivants \xE0 l'aff\xFBt
     se pr\xE9cipitent pour les attaquer. Apr\xE8s avoir assomm\xE9 ou tu\xE9 les
     soldats, l'un des survivants m'aide \xE0 soigner quelques blessures, puis ils
-    partent en me remerciant.\""
+    partent en me remerciant."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: 0
     Amount: 10
+  - Value: 13
+    Amount: 2
+  SFX: {fileID: 0}

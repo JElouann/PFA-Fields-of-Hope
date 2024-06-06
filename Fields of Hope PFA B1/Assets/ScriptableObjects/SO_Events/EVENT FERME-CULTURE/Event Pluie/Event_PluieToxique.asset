@@ -19,17 +19,16 @@ MonoBehaviour:
     mais rapidement une odeur qui pique me viens au nez , les nuances de l\u2019eau
     son inhabituelles\u2026\xE0 mon horreur je r\xE9alise que cette pluie est toxique
     ! Que faire ?"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 11400000, guid: 38629871e1a129a4bb2e2e6861a1004d, type: 2}
   Child1Text: Proteger les cultures
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: ad4a0a0b9df77a6438ee2fac4eb46995, type: 2}
   Child2Text: Me mettre a l'abris
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
-    Minimum: 3
-    Maximum: 8
+    Minimum: 1
+    Maximum: 7
   ValuesToChange: []
+  SFX: {fileID: 0}

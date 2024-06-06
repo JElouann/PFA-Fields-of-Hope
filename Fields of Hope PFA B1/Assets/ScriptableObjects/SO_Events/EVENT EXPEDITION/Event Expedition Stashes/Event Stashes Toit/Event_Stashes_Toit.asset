@@ -17,6 +17,7 @@ MonoBehaviour:
     un toit, des marques sugg\xE8re que quelqu\u2019un est pass\xE9 par ici, et a
     escalad\xE9 le mur. Cela pourrait \xEAtre quelque chose d\u2019utile, dois-je
     essayer de voir ce que c\u2019est ?"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 11400000, guid: a8d258159fc6cee42beb5ceba3a72924, type: 2}
   Child1Text: Oui
   Child1Conditions: []
@@ -25,6 +26,7 @@ MonoBehaviour:
   Child2Conditions: []
   StyleEvent: []
   OufitudePool:
-    Minimum: 0
-    Maximum: 0
+    Minimum: 2
+    Maximum: 8
   ValuesToChange: []
+  SFX: {fileID: 0}

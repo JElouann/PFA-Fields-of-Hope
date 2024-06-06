@@ -13,21 +13,19 @@ MonoBehaviour:
   m_Name: ChildEvent_Plancher Suspect 1
   m_EditorClassIdentifier: 
   Name: OUI
-  Text: "\"Je sors mes outils les plus coriaces et commence \xE0 soulever le plancher
+  Text: "Je sors mes outils les plus coriaces et commence \xE0 soulever le plancher
     avec un pied-de-biche. Les vieilles planches r\xE9sistent, mais apr\xE8s un travail
     m\xE9thodique, j'arrive \xE0 les retirer. En dessous, je trouve de l'argent et
     des bijoux, inutiles pour moi, mais aussi quelques conserves. Malheureusement,
-    je me suis l\xE9g\xE8rement bless\xE9 dans le processus.\""
+    je me suis l\xE9g\xE8rement bless\xE9 dans le processus."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
@@ -36,3 +34,6 @@ MonoBehaviour:
     Amount: -5
   - Value: 10
     Amount: 2
+  - Value: 13
+    Amount: -1
+  SFX: {fileID: 0}

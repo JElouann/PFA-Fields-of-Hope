@@ -13,20 +13,21 @@ MonoBehaviour:
   m_Name: ChildEvent_Coffre-Fort 2
   m_EditorClassIdentifier: 
   Name: DEVINER LE CODE
-  Text: "\"Je persiste \xE0 essayer de deviner le code, testant une combinaison apr\xE8s
+  Text: "Je persiste \xE0 essayer de deviner le code, testant une combinaison apr\xE8s
     l'autre. Apr\xE8s une heure, cela devient lassant et je me perds dans les combinaisons
-    d\xE9j\xE0 tent\xE9es et celles que je veux encore essayer\u2026\""
+    d\xE9j\xE0 tent\xE9es et celles que je veux encore essayer\u2026"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange: []
+  ValuesToChange:
+  - Value: 13
+    Amount: 0
+  SFX: {fileID: 0}
