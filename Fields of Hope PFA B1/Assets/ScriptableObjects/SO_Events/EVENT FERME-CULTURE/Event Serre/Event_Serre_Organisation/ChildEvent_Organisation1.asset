@@ -13,22 +13,23 @@ MonoBehaviour:
   m_Name: ChildEvent_Organisation1
   m_EditorClassIdentifier: 
   Name: OUI
-  Text: "\"Je d\xE9cide de tout bien organiser dans des caissons et de faire le compte
+  Text: "Je d\xE9cide de tout bien organiser dans des caissons et de faire le compte
     de tout ce que j'ai, m\xEAme si c'est peu. Durant tout cela, je constate que
-    j'ai une carotte en plus. Bonne id\xE9e d'avoir pris le temps de tout ranger.\""
+    j'ai une carotte en plus. Bonne id\xE9e d'avoir pris le temps de tout ranger."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: 3
     Amount: 1
+  - Value: 13
+    Amount: 2
+  SFX: {fileID: 0}

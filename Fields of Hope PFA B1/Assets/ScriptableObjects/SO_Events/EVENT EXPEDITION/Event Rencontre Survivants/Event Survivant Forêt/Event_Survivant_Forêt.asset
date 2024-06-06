@@ -13,20 +13,19 @@ MonoBehaviour:
   m_Name: "Event_Survivant_For\xEAt"
   m_EditorClassIdentifier: 
   Name: "Survivants dans la for\xEAt"
-  Text: "\"En traversant la for\xEAt, j'aper\xE7ois de la fum\xE9e devant moi. En
-    m'approchant, je d\xE9couvre un petit camp de survivants qui semblent vouloir
-    s'installer ici pour un moment. Devrais-je tenter de m'approcher ?\""
+  Text: "En traversant la for\xEAt, j'aper\xE7ois de la fum\xE9e devant moi. En m'approchant,
+    je d\xE9couvre un petit camp de survivants qui semblent vouloir s'installer ici
+    pour un moment. Devrais-je tenter de m'approcher ?"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 11400000, guid: 025317f33911dae41a8a7b8fe8642718, type: 2}
   Child1Text: Oui
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: c7be4dd4a6cdfb24f82abd184f29767c, type: 2}
   Child2Text: Non
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
-    Minimum: 0
-    Maximum: 0
+    Minimum: 6
+    Maximum: 9
   ValuesToChange: []
+  SFX: {fileID: 0}

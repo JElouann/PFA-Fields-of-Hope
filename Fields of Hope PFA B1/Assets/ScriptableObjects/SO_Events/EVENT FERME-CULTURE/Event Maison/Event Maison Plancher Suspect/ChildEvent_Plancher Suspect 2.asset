@@ -13,20 +13,21 @@ MonoBehaviour:
   m_Name: ChildEvent_Plancher Suspect 2
   m_EditorClassIdentifier: 
   Name: NON
-  Text: "\"Je d\xE9cide de laisser le plancher tel quel. Apr\xE8s tout, c'est mon
-    lieu de vie, et je ne veux pas avoir un trou dans ce qui semble \xEAtre le salon.
-    De plus, je pourrais me blesser pour rien.\""
+  Text: "Je d\xE9cide de laisser le plancher tel quel. Apr\xE8s tout, c'est mon lieu
+    de vie, et je ne veux pas avoir un trou dans ce qui semble \xEAtre le salon.
+    De plus, je pourrais me blesser pour rien."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange: []
+  ValuesToChange:
+  - Value: 13
+    Amount: 1
+  SFX: {fileID: 0}

@@ -13,20 +13,21 @@ MonoBehaviour:
   m_Name: ChildEvent_Grenier 2
   m_EditorClassIdentifier: 
   Name: NON
-  Text: "\"Un grenier peut regorger de bricoles inutiles. L'int\xE9grit\xE9 de la
-    maison est d\xE9j\xE0 incertaine, mieux vaut rester au sol et \xE9viter de tomber
-    \xE0 travers le plafond.\""
+  Text: "Un grenier peut regorger de bricoles inutiles. L'int\xE9grit\xE9 de la maison
+    est d\xE9j\xE0 incertaine, mieux vaut rester au sol et \xE9viter de tomber \xE0
+    travers le plafond."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange: []
+  ValuesToChange:
+  - Value: 13
+    Amount: 0
+  SFX: {fileID: 0}

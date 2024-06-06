@@ -13,24 +13,25 @@ MonoBehaviour:
   m_Name: ChildEvent_Cultures Fongiques 1
   m_EditorClassIdentifier: 
   Name: ESSAYER DE RETIRER
-  Text: "\"J'ai essay\xE9 de retirer la tumeur de ma plante, mais sans succ\xE8s.
-    Frustr\xE9, j'ai secou\xE9 la plante avec mes mains, lib\xE9rant une poudre jaune
-    sur mon visage et dans la serre. Apr\xE8s une demi-heure de toux, je me suis
-    senti revigor\xE9. \xC9trangement, mes plantes ont commenc\xE9 \xE0 pousser plus
-    vite. Je ne saurai jamais ce que c'\xE9tait, mais c'\xE9tait \xE9trangement plaisant.\""
+  Text: "J'ai essay\xE9 de retirer la tumeur de ma plante, mais sans succ\xE8s. Frustr\xE9,
+    j'ai secou\xE9 la plante avec mes mains, lib\xE9rant une poudre jaune sur mon
+    visage et dans la serre. Apr\xE8s une demi-heure de toux, je me suis senti revigor\xE9.
+    \xC9trangement, mes plantes ont commenc\xE9 \xE0 pousser plus vite. Je ne saurai
+    jamais ce que c'\xE9tait, mais c'\xE9tait \xE9trangement plaisant."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: 11
     Amount: -1
+  - Value: 13
+    Amount: 2
+  SFX: {fileID: 0}

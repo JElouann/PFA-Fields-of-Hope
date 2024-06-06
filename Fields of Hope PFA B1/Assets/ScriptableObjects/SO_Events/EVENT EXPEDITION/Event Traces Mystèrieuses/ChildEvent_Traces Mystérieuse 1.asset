@@ -13,23 +13,22 @@ MonoBehaviour:
   m_Name: "ChildEvent_Traces Myst\xE9rieuse 1"
   m_EditorClassIdentifier: 
   Name: Suivre les traces
-  Text: "\"Apr\xE8s avoir suivi les traces dans la neige, elles s'arr\xEAtent sous
+  Text: "Apr\xE8s avoir suivi les traces dans la neige, elles s'arr\xEAtent sous
     un arbre. En cherchant d'autres traces, vous d\xE9couvrez un terrier au pied
     de l'arbre. Vous y glissez la main et trouvez un objet myst\xE9rieux en bronze.
-    En le manipulant, il s'ouvre et r\xE9v\xE8le des graines.\""
+    En le manipulant, il s'ouvre et r\xE9v\xE8le des graines."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: 2
     Amount: 10
+  SFX: {fileID: 0}

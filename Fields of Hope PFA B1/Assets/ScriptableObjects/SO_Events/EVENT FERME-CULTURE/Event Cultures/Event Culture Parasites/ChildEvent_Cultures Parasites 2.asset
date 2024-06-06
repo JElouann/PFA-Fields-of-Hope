@@ -13,23 +13,24 @@ MonoBehaviour:
   m_Name: ChildEvent_Cultures Parasites 2
   m_EditorClassIdentifier: 
   Name: NON
-  Text: "\"J'ai choisi de laisser la plante telle qu'elle \xE9tait, pensant que le
+  Text: "J'ai choisi de laisser la plante telle qu'elle \xE9tait, pensant que le
     parasite pouvait \xEAtre naturel ou en symbiose avec elle. Quelques heures plus
     tard, la plante a noirci comme si elle se d\xE9composait. Heureusement, je n'y
-    avais pas touch\xE9. J'ai jet\xE9 la plante et le parasite au feu par pr\xE9caution.\""
+    avais pas touch\xE9. J'ai jet\xE9 la plante et le parasite au feu par pr\xE9caution."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: 11
     Amount: 1
+  - Value: 13
+    Amount: 1
+  SFX: {fileID: 0}
