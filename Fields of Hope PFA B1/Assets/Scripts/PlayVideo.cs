@@ -10,6 +10,9 @@ public class PlayVideo : MonoBehaviour
     [SerializeField]
     private GameObject PanelText;
 
+    [SerializeField] 
+    private GameObject Logo;
+
     [SerializeField]
     private DialogueBox dialogue;
 
@@ -72,7 +75,12 @@ public class PlayVideo : MonoBehaviour
         yield return new WaitForSecondsRealtime(10f);
         dialogue.StartDialogue("Vous, joueur, devez survivre, reconstruire et apporter de l’espoir à ce monde brisé.");
         yield return new WaitForSecondsRealtime(10f);
+        Logo.SetActive(true);
+        yield return new WaitForSecondsRealtime(1f);
         PanelText.SetActive(false);
+        ImageAnimation.SetActive(false);
+        yield return new WaitForSecondsRealtime(3f);
+        Logo.SetActive(false);
         MenuCinématic.SetActive(false);
     }
 }
