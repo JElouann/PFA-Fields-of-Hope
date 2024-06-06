@@ -23,9 +23,13 @@ public class EventInstancier : MonoBehaviour
     [SerializeField]
     private GameObject _eventPrefabBasis;
 
-    // Listes utilisées pour stocker et choisir les events
+    // Liste utilisée pour stocker et choisir les events
     private List<SO_Events> _eventDatasSuitable = new();
-    private Dictionary<SO_Events, int> _eventsPassed = new();
+
+    // Liste des events déjà passé et temps en jour avant de pouvoir retomber dessus
+    public Dictionary<SO_Events, int> _eventsPassed { get; set; } = new();
+
+    [SerializeField] private int _numOfDay;
 
     // Listes contenant tous les events, par type
     [SerializeField]
@@ -75,7 +79,7 @@ public class EventInstancier : MonoBehaviour
         int degreDeOufitude = _statsManager.OufitudeDegre;
         foreach (SO_Events eventData in _expeditionEventDatas)
         {
-            if (IsInOufitudeRange(eventData, degreDeOufitude))
+            if (IsInOufitudeRange(eventData, degreDeOufitude) && (_eventsPassed[eventData] <= 0))
             {
                 _eventDatasSuitable.Add(eventData);
             }
@@ -103,7 +107,10 @@ public class EventInstancier : MonoBehaviour
 
         createdEventScript.OnEndEvent += _dayManager.EndDay.OnEndDay;
         createdEventScript.LoadThis();
-        _eventsPassed.Add(createdEventScript.currentEvent);
+
+        print(_eventsPassed[createdEventScript.currentEvent]);
+        _eventsPassed.Add(createdEventScript.currentEvent, _numOfDay);
+        
         _eventDatasSuitable.Clear();
     }
 

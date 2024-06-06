@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -24,9 +25,6 @@ public class DayManager : MonoBehaviour
     [Header("Stats stuff")]
     [SerializeField][Tooltip("Represents how much food we loose each day")] private int FoodLoss;
     [SerializeField][Tooltip("Represents how much life we loose each day")] private int LifeLoss;
-    
-
-    public event Action OnEndDay;
 
     #region DEV CHEAT
     public void MoreLife() // DEV
@@ -49,6 +47,10 @@ public class DayManager : MonoBehaviour
     {
         //OnEndDay?.Invoke();
         _dayCounter++;
+        foreach(KeyValuePair<SO_Events, int> entry in _eventInstancier._eventsPassed)
+        {
+            _eventInstancier._eventsPassed[entry.Key]--;
+        }
         _counterText.text = (_dayCounter).ToString();
         DayChoice = DailyChoice.None;
         EndDayStats.OnDayFinished();
@@ -59,7 +61,6 @@ public class DayManager : MonoBehaviour
     {
         _statsManager = GameObject.FindAnyObjectByType<StatsManager>();
         _eventInstancier = GameObject.FindAnyObjectByType<EventInstancier>();
-        OnEndDay += EndDay.OnEndDay;
     }
 
     public void UpdateTextDay()
