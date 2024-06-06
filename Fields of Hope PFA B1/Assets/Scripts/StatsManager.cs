@@ -136,7 +136,7 @@ public class StatsManager : MonoBehaviour
     public void ChangeValues(InventoryEnum value, int amount, bool hasToRemember)
     {
         _myStat[value] = (value == InventoryEnum.DegreDeOufitude) ? Mathf.Clamp(_myStat[value] + amount, 0, 10) : Mathf.Clamp(_myStat[value] + amount, 0, 100);
-        if(value == InventoryEnum.Santé/* && amount > 0*/) // à voir si on boing le logo quand on perd
+        if(value == InventoryEnum.Santé && amount != 0) // à voir si on boing le logo quand on perd
         {
             StartCoroutine(_gameFeelHandler.LifeChangeText(amount));
             StartCoroutine(_gameFeelHandler.LifeGainLogo());
