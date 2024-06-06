@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: icone de nombre aliment_kit de soins_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 130
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af79e22861f16e14d98ea27ed02e3977
+      internalID: 53136568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icone de nombre aliment_kit de soins_1
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 131
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b5af87ebbde154f9eec5628f4b2587
+      internalID: 1942687859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icone de nombre aliment_kit de soins_2
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 126
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499ea844f9319d643923172e0e00b0b7
+      internalID: -185757380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icone de nombre aliment_kit de soins_3
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 132
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3542661e860a6b44bd7400c3a01717f
+      internalID: -1254188950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icone de nombre aliment_kit de soins_4
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 74
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31828c9f5f804044aa72bffc5e9d9e12
+      internalID: 385753749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icone de nombre aliment_kit de soins_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53844cc930203ec4ba8e62f5d6e8f36e
+      internalID: 1883099712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icone de nombre aliment_kit de soins_6
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 0
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54484bf85eff8c499281fbbaffd86be
+      internalID: 2095288160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icone de nombre aliment_kit de soins_7
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968fa579d3aabf04987ca9522f8ff24f
+      internalID: 1528294463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icone de nombre aliment_kit de soins_8
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 0
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beabbf93a29b9464d91d4c8c624dcdc5
+      internalID: 417343690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +308,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      icone de nombre aliment_kit de soins_0: 53136568
+      icone de nombre aliment_kit de soins_1: 1942687859
+      icone de nombre aliment_kit de soins_2: -185757380
+      icone de nombre aliment_kit de soins_3: -1254188950
+      icone de nombre aliment_kit de soins_4: 385753749
+      icone de nombre aliment_kit de soins_5: 1883099712
+      icone de nombre aliment_kit de soins_6: 2095288160
+      icone de nombre aliment_kit de soins_7: 1528294463
+      icone de nombre aliment_kit de soins_8: 417343690
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
