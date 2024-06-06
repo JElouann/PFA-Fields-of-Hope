@@ -25,7 +25,7 @@ public class EventInstancier : MonoBehaviour
 
     // Listes utilisées pour stocker et choisir les events
     private List<SO_Events> _eventDatasSuitable = new();
-    private List<SO_Events> _eventsPassed = new();
+    private Dictionary<SO_Events, int> _eventsPassed = new();
 
     // Listes contenant tous les events, par type
     [SerializeField]
