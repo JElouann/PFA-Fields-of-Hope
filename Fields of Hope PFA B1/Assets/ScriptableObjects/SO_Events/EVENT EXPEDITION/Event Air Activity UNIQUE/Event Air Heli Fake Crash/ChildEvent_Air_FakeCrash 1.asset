@@ -13,24 +13,25 @@ MonoBehaviour:
   m_Name: ChildEvent_Air_FakeCrash 1
   m_EditorClassIdentifier: 
   Name: OUI
-  Text: "\"J'avance en direction de la fum\xE9e \xE0 travers la for\xEAt. La carcasse
+  Text: "J'avance en direction de la fum\xE9e \xE0 travers la for\xEAt. La carcasse
     de l'h\xE9licopt\xE8re appara\xEEt entre les arbres, entour\xE9e de quelques
     cadavres. Alors que j'observe l'appareil d\xE9truit, l'un des occupants pointe
     un pistolet dans ma direction et tire, fr\xF4lant mon \xE9paule. Sans h\xE9siter,
-    je prends la fuite aussi vite que possible\u2026\""
+    je prends la fuite aussi vite que possible\u2026"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: 0
     Amount: -10
+  - Value: 13
+    Amount: -3
+  SFX: {fileID: 0}

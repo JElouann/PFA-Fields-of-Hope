@@ -17,6 +17,7 @@ MonoBehaviour:
     de l'h\xE9licopt\xE8re appara\xEEt entre les arbres, entour\xE9e de cadavres.
     En approchant avec m\xE9fiance, je constate que personne n'a surv\xE9cu. Je trouve
     quelques ressources utiles dans le v\xE9hicule et pars avant que d'autres n'arrivent."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
@@ -30,3 +31,6 @@ MonoBehaviour:
   ValuesToChange:
   - Value: 5
     Amount: 2
+  - Value: 13
+    Amount: -4
+  SFX: {fileID: 0}

@@ -41,7 +41,7 @@ public class TextSlicer : MonoBehaviour
         {
             slicedText.Add(currentSelection);
         }
-        
+        slicedText.Add(" ");
         return slicedText;
     }
 }

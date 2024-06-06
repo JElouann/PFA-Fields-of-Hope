@@ -13,23 +13,24 @@ MonoBehaviour:
   m_Name: "ChildEvent_Marchandage M\xE9decin 1"
   m_EditorClassIdentifier: 
   Name: OUI
-  Text: "\"Je lui offre une portion de 2 patates en \xE9change de ses services m\xE9dicaux.
+  Text: "Je lui offre une portion de 2 patates en \xE9change de ses services m\xE9dicaux.
     Apr\xE8s quelques minutes entre ses mains expertes et l'application de bandages,
     je ressens d\xE9j\xE0 un soulagement. Il repart ensuite en me saluant dans la
-    neige.\""
+    neige."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
   - Value: 0
     Amount: 50
+  - Value: 13
+    Amount: -1
+  SFX: {fileID: 0}

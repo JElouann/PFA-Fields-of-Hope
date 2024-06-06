@@ -13,20 +13,21 @@ MonoBehaviour:
   m_Name: ChildEvent_Stashes_Toit 2
   m_EditorClassIdentifier: 
   Name: NON
-  Text: "\"La cachette \xE9tant trop visible, je me dis que ce n'est pas la peine.
+  Text: "La cachette \xE9tant trop visible, je me dis que ce n'est pas la peine.
     Si j'ai pu trouver cet endroit, quelqu'un d'autre a d\xFB d\xE9j\xE0 prendre
-    ce qui s'y trouvait. Je d\xE9cide de rentrer directement chez moi\u2026\""
+    ce qui s'y trouvait. Je d\xE9cide de rentrer directement chez moi\u2026"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange: []
+  ValuesToChange:
+  - Value: 13
+    Amount: 1
+  SFX: {fileID: 0}

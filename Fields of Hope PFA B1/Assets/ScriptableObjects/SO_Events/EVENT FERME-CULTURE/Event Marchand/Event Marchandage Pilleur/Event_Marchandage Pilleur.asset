@@ -20,17 +20,16 @@ MonoBehaviour:
     moi. Elle explique qu'elle ne fait pas partie des pilleurs et souhaite simplement
     \xE9changer des ressources pour son fr\xE8re. Devrais-je accepter sa proposition
     d'\xE9change pour une Betterave"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 11400000, guid: f92097a3cfb809148a5f2da8c61ce17d, type: 2}
   Child1Text: Oui
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: bb4d485dff09dc24b8fe43d9ceeb9414, type: 2}
   Child2Text: Non
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
-    Minimum: 6
-    Maximum: 7
+    Minimum: 4
+    Maximum: 6
   ValuesToChange: []
+  SFX: {fileID: 0}

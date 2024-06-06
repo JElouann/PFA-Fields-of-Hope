@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -136,15 +137,17 @@ public class StatsManager : MonoBehaviour
     public void ChangeValues(InventoryEnum value, int amount, bool hasToRemember)
     {
         _myStat[value] = (value == InventoryEnum.DegreDeOufitude) ? Mathf.Clamp(_myStat[value] + amount, 0, 10) : Mathf.Clamp(_myStat[value] + amount, 0, 100);
-        if(value == InventoryEnum.Santé/* && amount > 0*/) // à voir si on boing le logo quand on perd
+        
+        // Gamefeel
+        if(value == InventoryEnum.Santé && amount != 0)
         {
             StartCoroutine(_gameFeelHandler.LifeChangeText(amount));
-            StartCoroutine(_gameFeelHandler.LifeGainLogo());
+            GFLifeLogo(amount);
         }
-        else if (value == InventoryEnum.Faim && amount > 0)
+        else if (value == InventoryEnum.Faim && amount != 0)
         {
             StartCoroutine(_gameFeelHandler.HungerChangeText(amount));
-            StartCoroutine(_gameFeelHandler.HungerGainLogo());
+            GFHungerLogo(amount);
         }
 
         if (IsDead()) 
@@ -160,6 +163,24 @@ public class StatsManager : MonoBehaviour
         if (hasToRemember) enddaystats.OnStatsChange(value, amount);
     }
 
+    #region GameFeel
+    private void GFLifeLogo(int amount)
+    {
+        Coroutine toStart = (amount > 0) ? StartCoroutine(_gameFeelHandler.LifeGainLogo()) : StartCoroutine(_gameFeelHandler.LifeLossLogo());
+    }
+
+    private void GFHungerLogo(int amount)
+    {
+        Coroutine toStart = (amount > 0) ? StartCoroutine(_gameFeelHandler.HungerGainLogo()) : StartCoroutine(_gameFeelHandler.HungerLossLogo());
+    }
+
+    public void UpdateBars()
+    {
+        LifeBar.DOFillAmount(Life / 100f, 0.1f + _previousLife / 100).SetEase(Ease.InOutSine);
+        HungerBar.DOFillAmount(Hunger / 100f, 0.1f + _previousHunger / 100).SetEase(Ease.InOutSine);
+    }
+    #endregion
+
     public bool CheckRessource(InventoryEnum value)
     {
         print(value);
@@ -172,12 +193,6 @@ public class StatsManager : MonoBehaviour
         HungerAmount.text = (Hunger).ToString();
         SeedsAmount.text = (Seeds).ToString();
         FoodAmount.text = (Carotte * 15 + Betterave * 18 + Poireau * 5 + Potiron * 25 + Patate * 20 + Rutabaga * 10 + Radis * 3 + Topinambour * 8).ToString();
-    }
-
-    public void UpdateBars()
-    {
-        LifeBar.DOFillAmount(Life / 100f, 0.1f + _previousLife / 100);
-        HungerBar.DOFillAmount(Hunger / 100f, 0.1f + _previousHunger / 100);
     }
 
     /// <summary>

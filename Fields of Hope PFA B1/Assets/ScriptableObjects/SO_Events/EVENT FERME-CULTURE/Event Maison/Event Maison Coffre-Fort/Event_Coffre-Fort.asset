@@ -18,17 +18,16 @@ MonoBehaviour:
     contient-il des choses int\xE9ressantes. Ce n'est pas la premi\xE8re fois que
     j'essaie de l'ouvrir, mais peut-\xEAtre que forcer la porte cette fois-ci pourrait
     \xEAtre la solution ?"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 11400000, guid: 572ebbdefd65fc644a65dac7ca7bdc49, type: 2}
   Child1Text: Forcer le coffre
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: aad02c73d86e5f94eadf39b8f360f196, type: 2}
   Child2Text: Deviner le code
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
-    Minimum: 7
-    Maximum: 9
+    Minimum: 6
+    Maximum: 8
   ValuesToChange: []
+  SFX: {fileID: 0}

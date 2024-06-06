@@ -13,21 +13,22 @@ MonoBehaviour:
   m_Name: ChildEvent_Survivant_CamionS 1
   m_EditorClassIdentifier: 
   Name: Se cacher
-  Text: "\"Je d\xE9cide de me mettre sur le c\xF4t\xE9 de la route et de me cacher
+  Text: "Je d\xE9cide de me mettre sur le c\xF4t\xE9 de la route et de me cacher
     dans un buisson pour attendre le passage du camion. Apr\xE8s quelques instants,
     le v\xE9hicule file \xE0 grande vitesse, et je n'ai pas eu le temps de voir qui
-    \xE9tait \xE0 bord...\""
+    \xE9tait \xE0 bord..."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange: []
+  ValuesToChange:
+  - Value: 13
+    Amount: -1
+  SFX: {fileID: 0}

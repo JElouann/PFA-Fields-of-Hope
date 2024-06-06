@@ -18,21 +18,22 @@ MonoBehaviour:
     sa prestance mena\xE7ante, il me salue chaleureusement. C'\xE9tait un homme sympathique
     dans un monde assez cruel. J'aurais aim\xE9 lui proposer de rester, mais il \xE9tait
     d\xE9j\xE0 parti"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: 0
-    Amount: -20
-  - Value: 0
-    Amount: 5
+  - Value: 3
+    Amount: 1
+  - Value: 4
+    Amount: 2
+  - Value: 13
+    Amount: 2
+  SFX: {fileID: 0}

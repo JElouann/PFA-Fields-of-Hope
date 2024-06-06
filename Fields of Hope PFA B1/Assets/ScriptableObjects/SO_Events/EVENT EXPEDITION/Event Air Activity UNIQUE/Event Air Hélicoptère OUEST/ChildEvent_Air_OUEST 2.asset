@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ChildEvent_Air_OUEST 2
   m_EditorClassIdentifier: 
   Name: COURRIR ET SE METTRE A COUVERT
-  Text: "\"Je me pr\xE9cipite vers la ruine la plus proche et stable. Derri\xE8re
-    moi, le bruit des rotors de l'h\xE9licopt\xE8re s'approche. Trop tard, une balle
-    me transperce l'abdomen et je m'\xE9croule au sol. En faisant semblant d'\xEAtre
-    morte, je reste immobile pendant quelques minutes avant qu'ils partent\u2026\""
+  Text: "Je me pr\xE9cipite vers la ruine la plus proche et stable. Derri\xE8re moi,
+    le bruit des rotors de l'h\xE9licopt\xE8re s'approche. Trop tard, une balle me
+    transperce l'abdomen et je m'\xE9croule au sol. En faisant semblant d'\xEAtre
+    morte, je reste immobile pendant quelques minutes avant qu'ils partent\u2026"
   IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
@@ -31,3 +31,6 @@ MonoBehaviour:
   ValuesToChange:
   - Value: 0
     Amount: -35
+  - Value: 13
+    Amount: -6
+  SFX: {fileID: 0}

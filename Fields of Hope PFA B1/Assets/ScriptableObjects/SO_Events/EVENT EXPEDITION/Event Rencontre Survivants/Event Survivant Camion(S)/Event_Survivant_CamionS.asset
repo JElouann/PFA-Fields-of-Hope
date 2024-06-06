@@ -17,17 +17,16 @@ MonoBehaviour:
     un camion qui se dirige vers moi au loin. Leur manque de discr\xE9tion est alarmant
     ; ils pourraient repr\xE9senter un danger. Devrais-je envisager de me cacher
     ?"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 11400000, guid: b152a083fb3633f4482fc9e91a7e3153, type: 2}
   Child1Text: Se cacher
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: 0eabaf60634208146aa424807c0de218, type: 2}
   Child2Text: Rester sur la route
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
-    Minimum: 0
-    Maximum: 0
+    Minimum: 8
+    Maximum: 10
   ValuesToChange: []
+  SFX: {fileID: 0}

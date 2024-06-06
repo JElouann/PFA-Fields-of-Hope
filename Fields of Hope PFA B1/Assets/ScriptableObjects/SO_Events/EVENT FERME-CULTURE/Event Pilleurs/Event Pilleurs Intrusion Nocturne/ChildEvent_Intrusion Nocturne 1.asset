@@ -13,21 +13,22 @@ MonoBehaviour:
   m_Name: ChildEvent_Intrusion Nocturne 1
   m_EditorClassIdentifier: 
   Name: NEGOCIER
-  Text: "\"Vous criez par une fen\xEAtre que vous voulez n\xE9gocier. Les bruits
-    de pas s'arr\xEAtent brusquement pendant quelques secondes, puis s'\xE9loignent
+  Text: "Vous criez par une fen\xEAtre que vous voulez n\xE9gocier. Les bruits de
+    pas s'arr\xEAtent brusquement pendant quelques secondes, puis s'\xE9loignent
     rapidement de la ferme. Ils semblent avoir pris peur et se sont enfuis vers les
-    for\xEAts.\""
+    for\xEAts."
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 0}
   Child1Text: 
   Child1Conditions: []
   ChildEvent2: {fileID: 0}
   Child2Text: 
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange: []
+  ValuesToChange:
+  - Value: 13
+    Amount: 1
+  SFX: {fileID: 0}
