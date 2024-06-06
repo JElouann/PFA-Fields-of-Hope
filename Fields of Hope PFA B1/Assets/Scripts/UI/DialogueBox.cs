@@ -96,13 +96,11 @@ public class DialogueBox : MonoBehaviour
         if (stop == "Stop")
         {
             Source.Stop();
-            Debug.Log("J'ai Fini");
         }
         else
         {
             Source.volume = 1f;
             Source.Play();
-            Debug.Log("Je commence");
         }
     }
 }
