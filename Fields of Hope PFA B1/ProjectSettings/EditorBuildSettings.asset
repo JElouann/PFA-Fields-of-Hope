@@ -5,16 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: "Assets/Scenes/Th\xE9oMenu.unity"
+    guid: 2d1ea57e5fc2fee439355bb77e1eb0cc
   - enabled: 1
     path: Assets/Scenes/ElouannTest.unity
     guid: 9fdf87cb24590b549b887527196ca41e
-  - enabled: 0
-    path: "Assets/Scenes/Th\xE9oMenu.unity"
-    guid: 2d1ea57e5fc2fee439355bb77e1eb0cc
-  - enabled: 0
-    path: "Assets/Scenes/Th\xE9o.unity"
-    guid: dbd9064d94b94ca49bd89c778bddb9b1
   m_configObjects: {}
