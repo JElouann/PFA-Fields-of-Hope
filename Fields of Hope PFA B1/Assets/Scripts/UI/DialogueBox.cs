@@ -32,7 +32,7 @@ public class DialogueBox : MonoBehaviour
 
     public void StartDialogue(string text)
     {
-        _soundSFXManager.PlaySoundFXClip(_Sound, transform, 1f, "Music");
+        _soundSFXManager.PlaySoundFXClip(_Sound, transform, 1f, "SFX");
         _textSlicer = gameObject.GetComponent<TextSlicer>();
         Lines = _textSlicer.Slice(text).ToArray();
 

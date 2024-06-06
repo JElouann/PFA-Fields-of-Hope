@@ -9,6 +9,9 @@ public class PlaySoundFx : MonoBehaviour
 
     private AudioClip _audio;
 
+    [SerializeField]
+    private AudioClip[] Music;
+
     public void OnClick(AudioClip clip)
     {
        _audio = clip;
@@ -17,5 +20,10 @@ public class PlaySoundFx : MonoBehaviour
     public void OnPlaySFXSound(string popilopo)
     {
         soundFxManager.PlaySoundFXClip(_audio, transform, 1f, popilopo);
+    }
+
+    public void OnPlayMusic()
+    {
+        
     }
 }
