@@ -79,8 +79,12 @@ public class EventInstancier : MonoBehaviour
         int degreDeOufitude = _statsManager.OufitudeDegre;
         foreach (SO_Events eventData in _expeditionEventDatas)
         {
-            if (IsInOufitudeRange(eventData, degreDeOufitude) && (_eventsPassed[eventData] <= 0))
+            if (IsInOufitudeRange(eventData, degreDeOufitude))
             {
+                if(_eventsPassed.ContainsKey(eventData))
+                {
+
+                }
                 _eventDatasSuitable.Add(eventData);
             }
         }
