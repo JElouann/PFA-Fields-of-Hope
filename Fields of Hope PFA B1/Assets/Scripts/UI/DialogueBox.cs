@@ -60,6 +60,7 @@ public class DialogueBox : MonoBehaviour
             //button.interactable = false;
             // afficher potentiels bouttons choix
             this.OnEndTextDisplay?.Invoke();
+
         }
         else
         {

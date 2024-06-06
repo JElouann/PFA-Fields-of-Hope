@@ -1,9 +1,7 @@
 using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Rendering;
 
 public class SoundSFXManager : MonoBehaviour
 {
@@ -32,35 +30,35 @@ public class SoundSFXManager : MonoBehaviour
 
     public void PlaySoundFXClip(AudioClip clip, Transform transform, float volume, string sound)
     {
-        AudioSource audio = Instantiate(soundFxObject, transform.position, Quaternion.identity);
-        audio.clip = clip;
-        audio.volume = volume;
-        //audio.Play();
-        audio.PlayOneShot(clip);
-        float cliplength = audio.clip.length;
-        Destroy(audio.gameObject, cliplength);
-    }
+        if (sound == "Music")
+        {
+            AudioSource audio = Instantiate(MusicObject, transform.position, Quaternion.identity);
+            audio.clip = clip;
+            audio.volume = volume;
+            audio.Play();
+            float cliplength = audio.clip.length;
+            Destroy(audio.gameObject, cliplength);
+        }
 
-    public void PlayMusicClip(AudioClip clip, Transform transform, float volume, string sound)
-    {
-        AudioSource audio = Instantiate(MusicObject, transform.position, Quaternion.identity);
-        audio.clip = clip;
-        audio.volume = volume;
-        //audio.Play();
-        audio.PlayOneShot(clip);
-        float cliplength = audio.clip.length;
-        Destroy(audio.gameObject, cliplength);
-    }
+        else if (sound == "SFX")
+        {
+            AudioSource audio = Instantiate(soundFxObject, transform.position, Quaternion.identity);
+            audio.clip = clip;
+            audio.volume = volume;
+            audio.Play();
+            float cliplength = audio.clip.length;
+            Destroy(audio.gameObject, cliplength);
+        }
 
-    public void PlayAmbianceClip(AudioClip clip, Transform transform, float volume, string sound)
-    {
-        AudioSource audio = Instantiate(AmbianceObject, transform.position, Quaternion.identity);
-        audio.clip = clip;
-        audio.volume = volume;
-        //audio.Play();
-        audio.PlayOneShot(clip);
-        float cliplength = audio.clip.length;
-        Destroy(audio.gameObject, cliplength);
+        else if (sound == "Ambiance")
+        {
+            AudioSource audio = Instantiate(AmbianceObject, transform.position, Quaternion.identity);
+            audio.clip = clip;
+            audio.volume = volume;
+            audio.Play();
+            float cliplength = audio.clip.length;
+            Destroy(audio.gameObject, cliplength);
+        }
     }
 
     public void PlayRandomSoundFXClip(AudioClip[] clip, Transform transform, float volume)
