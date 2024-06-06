@@ -2164,7 +2164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 141351898}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Rutabaga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3169,7 +3169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 191219321}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Radis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3411,7 +3411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 219354598}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Topinambour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4695,7 +4695,7 @@ GameObject:
   - component: {fileID: 322834439}
   - component: {fileID: 322834441}
   - component: {fileID: 322834440}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5455,7 +5455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 349570605}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Betterave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7082,7 +7082,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 552788671}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PommeDeTerre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7507,7 +7507,7 @@ GameObject:
   - component: {fileID: 587653403}
   - component: {fileID: 587653405}
   - component: {fileID: 587653404}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8702,7 +8702,7 @@ GameObject:
   - component: {fileID: 744916946}
   - component: {fileID: 744916948}
   - component: {fileID: 744916947}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9045,7 +9045,7 @@ GameObject:
   - component: {fileID: 759963895}
   - component: {fileID: 759963897}
   - component: {fileID: 759963896}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11666,7 +11666,7 @@ GameObject:
   - component: {fileID: 912886443}
   - component: {fileID: 912886445}
   - component: {fileID: 912886444}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12958,7 +12958,7 @@ GameObject:
   - component: {fileID: 1077625177}
   - component: {fileID: 1077625179}
   - component: {fileID: 1077625178}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13263,7 +13263,7 @@ GameObject:
   - component: {fileID: 1127179518}
   - component: {fileID: 1127179520}
   - component: {fileID: 1127179519}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13922,7 +13922,7 @@ GameObject:
   - component: {fileID: 1182257252}
   - component: {fileID: 1182257254}
   - component: {fileID: 1182257253}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14486,7 +14486,7 @@ GameObject:
   - component: {fileID: 1223929887}
   - component: {fileID: 1223929889}
   - component: {fileID: 1223929888}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14753,7 +14753,7 @@ GameObject:
   - component: {fileID: 1234068471}
   - component: {fileID: 1234068473}
   - component: {fileID: 1234068472}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14960,7 +14960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1237857183}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Vegetables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16260,7 +16260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1344310897}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Potiron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16686,7 +16686,7 @@ GameObject:
   - component: {fileID: 1391327111}
   - component: {fileID: 1391327113}
   - component: {fileID: 1391327112}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19572,7 +19572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1655983488}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Carotte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19816,7 +19816,7 @@ GameObject:
   - component: {fileID: 1674556814}
   - component: {fileID: 1674556816}
   - component: {fileID: 1674556815}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22165,7 +22165,7 @@ GameObject:
   - component: {fileID: 1876860312}
   - component: {fileID: 1876860314}
   - component: {fileID: 1876860313}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22463,7 +22463,7 @@ GameObject:
   - component: {fileID: 1906523709}
   - component: {fileID: 1906523711}
   - component: {fileID: 1906523710}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22863,7 +22863,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1936972623}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: InventoryDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22878,9 +22878,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936972622}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -990, y: -460, z: 0}
-  m_LocalScale: {x: 1.221, y: 1.221, z: 1.221}
+  m_LocalScale: {x: 1.2209998, y: 1.2209997, z: 1.2209997}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 759963895}
@@ -23568,7 +23568,7 @@ GameObject:
   - component: {fileID: 1962257375}
   - component: {fileID: 1962257377}
   - component: {fileID: 1962257376}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24262,7 +24262,7 @@ GameObject:
   - component: {fileID: 2038708713}
   - component: {fileID: 2038708715}
   - component: {fileID: 2038708714}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24432,7 +24432,7 @@ GameObject:
   - component: {fileID: 2062812672}
   - component: {fileID: 2062812674}
   - component: {fileID: 2062812673}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24564,7 +24564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2063012626}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Poireau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
