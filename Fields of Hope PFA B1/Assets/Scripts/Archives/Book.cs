@@ -1,117 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Book : MonoBehaviour
 {
-    // Sprites
-    [SerializeField] private Sprite _rectoSprite;
-    [SerializeField] private Sprite _versoSprite; 
-
     // Settings
     [SerializeField] float pageSpeed = 0.5f;
 
     // System
-    [SerializeField] GameObject page;
+    [SerializeField] private GameObject _page;
+    [SerializeField] private GameObject _book;
     private GameObject _recto;
     private GameObject _verso;
-    int index = -1;
-    bool rotate = false;
 
-    // Buttons [TEMPORARY]
-    [SerializeField] GameObject backButton;
-    [SerializeField] GameObject forwardButton;
+    private Coroutine FlipPageCoroutine;
 
     private void Start()
     {
-        _recto = page.transform.GetChild(0).Find("Recto").gameObject;
-        _verso = page.transform.GetChild(0).Find("Verso").gameObject;
-        InitialState();
+        _recto = _page.transform.GetChild(0).Find("Recto").gameObject;
+        _verso = _page.transform.GetChild(0).Find("Verso").gameObject;
     }
 
-    public void InitialState()
-    {
-        page.transform.rotation = new Quaternion(0, 0, 0, 0);
-        _recto.SetActive(false);
-        _recto.transform.SetAsLastSibling();
-        forwardButton.SetActive(false);
+    private bool _isFlipped;
 
+    public void TurnPage()
+    {
+        FlipPageCoroutine = StartCoroutine(FlipPage());
     }
 
-    public void RotateForward()
+    private IEnumerator FlipPage()
     {
-        if (rotate == true) { return; }
-        index++;
-        float angle = 0; //in order to rotate the page forward, you need to set the rotation by 180 degrees around the y axis
-        ForwardButtonActions();
-        page.transform.SetAsLastSibling();
-        StartCoroutine(Rotate(angle, true));
+        if (FlipPageCoroutine != null) { StopCoroutine(FlipPageCoroutine); }
 
-    }
-
-    public void ForwardButtonActions()
-    {
-        if (backButton.activeInHierarchy == false)
+        if (_isFlipped)
         {
-            backButton.SetActive(true); //every time we turn the page forward, the back button should be activated
+            _page.transform.DORotate(new Vector3(_page.transform.rotation.x, 90, _page.transform.rotation.z), pageSpeed);
+            yield return new WaitForSeconds(pageSpeed / 2);
+            if(FlipPageCoroutine != null) { FlipPageCoroutine = null; }
+            _book.transform.DOPunchScale(new Vector3(0.0125f, 0, 0), pageSpeed / 2, 0).SetEase(Ease.InBack);
+            _verso.SetActive(true);
+            _recto.SetActive(false);
+            _page.transform.DORotate(new Vector3(_page.transform.rotation.x, 0, _page.transform.rotation.z), pageSpeed);
+            _isFlipped = false;
         }
-        /*if (index == pages.Count - 1)
+        else
         {
-            forwardButton.SetActive(false); //if the page is last then we turn off the forward button
-        }*/
-    }
-
-    public void RotateBack()
-    {
-        if (rotate == true) { return; }
-        float angle = 180; //in order to rotate the page back, you need to set the rotation to 0 degrees around the y axis
-        //pages[index].transform.SetAsLastSibling();
-        BackButtonActions();
-        StartCoroutine(Rotate(angle, false));
-    }
-
-    public void BackButtonActions()
-    {
-        if (forwardButton.activeInHierarchy == false)
-        {
-            forwardButton.SetActive(true); //every time we turn the page back, the forward button should be activated
-        }
-        if (index - 1 == -1)
-        {
-            backButton.SetActive(false); //if the page is first then we turn off the back button
+            _page.transform.DORotate(new Vector3(_page.transform.rotation.x, 90, _page.transform.rotation.z), pageSpeed);
+            yield return new WaitForSeconds(pageSpeed / 2);
+            if (FlipPageCoroutine != null) { FlipPageCoroutine = null; }
+            _book.transform.DOPunchScale(new Vector3(0.0125f, 0, 0), pageSpeed / 2, 0);
+            _verso.SetActive(false);
+            _recto.SetActive(true);
+            _page.transform.DORotate(new Vector3(_page.transform.rotation.x, 180, _page.transform.rotation.z), pageSpeed);
+            _isFlipped = true;
         }
     }
-
-    IEnumerator Rotate(float angle, bool forward)
-    {
-        float value = 0f;
-        while (true)
-        {
-            if(page.transform.rotation.y == -86.957f) //-85 > page.transform.rotation.y && page.transform.rotation.y > -95
-            {
-                //_recto.SetActive(true);
-                print("étape");
-            }
-            rotate = true;
-            Quaternion targetRotation = Quaternion.Euler(0, angle, 0);
-            value += Time.deltaTime * pageSpeed;
-            page.transform.rotation = Quaternion.Slerp(page.transform.rotation, targetRotation, value); //smoothly turn the page
-            float angle1 = Quaternion.Angle(page.transform.rotation, targetRotation); //calculate the angle between the given angle of rotation and the current angle of rotation
-            if (angle1 < 0.1f)
-            {
-                if (forward == false)
-                {
-                    index--;
-                }
-                rotate = false;
-                break;
-
-            }
-            yield return null;
-            
-        }
-    }
-
-
-
 }

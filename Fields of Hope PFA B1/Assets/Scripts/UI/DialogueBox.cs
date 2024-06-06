@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using JetBrains.Annotations;
 
 public class DialogueBox : MonoBehaviour
 {
@@ -20,10 +21,18 @@ public class DialogueBox : MonoBehaviour
     private Coroutine _dialogueCoroutine;
 
     [SerializeField]
-    private PlaySoundFx _playSound;
-    
+    private AudioClip _Sound;
+
+    private SoundSFXManager _soundSFXManager;
+
+    private void Awake()
+    {
+        _soundSFXManager = FindAnyObjectByType<SoundSFXManager>();    
+    }
+
     public void StartDialogue(string text)
     {
+        _soundSFXManager.PlaySoundFXClip(_Sound, transform, 1f, "Music");
         _textSlicer = gameObject.GetComponent<TextSlicer>();
         Lines = _textSlicer.Slice(text).ToArray();
 
@@ -36,7 +45,7 @@ public class DialogueBox : MonoBehaviour
     {
         //this.GetComponent<Button>().interactable = false; VERSION SANS GAME FEEL
         Button button = GameObject.Find("Button").GetComponent<Button>();
-        button.interactable = false;
+        //button.interactable = false;
         _text.text = Lines[_index];
         _text.maxVisibleCharacters = 0;
         for (int i = 0; i < Lines[_index].Length; i++)
@@ -48,9 +57,10 @@ public class DialogueBox : MonoBehaviour
         if (_index == Lines.Length - 1)
         {
             //this.GetComponent<Button>().interactable = false;
-            button.interactable = false;
+            //button.interactable = false;
             // afficher potentiels bouttons choix
             this.OnEndTextDisplay?.Invoke();
+
         }
         else
         {
