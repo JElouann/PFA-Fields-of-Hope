@@ -52,7 +52,6 @@ public class EndDayStats : MonoBehaviour
         for (int i = 0; i < StatsHasChange.Count; i++)
         {
             StatsHasChange[i].Amount = 0;
-            gameObject.SetActive(false);
         }
     }
 }
