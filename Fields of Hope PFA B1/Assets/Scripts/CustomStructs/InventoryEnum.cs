@@ -15,6 +15,7 @@ public enum InventoryEnum
     Topinambour,
     Radis,
     Jour,
+    TempsDePousse,
     KitDeSoins,
     DegreDeOufitude
 }

@@ -959,6 +959,7 @@ MonoBehaviour:
   _index: 0
   _textSlicer: {fileID: 0}
   _Sound: {fileID: 8300000, guid: 89971d3defab26f4aa421f99778bd57f, type: 3}
+  AudioSource: {fileID: 4751365179062832348, guid: 6cfec4c4bcf0f9b4380247a008b7995f, type: 3}
 --- !u!114 &199540878537960389
 MonoBehaviour:
   m_ObjectHideFlags: 0

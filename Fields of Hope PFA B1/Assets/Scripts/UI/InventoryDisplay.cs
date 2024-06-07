@@ -1,5 +1,4 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -58,5 +57,17 @@ public class InventoryDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
             default:
                 break;
         }
+    }
+
+    private void Start()
+    {
+        _radisAmount.text = _statsManager.Radis.ToString();
+        _poireauAmount.text = _statsManager.Poireau.ToString();
+        _topinambourAmount.text = _statsManager.Topinambour.ToString();
+        _rutabagaAmount.text = _statsManager.Rutabaga.ToString();
+        _carotteAmount.text = _statsManager.Carotte.ToString();
+        _betteraveAmount.text = _statsManager.Betterave.ToString();
+        _patateAmount.text = _statsManager.Patate.ToString();
+        _potironAmount.text = _statsManager.Potiron.ToString();
     }
 }

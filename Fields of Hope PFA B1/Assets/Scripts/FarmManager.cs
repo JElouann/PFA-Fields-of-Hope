@@ -54,6 +54,16 @@ public class FarmManager : MonoBehaviour
         }
     }
 
+    public void AddDay()
+    {
+        if (InventorySlots == null) return;
+        for (int i = 0; i < InventorySlots.Count; i++)
+        {
+            GrowingPlant slot = InventorySlots[i];
+            slot.TempsRestantDePousse++;
+        }
+    }
+
     public void RemoveSeed()
     {
         seedData = null;
