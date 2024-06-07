@@ -17,7 +17,6 @@ public class RessourceButtonBlocker : MonoBehaviour
 
     public void CheckWhatHasToBeCheck()
     {
-        print(_checkToPerform);
         _checkToPerform.Invoke();
     }
 
@@ -29,7 +28,6 @@ public class RessourceButtonBlocker : MonoBehaviour
     public bool CheckSeedsAmount()
     {
         bool isEnough = (_statsManager._myStat[InventoryEnum.Graines] >= _vegetablesData.CoutEnGraines) ? true : false;
-        print(_statsManager._myStat[InventoryEnum.Graines] + " | " + _vegetablesData.CoutEnGraines + " | = " + isEnough);
         return isEnough;
     }
 
