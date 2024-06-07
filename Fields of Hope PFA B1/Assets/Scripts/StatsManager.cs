@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Security.Cryptography;
 using DG.Tweening;
 using TMPro;
@@ -8,10 +9,6 @@ using UnityEngine.UI;
 
 public class StatsManager : MonoBehaviour
 {
-    // System stats
-    //[Header("System stats")]
-    //[Range(0, 100)]
-    //[SerializeField]
     [SerializeField]
     private EndDayStats enddaystats;
 
@@ -107,6 +104,9 @@ public class StatsManager : MonoBehaviour
     public Image HungerBar;
 
     [SerializeField]
+    private FarmManager _farmManager;
+
+    [SerializeField]
     private InventoryDisplay _inventoryDisplay;
 
     [SerializeField]
@@ -137,6 +137,27 @@ public class StatsManager : MonoBehaviour
     public void ChangeValues(InventoryEnum value, int amount, bool hasToRemember)
     {
         _myStat[value] = (value == InventoryEnum.DegreDeOufitude) ? Mathf.Clamp(_myStat[value] + amount, 0, 10) : Mathf.Clamp(_myStat[value] + amount, 0, 100);
+        switch (value)
+        {
+            case InventoryEnum.DegreDeOufitude:
+                Mathf.Clamp(_myStat[value] + amount, 0, 10);
+                break;
+
+            case InventoryEnum.TempsDePousse:
+                if(value > 0)
+                {
+                    _farmManager.AddDay();
+                }
+                else
+                {
+                    _farmManager.RemoveDay();
+                }
+                break;
+
+            default:
+                Mathf.Clamp(_myStat[value] + amount, 0, 100);
+                break;
+        }
         
         // Gamefeel
         if(value == InventoryEnum.Santé && amount != 0)
@@ -192,7 +213,7 @@ public class StatsManager : MonoBehaviour
         LifeAmount.text = (Life).ToString();
         HungerAmount.text = (Hunger).ToString();
         SeedsAmount.text = (Seeds).ToString();
-        FoodAmount.text = (Carotte * 15 + Betterave * 18 + Poireau * 5 + Potiron * 25 + Patate * 20 + Rutabaga * 10 + Radis * 3 + Topinambour * 8).ToString();
+        FoodAmount.text = (Carotte + Betterave + Poireau + Potiron + Patate + Rutabaga + Radis + Topinambour).ToString();
     }
 
     /// <summary>

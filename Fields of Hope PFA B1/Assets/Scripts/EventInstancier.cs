@@ -68,7 +68,14 @@ public class EventInstancier : MonoBehaviour
         {
             if (IsInOufitudeRange(eventData, degreDeOufitude))
             {
-                _eventDatasSuitable.Add(eventData);
+                if (_eventsPassed.ContainsKey(eventData) && _eventsPassed[eventData] <= 0)
+                {
+                    _eventDatasSuitable.Add(eventData);
+                }
+                else if (!_eventsPassed.ContainsKey(eventData))
+                {
+                    _eventDatasSuitable.Add(eventData);
+                }
             }
         }
     }
@@ -81,11 +88,14 @@ public class EventInstancier : MonoBehaviour
         {
             if (IsInOufitudeRange(eventData, degreDeOufitude))
             {
-                if(_eventsPassed.ContainsKey(eventData))
+                if(_eventsPassed.ContainsKey(eventData) && _eventsPassed[eventData] <= 0)
                 {
-
+                    _eventDatasSuitable.Add(eventData);
                 }
-                _eventDatasSuitable.Add(eventData);
+                else if (!_eventsPassed.ContainsKey(eventData))
+                {
+                    _eventDatasSuitable.Add(eventData);
+                }
             }
         }
     }
@@ -103,17 +113,20 @@ public class EventInstancier : MonoBehaviour
         int selectedEventIndex = UnityEngine.Random.Range(0, _eventDatasSuitable.Count);
             
         CreatedEvent = Instantiate(_eventPrefabBasis, where);
+
         EventScript createdEventScript = CreatedEvent.GetComponent<EventScript>(); // Get the EventScript of the new event GameObject
 
         // Update the event contained in the new event GameObject, then load it to display it and update its script
 
         createdEventScript.currentEvent = (toInitialize == null) ? _eventDatasSuitable[selectedEventIndex] : toInitialize;
 
+        if (!_eventsPassed.ContainsKey(createdEventScript.currentEvent))
+        {
+            _eventsPassed.Add(createdEventScript.currentEvent, _numOfDay);
+        }
+
         createdEventScript.OnEndEvent += _dayManager.EndDay.OnEndDay;
         createdEventScript.LoadThis();
-
-        print(_eventsPassed[createdEventScript.currentEvent]);
-        _eventsPassed.Add(createdEventScript.currentEvent, _numOfDay);
         
         _eventDatasSuitable.Clear();
     }
