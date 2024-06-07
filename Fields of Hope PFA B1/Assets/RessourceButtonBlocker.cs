@@ -6,25 +6,41 @@ public class RessourceButtonBlocker : MonoBehaviour
 {
     private StatsManager _statsManager;
     [SerializeField] private InventoryEnum _inventoryEnum;
+    [SerializeField] private SO_SeedsData _vegetablesData;
     [SerializeField] private UnityEvent _checkToPerform;
 
     private void Awake()
     {
         _statsManager = FindAnyObjectByType<StatsManager>();
+        CheckWhatHasToBeCheck();
     }
 
-    void Start()
+    public void CheckWhatHasToBeCheck()
     {
-        GetComponent<Button>().interactable = (_statsManager._myStat[_inventoryEnum] > 0) ? true : false;
+        print(_checkToPerform);
+        _checkToPerform.Invoke();
+    }
+
+    public void BlockSeeds()
+    {
+        GetComponent<Button>().interactable = CheckSeedsAmount();
     }
 
     public bool CheckSeedsAmount()
     {
-        return true;
+        bool isEnough = (_statsManager._myStat[InventoryEnum.Graines] >= _vegetablesData.CoutEnGraines) ? true : false;
+        print(_statsManager._myStat[InventoryEnum.Graines] + " | " + _vegetablesData.CoutEnGraines + " | = " + isEnough);
+        return isEnough;
+    }
+
+    public void BlockVegetables()
+    {
+        GetComponent<Button>().interactable = CheckVegetableAmount();
     }
 
     public bool CheckVegetableAmount()
     {
-        return true;
+        bool isEnough = (_statsManager._myStat[_inventoryEnum] > 0) ? true : false;
+        return isEnough;
     }
 }
