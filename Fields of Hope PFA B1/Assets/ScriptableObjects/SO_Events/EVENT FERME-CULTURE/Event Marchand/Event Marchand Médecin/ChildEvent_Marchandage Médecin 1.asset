@@ -31,6 +31,6 @@ MonoBehaviour:
   ValuesToChange:
   - Value: 0
     Amount: 50
-  - Value: 13
+  - Value: 14
     Amount: -1
   SFX: {fileID: 0}
