@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Diagnostics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
@@ -54,15 +55,18 @@ public class PlayVideo : MonoBehaviour
 
     public void Skip()
     {
+        PlaySoundVideo(true);
+        StopCoroutine(StartVideo());
         videoplayer.Stop();
         AudioSource.Stop();
         PanelText.SetActive(false);
         MenuCinématic.SetActive(false);
+        play.PlayNextMusic();
     }
 
     private IEnumerator StartVideo()
     {
-        _soundSFXManager.PlaySoundFXClip(AudioClip, gameObject.transform, 1f, "Ambiance");
+        PlaySoundVideo(false);
         yield return new WaitForSecondsRealtime(0.40f);
         videoplayer.Play();
         yield return new WaitForSecondsRealtime(0.05f);
@@ -84,5 +88,20 @@ public class PlayVideo : MonoBehaviour
         StartCoroutine(FindAnyObjectByType<TimePostProcessHandler>().BasisProcess());
         MenuCinématic.SetActive(false);
         play.PlayNextMusic();
+    }
+
+    private void PlaySoundVideo(bool stop)
+    {
+        AudioSource Source = AudioSource;
+        Source.clip = AudioClip;
+        if (stop == true)
+        {
+            Source.Stop();
+        }
+        else
+        {
+            Source.volume = 1f;
+            Source.Play();
+        }
     }
 }
