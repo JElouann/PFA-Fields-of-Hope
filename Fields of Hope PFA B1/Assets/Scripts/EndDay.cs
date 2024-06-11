@@ -34,8 +34,8 @@ public class EndDay : MonoBehaviour
         _dayManager.DayChoice = DailyChoice.None;
 
         _dayManager.DayChoiceScript.Restart();
-        SeedsPlants.RemoveDay();
-
+        //SeedsPlants.RemoveDay();
+        SeedsPlants.ShowListPlant();
         PanelEndDay.SetActive(true);
         EndDayStats.OnEndDayToString();
     }
