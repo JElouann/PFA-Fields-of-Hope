@@ -62,6 +62,7 @@ public class SaveSystem : MonoBehaviour
         statsManager.Life = 50;
         statsManager.Hunger = 45;
         statsManager.Seeds = 15;
+        statsManager.Radis = 5;
         statsManager.Carotte = 2;
         statsManager.OufitudeDegre = 1;
         dayManager.UpdateTextDay();
