@@ -14,17 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Racine
   Text: Un homme au bonnet rouge vous aborde.
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 11400000, guid: 5bd09e6e43b8d7b47bb0980f42d06b74, type: 2}
   Child1Text: Ne pas lui faire confiance.
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: 1d7c9bcfc1d15f84fa5661c65c843567, type: 2}
   Child2Text: Le frapper.
   Child2Conditions: []
-  ImageEvent: {fileID: -538862991, guid: 0d20e3a8a4c2d4346be9060eea5fe757, type: 3}
-  SpritePosition: {x: 1250, y: 425, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 2, y: 2, z: 2}
+  StyleEvent:
+  - <ImageEvent>k__BackingField: {fileID: 0}
+    <SpritePosition>k__BackingField: {x: 0, y: 0, z: 0}
+    <SpriteRotation>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    <SpriteScale>k__BackingField: {x: 0, y: 0, z: 0}
+    <SpriteLongueurAndLargeur>k__BackingField: {x: 0, y: 0}
   OufitudePool:
     Minimum: 1
     Maximum: 3
   ValuesToChange: []
+  SFX: {fileID: 0}

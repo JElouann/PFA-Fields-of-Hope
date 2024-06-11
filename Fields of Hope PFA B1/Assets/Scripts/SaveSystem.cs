@@ -60,8 +60,7 @@ public class SaveSystem : MonoBehaviour
 
     public void NewGame()
     {
-        dayManager._dayCounter = -1;
-        dayManager.NextDay();
+        dayManager._dayCounter = 0;
         statsManager.Life = 50;
         statsManager.Hunger = 45;
         statsManager.Seeds = 15;

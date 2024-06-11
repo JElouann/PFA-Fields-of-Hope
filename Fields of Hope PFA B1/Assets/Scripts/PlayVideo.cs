@@ -8,6 +8,9 @@ using UnityEngine.Video;
 public class PlayVideo : MonoBehaviour
 {
     [SerializeField]
+    private PlayMusic play;
+
+    [SerializeField]
     private GameObject PanelText;
 
     [SerializeField] 
@@ -51,13 +54,10 @@ public class PlayVideo : MonoBehaviour
 
     public void Skip()
     {
-        if (videoplayer)
-        {
-            videoplayer.Stop();
-            AudioSource.Stop();
-            PanelText.SetActive(false);
-            MenuCinématic.SetActive(false);
-        }
+        videoplayer.Stop();
+        AudioSource.Stop();
+        PanelText.SetActive(false);
+        MenuCinématic.SetActive(false);
     }
 
     private IEnumerator StartVideo()
@@ -79,8 +79,10 @@ public class PlayVideo : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         PanelText.SetActive(false);
         ImageAnimation.SetActive(false);
-        yield return new WaitForSecondsRealtime(5f);
+        yield return new WaitForSecondsRealtime(0);
         Logo.SetActive(false);
+        StartCoroutine(FindAnyObjectByType<TimePostProcessHandler>().BasisProcess());
         MenuCinématic.SetActive(false);
+        play.PlayNextMusic();
     }
 }

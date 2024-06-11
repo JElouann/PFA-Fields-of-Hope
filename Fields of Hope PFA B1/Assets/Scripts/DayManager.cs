@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using static UnityEngine.EventSystems.EventTrigger;
@@ -31,36 +32,26 @@ public class DayManager : MonoBehaviour
     #region DEV CHEAT
     public void MoreLife() // DEV
     {
-        _statsManager.ChangeValues(InventoryEnum.Santé, 5, false);
+        _statsManager.ChangeValues(InventoryEnum.Santé, 5);
     }
 
     public void MoreFood() // DEV
     {
-        _statsManager.ChangeValues(InventoryEnum.Faim, 5, false);
+        _statsManager.ChangeValues(InventoryEnum.Faim, 5);
     }
 
     public void MoreSeeds() // DEV
     {
-        _statsManager.ChangeValues(InventoryEnum.Graines, 5, false);
+        _statsManager.ChangeValues(InventoryEnum.Graines, 5);
     }
     #endregion
 
-    public void NextDay()
+    public async void NextDay()
     {
-        //OnEndDay?.Invoke();
+        StartCoroutine(FindAnyObjectByType<TimePostProcessHandler>().NightFall());
+        await Task.Delay(2000);
         _dayCounter++;
-        /*foreach(KeyValuePair<SO_Events, int> entry in _eventInstancier._eventsPassed)
-        {
-            _eventInstancier._eventsPassed[entry.Key]--;
-        }*/
-
         _eventInstancier._eventsPassed.ToList().ForEach(e => _eventInstancier._eventsPassed[e.Key]--);
-
-        //for(int i = 0; i <  _eventInstancier._eventsPassed.Count; i++)
-        //{
-        //    _eventInstancier._eventsPassed[i]--;
-        //}
-
         _counterText.text = (_dayCounter).ToString();
         DayChoice = DailyChoice.None;
         EndDayStats.OnDayFinished();

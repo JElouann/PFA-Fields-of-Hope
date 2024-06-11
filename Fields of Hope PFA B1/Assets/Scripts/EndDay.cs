@@ -27,21 +27,15 @@ public class EndDay : MonoBehaviour
     public void OnEndDay()
     {
         Destroy(_eventInstancier.CreatedEvent);
-        print("ça marche");
 
-        // Jouer animation de changement de jour
-
-        // On met a jour les diff�rentes valeurs
-
-        _statsManager.ChangeValues(InventoryEnum.Santé, _statsManager.GetHungerConsequence(), false);
-        _statsManager.ChangeValues(InventoryEnum.Faim, -_foodLoss * _foodLossMultiplier, false);
+        _statsManager.ChangeValues(InventoryEnum.Santé, _statsManager.GetHungerConsequence());
+        _statsManager.ChangeValues(InventoryEnum.Faim, -_foodLoss * _foodLossMultiplier);
         
         _dayManager.DayChoice = DailyChoice.None;
 
         _dayManager.DayChoiceScript.Restart();
         SeedsPlants.RemoveDay();
 
-        
         PanelEndDay.SetActive(true);
         EndDayStats.OnEndDayToString();
     }

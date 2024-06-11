@@ -44,9 +44,4 @@ public class PlayMusic : MonoBehaviour
     {
         PlayRandomMusic(1f);
     }
-
-    private void Start()
-    {
-        PlayNextMusic();
-    }
 }
