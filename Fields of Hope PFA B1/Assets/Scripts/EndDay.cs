@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class EndDay : MonoBehaviour
@@ -24,19 +25,19 @@ public class EndDay : MonoBehaviour
     [SerializeField]
     private EndDayStats EndDayStats;
 
-    public void OnEndDay()
+    public async void OnEndDay()
     {
+        PanelEndDay.SetActive(true);
+        EndDayStats.OnEndDayToString();
+
         Destroy(_eventInstancier.CreatedEvent);
 
         _statsManager.ChangeValues(InventoryEnum.Santé, _statsManager.GetHungerConsequence());
         _statsManager.ChangeValues(InventoryEnum.Faim, -_foodLoss * _foodLossMultiplier);
         
-        _dayManager.DayChoice = DailyChoice.None;
-
-        _dayManager.DayChoiceScript.Restart();
+        
         SeedsPlants.RemoveDay();
 
-        PanelEndDay.SetActive(true);
-        EndDayStats.OnEndDayToString();
+        
     }
 }

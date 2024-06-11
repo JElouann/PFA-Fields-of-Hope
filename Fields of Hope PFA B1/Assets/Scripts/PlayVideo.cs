@@ -56,7 +56,8 @@ public class PlayVideo : MonoBehaviour
     public void Skip()
     {
         PlaySoundVideo(true);
-        StopCoroutine(StartVideo());
+        dialogue.StopAllCoroutines();
+        StopAllCoroutines();
         videoplayer.Stop();
         AudioSource.Stop();
         PanelText.SetActive(false);

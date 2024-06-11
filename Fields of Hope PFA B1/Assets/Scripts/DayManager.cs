@@ -1,10 +1,7 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
-using static UnityEngine.EventSystems.EventTrigger;
 
 public class DayManager : MonoBehaviour
 {
@@ -49,7 +46,9 @@ public class DayManager : MonoBehaviour
     public async void NextDay()
     {
         StartCoroutine(FindAnyObjectByType<TimePostProcessHandler>().NightFall());
-        await Task.Delay(2000);
+        await Task.Delay(5000);
+        DayChoice = DailyChoice.None;
+        DayChoiceScript.Restart();
         _dayCounter++;
         _eventInstancier._eventsPassed.ToList().ForEach(e => _eventInstancier._eventsPassed[e.Key]--);
         _counterText.text = (_dayCounter).ToString();
