@@ -36,8 +36,8 @@ public class EndDay : MonoBehaviour
         _statsManager.ChangeValues(InventoryEnum.Faim, -_foodLoss * _foodLossMultiplier);
         
         
-        SeedsPlants.RemoveDay();
-
+        //SeedsPlants.RemoveDay();
+        SeedsPlants.ShowListPlant();
         
     }
 }

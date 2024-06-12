@@ -9,8 +9,13 @@ public class PlaySoundFx : MonoBehaviour
 
     private AudioClip _audio;
 
-    [SerializeField]
-    private AudioClip[] Music;
+    private void Awake()
+    {
+        if (soundFxManager == null)
+        {
+            soundFxManager = FindAnyObjectByType<SoundSFXManager>();
+        }   
+    }
 
     public void OnClick(AudioClip clip)
     {

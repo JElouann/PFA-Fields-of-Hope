@@ -33,6 +33,7 @@ public class SaveSystem : MonoBehaviour
         PlayerPrefs.SetInt("Topinambour", statsManager.Topinambour);
         PlayerPrefs.SetInt("Radis", statsManager.Radis);
         PlayerPrefs.SetInt("Poireau", statsManager.Poireau);
+        PlayerPrefs.SetInt("OufitudeDegre", statsManager.OufitudeDegre);
     }
 
     public void LoadData()
@@ -49,6 +50,7 @@ public class SaveSystem : MonoBehaviour
         statsManager.Topinambour = PlayerPrefs.GetInt("Topinambour");
         statsManager.Radis = PlayerPrefs.GetInt("Radis");
         statsManager.Poireau = PlayerPrefs.GetInt("Poireau");
+        statsManager.OufitudeDegre = PlayerPrefs.GetInt("OufitudeDegre");
         dayManager.UpdateTextDay();
         statsManager.UpdateTexts();
         statsManager.UpdateBars();
@@ -60,6 +62,7 @@ public class SaveSystem : MonoBehaviour
         statsManager.Life = 50;
         statsManager.Hunger = 45;
         statsManager.Seeds = 15;
+        statsManager.Radis = 5;
         statsManager.Carotte = 2;
         statsManager.OufitudeDegre = 1;
         dayManager.UpdateTextDay();
