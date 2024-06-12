@@ -46,7 +46,7 @@ public class DayManager : MonoBehaviour
 
     public async void NextDay()
     {
-        FindAnyObjectByType<TimePostProcessHandler>().StartOpe();
+        FindAnyObjectByType<TimePostProcessHandler>()._specialProcess = StartCoroutine(FindAnyObjectByType<TimePostProcessHandler>().NightFall());
         await Task.Delay(5000);
         DayChoice = DailyChoice.None;
         DayChoiceScript.Restart();

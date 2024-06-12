@@ -19,7 +19,7 @@ public class TimePostProcessHandler : MonoBehaviour
     // Animation curves
     [Header("Basis Curve")]
     [SerializeField] private AnimationCurve _vignetteBasisCurve;
-    [SerializeField] private Coroutine _specialProcess;
+    [SerializeField] public Coroutine _specialProcess;
 
     [Header("On night fall")]
     [SerializeField] private AnimationCurve _vignetteNightFallCurve;
@@ -48,7 +48,8 @@ public class TimePostProcessHandler : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            StartOpe();
+            //StartOpe();
+            currentProcess = StartCoroutine(NightFall());
         }
     }
 
@@ -79,7 +80,7 @@ public class TimePostProcessHandler : MonoBehaviour
             }
         }
         yield return new WaitForSeconds(2f);
-        StartCoroutine(DayRise());
+        _specialProcess = StartCoroutine(DayRise());
     }
     #endregion
 
@@ -90,6 +91,7 @@ public class TimePostProcessHandler : MonoBehaviour
         _vignette.intensity.value = 1;
         while (_time <= _vignetteDayRiseCurve.length / 4)
         {
+            print("time : "+ _time + " | " +  "courbe : " + _vignetteDayRiseCurve.Evaluate(_time));
             _vignette.intensity.value = _vignetteDayRiseCurve.Evaluate(_time);
             _time += _vignetteDayRiseCurve.length * 0.0001f;
             _vignette.color.value = Color.Lerp(Color.black, _vignette.color.value, _vignetteDayRiseCurve.length * 0.0005f);
@@ -101,17 +103,18 @@ public class TimePostProcessHandler : MonoBehaviour
                 _bottomBlackPanel.Move(-810);
             }
         }
+        print("popo");
+        _specialProcess = null;
         StartCoroutine(BasisProcess());
     }
     #endregion
 
     public IEnumerator BasisProcess()
     {
-        StopCoroutine(DayRise());
+        //StopCoroutine(DayRise());
         _time = 0;
-        while (true)
+        while (_specialProcess == null)
         {
-            if (_specialProcess != null) yield return null;
             _vignette.intensity.value = _vignetteBasisCurve.Evaluate(_time);
             if( _time == _vignetteBasisCurve.length )
             {
