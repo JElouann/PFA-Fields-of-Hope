@@ -86,6 +86,7 @@ public class FarmManager : MonoBehaviour
         }
         else
         {
+            Text.text = "Voici les cultures qui se développent actuellement." + "\n";
             for (int i = 0; i < InventorySlots.Count; i++)
             {
                 GrowingPlant slot = InventorySlots[i];
