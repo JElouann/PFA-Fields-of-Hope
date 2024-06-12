@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DayManager : MonoBehaviour
 {
+
     [SerializeField]
     private EndDayStats EndDayStats;
 
@@ -45,7 +46,7 @@ public class DayManager : MonoBehaviour
 
     public async void NextDay()
     {
-        StartCoroutine(FindAnyObjectByType<TimePostProcessHandler>().NightFall());
+        FindAnyObjectByType<TimePostProcessHandler>().StartOpe();
         await Task.Delay(5000);
         DayChoice = DailyChoice.None;
         DayChoiceScript.Restart();

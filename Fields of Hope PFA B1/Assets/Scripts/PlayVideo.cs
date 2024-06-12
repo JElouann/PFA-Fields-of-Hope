@@ -63,6 +63,7 @@ public class PlayVideo : MonoBehaviour
         PanelText.SetActive(false);
         MenuCinématic.SetActive(false);
         play.PlayNextMusic();
+        StartCoroutine(FindAnyObjectByType<TimePostProcessHandler>().BasisProcess());
     }
 
     private IEnumerator StartVideo()

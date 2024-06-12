@@ -141,7 +141,7 @@ public class StatsManager : MonoBehaviour
         switch (value)
         {
             case InventoryEnum.DegreDeOufitude:
-                Mathf.Clamp(_myStat[value] + amount, 0, 10);
+                Mathf.Clamp(_myStat[value] + amount, 1, 10);
                 break;
 
             case InventoryEnum.TempsDePousse:

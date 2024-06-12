@@ -25,7 +25,7 @@ public class EndDay : MonoBehaviour
     [SerializeField]
     private EndDayStats EndDayStats;
 
-    public async void OnEndDay()
+    public void OnEndDay()
     {
         PanelEndDay.SetActive(true);
         EndDayStats.OnEndDayToString();

@@ -17,7 +17,6 @@ public class NightPanel : MonoBehaviour
     void Start()
     {
         print(_basePos);
-        //this.transform.localPosition = _basePos;
         this.GetComponent<Image>().DOFade(0, 0);
     }
 

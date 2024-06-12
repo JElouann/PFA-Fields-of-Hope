@@ -23,6 +23,11 @@ public class TimePostProcessHandler : MonoBehaviour
 
     [Header("On night fall")]
     [SerializeField] private AnimationCurve _vignetteNightFallCurve;
+
+    [Header("On day rise")]
+    [SerializeField] private AnimationCurve _vignetteDayRiseCurve;
+
+    [Header("Black panels")]
     [SerializeField] private NightPanel _topBlackPanel;
     [SerializeField] private NightPanel _bottomBlackPanel;
 
@@ -34,13 +39,6 @@ public class TimePostProcessHandler : MonoBehaviour
         _baseColor = _vignette.color.value;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //_vignette.intensity.value = 1.00f;
-        //currentProcess = StartCoroutine(BasisProcess());
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -50,19 +48,25 @@ public class TimePostProcessHandler : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            print("space");
-            StopAllCoroutines();
-            StartCoroutine(NightFall());
+            StartOpe();
         }
+    }
+
+    public void StartOpe()
+    {
+        StopAllCoroutines();
+        print("space");
+        StopCoroutine(BasisProcess());
+        StartCoroutine(NightFall());
     }
 
     #region OnNightFall
     public IEnumerator NightFall()
     {
         _time = 0;
+        
         while (_time <= _vignetteNightFallCurve.length / 4)
         {
-            print(_time);
             _vignette.intensity.value = _vignetteNightFallCurve.Evaluate(_time);
             _time += _vignetteNightFallCurve.length * 0.0001f;
             _vignette.color.value = Color.Lerp(_vignette.color.value, Color.black, _vignetteNightFallCurve.length * 0.0005f);           
@@ -74,11 +78,36 @@ public class TimePostProcessHandler : MonoBehaviour
                 _bottomBlackPanel.Move(-270);
             }
         }
+        yield return new WaitForSeconds(2f);
+        StartCoroutine(DayRise());
+    }
+    #endregion
+
+    #region OnDayRise
+    public IEnumerator DayRise()
+    {
+        _time = 0;
+        _vignette.intensity.value = 1;
+        while (_time <= _vignetteDayRiseCurve.length / 4)
+        {
+            _vignette.intensity.value = _vignetteDayRiseCurve.Evaluate(_time);
+            _time += _vignetteDayRiseCurve.length * 0.0001f;
+            _vignette.color.value = Color.Lerp(Color.black, _vignette.color.value, _vignetteDayRiseCurve.length * 0.0005f);
+            yield return new WaitForSeconds(_vignetteDayRiseCurve.length * 0.0001f);
+            if (_time <= 0.2f && NightPanel.IsNight)
+            {
+                NightPanel.IsNight = false;
+                _topBlackPanel.Move(810);
+                _bottomBlackPanel.Move(-810);
+            }
+        }
+        StartCoroutine(BasisProcess());
     }
     #endregion
 
     public IEnumerator BasisProcess()
     {
+        StopCoroutine(DayRise());
         _time = 0;
         while (true)
         {
