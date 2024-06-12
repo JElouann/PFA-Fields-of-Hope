@@ -24,6 +24,7 @@ public class EventInstancier : MonoBehaviour
     private GameObject _eventPrefabBasis;
 
     // Liste utilisée pour stocker et choisir les events
+    [SerializeField]
     private List<SO_Events> _eventDatasSuitable = new();
 
     // Liste des events déjà passé et temps en jour avant de pouvoir retomber dessus
@@ -103,7 +104,7 @@ public class EventInstancier : MonoBehaviour
     // Checks if the event range fits with the Oufitude degre
     private bool IsInOufitudeRange(SO_Events checkedEvent, int degreToCompare)
     {
-        bool toReturn = !(checkedEvent.OufitudePool.Minimum > degreToCompare | checkedEvent.OufitudePool.Maximum < degreToCompare) ? true : false;
+        bool toReturn = (checkedEvent.OufitudePool.Minimum > degreToCompare | checkedEvent.OufitudePool.Maximum < degreToCompare) ? false : true;
         return toReturn;
     }
 
@@ -118,6 +119,7 @@ public class EventInstancier : MonoBehaviour
 
         // Update the event contained in the new event GameObject, then load it to display it and update its script
 
+        print(_eventDatasSuitable.Count);
         createdEventScript.currentEvent = (toInitialize == null) ? _eventDatasSuitable[selectedEventIndex] : toInitialize;
 
         if (!_eventsPassed.ContainsKey(createdEventScript.currentEvent))

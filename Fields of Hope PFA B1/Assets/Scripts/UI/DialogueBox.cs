@@ -27,12 +27,10 @@ public class DialogueBox : MonoBehaviour
     [SerializeField]
     private AudioSource AudioSource;
 
-    private bool _isPlaying = false;
-
     public void StartDialogue(string text)
     {
         //_soundSFXManager.PlaySoundFXClip(_Sound, transform, 1f, "SFX");
-        PlaySoundWritting("Non");
+        PlaySoundWritting(true);
         _textSlicer = gameObject.GetComponent<TextSlicer>();
         Lines = _textSlicer.Slice(text).ToArray();
 
@@ -66,7 +64,7 @@ public class DialogueBox : MonoBehaviour
         {
             //this.GetComponent<Button>().interactable = true;
             //button.interactable = true;
-            PlaySoundWritting("Stop");
+            PlaySoundWritting(false);
         }
         _dialogueCoroutine = null;
     }
@@ -89,11 +87,11 @@ public class DialogueBox : MonoBehaviour
         }
     }
 
-    private void PlaySoundWritting(string stop)
+    private void PlaySoundWritting(bool stop)
     {
         AudioSource Source = AudioSource;
         Source.clip = _Sound;
-        if (stop == "Stop")
+        if (stop == false)
         {
             Source.Stop();
         }

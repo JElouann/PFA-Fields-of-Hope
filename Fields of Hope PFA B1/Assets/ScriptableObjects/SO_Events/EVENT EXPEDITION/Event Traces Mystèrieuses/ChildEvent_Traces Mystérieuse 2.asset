@@ -28,5 +28,7 @@ MonoBehaviour:
   OufitudePool:
     Minimum: 0
     Maximum: 0
-  ValuesToChange: []
+  ValuesToChange:
+  - Value: 14
+    Amount: 1
   SFX: {fileID: 0}

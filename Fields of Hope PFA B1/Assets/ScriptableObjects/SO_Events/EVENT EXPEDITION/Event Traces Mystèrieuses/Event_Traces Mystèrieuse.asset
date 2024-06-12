@@ -18,17 +18,16 @@ MonoBehaviour:
     de quel animal il s'agit, je me demande si la b\xEAte est encore l\xE0. Dois-je
     suivre les traces pour d\xE9couvrir ce qui se cache derri\xE8re, ou est-ce trop
     risqu\xE9 ?"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 11400000, guid: 295b4b8e6dd2db642a150874ba9d28f5, type: 2}
   Child1Text: Suivre les traces
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: f1d40bc60b487ea46a6e22a10d430908, type: 2}
   Child2Text: Retourner chez soi
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
-    Minimum: 0
-    Maximum: 0
+    Minimum: 4
+    Maximum: 6
   ValuesToChange: []
+  SFX: {fileID: 0}

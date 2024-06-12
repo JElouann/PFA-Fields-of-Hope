@@ -17,17 +17,16 @@ MonoBehaviour:
     plafond. Depuis que vous \xEAtes ici, vous n'aviez jamais remarqu\xE9 la possibilit\xE9
     que cette ferme ait un grenier. Il pourrait \xEAtre int\xE9ressant de voir ce
     qu'il y a au-dessus. Montez-vous ?"
+  IsStoryEvent: 0
   ChildEvent1: {fileID: 11400000, guid: 968eb3b1e967f7d4897dfb0f7ab70b31, type: 2}
   Child1Text: Oui
   Child1Conditions: []
   ChildEvent2: {fileID: 11400000, guid: edb359aa454f4934fa29e23e6bdf4ba7, type: 2}
   Child2Text: Non
   Child2Conditions: []
-  ImageEvent: {fileID: 0}
-  SpritePosition: {x: 0, y: 0, z: 0}
-  SpriteRotation: {x: 0, y: 0, z: 0, w: 0}
-  SpriteScale: {x: 0, y: 0, z: 0}
+  StyleEvent: []
   OufitudePool:
-    Minimum: 0
-    Maximum: 0
+    Minimum: 1
+    Maximum: 6
   ValuesToChange: []
+  SFX: {fileID: 0}

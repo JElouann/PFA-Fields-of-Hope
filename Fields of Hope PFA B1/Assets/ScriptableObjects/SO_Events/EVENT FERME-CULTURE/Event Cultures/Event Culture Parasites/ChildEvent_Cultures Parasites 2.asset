@@ -29,8 +29,8 @@ MonoBehaviour:
     Minimum: 0
     Maximum: 0
   ValuesToChange:
-  - Value: 11
+  - Value: 12
     Amount: 1
-  - Value: 13
-    Amount: 1
+  - Value: 14
+    Amount: 2
   SFX: {fileID: 0}

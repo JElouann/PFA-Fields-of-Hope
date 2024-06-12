@@ -128,19 +128,20 @@ public class StatsManager : MonoBehaviour
         {InventoryEnum.Topinambour, 0},
         {InventoryEnum.Radis, 0},
         {InventoryEnum.Jour, 0},
+        {InventoryEnum.TempsDePousse, 0},
         {InventoryEnum.KitDeSoins, 0},
         {InventoryEnum.DegreDeOufitude, 0}
     };
 
     public event Action OnDeath;
 
-    public void ChangeValues(InventoryEnum value, int amount, bool hasToRemember)
+    public void ChangeValues(InventoryEnum value, int amount, bool hasToRemember = false)
     {
         _myStat[value] = (value == InventoryEnum.DegreDeOufitude) ? Mathf.Clamp(_myStat[value] + amount, 0, 10) : Mathf.Clamp(_myStat[value] + amount, 0, 100);
         switch (value)
         {
             case InventoryEnum.DegreDeOufitude:
-                Mathf.Clamp(_myStat[value] + amount, 0, 10);
+                Mathf.Clamp(_myStat[value] + amount, 1, 10);
                 break;
 
             case InventoryEnum.TempsDePousse:

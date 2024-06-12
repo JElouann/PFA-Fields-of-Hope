@@ -15900,6 +15900,38 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d556a6600c3b8ae44b74c6a46ca1c73a, type: 3}
+    - target: {fileID: 5748425271073154851, guid: 19db5c5417bb0c1488a78d0f9a0df2a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748425271073154851, guid: 19db5c5417bb0c1488a78d0f9a0df2a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748425271073154851, guid: 19db5c5417bb0c1488a78d0f9a0df2a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 850617567}
+    - target: {fileID: 5748425271073154851, guid: 19db5c5417bb0c1488a78d0f9a0df2a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748425271073154851, guid: 19db5c5417bb0c1488a78d0f9a0df2a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnDayFinished
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748425271073154851, guid: 19db5c5417bb0c1488a78d0f9a0df2a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: EndDayStats, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748425271073154851, guid: 19db5c5417bb0c1488a78d0f9a0df2a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748425271073154851, guid: 19db5c5417bb0c1488a78d0f9a0df2a7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5832120367531765737, guid: 19db5c5417bb0c1488a78d0f9a0df2a7, type: 3}
       propertyPath: m_Name
       value: medkit
