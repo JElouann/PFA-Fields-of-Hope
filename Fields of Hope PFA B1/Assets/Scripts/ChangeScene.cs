@@ -19,11 +19,16 @@ public class ChangeScene : MonoBehaviour
 
     private IEnumerator Anim(string NameOfScene)
     {
-        Debug.Log(animator.GetFloat("POPILOPO"));
-        animator.SetFloat("POPILOPO", 1);
-        Debug.Log(animator.GetFloat("POPILOPO"));
-        yield return new WaitForSecondsRealtime(2f);
-        SceneManager.LoadScene(NameOfScene);
-        animator.SetFloat("LOL", 0);
+        if (animator == null)
+        {
+            SceneManager.LoadScene(NameOfScene);
+        }
+        else
+        {
+            animator.SetFloat("POPILOPO", 1);
+            yield return new WaitForSecondsRealtime(2f);
+            SceneManager.LoadScene(NameOfScene);
+            animator.SetFloat("POPILOPO", -1);
+        }
     }
 }
