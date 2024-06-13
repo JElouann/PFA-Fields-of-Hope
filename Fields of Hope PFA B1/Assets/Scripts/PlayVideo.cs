@@ -5,7 +5,7 @@ using UnityEngine.Video;
 public class PlayVideo : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _demerdeToi;
+    private GameObject LoadGame;
 
     [SerializeField]
     private PlayMusic play;
@@ -69,7 +69,7 @@ public class PlayVideo : MonoBehaviour
         MenuCinématic.SetActive(false);
         play.PlayNextMusic();
         StartCoroutine(FindAnyObjectByType<TimePostProcessHandler>().BasisProcess());
-        _demerdeToi.SetActive(false);
+        LoadGame.SetActive(false);
     }
 
     private IEnumerator StartVideo()
