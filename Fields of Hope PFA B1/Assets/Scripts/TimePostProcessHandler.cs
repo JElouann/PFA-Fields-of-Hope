@@ -5,7 +5,7 @@ using UnityEngine.Rendering.Universal;
 
 public class TimePostProcessHandler : MonoBehaviour
 {
-    private Coroutine currentProcess;
+    private Coroutine _currentProcess;
     private float _time;
     private Color _baseColor;
 
@@ -35,28 +35,26 @@ public class TimePostProcessHandler : MonoBehaviour
     {
         _volume = Camera.main.transform.GetChild(0).GetComponent<Volume>();
         _volume.profile.TryGet(out _vignette);
-        _volume.profile.TryGet(out _bloom);
         _baseColor = _vignette.color.value;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O)) 
+        if (Input.GetKeyDown(KeyCode.O))
         {
-            currentProcess = StartCoroutine(NightFall());
+            _specialProcess = StartCoroutine(NightFall());
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //StartOpe();
-            currentProcess = StartCoroutine(NightFall());
+            _specialProcess = StartCoroutine(NightFall());
         }
     }
 
     public void StartOpe()
     {
         StopAllCoroutines();
-        print("space");
         StopCoroutine(BasisProcess());
         StartCoroutine(NightFall());
     }
@@ -70,7 +68,7 @@ public class TimePostProcessHandler : MonoBehaviour
         {
             _vignette.intensity.value = _vignetteNightFallCurve.Evaluate(_time);
             _time += _vignetteNightFallCurve.length * 0.0001f;
-            _vignette.color.value = Color.Lerp(_vignette.color.value, Color.black, _vignetteNightFallCurve.length * 0.0005f);           
+            _vignette.color.value = Color.Lerp(_vignette.color.value, Color.black, _vignetteNightFallCurve.length * 0.0001f);           
             yield return new WaitForSeconds(_vignetteNightFallCurve.length * 0.0001f);
             if(_time >= 0.8f && !NightPanel.IsNight)
             {
@@ -79,7 +77,7 @@ public class TimePostProcessHandler : MonoBehaviour
                 _bottomBlackPanel.Move(-270);
             }
         }
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         _specialProcess = StartCoroutine(DayRise());
     }
     #endregion
@@ -89,12 +87,11 @@ public class TimePostProcessHandler : MonoBehaviour
     {
         _time = 0;
         _vignette.intensity.value = 1;
-        while (_time <= _vignetteDayRiseCurve.length / 4)
+        while (_time <= _vignetteDayRiseCurve.length / 4.5f)
         {
-            print("time : "+ _time + " | " +  "courbe : " + _vignetteDayRiseCurve.Evaluate(_time));
             _vignette.intensity.value = _vignetteDayRiseCurve.Evaluate(_time);
             _time += _vignetteDayRiseCurve.length * 0.0001f;
-            _vignette.color.value = Color.Lerp(Color.black, _vignette.color.value, _vignetteDayRiseCurve.length * 0.0005f);
+            _vignette.color.value = Color.Lerp(Color.black, _baseColor, _vignetteDayRiseCurve.length * 0.0001f);
             yield return new WaitForSeconds(_vignetteDayRiseCurve.length * 0.0001f);
             if (_time <= 0.2f && NightPanel.IsNight)
             {
@@ -103,7 +100,6 @@ public class TimePostProcessHandler : MonoBehaviour
                 _bottomBlackPanel.Move(-810);
             }
         }
-        print("popo");
         _specialProcess = null;
         StartCoroutine(BasisProcess());
     }
@@ -111,7 +107,6 @@ public class TimePostProcessHandler : MonoBehaviour
 
     public IEnumerator BasisProcess()
     {
-        //StopCoroutine(DayRise());
         _time = 0;
         while (_specialProcess == null)
         {

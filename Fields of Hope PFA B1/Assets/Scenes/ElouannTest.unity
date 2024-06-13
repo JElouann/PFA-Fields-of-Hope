@@ -17102,6 +17102,48 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _vignetteDayRiseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0001068458
+      value: 0.9999543
+      inSlope: -3.7729764
+      outSlope: -3.7729764
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.106772214
+      value: 0.5975084
+      inSlope: 0.6924914
+      outSlope: 0.6924914
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.2857129
+      outWeight: 0.17867571
+    - serializedVersion: 3
+      time: 0.1922873
+      value: 0.534715
+      inSlope: -3.0389738
+      outSlope: -3.0389738
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.06832743
+    - serializedVersion: 3
+      time: 0.2905366
+      value: 0.3921359
+      inSlope: -1.4511969
+      outSlope: -1.4511969
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   _topBlackPanel: {fileID: 342429952}
   _bottomBlackPanel: {fileID: 691491442}
 --- !u!4 &1327679085
@@ -18995,7 +19037,7 @@ MonoBehaviour:
   _position: {fileID: 541811245}
   _eventPrefabBasis: {fileID: 4607400035265042227, guid: 23f50a1ee6da4864cb9f9f840e1d32da, type: 3}
   _eventDatasSuitable: []
-  _numOfDay: 1
+  _numOfDay: 0
   _farmEventDatas:
   - {fileID: 11400000, guid: fedb858257d981a44a0dcda53d79007a, type: 2}
   - {fileID: 11400000, guid: 6ef18bb51d3c93540a22c98aa94f2aa6, type: 2}

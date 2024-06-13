@@ -23,7 +23,12 @@ MonoBehaviour:
   ChildEvent2: {fileID: 11400000, guid: c7be4dd4a6cdfb24f82abd184f29767c, type: 2}
   Child2Text: Non
   Child2Conditions: []
-  StyleEvent: []
+  StyleEvent:
+  - <ImageEvent>k__BackingField: {fileID: 0}
+    <SpritePosition>k__BackingField: {x: 0, y: 0, z: 0}
+    <SpriteRotation>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    <SpriteScale>k__BackingField: {x: 0, y: 0, z: 0}
+    <SpriteLongueurAndLargeur>k__BackingField: {x: 0, y: 0}
   OufitudePool:
     Minimum: 6
     Maximum: 9
