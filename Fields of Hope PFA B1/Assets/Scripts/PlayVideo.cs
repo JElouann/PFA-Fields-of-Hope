@@ -38,6 +38,12 @@ public class PlayVideo : MonoBehaviour
     [SerializeField]
     private SoundSFXManager _soundSFXManager;
 
+    [SerializeField]
+    private Animator _animator;
+
+    [SerializeField]
+    private GameObject game;
+
 
     private void Start()
     {
@@ -68,12 +74,16 @@ public class PlayVideo : MonoBehaviour
 
     private IEnumerator StartVideo()
     {
+        _animator.SetFloat("Change", 1);
+        yield return new WaitForSecondsRealtime(2f);
         PlaySoundVideo(false);
         yield return new WaitForSecondsRealtime(0.40f);
         videoplayer.Play();
         yield return new WaitForSecondsRealtime(0.05f);
         ImageAnimation.SetActive(true);
-        yield return new WaitForSecondsRealtime(11f);
+        yield return new WaitForSecondsRealtime(10f);
+        game.SetActive(false);
+        yield return new WaitForSecondsRealtime(1f);
         PanelText.SetActive(true);
         dialogue.StartDialogue("Au début du 21ème siècle, une attaque terroriste déclenche une guerre entre les puissances mondiales WEST et EST, entraînant des frappes nucléaires dévastatrices. ");
         yield return new WaitForSecondsRealtime(8f);
@@ -91,6 +101,7 @@ public class PlayVideo : MonoBehaviour
         Logo.SetActive(false);
         MenuCinématic.SetActive(false);
         play.PlayNextMusic();
+        _animator.SetFloat("Change", -1);
     }
 
     private void PlaySoundVideo(bool stop)
