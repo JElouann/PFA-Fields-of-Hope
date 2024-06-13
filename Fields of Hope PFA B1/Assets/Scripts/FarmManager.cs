@@ -45,7 +45,7 @@ public class FarmManager : MonoBehaviour
 
     public void RemoveDay()
     {
-        if (InventorySlots.Count == 0) { Debug.Log("TG"); }
+        if (InventorySlots.Count == 0) return; 
         for (int i = 0; i < InventorySlots.Count; i++)
         {
             GrowingPlant slot = InventorySlots[i];
