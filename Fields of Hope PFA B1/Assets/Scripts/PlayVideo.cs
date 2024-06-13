@@ -1,13 +1,12 @@
-using System;
 using System.Collections;
-using System.Diagnostics;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 public class PlayVideo : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject _demerdeToi;
+
     [SerializeField]
     private PlayMusic play;
 
@@ -70,6 +69,7 @@ public class PlayVideo : MonoBehaviour
         MenuCinématic.SetActive(false);
         play.PlayNextMusic();
         StartCoroutine(FindAnyObjectByType<TimePostProcessHandler>().BasisProcess());
+        _demerdeToi.SetActive(false);
     }
 
     private IEnumerator StartVideo()
