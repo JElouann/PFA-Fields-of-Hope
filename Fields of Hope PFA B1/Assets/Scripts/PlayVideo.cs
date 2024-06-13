@@ -85,9 +85,10 @@ public class PlayVideo : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         PanelText.SetActive(false);
         ImageAnimation.SetActive(false);
-        yield return new WaitForSecondsRealtime(2.8f);
-        Logo.SetActive(false);
+        yield return new WaitForSecondsRealtime(2.5f);
         StartCoroutine(FindAnyObjectByType<TimePostProcessHandler>().BasisProcess());
+        yield return new WaitForSecondsRealtime(0.3f);
+        Logo.SetActive(false);
         MenuCinématic.SetActive(false);
         play.PlayNextMusic();
     }
