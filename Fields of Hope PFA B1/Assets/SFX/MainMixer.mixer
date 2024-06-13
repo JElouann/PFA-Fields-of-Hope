@@ -49,6 +49,8 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: ae9a09116f358d840aaf28506479841f
+    name: Ambiance
   - guid: c1b7e6a4f71de8a44ab046c3030def5d
     name: MasterMain
   - guid: c50fb9d4f68388f429ac53f1213dee76

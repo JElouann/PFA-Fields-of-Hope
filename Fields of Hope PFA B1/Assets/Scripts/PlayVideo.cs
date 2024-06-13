@@ -73,21 +73,22 @@ public class PlayVideo : MonoBehaviour
         videoplayer.Play();
         yield return new WaitForSecondsRealtime(0.05f);
         ImageAnimation.SetActive(true);
-        yield return new WaitForSecondsRealtime(10.5f);
+        yield return new WaitForSecondsRealtime(11f);
         PanelText.SetActive(true);
         dialogue.StartDialogue("Au début du 21ème siècle, une attaque terroriste déclenche une guerre entre les puissances mondiales WEST et EST, entraînant des frappes nucléaires dévastatrices. ");
-        yield return new WaitForSecondsRealtime(10f);
+        yield return new WaitForSecondsRealtime(8f);
         dialogue.StartDialogue("Les nations sont en ruines et les survivants doivent naviguer dans un monde post-apocalyptique.");
-        yield return new WaitForSecondsRealtime(7f);
+        yield return new WaitForSecondsRealtime(5f);
         dialogue.StartDialogue("Vous, joueur, devez survivre, reconstruire et apporter de l’espoir à ce monde brisé.");
-        yield return new WaitForSecondsRealtime(7f);
+        yield return new WaitForSecondsRealtime(5f);
         Logo.SetActive(true);
         yield return new WaitForSecondsRealtime(1f);
         PanelText.SetActive(false);
         ImageAnimation.SetActive(false);
-        yield return new WaitForSecondsRealtime(0);
-        Logo.SetActive(false);
+        yield return new WaitForSecondsRealtime(2.5f);
         StartCoroutine(FindAnyObjectByType<TimePostProcessHandler>().BasisProcess());
+        yield return new WaitForSecondsRealtime(0.3f);
+        Logo.SetActive(false);
         MenuCinématic.SetActive(false);
         play.PlayNextMusic();
     }
