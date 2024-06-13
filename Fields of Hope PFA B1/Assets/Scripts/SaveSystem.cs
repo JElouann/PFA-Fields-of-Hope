@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class SaveSystem : MonoBehaviour
 {
@@ -12,10 +12,22 @@ public class SaveSystem : MonoBehaviour
     [SerializeField]
     private DayManager dayManager;
 
+    [SerializeField]
+    private Slider SliderMaster;
+
+    [SerializeField]
+    private Slider SliderSFX;
+
+    [SerializeField]
+    private Slider SliderMusic;
+
+    [SerializeField]
+    private Slider SliderAmbiance;
 
     private void Start()
     {
         LoadData();
+        SetOption();
     }
 
     public void SaveData()
@@ -34,6 +46,7 @@ public class SaveSystem : MonoBehaviour
         PlayerPrefs.SetInt("Radis", statsManager.Radis);
         PlayerPrefs.SetInt("Poireau", statsManager.Poireau);
         PlayerPrefs.SetInt("OufitudeDegre", statsManager.OufitudeDegre);
+        SaveOption();
     }
 
     public void LoadData()
@@ -54,6 +67,7 @@ public class SaveSystem : MonoBehaviour
         dayManager.UpdateTextDay();
         statsManager.UpdateTexts();
         statsManager.UpdateBars();
+        SetOption();
     }
 
     public void NewGame()
@@ -69,5 +83,21 @@ public class SaveSystem : MonoBehaviour
         statsManager.UpdateTexts();
         statsManager.UpdateBars();
         SaveData();
+    }
+
+    public void SaveOption()
+    {
+        PlayerPrefs.SetFloat("MasterVolume", SliderMaster.value);
+        PlayerPrefs.SetFloat("SFXVolume", SliderSFX.value);
+        PlayerPrefs.SetFloat("MusicVolume", SliderMusic.value);
+        PlayerPrefs.SetFloat("AmbianceVolume", SliderAmbiance.value);
+    }
+
+    public void SetOption()
+    {
+        SliderMaster.value = PlayerPrefs.GetFloat("MasterVolume");
+        SliderSFX.value = PlayerPrefs.GetFloat("SFXVolume");
+        SliderMusic.value = PlayerPrefs.GetFloat("MusicVolume");
+        SliderAmbiance.value = PlayerPrefs.GetFloat("AmbianceVolume");
     }
 }
