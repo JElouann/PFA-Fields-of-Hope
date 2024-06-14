@@ -19,9 +19,10 @@ public class RessourceButtonBlocker : MonoBehaviour
     private void Awake()
     {
         _statsManager = FindAnyObjectByType<StatsManager>();
+        UpdateButtons();
     }
 
-    private void Start()
+    public void UpdateButtons()
     {
         if (_typeOfRessource == TypeOfRessource.Vegetable)
         {

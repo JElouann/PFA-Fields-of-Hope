@@ -197,8 +197,8 @@ public class StatsManager : MonoBehaviour
 
     public void UpdateBars()
     {
-        LifeBar.DOFillAmount(Life / 100f, 0.5f).SetEase(Ease.InOutSine);
-        HungerBar.DOFillAmount(Hunger / 100f, 0.5f).SetEase(Ease.InOutSine);
+        LifeBar.DOFillAmount(Life / 100f, 0.5f + _previousLife / 100).SetEase(Ease.InOutSine);
+        HungerBar.DOFillAmount(Hunger / 100f, 0.5f + _previousHunger / 100).SetEase(Ease.InOutSine);
     }
     #endregion
 
