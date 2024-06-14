@@ -38,20 +38,6 @@ public class TimePostProcessHandler : MonoBehaviour
         _baseColor = _vignette.color.value;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            _specialProcess = StartCoroutine(NightFall());
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //StartOpe();
-            _specialProcess = StartCoroutine(NightFall());
-        }
-    }
-
     public void StartOpe()
     {
         StopAllCoroutines();
@@ -121,5 +107,10 @@ public class TimePostProcessHandler : MonoBehaviour
             }
             yield return new WaitForSeconds(_vignetteBasisCurve.length * 0.0125f);
         }
+    }
+
+    public void AGNEUGNEUGNA()
+    {
+        StartCoroutine(BasisProcess());
     }
 }

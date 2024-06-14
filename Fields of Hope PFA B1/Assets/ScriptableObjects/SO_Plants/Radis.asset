@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Radis
   m_EditorClassIdentifier: 
   Type: 10
-  Image: {fileID: 1093868420, guid: 5f4f7a79f3a6b474fb9e5cbffd64d98f, type: 3}
+  Image: {fileID: 21300000, guid: d556a6600c3b8ae44b74c6a46ca1c73a, type: 3}
   TempsDePousseEnJours: 1
   Description: "Croquant mais l\xE9ger, le radis apporte peu de calories. Il est
     id\xE9al pour des salades ou des en-cas rapides."
