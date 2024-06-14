@@ -1144,7 +1144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &62308157
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1590,6 +1590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 3
+  _typeOfRessource: 0
   _vegetablesData: {fileID: 11400000, guid: 7a071d21ffae4bd4eba0c182a385878e, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -3496,6 +3497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 5
+  _typeOfRessource: 0
   _vegetablesData: {fileID: 11400000, guid: 428ca6260af6bbd47b46a5b0dc5eaeb1, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -4834,6 +4836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 6
+  _typeOfRessource: 0
   _vegetablesData: {fileID: 11400000, guid: cb19bc4180ea72944bbd3f19982cf3f0, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -5876,6 +5879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 13
+  _typeOfRessource: 0
   _vegetablesData: {fileID: 11400000, guid: 138b2fe8fc6d20647b1c7f44b3b313bc, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -9323,6 +9327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 8
+  _typeOfRessource: 0
   _vegetablesData: {fileID: 11400000, guid: 9d42b04a00c2a8440add1783a2983339, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -9396,6 +9401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 7
+  _typeOfRessource: 0
   _vegetablesData: {fileID: 11400000, guid: e85a1638b44701d4ea57f4ece3d1185e, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -10744,7 +10750,7 @@ PrefabInstance:
       objectReference: {fileID: 882310841}
     - target: {fileID: 7956338856887364058, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
       propertyPath: m_Name
-      value: Button (1)
+      value: Radis
       objectReference: {fileID: 0}
     - target: {fileID: 8943552330021315626, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
       propertyPath: m_Type
@@ -11987,7 +11993,7 @@ PrefabInstance:
       objectReference: {fileID: 882310841}
     - target: {fileID: 7956338856887364058, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
       propertyPath: m_Name
-      value: Button (8)
+      value: Potiron
       objectReference: {fileID: 0}
     - target: {fileID: 8943552330021315626, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
       propertyPath: m_Sprite
@@ -12030,6 +12036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 6
+  _typeOfRessource: 1
   _vegetablesData: {fileID: 11400000, guid: cb19bc4180ea72944bbd3f19982cf3f0, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -13141,7 +13148,7 @@ PrefabInstance:
       objectReference: {fileID: 882310841}
     - target: {fileID: 7956338856887364058, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
       propertyPath: m_Name
-      value: Button (4)
+      value: Rutabaga
       objectReference: {fileID: 0}
     - target: {fileID: 7956338856887364058, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
       propertyPath: m_IsActive
@@ -18125,7 +18132,7 @@ PrefabInstance:
       objectReference: {fileID: 882310841}
     - target: {fileID: 7956338856887364058, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
       propertyPath: m_Name
-      value: Button (7)
+      value: Pomme de terre
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18365,7 +18372,7 @@ PrefabInstance:
       objectReference: {fileID: 882310841}
     - target: {fileID: 7956338856887364058, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
       propertyPath: m_Name
-      value: Button (6)
+      value: Betterave
       objectReference: {fileID: 0}
     - target: {fileID: 8943552330021315626, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
       propertyPath: m_Sprite
@@ -19534,6 +19541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 10
+  _typeOfRessource: 1
   _vegetablesData: {fileID: 11400000, guid: 60bf16555daf61a4093bfefb7c704b45, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -19616,6 +19624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 9
+  _typeOfRessource: 0
   _vegetablesData: {fileID: 11400000, guid: 961f590b3e87aeb4191ca74b8fc28158, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -20812,6 +20821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 4
+  _typeOfRessource: 0
   _vegetablesData: {fileID: 11400000, guid: 9a95e7455b8e0f34da8b8b159ec740a1, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -21605,6 +21615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 4
+  _typeOfRessource: 1
   _vegetablesData: {fileID: 11400000, guid: 9a95e7455b8e0f34da8b8b159ec740a1, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -21773,6 +21784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 10
+  _typeOfRessource: 0
   _vegetablesData: {fileID: 11400000, guid: 60bf16555daf61a4093bfefb7c704b45, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -23113,6 +23125,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2540046328561284781, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540046328561284781, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540046328561284781, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3228042662059794255, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -23227,7 +23251,7 @@ PrefabInstance:
       objectReference: {fileID: 882310841}
     - target: {fileID: 7956338856887364058, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
       propertyPath: m_Name
-      value: Button (5)
+      value: Carotte
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23266,6 +23290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 3
+  _typeOfRessource: 1
   _vegetablesData: {fileID: 11400000, guid: 7a071d21ffae4bd4eba0c182a385878e, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -26021,7 +26046,7 @@ PrefabInstance:
       objectReference: {fileID: 882310841}
     - target: {fileID: 7956338856887364058, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
       propertyPath: m_Name
-      value: Button (3)
+      value: Topinambour
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26060,6 +26085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 9
+  _typeOfRessource: 1
   _vegetablesData: {fileID: 11400000, guid: 961f590b3e87aeb4191ca74b8fc28158, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -27493,7 +27519,7 @@ PrefabInstance:
       objectReference: {fileID: 882310841}
     - target: {fileID: 7956338856887364058, guid: 9c3206ad6bbfae847a4962f5c96b57c7, type: 3}
       propertyPath: m_Name
-      value: Button (2)
+      value: Poireau
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27532,6 +27558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 5
+  _typeOfRessource: 1
   _vegetablesData: {fileID: 11400000, guid: 428ca6260af6bbd47b46a5b0dc5eaeb1, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -28465,6 +28492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 8
+  _typeOfRessource: 1
   _vegetablesData: {fileID: 11400000, guid: 9d42b04a00c2a8440add1783a2983339, type: 2}
   _checkToPerform:
     m_PersistentCalls:
@@ -28944,6 +28972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryEnum: 7
+  _typeOfRessource: 1
   _vegetablesData: {fileID: 11400000, guid: e85a1638b44701d4ea57f4ece3d1185e, type: 2}
   _checkToPerform:
     m_PersistentCalls:

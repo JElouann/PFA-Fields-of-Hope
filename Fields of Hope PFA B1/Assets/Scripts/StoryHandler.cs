@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class StoryHandler : MonoBehaviour
@@ -13,10 +12,13 @@ public class StoryHandler : MonoBehaviour
     [field: Header("Story events")]
     [field: SerializeField]
     public List<SO_Events> FirstPoolEvents { get; set; }
+
     [field: SerializeField]
     public List<SO_Events> SecondPoolEvents { get; set; }
+
     [field: SerializeField]
     public List<SO_Events> ThirdPoolEvents { get; set; }
+
     [field: SerializeField]
     public List<SO_Events> FourthPoolEvents { get; set; }
 

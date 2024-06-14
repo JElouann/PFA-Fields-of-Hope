@@ -137,11 +137,10 @@ public class StatsManager : MonoBehaviour
 
     public void ChangeValues(InventoryEnum value, int amount, bool hasToRemember = false)
     {
-        _myStat[value] = (value == InventoryEnum.DegreDeOufitude) ? Mathf.Clamp(_myStat[value] + amount, 0, 10) : Mathf.Clamp(_myStat[value] + amount, 0, 100);
         switch (value)
         {
             case InventoryEnum.DegreDeOufitude:
-                Mathf.Clamp(_myStat[value] + amount, 1, 10);
+                _myStat[value] = Mathf.Clamp(_myStat[value] + amount, 1, 10);
                 break;
 
             case InventoryEnum.TempsDePousse:
@@ -156,7 +155,7 @@ public class StatsManager : MonoBehaviour
                 break;
 
             default:
-                Mathf.Clamp(_myStat[value] + amount, 0, 100);
+                _myStat[value] = Mathf.Clamp(_myStat[value] + amount, 0, 100);
                 break;
         }
         
@@ -198,8 +197,8 @@ public class StatsManager : MonoBehaviour
 
     public void UpdateBars()
     {
-        LifeBar.DOFillAmount(Life / 100f, 0.1f + _previousLife / 100).SetEase(Ease.InOutSine);
-        HungerBar.DOFillAmount(Hunger / 100f, 0.1f + _previousHunger / 100).SetEase(Ease.InOutSine);
+        LifeBar.DOFillAmount(Life / 100f, 0.5f).SetEase(Ease.InOutSine);
+        HungerBar.DOFillAmount(Hunger / 100f, 0.5f).SetEase(Ease.InOutSine);
     }
     #endregion
 
@@ -262,5 +261,13 @@ public class StatsManager : MonoBehaviour
     {
         UpdateTexts();
         UpdateBars();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            print("Le degré de oufitude est égal à " + OufitudeDegre);
+        }
     }
 }
