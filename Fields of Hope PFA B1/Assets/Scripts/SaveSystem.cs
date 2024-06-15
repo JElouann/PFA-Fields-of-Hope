@@ -95,9 +95,19 @@ public class SaveSystem : MonoBehaviour
 
     public void SetOption()
     {
-        SliderMaster.value = PlayerPrefs.GetFloat("MasterVolume");
-        SliderSFX.value = PlayerPrefs.GetFloat("SFXVolume");
-        SliderMusic.value = PlayerPrefs.GetFloat("MusicVolume");
-        SliderAmbiance.value = PlayerPrefs.GetFloat("AmbianceVolume");
+        if (PlayerPrefs.GetFloat("MasterVolume") == 0 && PlayerPrefs.GetFloat("SFXVolume") ==0 && PlayerPrefs.GetFloat("MusicVolume")==0 && PlayerPrefs.GetFloat("AmbianceVolume") == 0)
+        {
+            SliderMaster.value = 1;
+            SliderSFX.value = 1;
+            SliderMusic.value = 1;
+            SliderAmbiance.value = 1;
+        }
+        else
+        {
+            SliderMaster.value = PlayerPrefs.GetFloat("MasterVolume");
+            SliderSFX.value = PlayerPrefs.GetFloat("SFXVolume");
+            SliderMusic.value = PlayerPrefs.GetFloat("MusicVolume");
+            SliderAmbiance.value = PlayerPrefs.GetFloat("AmbianceVolume");
+        }
     }
 }
