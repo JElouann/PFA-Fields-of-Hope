@@ -53,8 +53,8 @@ public class TimePostProcessHandler : MonoBehaviour
         while (_time <= _vignetteNightFallCurve.length / 4)
         {
             _vignette.intensity.value = _vignetteNightFallCurve.Evaluate(_time);
-            _time += _vignetteNightFallCurve.length * 0.0001f;
-            _vignette.color.value = Color.Lerp(_vignette.color.value, Color.black, _vignetteNightFallCurve.length * 0.0001f);           
+            _time += _vignetteNightFallCurve.length * 0.0005f;
+            _vignette.color.value = Color.Lerp(_vignette.color.value, Color.black, _vignetteNightFallCurve.length * 0.0005f);           
             yield return new WaitForSeconds(_vignetteNightFallCurve.length * 0.0001f);
             if(_time >= 0.8f && !NightPanel.IsNight)
             {
@@ -76,8 +76,8 @@ public class TimePostProcessHandler : MonoBehaviour
         while (_time <= _vignetteDayRiseCurve.length / 4.5f)
         {
             _vignette.intensity.value = _vignetteDayRiseCurve.Evaluate(_time);
-            _time += _vignetteDayRiseCurve.length * 0.0001f;
-            _vignette.color.value = Color.Lerp(Color.black, _baseColor, _vignetteDayRiseCurve.length * 0.0001f);
+            _time += _vignetteDayRiseCurve.length * 0.0005f;
+            _vignette.color.value = Color.Lerp(Color.black, _baseColor, _vignetteDayRiseCurve.length * 0.0005f);
             yield return new WaitForSeconds(_vignetteDayRiseCurve.length * 0.0001f);
             if (_time <= 0.2f && NightPanel.IsNight)
             {
